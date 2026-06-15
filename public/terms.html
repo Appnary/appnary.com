@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Appnary</title>
+  <meta name="description" content="Appnary's terms of service — the rules and guidelines for using our Shopify apps and website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111827;
+      --aqua: #37D7C6;
+      --lime: #B7F34B;
+      --mist: #F6FBF9;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-300: #D1D5DB;
+      --gray-400: #9CA3AF;
+      --gray-500: #6B7280;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --gray-800: #1F2937;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--gray-700);
+      background: var(--mist);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 24px;
+    }
+    .navbar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--ink);
+    }
+    .navbar-logo svg { display: block; }
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .navbar-links a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-600);
+      transition: color .15s;
+    }
+    .navbar-links a:hover { color: var(--aqua); }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      background: var(--ink);
+      color: #fff;
+      transition: opacity .15s;
+    }
+    .btn-cta:hover { opacity: .85; }
+
+    /* Main content */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px 120px;
+    }
+
+    .page h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .page .last-updated {
+      font-size: 14px;
+      color: var(--gray-400);
+      margin-bottom: 48px;
+    }
+
+    .page h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .page h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .page p {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .page ul, .page ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    .page li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .page a {
+      color: var(--aqua);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .page a:hover { color: #2bb8a7; }
+
+    .page strong { color: var(--ink); font-weight: 600; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-500);
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+    .back-link:hover { color: var(--aqua); }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--gray-200);
+      background: #fff;
+      padding: 32px 24px;
+    }
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--gray-400);
+      transition: color .15s;
+    }
+    .footer-links a:hover { color: var(--aqua); }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--gray-400);
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 48px 20px 80px; }
+      .page h1 { font-size: 28px; }
+      .page h2 { font-size: 19px; }
+      .navbar-inner { height: 56px; }
+      .navbar-links a:not(.btn-cta) { display: none; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#111827"/>
+          <path d="M8 14l4 4 8-8" stroke="#B7F34B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        appnary
+      </a>
+      <div class="navbar-links">
+        <a href="/">Apps</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/#waitlist" class="btn-cta">Get Early Access</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="page">
+    <a href="/" class="back-link">&larr; Back to Apps</a>
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: June 15, 2026</p>
+
+    <p>Welcome to Appnary. These Terms of Service ("Terms") govern your access to and use of the Appnary website (appnary.com) and our Shopify apps. By using our services, you agree to these Terms. If you do not agree, do not use our services.</p>
+
+    <h2>1. Definitions</h2>
+    <ul>
+      <li><strong>"Appnary," "we," "our," "us"</strong> — Appnary, the provider of Shopify apps and related services.</li>
+      <li><strong>"Service"</strong> — our Shopify apps, website, and any related tools or features.</li>
+      <li><strong>"You," "your," "Merchant"</strong> — the individual or entity using our Service.</li>
+      <li><strong>"Shopify"</strong> — Shopify Inc., the e-commerce platform through which our apps are distributed.</li>
+    </ul>
+
+    <h2>2. Acceptance of Terms</h2>
+    <p>By installing any Appnary app from the Shopify App Store or accessing our website, you agree to be bound by these Terms. If you are using the Service on behalf of a business or entity, you represent that you have the authority to bind that entity to these Terms.</p>
+
+    <h2>3. Description of Service</h2>
+    <p>Appnary provides Shopify apps that extend and enhance the functionality of Shopify stores. Our current app offering includes Pixel Tracker and any future apps we release. Each app is subject to its own feature set, pricing, and limitations as described on its respective page.</p>
+
+    <h2>4. Shopify App Store Terms</h2>
+    <p>Our apps are distributed through the Shopify App Store. By installing an Appnary app, you also agree to:</p>
+    <ul>
+      <li><a href="https://shopify.com/legal/terms" target="_blank" rel="noopener noreferrer">Shopify's Terms of Service</a></li>
+      <li><a href="https://shopify.com/legal/terms-participants" target="_blank" rel="noopener noreferrer">Shopify API License and Terms of Use</a></li>
+    </ul>
+    <p>If there is a conflict between Shopify's terms and these Terms, Shopify's terms govern your use of the Shopify platform, and these Terms govern your use of our apps.</p>
+
+    <h2>5. Accounts & Registration</h2>
+    <p>To use our Shopify apps, you must have a valid Shopify store. Authentication is handled through Shopify OAuth — we do not maintain separate login credentials. You are responsible for maintaining the security of your Shopify account and for all activities that occur under your account.</p>
+
+    <h2>6. Fees & Payments</h2>
+    <p>Our apps are billed through the Shopify App Store's billing system. Pricing is displayed on each app's page and in the Shopify App Store listing. All fees are:</p>
+    <ul>
+      <li>Charged in accordance with the pricing plan you select</li>
+      <li>Billed through Shopify's billing system on a recurring basis</li>
+      <li>Subject to applicable taxes and currency conversion fees</li>
+    </ul>
+    <p>We may change pricing with 30 days' notice. Price changes take effect at the start of the next billing cycle. Refunds are handled in accordance with Shopify's App Store refund policy.</p>
+
+    <h2>7. Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the Service for any unlawful purpose or in violation of any applicable law</li>
+      <li>Attempt to reverse engineer, decompile, or extract the source code of our apps</li>
+      <li>Circumvent any rate limits, access restrictions, or security measures</li>
+      <li>Use the Service in a manner that exceeds reasonable request volume or degrades service for other users</li>
+      <li>Use the Service to store or process illegal content or content that infringes on third-party rights</li>
+      <li>Interfere with or disrupt the integrity or performance of the Service</li>
+      <li>Use the Service for competitive analysis or to build a competing product</li>
+    </ul>
+
+    <h2>8. Data & Privacy</h2>
+    <p>Our collection and use of your data is governed by our <a href="/privacy.html">Privacy Policy</a>. By using the Service, you consent to our data practices as described in that policy. You represent that you have obtained all necessary consents from your customers for us to process store data as required by our apps.</p>
+
+    <h2>9. Intellectual Property</h2>
+    <ul>
+      <li><strong>Our IP:</strong> The Service, including its code, design, branding, and content, is owned by Appnary and protected by intellectual property laws. You receive a limited, non-exclusive, non-transferable license to use the Service during the term of your subscription.</li>
+      <li><strong>Your IP:</strong> You retain all rights to your store data, content, and customer information. We claim no ownership over your data.</li>
+      <li><strong>Feedback:</strong> Any suggestions or feedback you provide about the Service may be used by us without compensation or obligation.</li>
+    </ul>
+
+    <h2>10. Third-Party Services</h2>
+    <p>The Service may integrate with third-party services (e.g., analytics providers, payment processors). We are not responsible for the acts or omissions of these third parties. Your use of third-party services is governed by their respective terms.</p>
+
+    <h2>11. Limitation of Liability</h2>
+    <p><strong>To the maximum extent permitted by law, Appnary and its owners, employees, and contractors shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, or goodwill, arising out of or in connection with your use of the Service.</strong></p>
+    <p>Our total liability for any claim arising from these Terms or the Service shall not exceed the amount you have paid us in the 12 months preceding the claim. Some jurisdictions do not allow certain limitations of liability, so the above limitations may not apply to you.</p>
+
+    <h2>12. Disclaimer of Warranties</h2>
+    <p><strong>The Service is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to merchantability, fitness for a particular purpose, and non-infringement. We do not guarantee that the Service will be uninterrupted, error-free, secure, or free of viruses.</strong></p>
+
+    <h2>13. Indemnification</h2>
+    <p>You agree to indemnify and hold Appnary harmless from any claims, damages, losses, liabilities, and expenses arising out of your use of the Service, your violation of these Terms, or your violation of any third-party rights.</p>
+
+    <h2>14. Termination</h2>
+    <p>You may stop using our apps at any time by uninstalling them from your Shopify admin. We may suspend or terminate your access to the Service if:</p>
+    <ul>
+      <li>You violate these Terms</li>
+      <li>Your use of the Service poses a security or legal risk</li>
+      <li>We discontinue the Service (with reasonable notice where possible)</li>
+    </ul>
+    <p>Upon termination, your access to the Service ceases. Data retention after termination is governed by our Privacy Policy.</p>
+
+    <h2>15. Changes to Terms</h2>
+    <p>We may revise these Terms from time to time. Material changes will be notified via email (if you have provided one) or through the Service. Continued use of the Service after changes take effect constitutes your acceptance of the revised Terms.</p>
+
+    <h2>16. Governing Law</h2>
+    <p>These Terms are governed by the laws of Bangladesh, without regard to its conflict of laws principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply. Any disputes shall be resolved in the courts of Dhaka, Bangladesh.</p>
+
+    <h2>17. Contact</h2>
+    <p>If you have questions about these Terms, please contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:legal@appnary.com">legal@appnary.com</a></li>
+      <li>Website: <a href="https://appnary.com">appnary.com</a></li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="footer-logo">
+        <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+          <rect width="28" height="28" rx="6" fill="#111827"/>
+          <path d="M8 14l4 4 8-8" stroke="#B7F34B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        appnary
+      </a>
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+      <span class="footer-copy">&copy; 2026 Appnary. All rights reserved.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
