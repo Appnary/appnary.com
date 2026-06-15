@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@theme {
+  --color-ink: #111827;
+  --color-aqua: #37D7C6;
+  --color-lime: #B7F34B;
+  --color-mist: #F6FBF9;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--color-mist);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
