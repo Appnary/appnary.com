@@ -1,0 +1,14 @@
+# Railway deployment config for Appnary landing page
+# Nixpacks auto-detects Next.js, this is explicit override
+
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+cmds = ["npm ci --production=false"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npx next start --port $PORT"
