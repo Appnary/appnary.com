@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#F6FBF9"/>
+  <rect x="0" y="0" width="800" height="56" rx="16" fill="#111827"/>
+  <rect x="0" y="28" width="800" height="28" fill="#111827"/>
+
+  <!-- Sidebar -->
+  <rect x="20" y="76" width="48" height="48" rx="8" fill="#E5E7EB"/>
+  <rect x="20" y="136" width="48" height="48" rx="8" fill="#E5E7EB"/>
+  <rect x="20" y="196" width="48" height="48" rx="8" fill="#37D7C6" opacity="0.3"/>
+
+  <!-- Stats cards -->
+  <rect x="88" y="76" width="220" height="100" rx="12" fill="white" stroke="#E5E7EB"/>
+  <rect x="100" y="90" width="60" height="8" rx="4" fill="#9CA3AF"/>
+  <rect x="100" y="108" width="120" height="32" rx="4" fill="#111827"/>
+  <rect x="100" y="148" width="80" height="6" rx="3" fill="#37D7C6"/>
+
+  <rect x="324" y="76" width="220" height="100" rx="12" fill="white" stroke="#E5E7EB"/>
+  <rect x="336" y="90" width="80" height="8" rx="4" fill="#9CA3AF"/>
+  <rect x="336" y="108" width="100" height="32" rx="4" fill="#111827"/>
+  <rect x="336" y="148" width="60" height="6" rx="3" fill="#B7F34B"/>
+
+  <rect x="560" y="76" width="220" height="100" rx="12" fill="white" stroke="#E5E7EB"/>
+  <rect x="572" y="90" width="70" height="8" rx="4" fill="#9CA3AF"/>
+  <rect x="572" y="108" width="80" height="32" rx="4" fill="#111827"/>
+  <rect x="572" y="148" width="100" height="6" rx="3" fill="#37D7C6"/>
+
+  <!-- Chart area -->
+  <rect x="88" y="196" width="460" height="280" rx="12" fill="white" stroke="#E5E7EB"/>
+  <rect x="108" y="216" width="120" height="10" rx="4" fill="#111827"/>
+  <path d="M130 440 L180 380 L230 400 L280 300 L330 320 L380 240 L430 260 L480 200 L520 220" stroke="#37D7C6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M130 455 L180 420 L230 430 L280 370 L330 380 L380 320 L430 330 L480 290 L520 300" stroke="#B7F34B" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Activity list -->
+  <rect x="564" y="196" width="216" height="280" rx="12" fill="white" stroke="#E5E7EB"/>
+  <rect x="580" y="216" width="80" height="10" rx="4" fill="#111827"/>
+  <rect x="580" y="244" width="180" height="30" rx="6" fill="#E5E7EB"/>
+  <rect x="580" y="286" width="180" height="30" rx="6" fill="#E5E7EB"/>
+  <rect x="580" y="328" width="180" height="30" rx="6" fill="#E5E7EB"/>
+  <rect x="580" y="370" width="180" height="30" rx="6" fill="#E5E7EB"/>
+  <rect x="580" y="412" width="120" height="30" rx="6" fill="#E5E7EB"/>
+
+  <!-- Bottom status bar -->
+  <rect x="88" y="488" width="692" height="2" rx="1" fill="#E5E7EB"/>
+</svg>

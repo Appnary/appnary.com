@@ -4,6 +4,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pixel Tracker — Privacy-Friendly Shopify Analytics | Appnary",
   description: "Track every visitor, understand every click. Privacy-friendly analytics built for Shopify merchants.",
+  openGraph: {
+    title: "Pixel Tracker — Privacy-Friendly Shopify Analytics | Appnary",
+    description: "Track every visitor, understand every click. Privacy-friendly analytics for Shopify.",
+    url: "https://appnary.com/pixel-tracker",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 const features = [
@@ -26,9 +32,27 @@ const faqs = [
   { q: "Can I export my data?", a: "Yes. Export as CSV or JSON at any time." },
 ];
 
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Pixel Tracker",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Shopify",
+  description: "Privacy-friendly analytics for Shopify merchants. Track visitors, clicks, and conversions without cookies.",
+  offers: {
+    "@type": "Offer",
+    price: "4.99",
+    priceCurrency: "USD",
+  },
+};
+
 export default function PixelTrackerPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-20">
         <div className="flex flex-col items-center text-center">
           <span className="mb-4 rounded-full bg-lime/80 px-3 py-0.5 text-xs font-semibold text-ink/80">In Development</span>
@@ -42,6 +66,16 @@ export default function PixelTrackerPage() {
             <a href="/#waitlist" className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-gray-700 hover:border-gray-400 transition-colors">Get Early Access</a>
           </div>
           <p className="mt-3 text-sm text-gray-400">Available soon in the Shopify App Store</p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
+        <div className="overflow-hidden rounded-2xl border border-gray-200/70 bg-white shadow-sm">
+          <img
+            src="/pixel-tracker-preview.svg"
+            alt="Pixel Tracker dashboard preview"
+            className="w-full"
+          />
         </div>
       </section>
 
