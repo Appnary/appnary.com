@@ -2,6 +2,8 @@
 
 import { useState, FormEvent } from "react";
 
+const WAITLIST_API = process.env.NEXT_PUBLIC_WAITLIST_API || "/api/waitlist";
+
 export default function WaitlistForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -13,7 +15,7 @@ export default function WaitlistForm() {
     setMessage("");
 
     try {
-      const res = await fetch("/api/waitlist", {
+      const res = await fetch(WAITLIST_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -56,6 +58,9 @@ export default function WaitlistForm() {
           {message}
         </p>
       )}
+      <p className="text-xs text-gray-400">
+        No spam, unsubscribe anytime.
+      </p>
     </form>
   );
 }
