@@ -13,3 +13,12 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
+
+.waitlist-dark input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+.waitlist-dark input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}

@@ -2,12 +2,32 @@
 
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const heroEl = document.getElementById("hero");
+    if (!heroEl) {
+      setScrolled(true);
+      return;
+    }
+    const onScroll = () => setScrolled(window.scrollY > heroEl.offsetHeight - 64);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-ink/5 bg-mist/80 backdrop-blur-md">
+    <header
+      className={`sticky top-0 z-50 w-full border-b transition-colors ${
+        scrolled
+          ? "border-white/10 bg-ink/95 backdrop-blur-md"
+          : "border-transparent bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Appnary home">
           <svg viewBox="0 0 960 280" className="h-7 md:h-8 w-auto" role="img" aria-hidden="true">
@@ -18,22 +38,22 @@ export function Navbar() {
               <path d="M367 109h56v56" fill="none" stroke="#37D7C6" strokeWidth="30" strokeLinecap="round" strokeLinejoin="round" />
               <circle cx="404" cy="127" r="17" fill="#B7F34B" />
             </g>
-            <text x="288" y="177" fill="#111827" fontFamily="Inter, ui-sans-serif, system-ui, sans-serif" fontSize="118" fontWeight="720" letterSpacing="0">appnary</text>
+            <text x="288" y="177" fill="#FFFFFF" fontFamily="Inter, ui-sans-serif, system-ui, sans-serif" fontSize="118" fontWeight="720" letterSpacing="0">appnary</text>
           </svg>
         </Link>
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/#apps" className="text-sm font-medium text-ink/70 hover:text-ink transition-colors">Apps</Link>
+          <Link href="/#apps" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Apps</Link>
         </nav>
         <div className="hidden md:block">
           <Link href="/#waitlist" className="inline-flex items-center justify-center rounded-full bg-aqua px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-aqua/90">Get Early Access</Link>
         </div>
-        <button type="button" className="md:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Close" : "Menu"}>
+        <button type="button" className="md:hidden text-white" onClick={() => setOpen(!open)} aria-label={open ? "Close" : "Menu"}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
       {open && (
-        <div className="md:hidden border-t border-ink/5 bg-mist px-5 pb-6 pt-4">
-          <Link href="/#apps" className="block px-3 py-2 text-sm text-ink/70" onClick={() => setOpen(false)}>Apps</Link>
+        <div className="md:hidden border-t border-white/10 bg-ink px-5 pb-6 pt-4">
+          <Link href="/#apps" className="block px-3 py-2 text-sm text-white/70" onClick={() => setOpen(false)}>Apps</Link>
           <Link href="/#waitlist" className="mt-2 block rounded-full bg-aqua px-6 py-3 text-sm font-semibold text-white text-center" onClick={() => setOpen(false)}>Get Early Access</Link>
         </div>
       )}
