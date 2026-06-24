@@ -36,7 +36,7 @@ export default function WaitlistForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-3 sm:flex-row">
+    <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-3 sm:flex-row">
       <input
         type="email"
         value={email}
@@ -44,21 +44,25 @@ export default function WaitlistForm() {
         placeholder="you@example.com"
         required
         disabled={status === "loading"}
-        className="flex-1 rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-aqua/50 disabled:opacity-50"
+        className="flex-1 rounded-lg border border-input-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-input-placeholder focus:border-aqua focus:outline-none focus:ring-2 focus:ring-aqua/30 disabled:opacity-50"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="rounded-lg bg-aqua px-6 py-2.5 text-sm font-semibold text-white hover:bg-aqua/90 transition-colors disabled:opacity-50"
+        className="rounded-lg bg-aqua px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-aqua/90 disabled:opacity-50"
       >
         {status === "loading" ? "Sending..." : "Notify Me"}
       </button>
       {message && (
-        <p className={`text-sm ${status === "success" ? "text-green-600" : "text-red-500"}`}>
+        <p
+          className={`text-sm ${
+            status === "success" ? "text-aqua" : "text-red-500"
+          }`}
+        >
           {message}
         </p>
       )}
-      <p className="text-xs text-gray-400">
+      <p className="text-xs text-muted-foreground-faint">
         No spam, unsubscribe anytime.
       </p>
     </form>
