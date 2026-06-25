@@ -3,17 +3,18 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./navbar";
 import { Footer } from "./footer";
+import { ThemeProvider, THEME_INIT_SCRIPT } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 const baseUrl = "https://appnary.com";
 
 export const metadata: Metadata = {
-  title: "Appnary — Shopify Apps That Work the Way You Do",
+  title: "Appnary | Shopify Apps That Work the Way You Do",
   description: "Simple, affordable tools for Shopify merchants. Get early access.",
   metadataBase: new URL(baseUrl),
   openGraph: {
-    title: "Appnary — Shopify Apps That Work the Way You Do",
+    title: "Appnary | Shopify Apps That Work the Way You Do",
     description: "Simple, affordable tools for Shopify merchants. Get early access.",
     url: baseUrl,
     siteName: "Appnary",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Appnary — Shopify Apps That Work the Way You Do",
+    title: "Appnary | Shopify Apps That Work the Way You Do",
     description: "Simple, affordable tools for Shopify merchants. Get early access.",
     images: ["/og-image.png"],
   },
@@ -51,15 +52,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        {/* Set theme before first paint to avoid FOUC. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-mist font-sans text-ink antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <body className="min-h-screen font-sans antialiased">
+        <ThemeProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
