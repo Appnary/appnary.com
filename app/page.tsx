@@ -53,67 +53,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="apps"
-        className="border-t border-border-themed bg-section py-20"
-      >
+      <section id="apps" className="border-t border-border-themed bg-section py-20 transition-colors">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="mb-10 text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-            Our Apps
-          </h2>
+          <h2 className="mb-10 text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Our Apps</h2>
           <div className="grid gap-8 sm:grid-cols-3">
-            <div className="rounded-xl border border-border-themed bg-card p-6 text-left">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed">
+            <div className="rounded-xl border border-border-themed bg-card p-6 text-left transition-shadow hover:shadow-card hover:border-border-themed-strong">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed shadow-sm">
                 <BarChart3 className="h-6 w-6 text-aqua" />
               </div>
-              <span className="inline-block rounded-full bg-lime/30 px-3 py-1 text-xs font-medium text-foreground/70">
-                In Development
-              </span>
-              <h3 className="mt-3 text-lg font-semibold text-foreground">
-                Pixel Tracker
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Track ad performance and ROAS directly in your Shopify
-                dashboard.
-              </p>
-              <Link
-                href="/pixel-tracker"
-                className="mt-4 inline-block text-sm font-medium text-aqua hover:underline"
-              >
-                Learn More →
-              </Link>
+              <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-aqua">In Development</span>
+              <h3 className="mt-3 text-lg font-semibold text-foreground">Pixel Tracker</h3>
+              <p className="mt-2 text-sm text-muted-foreground">Track ad performance and ROAS directly in your Shopify dashboard.</p>
+              <Link href="/pixel-tracker" className="mt-4 inline-block text-sm font-medium text-aqua hover:underline">Learn More →</Link>
             </div>
 
-            <div className="rounded-xl border border-border-themed bg-card p-6 text-left">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed">
+            <div className="rounded-xl border border-border-themed bg-card p-6 text-left transition-shadow hover:shadow-card hover:border-border-themed-strong">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed shadow-sm">
                 <Sparkles className="h-6 w-6 text-foreground/50" />
               </div>
-              <span className="inline-block rounded-full bg-lime/30 px-3 py-1 text-xs font-medium text-foreground/70">
-                Coming Soon
-              </span>
-              <h3 className="mt-3 text-lg font-semibold text-foreground">
-                More Coming
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                We&apos;re building a suite of tools Shopify merchants
-                actually need.
-              </p>
+              <span className="inline-block rounded-full bg-muted-themed px-3 py-1 text-xs font-medium text-muted-foreground">Coming Soon</span>
+              <h3 className="mt-3 text-lg font-semibold text-foreground">More Coming</h3>
+              <p className="mt-2 text-sm text-muted-foreground">We&apos;re building a suite of tools Shopify merchants actually need.</p>
             </div>
 
-            <div className="rounded-xl border border-border-themed bg-card p-6 text-left">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed">
+            <div className="rounded-xl border border-border-themed bg-card p-6 text-left transition-shadow hover:shadow-card hover:border-border-themed-strong">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed shadow-sm">
                 <Tag className="h-6 w-6 text-foreground/50" />
               </div>
-              <span className="inline-block rounded-full bg-lime/30 px-3 py-1 text-xs font-medium text-foreground/70">
-                Coming Soon
-              </span>
-              <h3 className="mt-3 text-lg font-semibold text-foreground">
-                Simple Pricing
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                No surprises. Transparent, affordable pricing for every
-                budget.
-              </p>
+              <span className="inline-block rounded-full bg-muted-themed px-3 py-1 text-xs font-medium text-muted-foreground">Coming Soon</span>
+              <h3 className="mt-3 text-lg font-semibold text-foreground">Simple Pricing</h3>
+              <p className="mt-2 text-sm text-muted-foreground">No surprises. Transparent, affordable pricing for every budget.</p>
             </div>
           </div>
         </div>
