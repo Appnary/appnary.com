@@ -2,10 +2,10 @@ import { BarChart3, CheckCircle2, ChevronDown } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pixel Tracker — Privacy-Friendly Shopify Analytics | Appnary",
+  title: "Pixel Tracker | Privacy-Friendly Shopify Analytics | Appnary",
   description: "Track every visitor, understand every click. Privacy-friendly analytics built for Shopify merchants.",
   openGraph: {
-    title: "Pixel Tracker — Privacy-Friendly Shopify Analytics | Appnary",
+    title: "Pixel Tracker | Privacy-Friendly Shopify Analytics | Appnary",
     description: "Track every visitor, understand every click. Privacy-friendly analytics for Shopify.",
     url: "https://appnary.com/pixel-tracker",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -55,22 +55,22 @@ export default function PixelTrackerPage() {
       />
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-20">
         <div className="flex flex-col items-center text-center">
-          <span className="mb-4 rounded-full bg-lime/80 px-3 py-0.5 text-xs font-semibold text-ink/80">In Development</span>
-          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-mist border border-gray-100">
+          <span className="mb-4 rounded-full bg-lime/80 px-3 py-0.5 text-xs font-semibold text-foreground/80">In Development</span>
+          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-surface border border-border-themed">
             <BarChart3 className="h-7 w-7 text-aqua" />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">Pixel Tracker</h1>
-          <p className="mt-3 max-w-xl text-lg text-gray-600">Track every visitor, understand every click. Privacy-friendly analytics built for Shopify merchants.</p>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">Pixel Tracker</h1>
+          <p className="mt-3 max-w-xl text-lg text-muted-foreground">Track every visitor, understand every click. Privacy-friendly analytics built for Shopify merchants.</p>
           <div className="mt-8 flex items-center gap-4">
-            <button disabled className="rounded-lg bg-gray-300 px-6 py-3 text-sm font-semibold text-gray-500 cursor-not-allowed">Install from Shopify</button>
-            <a href="/#waitlist" className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-gray-700 hover:border-gray-400 transition-colors">Get Early Access</a>
+            <button disabled className="rounded-lg bg-muted-themed px-6 py-3 text-sm font-semibold text-muted-foreground cursor-not-allowed">Install from Shopify</button>
+            <a href="/#waitlist" className="rounded-lg border border-border-themed px-6 py-3 text-sm font-medium text-foreground hover:border-foreground transition-colors">Get Early Access</a>
           </div>
-          <p className="mt-3 text-sm text-gray-400">Available soon in the Shopify App Store</p>
+          <p className="mt-3 text-sm text-muted-foreground-faint">Available soon in the Shopify App Store</p>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
-        <div className="overflow-hidden rounded-2xl border border-gray-200/70 bg-white shadow-sm">
+        <div className="overflow-hidden rounded-2xl border border-border-themed bg-surface shadow-sm">
           <img
             src="/pixel-tracker-preview.svg"
             alt="Pixel Tracker dashboard preview"
@@ -80,37 +80,37 @@ export default function PixelTrackerPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-16 sm:pb-20">
-        <div className="rounded-2xl border border-gray-200/70 bg-white p-8 text-center shadow-sm">
-          <p className="text-sm font-medium text-gray-500 uppercase tracking-wider">Pricing</p>
-          <p className="mt-2 text-4xl font-bold text-ink">$4.99<span className="text-lg font-normal text-gray-500">/month</span></p>
-          <p className="mt-2 text-sm text-gray-500">Flat rate. No per-visitor fees. No tiered plans.</p>
-          <p className="mt-4 text-sm text-gray-400">Available in the Shopify App Store — purchase directly through Shopify.</p>
+        <div className="rounded-2xl border border-border-themed bg-surface p-8 text-center shadow-sm">
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Pricing</p>
+          <p className="mt-2 text-4xl font-bold text-foreground">$4.99<span className="text-lg font-normal text-muted-foreground">/month</span></p>
+          <p className="mt-2 text-sm text-muted-foreground">Flat rate. No per-visitor fees. No tiered plans.</p>
+          <p className="mt-4 text-sm text-muted-foreground-faint">Available in the Shopify App Store, purchase directly through Shopify.</p>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
-        <h2 className="mb-8 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Features</h2>
+        <h2 className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Features</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
-            <div key={f.title} className="rounded-xl border border-gray-200/70 bg-white p-6 shadow-sm">
+            <div key={f.title} className="rounded-xl border border-border-themed bg-surface p-6 shadow-sm">
               <CheckCircle2 className="mb-3 h-5 w-5 text-aqua" />
-              <h3 className="font-semibold text-ink">{f.title}</h3>
-              <p className="mt-1 text-sm text-gray-600 leading-relaxed">{f.description}</p>
+              <h3 className="font-semibold text-foreground">{f.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{f.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
-        <h2 className="mb-8 text-2xl font-bold tracking-tight text-ink sm:text-3xl">Frequently Asked Questions</h2>
+        <h2 className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">Frequently Asked Questions</h2>
         <div className="space-y-3">
           {faqs.map((faq) => (
-            <details key={faq.q} className="group rounded-xl border border-gray-200/70 bg-white shadow-sm transition-all open:border-aqua/30">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-medium text-ink list-none">
+            <details key={faq.q} className="group rounded-xl border border-border-themed bg-surface shadow-sm transition-all open:border-aqua/30">
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-medium text-foreground list-none">
                 {faq.q}
-                <ChevronDown className="h-4 w-4 text-gray-400 transition-transform group-open:rotate-180" />
+                <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180" />
               </summary>
-              <div className="px-6 pb-4 text-sm text-gray-600 leading-relaxed">{faq.a}</div>
+              <div className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">{faq.a}</div>
             </details>
           ))}
         </div>

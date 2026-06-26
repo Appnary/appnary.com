@@ -1,4 +1,8 @@
 @import "tailwindcss";
+
+/* ----------------------------------------------------------------
+   Brand colors — fixed across themes (these define the Appnary look)
+   ---------------------------------------------------------------- */
 @theme {
   --color-ink: #111827;
   --color-aqua: #37D7C6;
@@ -7,18 +11,113 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
+
+/* ----------------------------------------------------------------
+   Semantic theme tokens — light (default)
+   ---------------------------------------------------------------- */
+:root {
+  --background: #F6FBF9;          /* mist */
+  --foreground: #111827;          /* ink */
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --section: #ffffff;             /* page sections — white on mist, ink on ink */
+  --card: #F6FBF9;                /* cards on sections — mist on white, white/5 on ink */
+  --border: rgba(17, 24, 39, 0.08);
+  --border-strong: rgba(17, 24, 39, 0.10);
+  --muted: #F6FBF9;
+  --muted-foreground: rgba(17, 24, 39, 0.60);
+  --muted-foreground-strong: rgba(17, 24, 39, 0.70);
+  --muted-foreground-faint: rgba(17, 24, 39, 0.40);
+  --input-border: rgb(209, 213, 219);
+  --input-placeholder: rgba(17, 24, 39, 0.40);
+  --shadow-card: 0 1px 2px rgba(17, 24, 39, 0.04);
+  --shadow-card-hover: 0 4px 12px rgba(17, 24, 39, 0.08);
+}
+
+/* ----------------------------------------------------------------
+   Semantic theme tokens — dark (ink-based)
+   ---------------------------------------------------------------- */
+[data-theme="dark"] {
+  --background: #111827;          /* ink */
+  --foreground: #F6FBF9;          /* mist */
+  --surface: #1e293b;             /* slate-800 */
+  --surface-elevated: #1e293b;
+  --section: #111827;             /* ink — matches body so section blends seamlessly */
+  --card: rgba(255, 255, 255, 0.05); /* subtle elevation over ink/slate-800 */
+  --border: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --muted: #0f172a;               /* slate-900 */
+  --muted-foreground: rgba(255, 255, 255, 0.60);
+  --muted-foreground-strong: rgba(255, 255, 255, 0.70);
+  --muted-foreground-faint: rgba(255, 255, 255, 0.40);
+  --input-border: rgba(255, 255, 255, 0.15);
+  --input-placeholder: rgba(255, 255, 255, 0.40);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ----------------------------------------------------------------
+   Map semantic tokens to Tailwind utility classes via @theme inline
+   ---------------------------------------------------------------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-section: var(--section);
+  --color-card: var(--card);
+  --color-border-themed: var(--border);
+  --color-border-themed-strong: var(--border-strong);
+  --color-muted-themed: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-foreground-strong: var(--muted-foreground-strong);
+  --color-muted-foreground-faint: var(--muted-foreground-faint);
+  --color-input-border: var(--input-border);
+  --color-input-placeholder: var(--input-placeholder);
+}
+
 html { scroll-behavior: smooth; }
 body {
-  background: var(--color-mist);
-  color: var(--color-ink);
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-sans);
 }
 
-.waitlist-dark input {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+/* ----------------------------------------------------------------
+   Animations
+   ---------------------------------------------------------------- */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-.waitlist-dark input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(30px, -20px) scale(1.1); }
+  66%      { transform: translate(-20px, 10px) scale(0.95); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out both;
+}
+
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+
+.animate-orb {
+  animation: orb-float 12s ease-in-out infinite;
+}
+
+.animate-orb-delayed {
+  animation: orb-float 14s ease-in-out 2s infinite;
 }
