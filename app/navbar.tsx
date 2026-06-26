@@ -41,7 +41,7 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Appnary home">
-          <svg viewBox="0 0 960 280" className="h-9 md:h-11 w-auto text-foreground" role="img" aria-hidden="true">
+          <svg viewBox="0 0 960 280" className="h-12 md:h-16 w-auto text-foreground" role="img" aria-hidden="true">
             <g transform="translate(28 28) scale(.4375)">
               <rect x="40" y="40" width="432" height="432" rx="112" fill="#F6FBF9" />
               <path fill="#111827" fillRule="evenodd"
