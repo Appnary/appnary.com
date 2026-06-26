@@ -65,7 +65,7 @@ export default function WaitlistForm() {
         </p>
       )}
       <p className="mt-1 text-xs text-muted-foreground-faint">
-        No spam.
+        No spam, unsubscribe anytime.
       </p>
     </form>
   );
