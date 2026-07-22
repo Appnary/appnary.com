@@ -63,7 +63,7 @@ export default function Home() {
               </div>
               <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-aqua">In Development</span>
               <h3 className="mt-3 text-lg font-semibold text-foreground">Pixel Tracker</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Track ad performance and ROAS directly in your Shopify dashboard.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Connect Facebook, Google, TikTok &amp; more pixels from one simple dashboard.</p>
               <Link href="/pixel-tracker" className="mt-4 inline-block text-sm font-medium text-aqua hover:underline">Learn More →</Link>
             </div>
 
