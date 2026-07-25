@@ -8,6 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
     { url: baseUrl, priority: 1, changeFrequency: "monthly" },
     { url: `${baseUrl}/pixel-tracker`, priority: 0.9, changeFrequency: "monthly" },
+    { url: `${baseUrl}/pixel-tracker/meta-pixel`, priority: 0.7, changeFrequency: "monthly" },
+    { url: `${baseUrl}/pixel-tracker/google-ads`, priority: 0.7, changeFrequency: "monthly" },
+    { url: `${baseUrl}/pixel-tracker/tiktok-pixel`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${baseUrl}/about`, priority: 0.6, changeFrequency: "monthly" },
     { url: `${baseUrl}/blog`, priority: 0.7, changeFrequency: "weekly" },
     { url: `${baseUrl}/docs`, priority: 0.7, changeFrequency: "monthly" },

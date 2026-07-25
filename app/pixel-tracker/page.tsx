@@ -1,5 +1,6 @@
 import { BarChart3, CheckCircle2, ChevronDown } from "lucide-react";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Pixel Tracker | Multi-Platform Tracking for Shopify | Appnary",
@@ -117,6 +118,25 @@ const faqs = [
   },
 ];
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://appnary.com/" },
+    { "@type": "ListItem", position: 2, name: "Pixel Tracker", item: "https://appnary.com/pixel-tracker" },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -158,9 +178,31 @@ export default function PixelTrackerPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-4xl px-6 pt-6">
+        <ol className="flex items-center gap-2 text-xs text-muted-foreground">
+          <li>
+            <Link href="/" className="hover:text-foreground hover:underline">
+              Home
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" className="text-foreground">
+            Pixel Tracker
+          </li>
+        </ol>
+      </nav>
 
       {/* ── Hero ── */}
-      <section className="mx-auto max-w-4xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-20">
+      <section aria-label="Pixel Tracker overview" className="mx-auto max-w-4xl px-6 pt-14 pb-16 sm:pt-20 sm:pb-20">
         <div className="flex flex-col items-center text-center">
           <span className="mb-4 rounded-full bg-lime/80 px-3 py-0.5 text-xs font-semibold text-foreground/80">
             In Development
@@ -197,8 +239,8 @@ export default function PixelTrackerPage() {
       </section>
 
       {/* ── Features ── */}
-      <section className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
-        <h2 className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+      <section aria-labelledby="features-heading" className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
+        <h2 id="features-heading" className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           Features
         </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -218,8 +260,8 @@ export default function PixelTrackerPage() {
       </section>
 
       {/* ── Pricing ── */}
-      <section className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
-        <h2 className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+      <section aria-labelledby="pricing-heading" className="mx-auto max-w-5xl px-6 pb-16 sm:pb-20">
+        <h2 id="pricing-heading" className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           Pricing
         </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -265,8 +307,8 @@ export default function PixelTrackerPage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
-        <h2 className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+      <section aria-labelledby="faq-heading" className="mx-auto max-w-3xl px-6 pb-16 sm:pb-20">
+        <h2 id="faq-heading" className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           Frequently Asked Questions
         </h2>
         <div className="space-y-3">
@@ -286,6 +328,35 @@ export default function PixelTrackerPage() {
           ))}
         </div>
       </section>
+
+      {/* ── Setup guides ── */}
+      <aside aria-labelledby="guides-heading" className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
+        <div className="rounded-2xl border border-border-themed bg-section p-6 sm:p-8">
+          <h2 id="guides-heading" className="text-lg font-semibold text-foreground">
+            Platform setup guides
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground-strong">
+            Step-by-step instructions for connecting each ad platform once Pixel Tracker is installed.
+          </p>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-3">
+            <li>
+              <Link href="/pixel-tracker/meta-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Meta Pixel setup →
+              </Link>
+            </li>
+            <li>
+              <Link href="/pixel-tracker/google-ads" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Google Ads tag setup →
+              </Link>
+            </li>
+            <li>
+              <Link href="/pixel-tracker/tiktok-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                TikTok Pixel setup →
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </>
   );
 }
