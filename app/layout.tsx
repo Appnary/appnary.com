@@ -45,6 +45,15 @@ const jsonLd = {
   url: baseUrl,
   logo: `${baseUrl}/appnary-logo.svg`,
   description: "Simple, affordable Shopify apps for merchants.",
+  foundingDate: "2026",
+  founder: {
+    "@type": "Person",
+    name: "Harun R. Rayhan",
+  },
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Binary Labs LLC",
+  },
   sameAs: [],
 };
 
