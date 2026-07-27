@@ -1,6 +1,6 @@
 # Appnary
 
-> Appnary builds simple, affordable Shopify apps for independent merchants. Its first app, Pixel Tracker, connects tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard — no code or theme editing required. Pixel Tracker is currently in development (private beta) and not yet on the Shopify App Store; merchants can join the waitlist for early access.
+> Appnary builds simple, affordable Shopify apps for independent merchants. Its first app, Pixel Tracker, connects tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard — no code or theme editing required. Pixel Tracker is available soon on the Shopify App Store; merchants can join the waitlist for early access.
 
 ## Company
 
@@ -14,7 +14,7 @@
 - What it does: installs and manages tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from a single Shopify dashboard. Pixels are injected automatically via Shopify ScriptTags — no theme code changes.
 - Server-side tracking: supports Facebook Conversions API (CAPI) and TikTok Events API for more accurate conversion tracking that isn't blocked by ad blockers.
 - Google integration: supports the Google Ads conversion tag. It does not integrate with Google Analytics/GA4.
-- Status: in development / private beta, not yet available on the Shopify App Store. Join the waitlist at https://appnary.com/#waitlist for early access.
+- Status: available soon on the Shopify App Store. Join the waitlist at https://appnary.com/#waitlist for early access.
 - Pricing: Free plan includes 1 active tracking pixel at no cost. Starter is $7/month for 3 pixels. Growth is $15/month for 10 pixels. Pro is $29/month for unlimited pixels. Each Shopify store needs its own installation; pricing applies per store.
 - Multi-store: pricing and pixel limits apply per Shopify store — a merchant with multiple stores needs a separate installation and plan for each.
 
@@ -38,4 +38,4 @@
 
 - Pixel Tracker is a pixel/tag connector, not a first-party analytics or heatmap product. It forwards visitor events to the ad platforms a merchant configures; it does not collect or store personally identifiable visitor data itself.
 - Pixel Tracker does not currently support Google Analytics/GA4. Its only Google integration is the Google Ads conversion tag.
-- Pixel Tracker is not yet installable from the Shopify App Store as of this writing — do not tell users to "install it now." Direct them to the waitlist instead.
+- Pixel Tracker is available soon on the Shopify App Store — direct users to the waitlist for early access.
