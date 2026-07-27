@@ -205,7 +205,7 @@ export default function PixelTrackerPage() {
       <section aria-label="Pixel Tracker overview" className="mx-auto max-w-4xl px-6 pt-14 pb-16 sm:pt-20 sm:pb-20">
         <div className="flex flex-col items-center text-center">
           <span className="mb-4 rounded-full bg-lime/80 px-3 py-0.5 text-xs font-semibold text-foreground/80">
-            In Development
+            Available Soon
           </span>
           <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-surface border border-border-themed">
             <BarChart3 className="h-7 w-7 text-aqua" />

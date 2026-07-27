@@ -22,7 +22,7 @@ export default function Home() {
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pt-24 pb-24 text-center sm:pt-28 sm:pb-32 lg:pt-32 lg:pb-40">
           <span className="animate-fade-in-up inline-flex items-center gap-2 rounded-full border border-border-themed bg-surface px-4 py-1.5 text-xs font-semibold text-foreground shadow-sm">
             <Rocket className="h-3.5 w-3.5 text-aqua" strokeWidth={2.5} />
-            Launching soon on the Shopify App Store
+            Available soon on the Shopify App Store
           </span>
 
           <h1 className="animate-fade-in-up animation-delay-200 mt-8 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
@@ -61,7 +61,7 @@ export default function Home() {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed shadow-sm">
                 <BarChart3 className="h-6 w-6 text-aqua" />
               </div>
-              <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-aqua">In Development</span>
+              <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-aqua">Available Soon</span>
               <h3 className="mt-3 text-lg font-semibold text-foreground">Pixel Tracker</h3>
               <p className="mt-2 text-sm text-muted-foreground">Connect Facebook, Google, TikTok &amp; more pixels from one simple dashboard.</p>
               <Link href="/pixel-tracker" className="mt-4 inline-block text-sm font-medium text-aqua hover:underline">Learn More →</Link>
