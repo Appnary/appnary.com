@@ -54,7 +54,10 @@ const jsonLd = {
     "@type": "Organization",
     name: "Binary Labs LLC",
   },
-  sameAs: [],
+  sameAs: [
+    "https://github.com/Appnary",
+    "https://x.com/appnary",
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
