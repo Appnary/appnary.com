@@ -354,6 +354,26 @@ export default function PixelTrackerPage() {
                 TikTok Pixel setup →
               </Link>
             </li>
+            <li>
+              <Link href="/pixel-tracker/snapchat-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Snapchat Pixel setup →
+              </Link>
+            </li>
+            <li>
+              <Link href="/pixel-tracker/pinterest-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Pinterest Tag setup →
+              </Link>
+            </li>
+            <li>
+              <Link href="/pixel-tracker/linkedin-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                LinkedIn Insight Tag setup →
+              </Link>
+            </li>
+            <li>
+              <Link href="/pixel-tracker/twitter-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                X (Twitter) Pixel setup →
+              </Link>
+            </li>
           </ul>
         </div>
       </aside>

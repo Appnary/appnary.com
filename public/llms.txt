@@ -25,6 +25,10 @@
 - [Meta Pixel setup guide](https://appnary.com/pixel-tracker/meta-pixel) — How to connect a Facebook/Meta Pixel through Pixel Tracker.
 - [Google Ads tag setup guide](https://appnary.com/pixel-tracker/google-ads) — How to connect a Google Ads conversion tag through Pixel Tracker.
 - [TikTok Pixel setup guide](https://appnary.com/pixel-tracker/tiktok-pixel) — How to connect a TikTok Pixel through Pixel Tracker.
+- [Snapchat Pixel setup guide](https://appnary.com/pixel-tracker/snapchat-pixel) — How to connect a Snapchat Pixel through Pixel Tracker.
+- [Pinterest Tag setup guide](https://appnary.com/pixel-tracker/pinterest-pixel) — How to connect a Pinterest Tag through Pixel Tracker.
+- [LinkedIn Insight Tag setup guide](https://appnary.com/pixel-tracker/linkedin-pixel) — How to connect a LinkedIn Insight Tag through Pixel Tracker.
+- [X (Twitter) Pixel setup guide](https://appnary.com/pixel-tracker/twitter-pixel) — How to connect an X (Twitter) Pixel through Pixel Tracker.
 - [Compare](https://appnary.com/compare) — How Pixel Tracker stacks up against alternatives.
 - [Docs](https://appnary.com/docs) — Setup guide and frequently asked questions.
 - [Changelog](https://appnary.com/changelog) — Release history and roadmap.
