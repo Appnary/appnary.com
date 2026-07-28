@@ -40,6 +40,11 @@
 - [Pixel Tracker vs MultiPixels](https://appnary.com/vs/multipixels-alternative) — Comparison with MultiPixels, a Shopify social pixel app.
 - [Pixel Tracker vs Pixelfy](https://appnary.com/vs/pixelfy-alternative) — Comparison with Pixelfy, a Shopify multi-pixel app.
 - [Pixel Tracker vs Shoptok](https://appnary.com/vs/shoptok-alternative) — Comparison with Shoptok, a Shopify pixel tracking app.
+- [Best Shopify Pixel Tracking Apps](https://appnary.com/alternatives/best-shopify-pixel-tracking-apps) — Roundup ranking 7 Shopify pixel tracking apps, including Pixel Tracker.
+- [Best Shopify Ad Tracking Tools](https://appnary.com/alternatives/best-shopify-ad-tracking-tools) — Roundup comparing pixel installers and attribution platforms for Shopify ad tracking.
+- [Best Shopify ROAS Calculators](https://appnary.com/alternatives/best-shopify-roas-calculators) — Roundup of Shopify ROAS/profit calculator apps and where Pixel Tracker's data layer fits in.
+- [Best Shopify Conversion Tracking Apps](https://appnary.com/alternatives/best-shopify-conversion-tracking-apps) — Roundup ranking Shopify apps on server-side (CAPI/Events API) conversion tracking.
+- [Best Shopify Analytics Apps](https://appnary.com/alternatives/best-shopify-analytics-apps) — Roundup of Shopify analytics/reporting apps and where Pixel Tracker's tracking layer fits in.
 - [Docs](https://appnary.com/docs) — Setup guide and frequently asked questions.
 - [Changelog](https://appnary.com/changelog) — Release history and roadmap.
 - [Blog](https://appnary.com/blog) — Articles on Shopify analytics and marketing.
