@@ -1,0 +1,12 @@
+# Learn about extension config at https://shopify.dev/docs/themes/extensions/ext
+type = "theme"
+name = "Pixel Tracker"
+version = "1.0.0"
+description = "Auto-inject tracking pixels (Google, Facebook, TikTok, Pinterest, LinkedIn, Snapchat, Twitter) based on merchant configuration."
+
+target_shopify_online_store_version = "2.0"
+
+[[blocks]]
+type = "pixel_tracker"
+name = "Pixel Tracker"
+description = "Injects configured tracking pixels into the storefront."

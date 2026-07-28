@@ -1,0 +1,66 @@
+{% comment %}
+  Pixel Tracker — App Block
+  Auto-injects tracking pixels based on merchant's configured keys.
+  Place this block in your theme header or footer via the theme editor.
+
+  Metafields (set by the embedded app):
+    pixel_tracker.google_ads        — Google Ads measurement ID (G-XXXXXXXXXX)
+    pixel_tracker.facebook          — Facebook/Meta Pixel ID (XXXXXXXXXXXXXXX)
+    pixel_tracker.tiktok            — TikTok Pixel ID (XXXXXXX...)
+    pixel_tracker.pinterest         — Pinterest Tag ID (261...)
+    pixel_tracker.linkedin          — LinkedIn Insight Partner ID (XXXXXXX)
+    pixel_tracker.snapchat          — Snapchat Pixel ID (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+    pixel_tracker.twitter           — Twitter/X Pixel ID (o9x...)
+    pixel_tracker.consent_mode      — "auto" | "cookiebot" | "onetrust" | "none"
+    pixel_tracker.debug             — "true" | "false"
+{% endcomment %}
+
+{%- assign google_ads_id = shop.metafields.pixel_tracker.google_ads -%}
+{%- assign facebook_id = shop.metafields.pixel_tracker.facebook -%}
+{%- assign tiktok_id = shop.metafields.pixel_tracker.tiktok -%}
+{%- assign pinterest_id = shop.metafields.pixel_tracker.pinterest -%}
+{%- assign linkedin_id = shop.metafields.pixel_tracker.linkedin -%}
+{%- assign snapchat_id = shop.metafields.pixel_tracker.snapchat -%}
+{%- assign twitter_id = shop.metafields.pixel_tracker.twitter -%}
+{%- assign consent_mode = shop.metafields.pixel_tracker.consent_mode | default: "auto" -%}
+{%- assign debug_mode = shop.metafields.pixel_tracker.debug | default: "false" -%}
+
+{%- if google_ads_id != blank or facebook_id != blank or tiktok_id != blank or pinterest_id != blank or linkedin_id != blank or snapchat_id != blank or twitter_id != blank -%}
+
+  {%- comment -%}
+    Pass config to tracker.js via a JSON script tag (no inline scripts needed — CSP friendly)
+  {%- endcomment -%}
+  <script id="pixel-tracker-config" type="application/json">
+    {
+      "google_ads": {{ google_ads_id | json }},
+      "facebook": {{ facebook_id | json }},
+      "tiktok": {{ tiktok_id | json }},
+      "pinterest": {{ pinterest_id | json }},
+      "linkedin": {{ linkedin_id | json }},
+      "snapchat": {{ snapchat_id | json }},
+      "twitter": {{ twitter_id | json }},
+      "consent_mode": {{ consent_mode | json }},
+      "debug": {{ debug_mode | json }}
+    }
+  </script>
+
+  {%- comment -%}
+    Load consent adapter first (small, fast), then tracker engine
+  {%- endcomment -%}
+  {{ 'consent.js' | asset_url | append: '?v=1.0.0' | script_tag_deferred }}
+  {{ 'tracker.js' | asset_url | append: '?v=1.0.0' | script_tag_deferred }}
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Pixel Tracker",
+  "target": "head",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Configures tracking keys in the app settings. Pixels load asynchronously and respect visitor consent."
+    }
+  ]
+}
+{% endschema %}
