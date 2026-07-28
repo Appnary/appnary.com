@@ -30,6 +30,21 @@
 - [LinkedIn Insight Tag setup guide](https://appnary.com/pixel-tracker/linkedin-pixel) — How to connect a LinkedIn Insight Tag through Pixel Tracker.
 - [X (Twitter) Pixel setup guide](https://appnary.com/pixel-tracker/twitter-pixel) — How to connect an X (Twitter) Pixel through Pixel Tracker.
 - [Compare](https://appnary.com/compare) — How Pixel Tracker stacks up against alternatives.
+- [Pixel Tracker vs TiXel](https://appnary.com/vs/tixel-alternative) — Comparison with TiXel, a multi-platform Shopify pixel app.
+- [Pixel Tracker vs Infinite Pixels](https://appnary.com/vs/infinite-pixel-alternative) — Comparison with Infinite (∞ Facebook Pixel-TikTok Pixel).
+- [Pixel Tracker vs Omega Pixel](https://appnary.com/vs/omega-pixel-alternative) — Comparison with Omega (Ⓩ Facebook Pixel TikTok Pixel).
+- [Pixel Tracker vs Trackify](https://appnary.com/vs/trackify-alternative) — Comparison with Trackify, a Shopify pixel tracking app.
+- [Pixel Tracker vs OnePixel](https://appnary.com/vs/onepixel-alternative) — Comparison with OnePixel, a Shopify pixel tracking app.
+- [Pixel Tracker vs Avantify](https://appnary.com/vs/avantify-alternative) — Comparison with Avantify, a Shopify server-side tracking app.
+- [Pixel Tracker vs Pixee](https://appnary.com/vs/pixee-alternative) — Comparison with Pixee, a Shopify multi-pixel app.
+- [Pixel Tracker vs MultiPixels](https://appnary.com/vs/multipixels-alternative) — Comparison with MultiPixels, a Shopify social pixel app.
+- [Pixel Tracker vs Pixelfy](https://appnary.com/vs/pixelfy-alternative) — Comparison with Pixelfy, a Shopify multi-pixel app.
+- [Pixel Tracker vs Shoptok](https://appnary.com/vs/shoptok-alternative) — Comparison with Shoptok, a Shopify pixel tracking app.
+- [Best Shopify Pixel Tracking Apps](https://appnary.com/alternatives/best-shopify-pixel-tracking-apps) — Roundup ranking 7 Shopify pixel tracking apps, including Pixel Tracker.
+- [Best Shopify Ad Tracking Tools](https://appnary.com/alternatives/best-shopify-ad-tracking-tools) — Roundup comparing pixel installers and attribution platforms for Shopify ad tracking.
+- [Best Shopify ROAS Calculators](https://appnary.com/alternatives/best-shopify-roas-calculators) — Roundup of Shopify ROAS/profit calculator apps and where Pixel Tracker's data layer fits in.
+- [Best Shopify Conversion Tracking Apps](https://appnary.com/alternatives/best-shopify-conversion-tracking-apps) — Roundup ranking Shopify apps on server-side (CAPI/Events API) conversion tracking.
+- [Best Shopify Analytics Apps](https://appnary.com/alternatives/best-shopify-analytics-apps) — Roundup of Shopify analytics/reporting apps and where Pixel Tracker's tracking layer fits in.
 - [Docs](https://appnary.com/docs) — Setup guide and frequently asked questions.
 - [Changelog](https://appnary.com/changelog) — Release history and roadmap.
 - [Blog](https://appnary.com/blog) — Articles on Shopify analytics and marketing.
