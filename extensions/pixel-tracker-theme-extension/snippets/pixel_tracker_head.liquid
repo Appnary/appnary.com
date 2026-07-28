@@ -1,0 +1,33 @@
+{% comment %}
+  Pixel Tracker — Head Snippet
+  Drop this into theme.liquid <head> if you prefer manual placement over the app block.
+  Usage: {% render 'pixel_tracker_head' %}
+{% endcomment %}
+
+{%- assign google_ads_id = shop.metafields.pixel_tracker.google_ads -%}
+{%- assign facebook_id = shop.metafields.pixel_tracker.facebook -%}
+{%- assign tiktok_id = shop.metafields.pixel_tracker.tiktok -%}
+{%- assign pinterest_id = shop.metafields.pixel_tracker.pinterest -%}
+{%- assign linkedin_id = shop.metafields.pixel_tracker.linkedin -%}
+{%- assign snapchat_id = shop.metafields.pixel_tracker.snapchat -%}
+{%- assign twitter_id = shop.metafields.pixel_tracker.twitter -%}
+{%- assign consent_mode = shop.metafields.pixel_tracker.consent_mode | default: "auto" -%}
+{%- assign debug_mode = shop.metafields.pixel_tracker.debug | default: "false" -%}
+
+{%- if google_ads_id != blank or facebook_id != blank or tiktok_id != blank or pinterest_id != blank or linkedin_id != blank or snapchat_id != blank or twitter_id != blank -%}
+  <script id="pixel-tracker-config" type="application/json">
+    {
+      "google_ads": {{ google_ads_id | json }},
+      "facebook": {{ facebook_id | json }},
+      "tiktok": {{ tiktok_id | json }},
+      "pinterest": {{ pinterest_id | json }},
+      "linkedin": {{ linkedin_id | json }},
+      "snapchat": {{ snapchat_id | json }},
+      "twitter": {{ twitter_id | json }},
+      "consent_mode": {{ consent_mode | json }},
+      "debug": {{ debug_mode | json }}
+    }
+  </script>
+  {{ 'consent.js' | asset_url | append: '?v=1.0.0' | script_tag_deferred }}
+  {{ 'tracker.js' | asset_url | append: '?v=1.0.0' | script_tag_deferred }}
+{%- endif -%}

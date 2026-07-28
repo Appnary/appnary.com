@@ -1,0 +1,15 @@
+{% comment %}
+  Pixel Tracker — Body Snippet
+  Drop this before </body> in theme.liquid for non-critical tracking elements.
+  The main pixel injection happens via pixel_tracker_head.liquid; this snippet
+  is a placeholder for future body-level extensions (e.g., scroll tracking,
+  heatmap scripts, or delayed pixel firing for CMP compatibility).
+
+  Usage: {% render 'pixel_tracker_body' %}
+{% endcomment %}
+
+{%- comment -%}
+  Body-level tracking elements go here. Currently a no-op since all pixel
+  injection is managed by tracker.js loaded in the head. This snippet exists
+  for future extensibility (e.g., Hotjar, CrazyEgg, or other body-injected scripts).
+{%- endcomment -%}
