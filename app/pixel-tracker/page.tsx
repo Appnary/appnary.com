@@ -375,6 +375,13 @@ export default function PixelTrackerPage() {
               </Link>
             </li>
           </ul>
+          <p className="mt-4 text-sm text-muted-foreground-strong">
+            Want more depth? See the full{" "}
+            <Link href="/pixel-tracker/guides" className="font-medium text-aqua hover:underline">
+              tracking guides
+            </Link>
+            .
+          </p>
         </div>
       </aside>
     </>

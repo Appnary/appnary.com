@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Calendar, Clock, Tag as TagIcon } from "lucide-react";
+import { ArrowLeft, Calendar, ChevronDown, Clock, Tag as TagIcon } from "lucide-react";
 import {
   formatDate,
   getAllPosts,
   getPostBySlug,
   renderBody,
 } from "@/lib/blog";
+import { InlineText } from "@/components/inline-text";
+import { stripInline } from "@/lib/text";
+
+const baseUrl = "https://appnary.com";
 
 type Params = { slug: string };
 
@@ -51,9 +55,60 @@ export default function BlogPostPage({ params }: { params: Params }) {
     currentIdx >= 0 && currentIdx < allPosts.length - 1
       ? allPosts[currentIdx + 1]
       : null;
+  const faqs = post.faqs ?? [];
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${baseUrl}/blog/${post.slug}` },
+    ],
+  };
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.publishedAt,
+    author: { "@type": "Organization", name: post.author },
+    publisher: { "@type": "Organization", name: "Appnary" },
+    mainEntityOfPage: `${baseUrl}/blog/${post.slug}`,
+    image: `${baseUrl}/og-image.png`,
+  };
+
+  const faqJsonLd =
+    faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: { "@type": "Answer", text: stripInline(faq.a) },
+          })),
+        }
+      : null;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
+
       <article className="mx-auto max-w-3xl px-6 pt-16 pb-16 sm:pt-24">
         <Link
           href="/blog"
@@ -87,7 +142,9 @@ export default function BlogPostPage({ params }: { params: Params }) {
 
         <div className="mt-10 space-y-5 text-base text-muted-foreground-strong leading-relaxed">
           {paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
+            <p key={i}>
+              <InlineText text={p} />
+            </p>
           ))}
         </div>
 
@@ -103,6 +160,33 @@ export default function BlogPostPage({ params }: { params: Params }) {
               </span>
             ))}
           </div>
+        )}
+
+        {faqs.length > 0 && (
+          <section aria-labelledby="faq-heading" className="mt-12 border-t border-border-themed pt-10">
+            <h2
+              id="faq-heading"
+              className="mb-6 text-2xl font-bold tracking-tight text-foreground"
+            >
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-3">
+              {faqs.map((faq) => (
+                <details
+                  key={faq.q}
+                  className="group rounded-xl border border-border-themed bg-surface shadow-sm transition-all open:border-aqua/30"
+                >
+                  <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-medium text-foreground list-none">
+                    {faq.q}
+                    <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180 shrink-0" />
+                  </summary>
+                  <div className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">
+                    <InlineText text={faq.a} />
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
         )}
       </article>
 

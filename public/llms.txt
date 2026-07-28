@@ -29,6 +29,13 @@
 - [Pinterest Tag setup guide](https://appnary.com/pixel-tracker/pinterest-pixel) — How to connect a Pinterest Tag through Pixel Tracker.
 - [LinkedIn Insight Tag setup guide](https://appnary.com/pixel-tracker/linkedin-pixel) — How to connect a LinkedIn Insight Tag through Pixel Tracker.
 - [X (Twitter) Pixel setup guide](https://appnary.com/pixel-tracker/twitter-pixel) — How to connect an X (Twitter) Pixel through Pixel Tracker.
+- [Guides](https://appnary.com/pixel-tracker/guides) — Hub for in-depth Pixel Tracker setup and strategy guides.
+- [Facebook Pixel setup guide](https://appnary.com/pixel-tracker/guides/facebook-pixel-setup) — Complete walkthrough for setting up the Meta Pixel on Shopify.
+- [Google Ads conversion tracking guide](https://appnary.com/pixel-tracker/guides/google-ads-conversion-tracking) — How to track Google Ads conversions on Shopify.
+- [TikTok Pixel setup guide (in-depth)](https://appnary.com/pixel-tracker/guides/tiktok-pixel-setup) — Full TikTok pixel setup guide for Shopify stores.
+- [Server-side tracking guide](https://appnary.com/pixel-tracker/guides/server-side-tracking) — Server-side tracking explained for Shopify merchants.
+- [ROAS calculation guide](https://appnary.com/pixel-tracker/guides/roas-calculation) — How to calculate ROAS on Shopify.
+- [Multi-channel attribution guide](https://appnary.com/pixel-tracker/guides/multi-channel-attribution) — Multi-channel ad attribution for Shopify stores.
 - [Compare](https://appnary.com/compare) — How Pixel Tracker stacks up against alternatives.
 - [Pixel Tracker vs TiXel](https://appnary.com/vs/tixel-alternative) — Comparison with TiXel, a multi-platform Shopify pixel app.
 - [Pixel Tracker vs Infinite Pixels](https://appnary.com/vs/infinite-pixel-alternative) — Comparison with Infinite (∞ Facebook Pixel-TikTok Pixel).
@@ -47,7 +54,15 @@
 - [Best Shopify Analytics Apps](https://appnary.com/alternatives/best-shopify-analytics-apps) — Roundup of Shopify analytics/reporting apps and where Pixel Tracker's tracking layer fits in.
 - [Docs](https://appnary.com/docs) — Setup guide and frequently asked questions.
 - [Changelog](https://appnary.com/changelog) — Release history and roadmap.
-- [Blog](https://appnary.com/blog) — Articles on Shopify analytics and marketing.
+- [Blog](https://appnary.com/blog) — Articles on Shopify analytics and marketing, including ROAS accuracy, pixel setup, server-side tracking, and privacy-first tracking.
+- [Why Your Shopify ROAS Is Inaccurate](https://appnary.com/blog/why-shopify-roas-is-inaccurate) — Why platform-reported ROAS overlaps across ad platforms and how to build a blended number.
+- [Facebook Pixel vs Google Tag](https://appnary.com/blog/facebook-pixel-vs-google-tag) — Which tracking tag a merchant needs depending on where ad spend goes.
+- [TikTok Pixel Setup on Shopify](https://appnary.com/blog/tiktok-pixel-setup-shopify) — Step-by-step TikTok pixel setup for Shopify merchants.
+- [How to Track Ad Spend Across Multiple Platforms](https://appnary.com/blog/track-ad-spend-multiple-platforms) — Building a blended CAC view across ad platforms.
+- [Shopify Analytics vs Google Analytics](https://appnary.com/blog/shopify-analytics-vs-google-analytics) — Comparing Shopify's native analytics with GA4.
+- [The Complete Guide to Shopify Server-Side Tracking](https://appnary.com/blog/shopify-server-side-tracking-guide) — Why server-side tracking matters and what Pixel Tracker supports.
+- [How to Calculate True ROAS (Including Returns)](https://appnary.com/blog/calculate-true-roas) — Adjusting ROAS for returns and refunds.
+- [Privacy-First Tracking for Shopify in 2026](https://appnary.com/blog/privacy-first-tracking-shopify) — What privacy-first tracking means and how it differs from no tracking at all.
 - [About](https://appnary.com/about) — Company mission, values, and story.
 - [Contact](https://appnary.com/contact) — Support, pre-sales, partnership, and press contact.
 - [Privacy](https://appnary.com/privacy) — Privacy policy.

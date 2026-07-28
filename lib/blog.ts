@@ -8,6 +8,8 @@
  * To add a post: append it to `content/blog/posts.ts`.
  */
 
+export type BlogFaq = { q: string; a: string };
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -17,7 +19,8 @@ export type BlogPost = {
   author: string;
   readingMinutes: number;
   tags: string[];
-  body: string; // Plain text with paragraph breaks (blank lines).
+  body: string; // Plain text with paragraph breaks (blank lines). Supports [label](href) links.
+  faqs?: BlogFaq[];
 };
 
 // Import the seed list. Adding a new post is just appending to that file.
