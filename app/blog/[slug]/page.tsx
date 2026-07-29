@@ -13,18 +13,19 @@ import { stripInline } from "@/lib/text";
 
 const baseUrl = "https://appnary.com";
 
-type Params = { slug: string };
+type Params = Promise<{ slug: string }>;
 
-export function generateStaticParams(): Params[] {
+export function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: Params;
-}): Metadata {
-  const post = getPostBySlug(params.slug);
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) {
     return { title: "Post not found | Appnary Blog" };
   }
@@ -43,8 +44,9 @@ export function generateMetadata({
   };
 }
 
-export default function BlogPostPage({ params }: { params: Params }) {
-  const post = getPostBySlug(params.slug);
+export default async function BlogPostPage({ params }: { params: Params }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) notFound();
 
   const paragraphs = renderBody(post.body);
