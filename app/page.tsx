@@ -1,10 +1,54 @@
+import type { Metadata } from "next";
 import WaitlistForm from "@/components/waitlist-form";
 import Link from "next/link";
-import { BarChart3, Rocket, Sparkles, Tag } from "lucide-react";
+import { BarChart3, ChevronDown, Rocket, Sparkles, Tag } from "lucide-react";
+
+export const metadata: Metadata = {
+  description:
+    "Appnary builds Pixel Tracker, connecting Facebook, Google, and TikTok pixels on your Shopify store from one dashboard — no code or theme edits required.",
+  openGraph: {
+    description:
+      "Pixel Tracker connects Shopify pixel tracking for Facebook, Google, and TikTok from one dashboard — no code required.",
+  },
+};
+
+const homeFaqs = [
+  {
+    q: "What does Appnary build?",
+    a: "Appnary builds simple, affordable Shopify apps for independent merchants, starting with Pixel Tracker, a multi-platform tracking pixel connector.",
+  },
+  {
+    q: "What is Pixel Tracker?",
+    a: "Pixel Tracker connects tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard, with no theme code editing required.",
+  },
+  {
+    q: "Is Pixel Tracker available now?",
+    a: "Pixel Tracker is available soon on the Shopify App Store. Join the waitlist for early access and launch pricing.",
+  },
+  {
+    q: "How much does Pixel Tracker cost?",
+    a: "Pixel Tracker starts free for 1 pixel, with paid plans from $7/month for 3 pixels up to $29/month for unlimited pixels, per Shopify store.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homeFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       <section
         id="hero"
         className="relative overflow-hidden bg-background text-foreground transition-colors"
@@ -85,6 +129,28 @@ export default function Home() {
               <p className="mt-2 text-sm text-muted-foreground">No surprises. Transparent, affordable pricing for every budget.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="faq-heading" className="mx-auto max-w-3xl px-6 py-20 sm:py-24">
+        <h2 id="faq-heading" className="mb-8 text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-3">
+          {homeFaqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="group rounded-xl border border-border-themed bg-surface shadow-sm transition-all open:border-aqua/30"
+            >
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-medium text-foreground list-none">
+                {faq.q}
+                <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180 shrink-0" />
+              </summary>
+              <div className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
         </div>
       </section>
     </>
