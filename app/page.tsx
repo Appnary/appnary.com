@@ -41,12 +41,62 @@ const faqJsonLd = {
   })),
 };
 
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Pixel Tracker",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Shopify",
+  description:
+    "Connect tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard.",
+  url: "https://appnary.com/pixel-tracker",
+  offers: [
+    {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      name: "Free",
+      description: "1 active pixel",
+    },
+    {
+      "@type": "Offer",
+      price: "7",
+      priceCurrency: "USD",
+      name: "Starter",
+      description: "3 active pixels",
+    },
+    {
+      "@type": "Offer",
+      price: "15",
+      priceCurrency: "USD",
+      name: "Growth",
+      description: "10 active pixels",
+    },
+    {
+      "@type": "Offer",
+      price: "29",
+      priceCurrency: "USD",
+      name: "Pro",
+      description: "Unlimited pixels",
+    },
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    ratingCount: "50",
+  },
+};
+
 export default function Home() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
 
       <section
