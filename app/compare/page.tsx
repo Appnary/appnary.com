@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Minus, X } from "lucide-react";
+import { Check, ChevronDown, Minus, X } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Pixel Tracker vs Manual Pixel Setup & Paid Tracking Apps | Appnary",
   description:
-    "How Pixel Tracker compares to manually adding tracking pixels via Shopify theme code, and to other paid Shopify tracking apps. An honest, side-by-side breakdown.",
+    "How Pixel Tracker compares to manually adding tracking pixels via Shopify theme code, and to other paid Shopify tracking apps — an honest breakdown.",
   openGraph: {
     title: "Pixel Tracker vs the alternatives",
     description:
@@ -114,6 +114,29 @@ function CellRenderer({ value }: { value: Cell }) {
   );
 }
 
+const faqs = [
+  {
+    q: "Is Pixel Tracker better than manually adding pixel code to my theme?",
+    a: "For most merchants, yes. Manual theme code is free but breaks silently on theme updates and needs a developer for each new platform. Pixel Tracker injects pixels via Shopify ScriptTags instead, so a theme change doesn't take your tracking down with it.",
+  },
+  {
+    q: "How does Pixel Tracker compare to other paid Shopify tracking apps?",
+    a: "Other paid apps vary — some support only one or two ad platforms, some charge per platform, and server-side event support isn't universal. Pixel Tracker covers seven platforms from one dashboard with pricing based on how many pixels you actually use.",
+  },
+  {
+    q: "Should I switch from my current tracking app to Pixel Tracker?",
+    a: "If your current app already covers every platform you advertise on, works reliably, and is priced fairly for your pixel count, there's no urgency to switch. Pixel Tracker is worth a look if you're paying for platforms you don't use, or your tracking has broken after a theme update before.",
+  },
+  {
+    q: "Does Pixel Tracker support server-side tracking like other apps?",
+    a: "Yes, for two platforms: Facebook Conversions API and TikTok Events API. Google Ads, Snapchat, Pinterest, X, and LinkedIn run as standard browser pixels through Pixel Tracker, with no server-side option yet.",
+  },
+  {
+    q: "What if I need more ad platforms than Pixel Tracker supports?",
+    a: "Pixel Tracker covers Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn. If you specifically need Reddit or Microsoft/Bing Ads tracking, the full alternatives roundup at /alternatives/best-shopify-pixel-tracking-apps compares apps that cover those platforms instead.",
+  },
+];
+
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -121,6 +144,16 @@ const breadcrumbJsonLd = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://appnary.com/" },
     { "@type": "ListItem", position: 2, name: "Compare", item: "https://appnary.com/compare" },
   ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
 };
 
 const softwareJsonLd = {
@@ -167,6 +200,10 @@ export default function ComparePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-6 pt-6">
@@ -339,6 +376,29 @@ export default function ComparePage() {
               See Pixel Tracker
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section aria-labelledby="faq-heading" className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
+        <h2 id="faq-heading" className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-3">
+          {faqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="group rounded-xl border border-border-themed bg-surface shadow-sm transition-all open:border-aqua/30"
+            >
+              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-medium text-foreground list-none">
+                {faq.q}
+                <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180 shrink-0" />
+              </summary>
+              <div className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
         </div>
       </section>
     </>

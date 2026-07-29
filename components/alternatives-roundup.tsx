@@ -117,7 +117,7 @@ export function AlternativesRoundup({
         applicationCategory: "BusinessApplication",
         operatingSystem: "Shopify",
         description: tool.blurb,
-        url: tool.href,
+        url: tool.external ? tool.href : `${baseUrl}${tool.href}`,
       },
     })),
   };
