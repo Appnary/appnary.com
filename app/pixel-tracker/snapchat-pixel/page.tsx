@@ -71,6 +71,11 @@ export default function SnapchatPixelGuidePage() {
       intro="Connect your Snapchat Pixel to your Shopify store in a few minutes — no theme code changes required."
       steps={steps}
       faqs={faqs}
+      relatedLinks={[
+        { label: "Snapchat Pixel troubleshooting", href: "/pixel-tracker/snapchat-pixel/troubleshooting" },
+        { label: "Snapchat Pixel events explained", href: "/pixel-tracker/snapchat-pixel/events" },
+        { label: "Snapchat server-side tracking", href: "/pixel-tracker/snapchat-pixel/server-side" },
+      ]}
     />
   );
 }

@@ -69,6 +69,11 @@ export default function TikTokPixelGuidePage() {
       intro="Connect your TikTok Pixel to your Shopify store in a few minutes — no theme code changes, with optional server-side Events API support."
       steps={steps}
       faqs={faqs}
+      relatedLinks={[
+        { label: "TikTok Pixel troubleshooting", href: "/pixel-tracker/tiktok-pixel/troubleshooting" },
+        { label: "TikTok Pixel events explained", href: "/pixel-tracker/tiktok-pixel/events" },
+        { label: "TikTok Pixel server-side tracking", href: "/pixel-tracker/tiktok-pixel/server-side" },
+      ]}
     />
   );
 }

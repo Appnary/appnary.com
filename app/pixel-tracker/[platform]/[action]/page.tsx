@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PlatformActionGuide } from "@/components/platform-action-guide";
-import {
-  getAllPlatformActionPages,
-  getPlatformActionPage,
-} from "@/content/platform-actions";
+import { getPlatformActionPage } from "@/content/platform-actions";
 import {
   ACTION_SLUGS,
   PLATFORM_ACTION_SLUGS,
@@ -54,9 +51,6 @@ export default async function PlatformActionPageRoute({
   const { platform, action } = await params;
   const page = getPlatformActionPage(platform, action);
   if (!page) notFound();
-
-  // Touch all pages so tree-shaking keeps the full matrix available.
-  void getAllPlatformActionPages();
 
   return <PlatformActionGuide page={page} />;
 }

@@ -71,6 +71,11 @@ export default function LinkedInPixelGuidePage() {
       intro="Connect your LinkedIn Insight Tag to your Shopify store in a few minutes — no theme code changes required."
       steps={steps}
       faqs={faqs}
+      relatedLinks={[
+        { label: "LinkedIn Insight Tag troubleshooting", href: "/pixel-tracker/linkedin-pixel/troubleshooting" },
+        { label: "LinkedIn Insight Tag events explained", href: "/pixel-tracker/linkedin-pixel/events" },
+        { label: "LinkedIn server-side tracking", href: "/pixel-tracker/linkedin-pixel/server-side" },
+      ]}
     />
   );
 }

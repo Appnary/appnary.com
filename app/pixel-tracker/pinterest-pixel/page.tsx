@@ -71,6 +71,11 @@ export default function PinterestPixelGuidePage() {
       intro="Connect your Pinterest Tag to your Shopify store in a few minutes — no theme code changes required."
       steps={steps}
       faqs={faqs}
+      relatedLinks={[
+        { label: "Pinterest Tag troubleshooting", href: "/pixel-tracker/pinterest-pixel/troubleshooting" },
+        { label: "Pinterest Tag events explained", href: "/pixel-tracker/pinterest-pixel/events" },
+        { label: "Pinterest server-side tracking", href: "/pixel-tracker/pinterest-pixel/server-side" },
+      ]}
     />
   );
 }

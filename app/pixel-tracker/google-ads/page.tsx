@@ -65,6 +65,11 @@ export default function GoogleAdsGuidePage() {
       intro="Connect a Google Ads conversion tag to your Shopify store in a few minutes — no theme code changes required."
       steps={steps}
       faqs={faqs}
+      relatedLinks={[
+        { label: "Google Ads troubleshooting", href: "/pixel-tracker/google-ads/troubleshooting" },
+        { label: "Google Ads events explained", href: "/pixel-tracker/google-ads/events" },
+        { label: "Google Ads server-side tracking", href: "/pixel-tracker/google-ads/server-side" },
+      ]}
     />
   );
 }
