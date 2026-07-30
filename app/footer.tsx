@@ -14,6 +14,7 @@ const columns = [
   {
     title: "Resources",
     links: [
+      { label: "Tools", href: "/tools" },
       { label: "Guides", href: "/pixel-tracker/guides" },
       { label: "Docs", href: "/docs" },
       { label: "Blog", href: "/blog" },
