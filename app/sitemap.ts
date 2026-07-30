@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/compare`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${baseUrl}/tools`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${baseUrl}/tools/pixel-tracking-calculator`, priority: 0.8, changeFrequency: "monthly" },
+    { url: `${baseUrl}/tools/pixel-health-check`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${baseUrl}/vs/tixel-alternative`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${baseUrl}/vs/infinite-pixel-alternative`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${baseUrl}/vs/omega-pixel-alternative`, priority: 0.7, changeFrequency: "monthly" },
