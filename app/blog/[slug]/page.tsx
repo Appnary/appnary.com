@@ -190,6 +190,32 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             </div>
           </section>
         )}
+
+        <aside
+          aria-labelledby="cta-heading"
+          className="mt-12 rounded-2xl border border-aqua/30 bg-aqua/5 p-6 text-center sm:p-8"
+        >
+          <p id="cta-heading" className="text-base font-semibold text-foreground">
+            Pixel Tracker is in development
+          </p>
+          <p className="mt-1 text-sm text-muted-foreground-strong">
+            Join the waitlist for early access when it launches on the Shopify App Store.
+          </p>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="/#waitlist"
+              className="inline-flex items-center justify-center rounded-lg bg-aqua px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-aqua/90"
+            >
+              Join the waitlist
+            </Link>
+            <Link
+              href="/pixel-tracker"
+              className="inline-flex items-center justify-center rounded-lg border border-border-themed bg-surface px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
+            >
+              See Pixel Tracker
+            </Link>
+          </div>
+        </aside>
       </article>
 
       {/* Older / newer */}

@@ -458,7 +458,7 @@ export function VsGuide({
             Pixel Tracker is in development
           </p>
           <p className="mt-1 text-sm text-muted-foreground-strong">
-            Join the waitlist for early access — available soon on the Shopify App Store.
+            Join the waitlist for early access. Available soon on the Shopify App Store.
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
             <Link
