@@ -69,6 +69,11 @@ export default function MetaPixelGuidePage() {
       intro="Connect your Facebook/Meta Pixel to your Shopify store in a few minutes — no theme code changes, with optional server-side Conversions API support."
       steps={steps}
       faqs={faqs}
+      relatedLinks={[
+        { label: "Meta Pixel troubleshooting", href: "/pixel-tracker/meta-pixel/troubleshooting" },
+        { label: "Meta Pixel events explained", href: "/pixel-tracker/meta-pixel/events" },
+        { label: "Meta Pixel server-side tracking", href: "/pixel-tracker/meta-pixel/server-side" },
+      ]}
     />
   );
 }

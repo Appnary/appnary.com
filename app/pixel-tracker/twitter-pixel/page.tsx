@@ -71,6 +71,11 @@ export default function TwitterPixelGuidePage() {
       intro="Connect your X (Twitter) Pixel to your Shopify store in a few minutes — no theme code changes required."
       steps={steps}
       faqs={faqs}
+      relatedLinks={[
+        { label: "X (Twitter) Pixel troubleshooting", href: "/pixel-tracker/twitter-pixel/troubleshooting" },
+        { label: "X (Twitter) Pixel events explained", href: "/pixel-tracker/twitter-pixel/events" },
+        { label: "X (Twitter) server-side tracking", href: "/pixel-tracker/twitter-pixel/server-side" },
+      ]}
     />
   );
 }

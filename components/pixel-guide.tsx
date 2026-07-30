@@ -3,6 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 type GuideStep = { title: string; body: string };
 type GuideFaq = { q: string; a: string };
+type RelatedLink = { label: string; href: string };
 
 interface PixelGuideProps {
   slug: string;
@@ -12,6 +13,7 @@ interface PixelGuideProps {
   intro: string;
   steps: GuideStep[];
   faqs: GuideFaq[];
+  relatedLinks?: RelatedLink[];
 }
 
 export function PixelGuide({
@@ -22,6 +24,7 @@ export function PixelGuide({
   intro,
   steps,
   faqs,
+  relatedLinks = [],
 }: PixelGuideProps) {
   const baseUrl = "https://appnary.com";
   const pageUrl = `${baseUrl}/pixel-tracker/${slug}`;
@@ -158,6 +161,29 @@ export function PixelGuide({
             ))}
           </div>
         </section>
+
+        {relatedLinks.length > 0 && (
+          <section aria-labelledby="related-heading" className="pb-16 sm:pb-20">
+            <h2
+              id="related-heading"
+              className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+            >
+              Related reading
+            </h2>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {relatedLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="flex h-full rounded-xl border border-border-themed bg-surface px-4 py-3 text-sm font-medium text-foreground transition-colors hover:border-aqua/40 hover:bg-section"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <aside aria-labelledby="cta-heading" className="rounded-2xl border border-aqua/30 bg-aqua/5 p-6 text-center sm:p-8">
           <p id="cta-heading" className="text-base font-semibold text-foreground">
