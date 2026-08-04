@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { getAllPlatformActionPages } from "@/content/platform-actions";
+import { getAllVsComparisons } from "@/content/vs-comparisons";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://appnary.com";
@@ -65,6 +66,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const vsComparisonPages = getAllVsComparisons().map((p) => ({
+    url: `${baseUrl}/vs/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticRoutes.map((r) => ({
       url: r.url,
@@ -74,5 +82,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...blogPosts,
     ...platformActionPages,
+    ...vsComparisonPages,
   ];
 }
