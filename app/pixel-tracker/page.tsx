@@ -384,6 +384,79 @@ export default function PixelTrackerPage() {
           </p>
         </div>
       </aside>
+
+      {/* ── How Pixel Tracker compares ── */}
+      <aside aria-labelledby="compares-heading" className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
+        <div className="rounded-2xl border border-border-themed bg-section p-6 sm:p-8">
+          <h2 id="compares-heading" className="text-lg font-semibold text-foreground">
+            How Pixel Tracker compares
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground-strong">
+            Honest side-by-side breakdowns against specific tracking tools and native channels.
+          </p>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            <li>
+              <Link href="/compare" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                See all comparisons →
+              </Link>
+            </li>
+            <li>
+              <Link href="/vs/elevar-alternative" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                vs Elevar →
+              </Link>
+            </li>
+            <li>
+              <Link href="/vs/trackbee-alternative" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                vs TrackBee →
+              </Link>
+            </li>
+            <li>
+              <Link href="/vs/facebook-instagram-alternative" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                vs Facebook Channel →
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      {/* ── Best-of roundups ── */}
+      <aside aria-labelledby="roundups-heading" className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
+        <div className="rounded-2xl border border-border-themed bg-section p-6 sm:p-8">
+          <h2 id="roundups-heading" className="text-lg font-semibold text-foreground">
+            Best-of roundups
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground-strong">
+            See where Pixel Tracker ranks against a wider field of Shopify apps in each category.
+          </p>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            <li>
+              <Link href="/alternatives/best-shopify-pixel-tracking-apps" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Best Pixel Tracking Apps →
+              </Link>
+            </li>
+            <li>
+              <Link href="/alternatives/best-shopify-ad-tracking-tools" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Best Ad Tracking Tools →
+              </Link>
+            </li>
+            <li>
+              <Link href="/alternatives/best-shopify-conversion-tracking-apps" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Best Conversion Tracking Apps →
+              </Link>
+            </li>
+            <li>
+              <Link href="/alternatives/best-shopify-analytics-apps" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Best Analytics Apps →
+              </Link>
+            </li>
+            <li>
+              <Link href="/alternatives/best-shopify-roas-calculators" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Best ROAS Calculators →
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </>
   );
 }
