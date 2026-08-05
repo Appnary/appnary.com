@@ -185,6 +185,14 @@ export function PixelGuide({
           </section>
         )}
 
+        <p className="pb-6 text-sm text-muted-foreground-strong">
+          Browse all{" "}
+          <Link href="/integrations" className="font-medium text-aqua hover:underline">
+            platform integrations
+          </Link>
+          .
+        </p>
+
         <aside aria-labelledby="cta-heading" className="rounded-2xl border border-aqua/30 bg-aqua/5 p-6 text-center sm:p-8">
           <p id="cta-heading" className="text-base font-semibold text-foreground">
             Pixel Tracker is in development
