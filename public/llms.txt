@@ -74,6 +74,10 @@
 - [The Complete Guide to Shopify Server-Side Tracking](https://appnary.com/blog/shopify-server-side-tracking-guide) — Why server-side tracking matters and what Pixel Tracker supports.
 - [How to Calculate True ROAS (Including Returns)](https://appnary.com/blog/calculate-true-roas) — Adjusting ROAS for returns and refunds.
 - [Privacy-First Tracking for Shopify in 2026](https://appnary.com/blog/privacy-first-tracking-shopify) — What privacy-first tracking means and how it differs from no tracking at all.
+- [How to Audit Your Ad Tracking Across Platforms](https://appnary.com/blog/multi-platform-ad-tracking-audit) — A one-afternoon routine for checking pixel health across Meta, Google, TikTok, and other platforms.
+- [Pixel Tracking Calculator](https://appnary.com/tools/pixel-tracking-calculator) — Estimates how many conversions your browser-only pixels miss and your likely coverage score.
+- [Pixel Health Check](https://appnary.com/tools/pixel-health-check) — Scans your storefront and setup to flag missing pixels, duplicates, and server-side gaps.
+- [Compare](https://appnary.com/compare) — Directory of all comparisons, alternatives, and side-by-side pages.
 - [About](https://appnary.com/about) — Company mission, values, and story.
 - [Contact](https://appnary.com/contact) — Support, pre-sales, partnership, and press contact.
 - [Privacy](https://appnary.com/privacy) — Privacy policy.
