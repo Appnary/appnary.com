@@ -1,140 +1,76 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ChevronDown, Minus, X } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Pixel Tracker vs Manual Pixel Setup & Paid Tracking Apps | Appnary",
+  title: "How Pixel Tracker Compares | Appnary",
   description:
-    "How Pixel Tracker compares to manually adding tracking pixels via Shopify theme code, and to other paid Shopify tracking apps — an honest breakdown.",
+    "See how Pixel Tracker compares to other Shopify pixel tracking apps, DIY setups, and attribution tools, plus a quick look at pricing.",
   openGraph: {
-    title: "Pixel Tracker vs the alternatives",
+    title: "How Pixel Tracker Compares",
     description:
-      "A clear, honest side-by-side comparison of Pixel Tracker, manual theme-code pixel setup, and other paid Shopify tracking apps.",
+      "A directory of every Pixel Tracker comparison, best-of roundup, and pricing tier.",
     url: "https://appnary.com/compare",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
 };
 
-type Cell = boolean | "varies" | string;
+const vsCompetitors = [
+  { name: "TiXel", slug: "tixel-alternative" },
+  { name: "Infinite Pixels", slug: "infinite-pixel-alternative" },
+  { name: "Omega Pixel", slug: "omega-pixel-alternative" },
+  { name: "Trackify", slug: "trackify-alternative" },
+  { name: "OnePixel", slug: "onepixel-alternative" },
+  { name: "Avantify", slug: "avantify-alternative" },
+  { name: "Pixee", slug: "pixee-alternative" },
+  { name: "MultiPixels", slug: "multipixels-alternative" },
+  { name: "Pixelfy", slug: "pixelfy-alternative" },
+  { name: "Shoptok", slug: "shoptok-alternative" },
+  { name: "Elevar", slug: "elevar-alternative" },
+  { name: "Facebook & Instagram Channel", slug: "facebook-instagram-alternative" },
+  { name: "Google Tag Manager", slug: "google-tag-manager-alternative" },
+  { name: "Littledata", slug: "littledata-alternative" },
+  { name: "TrackBee", slug: "trackbee-alternative" },
+  { name: "Hyros", slug: "hyros-alternative" },
+  { name: "Northbeam", slug: "northbeam-alternative" },
+  { name: "Lifetimely", slug: "lifetimely-alternative" },
+  { name: "DIY Theme Code", slug: "diy-vs-app" },
+  { name: "Server-Side Setup Options", slug: "server-side-setup-options" },
+];
 
-const rows: { feature: string; values: Record<string, Cell> }[] = [
+const alternativesCategories = [
   {
-    feature: "No theme code editing required",
-    values: { pixel: true, manual: false, paid: "varies" },
+    name: "Best Shopify Pixel Tracking Apps",
+    slug: "best-shopify-pixel-tracking-apps",
+    blurb: "7 pixel tracking apps compared side by side.",
   },
   {
-    feature: "7 ad platforms from one dashboard",
-    values: { pixel: true, manual: false, paid: "varies" },
+    name: "Best Shopify Ad Tracking Tools",
+    slug: "best-shopify-ad-tracking-tools",
+    blurb: "Pixel installers and attribution platforms compared.",
   },
   {
-    feature: "Server-side events (CAPI / Events API)",
-    values: { pixel: true, manual: false, paid: "varies" },
+    name: "Best Shopify ROAS Calculators",
+    slug: "best-shopify-roas-calculators",
+    blurb: "ROAS and profit calculator apps compared.",
   },
   {
-    feature: "Survives theme updates without breaking",
-    values: { pixel: true, manual: false, paid: true },
+    name: "Best Shopify Conversion Tracking Apps",
+    slug: "best-shopify-conversion-tracking-apps",
+    blurb: "Apps ranked on server-side conversion tracking.",
   },
   {
-    feature: "No developer needed",
-    values: { pixel: true, manual: false, paid: true },
-  },
-  {
-    feature: "Flat, transparent per-store pricing",
-    values: { pixel: true, manual: true, paid: "varies" },
-  },
-  {
-    feature: "Setup time per platform",
-    values: { pixel: "Minutes", manual: "Hours", paid: "Minutes–hours" },
-  },
-  {
-    feature: "Free plan available",
-    values: { pixel: true, manual: true, paid: "varies" },
+    name: "Best Shopify Analytics Apps",
+    slug: "best-shopify-analytics-apps",
+    blurb: "Analytics and reporting apps compared.",
   },
 ];
 
-const competitors = [
-  {
-    key: "pixel",
-    name: "Pixel Tracker",
-    blurb: "Multi-platform tracking pixel connector for Shopify, from Appnary.",
-    price: "Free – $29/mo",
-    href: "/pixel-tracker",
-    cta: "See Pixel Tracker",
-  },
-  {
-    key: "manual",
-    name: "Manual theme code",
-    blurb: "Pasting each platform's pixel snippet directly into your theme files.",
-    price: "Free (developer time)",
-    href: null,
-    cta: null,
-  },
-  {
-    key: "paid",
-    name: "Other paid tracking apps",
-    blurb: "Single-platform or bundled tracking apps in the Shopify App Store.",
-    price: "$10–$50+/mo",
-    href: null,
-    cta: null,
-  },
-];
-
-function CellRenderer({ value }: { value: Cell }) {
-  if (value === true) {
-    return (
-      <Check
-        className="mx-auto h-5 w-5 text-aqua"
-        strokeWidth={2.5}
-        aria-label="Yes"
-      />
-    );
-  }
-  if (value === false) {
-    return (
-      <X
-        className="mx-auto h-5 w-5 text-muted-foreground-faint"
-        strokeWidth={2.5}
-        aria-label="No"
-      />
-    );
-  }
-  if (value === "varies") {
-    return (
-      <Minus
-        className="mx-auto h-5 w-5 text-muted-foreground"
-        strokeWidth={2.5}
-        aria-label="Varies"
-      />
-    );
-  }
-  return (
-    <span className="text-xs font-medium text-muted-foreground-strong">
-      {value}
-    </span>
-  );
-}
-
-const faqs = [
-  {
-    q: "Is Pixel Tracker better than manually adding pixel code to my theme?",
-    a: "For most merchants, yes. Manual theme code is free but breaks silently on theme updates and needs a developer for each new platform. Pixel Tracker injects pixels via Shopify ScriptTags instead, so a theme change doesn't take your tracking down with it.",
-  },
-  {
-    q: "How does Pixel Tracker compare to other paid Shopify tracking apps?",
-    a: "Other paid apps vary — some support only one or two ad platforms, some charge per platform, and server-side event support isn't universal. Pixel Tracker covers seven platforms from one dashboard with pricing based on how many pixels you actually use.",
-  },
-  {
-    q: "Should I switch from my current tracking app to Pixel Tracker?",
-    a: "If your current app already covers every platform you advertise on, works reliably, and is priced fairly for your pixel count, there's no urgency to switch. Pixel Tracker is worth a look if you're paying for platforms you don't use, or your tracking has broken after a theme update before.",
-  },
-  {
-    q: "Does Pixel Tracker support server-side tracking like other apps?",
-    a: "Yes, for two platforms: Facebook Conversions API and TikTok Events API. Google Ads, Snapchat, Pinterest, X, and LinkedIn run as standard browser pixels through Pixel Tracker, with no server-side option yet.",
-  },
-  {
-    q: "What if I need more ad platforms than Pixel Tracker supports?",
-    a: "Pixel Tracker covers Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn. If you specifically need Reddit or Microsoft/Bing Ads tracking, the full alternatives roundup at /alternatives/best-shopify-pixel-tracking-apps compares apps that cover those platforms instead.",
-  },
+const pricingTiers = [
+  { plan: "Free", price: "$0", pixels: "1 pixel" },
+  { plan: "Starter", price: "$7/mo", pixels: "3 pixels" },
+  { plan: "Growth", price: "$15/mo", pixels: "10 pixels" },
+  { plan: "Pro", price: "$29/mo", pixels: "Unlimited pixels" },
 ];
 
 const breadcrumbJsonLd = {
@@ -144,16 +80,6 @@ const breadcrumbJsonLd = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://appnary.com/" },
     { "@type": "ListItem", position: 2, name: "Compare", item: "https://appnary.com/compare" },
   ],
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: { "@type": "Answer", text: faq.a },
-  })),
 };
 
 const softwareJsonLd = {
@@ -201,10 +127,6 @@ export default function ComparePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
 
       <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-6 pt-6">
         <ol className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -226,140 +148,124 @@ export default function ComparePage() {
           Comparison
         </span>
         <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Pixel Tracker vs{" "}
+          How Pixel Tracker{" "}
           <span className="bg-gradient-to-r from-aqua to-lime bg-clip-text text-transparent">
-            the alternatives
+            Compares
           </span>
         </h1>
         <p className="mt-4 text-lg text-muted-foreground-strong">
-          An honest side-by-side of Pixel Tracker, manually adding pixels via
-          theme code, and typical paid Shopify tracking apps.
+          Every side by side comparison, best of roundup, and pricing detail
+          for Pixel Tracker in one place.
         </p>
       </section>
 
-      {/* Competitor summary cards */}
-      <section className="mx-auto max-w-5xl px-6 pb-12">
-        <div className="grid gap-4 sm:grid-cols-3">
-          {competitors.map((c) => (
-            <div
-              key={c.key}
-              className={`rounded-xl border p-5 ${
-                c.key === "pixel"
-                  ? "border-aqua/40 bg-aqua/5 shadow-sm"
-                  : "border-border-themed bg-surface"
-              }`}
+      {/* Pixel Tracker vs competitors */}
+      <section className="mx-auto max-w-5xl px-6 pb-16">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Pixel Tracker vs competitors
+        </h2>
+        <p className="mt-3 text-base text-muted-foreground-strong">
+          Detailed, honest breakdowns against specific Shopify tracking
+          apps, native channels, and DIY setups.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {vsCompetitors.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/vs/${c.slug}`}
+              className="group flex items-center justify-between gap-2 rounded-xl border border-border-themed bg-surface px-5 py-4 transition-all hover:border-aqua/40 hover:shadow-md"
             >
-              <div className="flex items-start justify-between gap-2">
-                <h2 className="text-base font-semibold text-foreground">
-                  {c.name}
-                </h2>
-                {c.key === "pixel" && (
-                  <span className="rounded-full bg-aqua/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-foreground/80">
-                    Us
-                  </span>
-                )}
-              </div>
-              <p className="mt-1 text-xs text-muted-foreground">{c.blurb}</p>
-              <p className="mt-3 text-sm font-semibold text-foreground">
-                {c.price}
-              </p>
-              {c.href && c.cta && (
-                <Link
-                  href={c.href}
-                  className="mt-3 inline-block text-xs font-medium text-aqua hover:underline"
-                >
-                  {c.cta} →
-                </Link>
-              )}
-            </div>
+              <span className="text-sm font-semibold text-foreground group-hover:text-aqua transition-colors">
+                {c.name}
+              </span>
+              <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-aqua transition-colors" />
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* Comparison table */}
+      {/* Best-of categories */}
       <section className="mx-auto max-w-5xl px-6 pb-16">
-        <div className="overflow-x-auto rounded-2xl border border-border-themed bg-surface shadow-sm">
-          <table className="w-full min-w-[560px] text-left text-sm">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Best-of categories
+        </h2>
+        <p className="mt-3 text-base text-muted-foreground-strong">
+          Roundups ranking Pixel Tracker against a wider field of Shopify
+          apps in each category.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {alternativesCategories.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/alternatives/${cat.slug}`}
+              className="group rounded-xl border border-border-themed bg-surface p-5 transition-all hover:border-aqua/40 hover:shadow-md"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-base font-semibold text-foreground group-hover:text-aqua transition-colors">
+                  {cat.name}
+                </h3>
+                <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-aqua transition-colors" />
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">{cat.blurb}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Quick pricing overview */}
+      <section className="mx-auto max-w-3xl px-6 pb-16">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Quick pricing overview
+        </h2>
+        <div className="mt-6 overflow-x-auto rounded-2xl border border-border-themed bg-surface shadow-sm">
+          <table className="w-full min-w-[420px] text-left text-sm">
             <thead className="bg-section">
               <tr>
                 <th className="px-5 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Feature
+                  Plan
                 </th>
-                <th className="px-5 py-4 text-center text-xs font-semibold uppercase tracking-wider text-foreground">
-                  Pixel Tracker
+                <th className="px-5 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Price
                 </th>
-                <th className="px-5 py-4 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Manual theme code
-                </th>
-                <th className="px-5 py-4 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Other paid apps
+                <th className="px-5 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Pixels included
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border-themed">
-              {rows.map((row) => (
-                <tr key={row.feature}>
-                  <td className="px-5 py-3 text-sm font-medium text-foreground">
-                    {row.feature}
+              {pricingTiers.map((tier) => (
+                <tr key={tier.plan}>
+                  <td className="px-5 py-4 text-sm font-medium text-foreground">
+                    {tier.plan}
                   </td>
-                  <td className="px-5 py-3 text-center">
-                    <CellRenderer value={row.values.pixel} />
+                  <td className="px-5 py-4 text-sm text-muted-foreground">
+                    {tier.price}
                   </td>
-                  <td className="px-5 py-3 text-center">
-                    <CellRenderer value={row.values.manual} />
-                  </td>
-                  <td className="px-5 py-3 text-center">
-                    <CellRenderer value={row.values.paid} />
+                  <td className="px-5 py-4 text-sm text-muted-foreground">
+                    {tier.pixels}
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+        <p className="mt-3 text-xs text-muted-foreground">
+          Pricing and pixel limits apply per Shopify store. See{" "}
+          <Link href="/pixel-tracker" className="text-aqua hover:underline">
+            Pixel Tracker
+          </Link>{" "}
+          for the full feature list.
+        </p>
       </section>
 
-      {/* Why Pixel Tracker */}
+      {/* Waitlist CTA */}
       <section className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
-        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          When Pixel Tracker is the right call
-        </h2>
-        <div className="mt-6 space-y-4 text-base text-muted-foreground-strong leading-relaxed">
-          <p>
-            You want every ad platform pixel — Facebook, Google, TikTok,
-            Snapchat, Pinterest, X, and LinkedIn — firing correctly without
-            touching your theme code or hiring a developer.
-          </p>
-          <p>
-            You&apos;ve had a pixel silently break after a theme update.
-            Pixel Tracker injects pixels via Shopify ScriptTags, not theme
-            files, so a theme change doesn&apos;t take your tracking down
-            with it.
-          </p>
-          <p>
-            You want server-side event matching — Facebook Conversions API,
-            TikTok Events API — without building custom backend
-            infrastructure yourself.
-          </p>
-          <p>
-            You&apos;re comparing apps that only support one ad platform at
-            a time, but you run campaigns across several.
-          </p>
-          <p>
-            One honest caveat: if what you need is multi-touch attribution
-            modeling, cross-device identity resolution, or a full
-            analytics/BI layer on top of your pixels, that&apos;s a
-            different category of tool than Pixel Tracker. Pixel Tracker
-            focuses specifically on getting your pixels firing reliably —
-            it doesn&apos;t replace an attribution platform.
-          </p>
-        </div>
-
-        <div className="mt-10 rounded-2xl border border-aqua/30 bg-aqua/5 p-6 text-center sm:p-8">
+        <div className="rounded-2xl border border-aqua/30 bg-aqua/5 p-6 text-center sm:p-8">
           <p className="text-base font-semibold text-foreground">
             Pixel Tracker is in development
           </p>
           <p className="mt-1 text-sm text-muted-foreground-strong">
-            Join the waitlist for early access — available soon on the
+            Join the waitlist for early access, available soon on the
             Shopify App Store.
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
@@ -367,38 +273,15 @@ export default function ComparePage() {
               href="/#waitlist"
               className="inline-flex items-center justify-center rounded-lg bg-aqua px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-aqua/90"
             >
-              Join the waitlist
+              Join the Waitlist
             </Link>
             <Link
-              href="/pixel-tracker"
+              href="/integrations"
               className="inline-flex items-center justify-center rounded-lg border border-border-themed bg-surface px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-foreground"
             >
-              See Pixel Tracker
+              See Integrations
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section aria-labelledby="faq-heading" className="mx-auto max-w-3xl px-6 pb-24 sm:pb-32">
-        <h2 id="faq-heading" className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          Frequently Asked Questions
-        </h2>
-        <div className="space-y-3">
-          {faqs.map((faq) => (
-            <details
-              key={faq.q}
-              className="group rounded-xl border border-border-themed bg-surface shadow-sm transition-all open:border-aqua/30"
-            >
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-sm font-medium text-foreground list-none">
-                {faq.q}
-                <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-open:rotate-180 shrink-0" />
-              </summary>
-              <div className="px-6 pb-4 text-sm text-muted-foreground leading-relaxed">
-                {faq.a}
-              </div>
-            </details>
-          ))}
         </div>
       </section>
     </>
