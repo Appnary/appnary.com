@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Activity, Calculator } from "lucide-react";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools", {
   title: "Free Tools for Shopify Merchants | Appnary",
   description:
     "Free calculators and tools for Shopify merchants: pixel tracking cost calculator and pixel health check. No signup required.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/tools",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const tools = [
   {

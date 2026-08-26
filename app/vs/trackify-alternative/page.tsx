@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { VsGuide } from "@/components/vs-guide";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/vs/trackify-alternative", {
   title: "Pixel Tracker vs Trackify | Shopify Pixel Tracking Comparison | Appnary",
   description:
     "How Pixel Tracker compares to Trackify for Shopify pixel tracking — platform support, unlimited-pixel pricing, and reviews, compared honestly.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/vs/trackify-alternative",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const featureRows = [
   { feature: "No theme code editing required", pixelTracker: true, competitor: true },

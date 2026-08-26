@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import PixelHealthCheck from "@/components/pixel-health-check";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/pixel-health-check", {
   title: "Shopify Pixel Health Check | Free Tool | Appnary",
   description:
     "Check whether your Shopify storefront is loading Meta, Google, TikTok, and other ad pixels. Get a health score and prioritized fixes. Free, no signup.",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/tools/pixel-health-check",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const faqs = [
   {

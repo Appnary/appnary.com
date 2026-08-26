@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/terms", {
   title: "Terms of Service | Appnary",
-};
+});
 
 export default function TermsPage() {
   return (

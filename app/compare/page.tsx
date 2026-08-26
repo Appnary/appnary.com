@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/compare", {
   title: "How Pixel Tracker Compares | Appnary",
   description:
     "See how Pixel Tracker compares to other Shopify pixel tracking apps, DIY setups, and attribution tools, plus a quick look at pricing.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/compare",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const vsCompetitors = [
   { name: "TiXel", slug: "tixel-alternative" },

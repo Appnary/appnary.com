@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { PixelGuide } from "@/components/pixel-guide";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/meta-pixel", {
   title: "Meta Pixel Setup for Shopify | Pixel Tracker | Appnary",
   description:
     "How to connect a Facebook/Meta Pixel to your Shopify store with Pixel Tracker. No theme code required, with optional Conversions API support.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/meta-pixel",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const steps = [
   {

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticle } from "@/components/guide-article";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/guides/facebook-pixel-setup", {
   title: "How to Set Up the Meta Pixel on Shopify: Complete Guide",
   description:
     "A complete walkthrough for installing the Meta Pixel on Shopify correctly: standard events, Conversions API, domain checks, and how to verify it fires.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/guides/facebook-pixel-setup",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const intro = [
   `If you run ads for a Shopify store, the Meta Pixel is not optional. It is the thing that tells Facebook and Instagram which of your ads led to a purchase, which of your visitors are worth showing more ads to, and which ones are not. Get it wrong and you are effectively paying to acquire customers Meta cannot verify, while its ad delivery system optimizes toward the wrong audience without you knowing it.`,

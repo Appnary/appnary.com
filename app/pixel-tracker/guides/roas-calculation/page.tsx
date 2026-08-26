@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticle } from "@/components/guide-article";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/guides/roas-calculation", {
   title: "How to Calculate ROAS on Shopify: Formula, Example, and Steps",
   description:
     "Learn the ROAS formula for Shopify stores, why platform-reported ROAS runs optimistic, and the exact steps to calculate your real blended ROAS each month.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/guides/roas-calculation",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const intro = [
   `ROAS stands for return on ad spend, and the formula is short: ad revenue divided by ad spend. If you spent $1,000 on ads and those ads drove $4,000 in revenue, your ROAS is 4, or "4x." That part isn't controversial. What trips up most Shopify merchants is that the ROAS number sitting in Facebook Ads Manager or Google Ads almost never matches what actually happened in their store, because each platform reports attribution on its own terms, not on your store's terms.`,

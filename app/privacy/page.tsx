@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/privacy", {
   title: "Privacy Policy | Appnary",
-};
+});
 
 export default function PrivacyPage() {
   return (

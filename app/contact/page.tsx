@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Briefcase, HelpCircle, Mail, MessageSquare, Newspaper } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/contact", {
   title: "Contact | Appnary | Support & Business Inquiries",
   description:
     "Reach the Appnary team for support, pre-sales questions, partnerships, press, or anything else.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/contact",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const channels = [
   {

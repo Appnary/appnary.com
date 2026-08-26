@@ -8,8 +8,9 @@ import {
   HelpCircle,
   Settings,
 } from "lucide-react";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/docs", {
   title: "Docs & Help | Pixel Tracker by Appnary",
   description:
     "How Pixel Tracker works, setup guides, FAQs, and everything else you need to get started.",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/docs",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const sections = [
   {

@@ -10,6 +10,7 @@ import {
 } from "@/lib/blog";
 import { InlineText } from "@/components/inline-text";
 import { stripInline } from "@/lib/text";
+import { withPageSeo } from "@/lib/seo";
 
 const baseUrl = "https://appnary.com";
 
@@ -29,7 +30,7 @@ export async function generateMetadata({
   if (!post) {
     return { title: "Post not found | Appnary Blog" };
   }
-  return {
+  return withPageSeo(`/blog/${post.slug}`, {
     title: `${post.title} | Appnary Blog`,
     description: post.excerpt,
     openGraph: {
@@ -41,7 +42,7 @@ export async function generateMetadata({
       authors: [post.author],
       images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
-  };
+  });
 }
 
 export default async function BlogPostPage({ params }: { params: Params }) {

@@ -6,6 +6,7 @@ import {
   ACTION_SLUGS,
   PLATFORM_ACTION_SLUGS,
 } from "@/lib/platform-actions";
+import { withPageSeo } from "@/lib/seo";
 
 type RouteParams = {
   platform: string;
@@ -31,7 +32,7 @@ export async function generateMetadata({
 
   const url = `https://appnary.com/pixel-tracker/${page.platformSlug}/${page.actionSlug}`;
 
-  return {
+  return withPageSeo(`/pixel-tracker/${page.platformSlug}/${page.actionSlug}`, {
     title: page.title,
     description: page.description,
     openGraph: {
@@ -40,7 +41,7 @@ export async function generateMetadata({
       url,
       images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
-  };
+  });
 }
 
 export default async function PlatformActionPageRoute({

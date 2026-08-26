@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { AlternativesRoundup } from "@/components/alternatives-roundup";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/alternatives/best-shopify-analytics-apps", {
   title: "Best Shopify Analytics Apps 2026 (6 Compared) | Appnary",
   description:
     "Better Reports, Report Pundit, Lifetimely, Polar Analytics, Peel, and Daasity compared on reporting depth, pricing, and reviews for Shopify stores.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/alternatives/best-shopify-analytics-apps",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const tools = [
   {

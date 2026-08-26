@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticle } from "@/components/guide-article";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/guides/google-ads-conversion-tracking", {
   title: "How to Track Google Ads Conversions on Shopify | Pixel Tracker",
   description:
     "Learn how to create a Google Ads conversion action on Shopify, grab your Conversion ID and Label, and connect them correctly in Pixel Tracker's dashboard.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/guides/google-ads-conversion-tracking",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const intro = [
   `Ask a Shopify merchant if their Google Ads conversion tracking works, and most will say yes. Ask them to open Google Ads and show you the Conversions column for last week, and the answer gets a lot less confident. Somewhere between installing "some Google code" during store setup and actually running ads, the wires get crossed, usually because Google Analytics got installed instead of, or in addition to, the Google Ads conversion tag.`,
