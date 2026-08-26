@@ -47,12 +47,14 @@ export function withPageSeo(path: string, metadata: Metadata = {}): Metadata {
     openGraph: {
       ...metadata.openGraph,
       url: metadata.openGraph?.url ?? canonical,
+      ...(ogTitle ? { title: ogTitle } : {}),
+      ...(ogDescription ? { description: ogDescription } : {}),
     },
     twitter: {
       card: "summary_large_image",
       ...metadata.twitter,
-      title: twitterTitle,
-      description: twitterDescription,
+      ...(twitterTitle ? { title: twitterTitle } : {}),
+      ...(twitterDescription ? { description: twitterDescription } : {}),
       images: metadata.twitter?.images ?? ["/og-image.png"],
     },
   };
