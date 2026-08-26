@@ -70,6 +70,7 @@ export default function GoogleAdsGuidePage() {
         { label: "Google Ads troubleshooting", href: "/pixel-tracker/google-ads/troubleshooting" },
         { label: "Google Ads events explained", href: "/pixel-tracker/google-ads/events" },
         { label: "Google Ads server-side tracking", href: "/pixel-tracker/google-ads/server-side" },
+        { label: "Compare Pixel Tracker", href: "/compare" },
       ]}
     />
   );

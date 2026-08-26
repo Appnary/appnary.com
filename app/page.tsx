@@ -154,7 +154,10 @@ export default function Home() {
               <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-aqua">Available Soon</span>
               <h3 className="mt-3 text-lg font-semibold text-foreground">Pixel Tracker</h3>
               <p className="mt-2 text-sm text-muted-foreground">Connect Facebook, Google, TikTok &amp; more pixels from one simple dashboard.</p>
-              <Link href="/pixel-tracker" className="mt-4 inline-block text-sm font-medium text-aqua hover:underline">Learn More →</Link>
+              <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
+                <Link href="/pixel-tracker" className="inline-block text-sm font-medium text-aqua hover:underline">Learn More →</Link>
+                <Link href="/compare" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-aqua hover:underline">Compare tracking options →</Link>
+              </div>
             </div>
 
             <div className="rounded-xl border border-border-themed bg-card p-6 text-left transition-shadow hover:shadow-card hover:border-border-themed-strong">
