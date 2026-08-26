@@ -1,0 +1,21 @@
+---
+description: Landing SEO constraints. Use when editing pages, metadata, schema, robots, or sitemaps.
+alwaysApply: true
+---
+
+# Landing SEO
+
+- Do not add `/vs/` or `/alternatives/` pages until GSC indexed count is 40+ of the existing 88 sitemap URLs.
+- Use `withPageSeo()` from `lib/seo.ts` on every page. Do not ship a page that inherits the root "Get early access" Twitter card.
+- Do not restore `public/robots.txt`. `app/robots.ts` must win.
+- No fabricated `AggregateRating` or review stars.
+- No `installUrl` while `apps.shopify.com/pixel-tracker` is 404.
+- Do not add Compare to the main nav.
+
+```ts
+// ✅ GOOD
+export const metadata = withPageSeo("/docs", { title: "Docs", description: "..." });
+
+// ❌ BAD
+export const metadata = { title: "Docs" };
+```
