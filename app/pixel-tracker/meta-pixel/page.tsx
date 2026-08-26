@@ -74,6 +74,7 @@ export default function MetaPixelGuidePage() {
         { label: "Meta Pixel troubleshooting", href: "/pixel-tracker/meta-pixel/troubleshooting" },
         { label: "Meta Pixel events explained", href: "/pixel-tracker/meta-pixel/events" },
         { label: "Meta Pixel server-side tracking", href: "/pixel-tracker/meta-pixel/server-side" },
+        { label: "Compare Pixel Tracker", href: "/compare" },
       ]}
     />
   );

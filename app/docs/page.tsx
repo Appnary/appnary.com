@@ -336,12 +336,20 @@ export default function DocsPage() {
           <p className="text-sm font-medium text-muted-foreground">
             Still have questions?
           </p>
-          <Link
-            href="/contact"
-            className="mt-2 inline-block text-base font-semibold text-aqua hover:underline"
-          >
-            Contact support →
-          </Link>
+          <div className="mt-2 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
+            <Link
+              href="/compare"
+              className="inline-block text-base font-semibold text-aqua hover:underline"
+            >
+              Compare Pixel Tracker →
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block text-base font-semibold text-aqua hover:underline"
+            >
+              Contact support →
+            </Link>
+          </div>
         </div>
       </section>
     </>
