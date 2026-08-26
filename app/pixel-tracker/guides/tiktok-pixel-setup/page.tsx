@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticle } from "@/components/guide-article";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/guides/tiktok-pixel-setup", {
   title: "TikTok Pixel Setup Guide for Shopify (2026)",
   description:
     "A complete walkthrough for setting up the TikTok Pixel on Shopify: creating the pixel, standard events, the Events API, and verifying it with Pixel Helper.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/guides/tiktok-pixel-setup",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const intro = [
   `If you're spending money on TikTok ads for a Shopify store, the TikTok Pixel isn't a nice-to-have. TikTok's ad system decides who to show your ads to based on the events the pixel reports back, things like product views, add-to-carts, and completed purchases. Without that signal, TikTok's bidding is optimizing blind. With it, TikTok can actually find people who resemble your past buyers instead of just people who tend to click ads.`,

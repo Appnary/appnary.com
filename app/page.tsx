@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import WaitlistForm from "@/components/waitlist-form";
 import Link from "next/link";
 import { BarChart3, ChevronDown, Rocket, Sparkles, Tag } from "lucide-react";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/", {
   description:
     "Appnary builds Pixel Tracker, connecting Facebook, Google, and TikTok pixels on your Shopify store from one dashboard — no code or theme edits required.",
   openGraph: {
     description:
       "Pixel Tracker connects Shopify pixel tracking for Facebook, Google, and TikTok from one dashboard — no code required.",
   },
-};
+});
 
 const homeFaqs = [
   {
@@ -80,11 +81,6 @@ const softwareJsonLd = {
       description: "Unlimited pixels",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "50",
-  },
 };
 
 export default function Home() {

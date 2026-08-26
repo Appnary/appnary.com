@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { PixelGuide } from "@/components/pixel-guide";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/tiktok-pixel", {
   title: "TikTok Pixel Setup for Shopify | Pixel Tracker | Appnary",
   description:
     "How to connect a TikTok Pixel to your Shopify store with Pixel Tracker. No theme code required, with optional Events API support.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/tiktok-pixel",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const steps = [
   {

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/terms", {
   title: "Terms of Service | Appnary",
-};
+  description: "Terms of service for Appnary Shopify apps, including subscriptions, payments, and liability.",
+});
 
 export default function TermsPage() {
   return (

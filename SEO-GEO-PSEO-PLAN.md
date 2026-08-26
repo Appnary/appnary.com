@@ -1,6 +1,6 @@
 # Appnary SEO/GEO/pSEO Action Plan
 **Date:** July 27, 2026
-**Status:** Planning Phase
+**Status:** Pause new pSEO — do not add `/vs/` or `/alternatives/` pages until GSC indexed count is 40+ of the existing sitemap (22 of 88 as of 26 Aug 2026).
 
 ---
 

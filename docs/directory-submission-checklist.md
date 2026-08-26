@@ -1,5 +1,7 @@
 # Directory Submission Checklist
 
+**Blocked until Pixel Tracker is live on the Shopify App Store.** [apps.shopify.com/pixel-tracker](https://apps.shopify.com/pixel-tracker) is 404 as of 26 Aug 2026. Do not add `installUrl` to SoftwareApplication schema or submit directories until that listing returns 200.
+
 ## Ready to Submit (Manual)
 
 ### Shopify Ecosystem

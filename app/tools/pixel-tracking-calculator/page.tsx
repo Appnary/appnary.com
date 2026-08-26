@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import PixelTrackingCalculator from "@/components/pixel-tracking-calculator";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/tools/pixel-tracking-calculator", {
   title: "Pixel Tracking Cost & Coverage Calculator | Appnary",
   description:
     "Estimate your Shopify tracking coverage, recommended plan cost, and missed conversions from browser-only pixels. Free, no signup required.",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/tools/pixel-tracking-calculator",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const faqs = [
   {

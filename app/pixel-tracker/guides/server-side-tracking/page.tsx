@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticle } from "@/components/guide-article";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/guides/server-side-tracking", {
   title: "Server-Side Tracking for Shopify Merchants | Pixel Tracker",
   description:
     "Server-side tracking sends Shopify order events straight from the server to Meta and TikTok, so ad blockers and Safari's ITP can't stop them from being counted.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/guides/server-side-tracking",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const intro = [
   `Most Shopify merchants find out server-side tracking exists the same way: their ad account's reported conversions stop matching their actual order count, and someone in a Facebook ads group tells them to "turn on CAPI." That's a reasonable starting point, but it's worth understanding what's actually happening before you flip a switch, because the fix only works if you know what problem it's solving.`,

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/privacy", {
   title: "Privacy Policy | Appnary",
-};
+  description: "How Appnary collects, uses, and shares data for Pixel Tracker and other Shopify apps.",
+});
 
 export default function PrivacyPage() {
   return (

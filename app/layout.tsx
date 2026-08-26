@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Appnary | Shopify Apps That Work the Way You Do",
   description: "Simple, affordable tools for Shopify merchants. Get early access.",
   metadataBase: new URL(baseUrl),
+  alternates: {
+    canonical: baseUrl,
+  },
   openGraph: {
     title: "Appnary | Shopify Apps That Work the Way You Do",
     description: "Simple, affordable tools for Shopify merchants. Get early access.",
@@ -24,8 +27,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Appnary | Shopify Apps That Work the Way You Do",
-    description: "Simple, affordable tools for Shopify merchants. Get early access.",
     images: ["/og-image.png"],
   },
   icons: {

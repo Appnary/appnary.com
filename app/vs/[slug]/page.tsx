@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { VsComparisonGuide } from "@/components/vs-comparison";
 import { getVsComparisonPage, VS_COMPARISON_SLUGS } from "@/content/vs-comparisons";
 import { InlineText } from "@/components/inline-text";
+import { withPageSeo } from "@/lib/seo";
 
 export const dynamic = "error";
 export const revalidate = false;
@@ -17,10 +18,9 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { slug } = await params;
   const page = getVsComparisonPage(slug);
   if (!page) return {};
-  return {
+  return withPageSeo(`/vs/${slug}`, {
     title: page.title,
     description: page.description,
-    alternates: { canonical: `https://appnary.com/vs/${slug}` },
     openGraph: {
       title: page.title,
       description: page.description,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
       siteName: "Appnary",
       type: "website",
     },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {

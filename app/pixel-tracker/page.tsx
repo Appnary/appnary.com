@@ -1,8 +1,9 @@
 import { BarChart3, CheckCircle2, ChevronDown } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker", {
   title: "Pixel Tracker | Multi-Platform Tracking for Shopify | Appnary",
   description:
     "Connect Facebook, Google, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels from one simple Shopify dashboard. No coding required.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const features = [
   {

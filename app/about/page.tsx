@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Heart, Lightbulb, Users } from "lucide-react";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/about", {
   title: "About | Appnary | Simple Shopify Apps",
   description:
     "Appnary builds simple, affordable Shopify apps for independent merchants. Learn about our mission, team, and story.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/about",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const values = [
   {

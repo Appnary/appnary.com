@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { AlternativesRoundup } from "@/components/alternatives-roundup";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/alternatives/best-shopify-roas-calculators", {
   title: "Best Shopify ROAS Calculators 2026 (6 Compared) | Appnary",
   description:
     "TrueProfit, BeProfit, Triple Whale, Juicy, Kendall Analytics, and Rockerbox — real Shopify ROAS and profit apps compared on pricing, features, and reviews.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/alternatives/best-shopify-roas-calculators",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const tools = [
   {

@@ -7,8 +7,9 @@ import {
   getAllPosts,
   getRecentPosts,
 } from "@/lib/blog";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/blog", {
   title: "Blog | Appnary | Shopify Tips & Product Updates",
   description:
     "Product updates from the Appnary team and practical tips for Shopify merchants. New posts every week.",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/blog",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 export default function BlogIndexPage() {
   const featured = getRecentPosts(1)[0];

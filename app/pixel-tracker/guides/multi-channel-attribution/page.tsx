@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { GuideArticle } from "@/components/guide-article";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/guides/multi-channel-attribution", {
   title: "Multi-Channel Ad Attribution for Shopify Stores",
   description:
     "Running ads on Meta, Google, and TikTok? Learn why platforms overclaim the same sale, the main attribution models, and how to set up multi-channel tracking.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/guides/multi-channel-attribution",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const intro = [
   `Running a Shopify store's ad account dashboards side by side is a strange experience. Meta Ads Manager says it drove $12,000 in purchases this month. Google Ads says $9,000. TikTok says $4,000. Add those up and the total is bigger than the store actually made in revenue. Nothing is broken. This is what happens by default the moment a store advertises on more than one platform, and it's the reason attribution has to be understood on purpose rather than assumed.`,

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { AlternativesRoundup } from "@/components/alternatives-roundup";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/alternatives/best-shopify-pixel-tracking-apps", {
   title: "Best Shopify Pixel Tracking Apps 2026 (7 Compared) | Appnary",
   description:
     "TiXel, Trackify, Infinite Pixels, Omega Pixel, OnePixel, Avantify, and Pixel Tracker — ranked and compared on platform coverage, pricing, and reviews.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/alternatives/best-shopify-pixel-tracking-apps",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const tools = [
   {

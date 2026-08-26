@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen } from "lucide-react";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/pixel-tracker/guides", {
   title: "Shopify Tracking Guides | Pixel Tracker | Appnary",
   description:
     "In-depth guides on pixel setup, server-side tracking, ROAS calculation, and multi-channel attribution for Shopify merchants.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     url: "https://appnary.com/pixel-tracker/guides",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
-};
+});
 
 const guides = [
   {

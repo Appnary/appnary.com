@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { withPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withPageSeo("/changelog", {
   title: "Changelog | Appnary",
   description:
     "Release history and roadmap for Appnary's Shopify apps. See what's new, what's fixed, and what's coming next.",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
       "Release history and roadmap for Appnary's Shopify apps.",
     url: "https://appnary.com/changelog",
   },
-};
+});
 
 interface ChangelogEntry {
   version: string;
