@@ -8,6 +8,8 @@ const columns = [
     title: "Apps",
     links: [
       { label: "Pixel Tracker", href: "/pixel-tracker" },
+      { label: "Meta Pixel setup", href: "/pixel-tracker/meta-pixel" },
+      { label: "LinkedIn Insight Tag", href: "/pixel-tracker/linkedin-pixel" },
       { label: "Compare", href: "/compare" },
     ],
   },
@@ -16,6 +18,7 @@ const columns = [
     links: [
       { label: "Tools", href: "/tools" },
       { label: "Guides", href: "/pixel-tracker/guides" },
+      { label: "Integrations", href: "/integrations" },
       { label: "Docs", href: "/docs" },
       { label: "Blog", href: "/blog" },
       { label: "Changelog", href: "/changelog" },

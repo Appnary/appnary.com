@@ -376,8 +376,8 @@ None of this requires new software to start, though. The spreadsheet, the weekly
   },
   {
     slug: "shopify-analytics-vs-google-analytics",
-    title: "Shopify Analytics vs Google Analytics: Pros and Cons",
-    excerpt: `Shopify's built-in dashboard covers sales, sessions, and conversion rate with zero setup. Here's what Google Analytics 4 actually adds on top, what it costs you in setup time and consent complexity, and how to tell which one your store needs.`,
+    title: "Shopify Analytics vs Google Analytics: Which Do You Need?",
+    excerpt: `Shopify already shows sales, sessions, and conversion rate with zero setup. Here's what GA4 actually adds, what it costs in setup and consent work, and when you can skip it.`,
     category: "Analytics",
     publishedAt: "2026-07-17",
     author: "The Appnary Team",
@@ -450,8 +450,8 @@ Server-side tracking and privacy-conscious tracking aren't opposites, even thoug
   },
   {
     slug: "calculate-true-roas",
-    title: "How to Calculate True ROAS (Including Returns)",
-    excerpt: `Ad platforms calculate ROAS from gross revenue at checkout and never adjust it when a return comes in later. Here's how to work out net-of-returns ROAS, with a worked example showing how a profitable-looking campaign can quietly go underwater.`,
+    title: "How to Measure True ROAS on Shopify (After Returns)",
+    excerpt: `Ad platforms lock in ROAS from checkout revenue and never subtract returns. Here's net-of-returns ROAS with a worked example of a campaign that looks fine until refunds land.`,
     category: "Analytics",
     publishedAt: "2026-07-24",
     author: "The Appnary Team",

@@ -332,11 +332,33 @@ export default function DocsPage() {
             </div>
           ))}
         </div>
-        <div className="mt-10 rounded-2xl border border-border-themed bg-section p-6 text-center sm:p-8">
-          <p className="text-sm font-medium text-muted-foreground">
-            Still have questions?
-          </p>
-          <div className="mt-2 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
+        <div className="mt-10 rounded-2xl border border-border-themed bg-section p-6 sm:p-8">
+          <h3 className="text-base font-semibold text-foreground text-center">
+            Platform setup and tools
+          </h3>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            <li>
+              <Link href="/pixel-tracker/meta-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Meta Pixel setup →
+              </Link>
+            </li>
+            <li>
+              <Link href="/pixel-tracker/linkedin-pixel" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                LinkedIn Insight Tag setup →
+              </Link>
+            </li>
+            <li>
+              <Link href="/pixel-tracker/guides" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                All tracking guides →
+              </Link>
+            </li>
+            <li>
+              <Link href="/tools/pixel-health-check" className="block rounded-lg border border-border-themed bg-surface px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-aqua">
+                Pixel health check →
+              </Link>
+            </li>
+          </ul>
+          <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
             <Link
               href="/compare"
               className="inline-block text-base font-semibold text-aqua hover:underline"
