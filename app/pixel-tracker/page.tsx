@@ -4,13 +4,13 @@ import Link from "next/link";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker", {
-  title: "Pixel Tracker | Multi-Platform Tracking for Shopify | Appnary",
+  title: "Pixel Tracker for Shopify: Meta, Google, TikTok & More | Appnary",
   description:
-    "Connect Facebook, Google, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels from one simple Shopify dashboard. No coding required.",
+    "One Shopify dashboard for Facebook, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels. Free for 1 pixel. No theme edits.",
   openGraph: {
-    title: "Pixel Tracker | Multi-Platform Tracking for Shopify | Appnary",
+    title: "Pixel Tracker for Shopify: Meta, Google, TikTok & More",
     description:
-      "Connect all your tracking pixels from one simple dashboard. No coding required.",
+      "Connect Meta, Google Ads, TikTok, and more from one dashboard. Free for 1 pixel.",
     url: "https://appnary.com/pixel-tracker",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -380,6 +380,14 @@ export default function PixelTrackerPage() {
             Want more depth? See the full{" "}
             <Link href="/pixel-tracker/guides" className="font-medium text-aqua hover:underline">
               tracking guides
+            </Link>
+            , the{" "}
+            <Link href="/integrations" className="font-medium text-aqua hover:underline">
+              integrations hub
+            </Link>
+            , or free{" "}
+            <Link href="/tools" className="font-medium text-aqua hover:underline">
+              merchant tools
             </Link>
             .
           </p>

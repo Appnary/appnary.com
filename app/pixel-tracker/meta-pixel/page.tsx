@@ -3,13 +3,13 @@ import { PixelGuide } from "@/components/pixel-guide";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker/meta-pixel", {
-  title: "Meta Pixel Setup for Shopify | Pixel Tracker | Appnary",
+  title: "Meta Pixel for Shopify: Setup Without Theme Code | Appnary",
   description:
-    "How to connect a Facebook/Meta Pixel to your Shopify store with Pixel Tracker. No theme code required, with optional Conversions API support.",
+    "Connect a Facebook/Meta Pixel to Shopify with Pixel Tracker. Paste your Pixel ID, optional Conversions API, no theme edits.",
   openGraph: {
-    title: "Meta Pixel Setup for Shopify | Pixel Tracker",
+    title: "Meta Pixel for Shopify: Setup Without Theme Code",
     description:
-      "Connect a Facebook/Meta Pixel to your Shopify store with Pixel Tracker. No code required.",
+      "Paste your Meta Pixel ID into Pixel Tracker. Optional CAPI. No theme code.",
     url: "https://appnary.com/pixel-tracker/meta-pixel",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -74,6 +74,9 @@ export default function MetaPixelGuidePage() {
         { label: "Meta Pixel troubleshooting", href: "/pixel-tracker/meta-pixel/troubleshooting" },
         { label: "Meta Pixel events explained", href: "/pixel-tracker/meta-pixel/events" },
         { label: "Meta Pixel server-side tracking", href: "/pixel-tracker/meta-pixel/server-side" },
+        { label: "Full Facebook pixel setup guide", href: "/pixel-tracker/guides/facebook-pixel-setup" },
+        { label: "LinkedIn Insight Tag setup", href: "/pixel-tracker/linkedin-pixel" },
+        { label: "Pixel health check tool", href: "/tools/pixel-health-check" },
         { label: "Compare Pixel Tracker", href: "/compare" },
       ]}
     />

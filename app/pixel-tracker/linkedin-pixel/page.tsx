@@ -3,9 +3,9 @@ import { PixelGuide } from "@/components/pixel-guide";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker/linkedin-pixel", {
-  title: "LinkedIn Insight Tag Setup for Shopify | Pixel Tracker | Appnary",
+  title: "LinkedIn Insight Tag for Shopify: Setup Guide | Appnary",
   description:
-    "How to connect a LinkedIn Insight Tag to your Shopify store with Pixel Tracker. No theme code required.",
+    "Add the LinkedIn Insight Tag to Shopify with Pixel Tracker. Paste your Partner ID — no theme edits required.",
   keywords: [
     "LinkedIn Insight Tag Shopify",
     "LinkedIn Pixel setup",
@@ -13,9 +13,9 @@ export const metadata: Metadata = withPageSeo("/pixel-tracker/linkedin-pixel", {
     "LinkedIn conversion tracking Shopify",
   ],
   openGraph: {
-    title: "LinkedIn Insight Tag Setup for Shopify | Pixel Tracker",
+    title: "LinkedIn Insight Tag for Shopify: Setup Guide",
     description:
-      "Connect a LinkedIn Insight Tag to your Shopify store with Pixel Tracker. No code required.",
+      "Paste your LinkedIn Partner ID into Pixel Tracker. No theme code.",
     url: "https://appnary.com/pixel-tracker/linkedin-pixel",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },

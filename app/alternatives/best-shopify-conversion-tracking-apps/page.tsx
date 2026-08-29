@@ -3,13 +3,13 @@ import { AlternativesRoundup } from "@/components/alternatives-roundup";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/alternatives/best-shopify-conversion-tracking-apps", {
-  title: "Best Shopify Conversion Tracking Apps 2026 (6 Compared) | Appnary",
+  title: "Best Shopify Conversion Tracking Apps (2026) | Appnary",
   description:
-    "TiXel, Pixel Tracker, Omega Pixel, Avantify, OnePixel, and Pixee compared on server-side conversion tracking (CAPI / Events API), pricing, and reviews.",
+    "TiXel, Pixel Tracker, Omega Pixel, Avantify, OnePixel, and Pixee compared on CAPI/Events API coverage, pricing, and reviews.",
   openGraph: {
-    title: "Best Shopify Conversion Tracking Apps 2026",
+    title: "Best Shopify Conversion Tracking Apps (2026)",
     description:
-      "6 real Shopify apps compared specifically on server-side conversion tracking accuracy — CAPI and Events API coverage, pricing, and reviews.",
+      "Six Shopify apps compared on server-side conversion tracking (CAPI and Events API), pricing, and reviews.",
     url: "https://appnary.com/alternatives/best-shopify-conversion-tracking-apps",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },

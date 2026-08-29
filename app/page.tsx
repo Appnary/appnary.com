@@ -156,6 +156,7 @@ export default function Home() {
               <p className="mt-2 text-sm text-muted-foreground">Connect Facebook, Google, TikTok &amp; more pixels from one simple dashboard.</p>
               <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
                 <Link href="/pixel-tracker" className="inline-block text-sm font-medium text-aqua hover:underline">Learn More →</Link>
+                <Link href="/pixel-tracker/guides" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-aqua hover:underline">Setup guides →</Link>
                 <Link href="/compare" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-aqua hover:underline">Compare tracking options →</Link>
               </div>
             </div>
