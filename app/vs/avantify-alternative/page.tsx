@@ -129,7 +129,10 @@ export default function AvantifyVsPage() {
         "Has a genuine free plan; Avantify has none",
         "Server-side CAPI/Events API included at every paid tier, no per-integration add-on fee",
       ]}
-      pixelTrackerCons={["Doesn't support Google Ads or LinkedIn"]}
+      pixelTrackerCons={[
+        "Still on the waitlist (not installable from the App Store yet)",
+        "Server-side events currently cover Meta and TikTok only",
+      ]}
       competitorPros={[
         "Lower base entry price ($5.99/mo)",
         "Pricing tied to Shopify plan tier rather than pixel count may suit stores using many pixels on a Basic Shopify plan",
