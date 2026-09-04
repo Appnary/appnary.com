@@ -4,13 +4,13 @@ import Link from "next/link";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker", {
-  title: "Pixel Tracker for Shopify: Meta, Google, TikTok & More | Appnary",
+  title: "Shopify Pixel Tracking: Meta, Google Ads, TikTok & More | Appnary",
   description:
-    "One Shopify dashboard for Facebook, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels. Free for 1 pixel. No theme edits.",
+    "Connect Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels in Shopify. Free for one pixel. No theme edits.",
   openGraph: {
-    title: "Pixel Tracker for Shopify: Meta, Google, TikTok & More",
+    title: "Shopify Pixel Tracking: Meta, Google Ads, TikTok & More",
     description:
-      "Connect Meta, Google Ads, TikTok, and more from one dashboard. Free for 1 pixel.",
+      "Connect Meta, Google Ads, TikTok, and more from one Shopify dashboard. Free for one pixel.",
     url: "https://appnary.com/pixel-tracker",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -302,8 +302,7 @@ export default function PixelTrackerPage() {
           ))}
         </div>
         <p className="mt-4 text-sm text-muted-foreground-faint text-center">
-          Available in the Shopify App Store. Purchase directly through
-          Shopify.
+          Planned for the Shopify App Store. Pricing is per store.
         </p>
       </section>
 
