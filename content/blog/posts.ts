@@ -377,7 +377,7 @@ None of this requires new software to start, though. The spreadsheet, the weekly
   {
     slug: "shopify-analytics-vs-google-analytics",
     title: "Shopify Analytics vs Google Analytics: Which Do You Need?",
-    excerpt: `Shopify already shows sales, sessions, and conversion rate with zero setup. Here's what GA4 actually adds, what it costs in setup and consent work, and when you can skip it.`,
+    excerpt: `Shopify already covers sales, sessions, and conversion rate. See what GA4 adds, when it's worth the setup, and when Shopify Analytics is enough.`,
     category: "Analytics",
     publishedAt: "2026-07-17",
     author: "The Appnary Team",

@@ -108,6 +108,17 @@ export function PixelGuide({
           <p className="mt-4 text-lg text-muted-foreground-strong">{intro}</p>
         </header>
 
+        <section className="pb-10 sm:pb-12">
+          <div className="rounded-2xl border border-border-themed bg-section p-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              TL;DR
+            </p>
+            <p className="mt-2 text-base font-medium text-foreground-strong leading-relaxed">
+              {intro}
+            </p>
+          </div>
+        </section>
+
         <section aria-labelledby="steps-heading" className="pb-16 sm:pb-20">
           <h2
             id="steps-heading"

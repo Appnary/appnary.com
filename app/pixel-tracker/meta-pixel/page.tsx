@@ -3,13 +3,13 @@ import { PixelGuide } from "@/components/pixel-guide";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker/meta-pixel", {
-  title: "Meta Pixel for Shopify: Setup Without Theme Code | Appnary",
+  title: "Facebook Pixel for Shopify: Meta Setup Guide | Appnary",
   description:
-    "Connect a Facebook/Meta Pixel to Shopify with Pixel Tracker. Paste your Pixel ID, optional Conversions API, no theme edits.",
+    "Set up Facebook (Meta) Pixel on Shopify without editing your theme. Paste your Pixel ID in Pixel Tracker, with optional Conversions API (CAPI).",
   openGraph: {
-    title: "Meta Pixel for Shopify: Setup Without Theme Code",
+    title: "Facebook Pixel for Shopify: Meta Setup Guide",
     description:
-      "Paste your Meta Pixel ID into Pixel Tracker. Optional CAPI. No theme code.",
+      "Set up a Facebook (Meta) Pixel on Shopify without theme code. Optional Conversions API.",
     url: "https://appnary.com/pixel-tracker/meta-pixel",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
