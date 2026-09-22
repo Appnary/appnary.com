@@ -4,13 +4,13 @@ import { ArrowRight } from "lucide-react";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/compare", {
-  title: "How Pixel Tracker Compares | Appnary",
+  title: "Shopify Pixel Tracking Software: Compare Options | Appnary",
   description:
-    "See how Pixel Tracker compares to other Shopify pixel tracking apps, DIY setups, and attribution tools, plus a quick look at pricing.",
+    "Compare Shopify pixel tracking software, apps, DIY theme setup, and attribution tools. See Pixel Tracker features, pricing, and side-by-side comparisons.",
   openGraph: {
-    title: "How Pixel Tracker Compares",
+    title: "Shopify Pixel Tracking Software: Compare Options",
     description:
-      "A directory of every Pixel Tracker comparison, best-of roundup, and pricing tier.",
+      "Compare Shopify pixel tracking software, apps, DIY setup, and attribution tools, with pricing details.",
     url: "https://appnary.com/compare",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -149,14 +149,14 @@ export default function ComparePage() {
           Comparison
         </span>
         <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          How Pixel Tracker{" "}
+          Compare Shopify Pixel Tracking{" "}
           <span className="bg-gradient-to-r from-aqua to-lime bg-clip-text text-transparent">
-            Compares
+            Software
           </span>
         </h1>
         <p className="mt-4 text-lg text-muted-foreground-strong">
-          Every side by side comparison, best of roundup, and pricing detail
-          for Pixel Tracker in one place.
+          Compare Shopify pixel tracking software, app setups, DIY theme code,
+          and attribution tools in one place.
         </p>
       </section>
 

@@ -3,13 +3,13 @@ import { PixelGuide } from "@/components/pixel-guide";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker/meta-pixel", {
-  title: "Facebook Pixel for Shopify: Meta Setup Guide | Appnary",
+  title: "How to Install Meta Pixel on Shopify: Facebook Pixel Guide | Appnary",
   description:
-    "Set up Facebook (Meta) Pixel on Shopify without editing your theme. Paste your Pixel ID in Pixel Tracker, with optional Conversions API (CAPI).",
+    "Learn how to install the Meta Pixel (Facebook Pixel) on Shopify without editing your theme. Paste your Pixel ID in Pixel Tracker, with optional Conversions API (CAPI).",
   openGraph: {
-    title: "Facebook Pixel for Shopify: Meta Setup Guide",
+    title: "How to Install Meta Pixel on Shopify: Facebook Pixel Guide",
     description:
-      "Set up a Facebook (Meta) Pixel on Shopify without theme code. Optional Conversions API.",
+      "Install a Facebook (Meta) Pixel on Shopify without theme code. Optional Conversions API.",
     url: "https://appnary.com/pixel-tracker/meta-pixel",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -66,8 +66,8 @@ export default function MetaPixelGuidePage() {
     <PixelGuide
       slug="meta-pixel"
       platformName="Meta Pixel"
-      h1="How to Set Up the Meta Pixel on Shopify with Pixel Tracker"
-      intro="Connect your Facebook/Meta Pixel to your Shopify store in a few minutes — no theme code changes, with optional server-side Conversions API support."
+      h1="How to Install the Meta Pixel on Shopify with Pixel Tracker"
+      intro="Install your Facebook/Meta Pixel on Shopify in a few minutes, without theme code changes, with optional server-side Conversions API support."
       steps={steps}
       faqs={faqs}
       relatedLinks={[

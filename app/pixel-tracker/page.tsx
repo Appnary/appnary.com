@@ -388,6 +388,14 @@ export default function PixelTrackerPage() {
             <Link href="/tools" className="font-medium text-aqua hover:underline">
               merchant tools
             </Link>
+            . For the difference between store reporting and ad-platform tracking,
+            read{" "}
+            <Link
+              href="/blog/shopify-analytics-vs-google-analytics"
+              className="font-medium text-aqua hover:underline"
+            >
+              Shopify Analytics vs Google Analytics
+            </Link>
             .
           </p>
         </div>

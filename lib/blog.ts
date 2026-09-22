@@ -16,9 +16,11 @@ export type BlogPost = {
   excerpt: string;
   category: string;
   publishedAt: string; // ISO date — YYYY-MM-DD
+  updatedAt?: string; // ISO date — YYYY-MM-DD
   author: string;
   readingMinutes: number;
   tags: string[];
+  tldr?: string;
   body: string; // Plain text with paragraph breaks (blank lines). Supports [label](href) links.
   faqs?: BlogFaq[];
 };
