@@ -12,7 +12,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/blog", {
   title: "Blog | Appnary | Shopify Tips & Product Updates",
   description:
-    "Product updates from the Appnary team and practical tips for Shopify merchants. New posts every week.",
+    "Product updates from the Appnary team and practical Shopify tracking tips for merchants.",
   openGraph: {
     title: "Blog | Appnary",
     description: "Product updates and Shopify tips from the Appnary team.",
@@ -21,13 +21,63 @@ export const metadata: Metadata = withPageSeo("/blog", {
   },
 });
 
+const baseUrl = "https://appnary.com";
+
 export default function BlogIndexPage() {
-  const featured = getRecentPosts(1)[0];
-  const rest = getAllPosts().slice(1);
+  const allPosts = getAllPosts();
+  const featured = allPosts[0];
+  const rest = allPosts.slice(1);
   const categories = getAllCategories();
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+    ],
+  };
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Appnary Blog",
+    url: `${baseUrl}/blog`,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    numberOfItems: allPosts.length,
+    itemListElement: allPosts.map((post, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: post.title,
+      url: `${baseUrl}/blog/${post.slug}`,
+    })),
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+
+      <nav aria-label="Breadcrumb" className="mx-auto max-w-5xl px-6 pt-6">
+        <ol className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+          <li>
+            <Link href="/" className="hover:text-foreground hover:underline">
+              Home
+            </Link>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" className="text-foreground">
+            Blog
+          </li>
+        </ol>
+      </nav>
+
       {/* Header */}
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-12 text-center sm:pt-28 sm:pb-16">
         <span className="inline-flex items-center rounded-full border border-border-themed bg-surface px-3 py-1 text-xs font-semibold text-foreground">
