@@ -7,19 +7,21 @@ import type { BlogPost } from "@/lib/blog";
 export const posts: BlogPost[] = [
   {
     slug: "pixel-tracker-launch-preview",
-    title: "Pixel Tracker is live on the Shopify App Store",
+    title: "Pixel Tracker Launch Preview: What We're Building",
     excerpt:
-      "Multi-platform pixel tracking for Facebook, Google Ads, TikTok, and more is now available. Here's what shipped and what's next.",
+      "A look at Pixel Tracker's multi-platform tracking setup, planned pricing, and what remains before the Shopify App Store launch.",
     category: "Product update",
     publishedAt: "2026-06-18",
+    updatedAt: "2026-09-22",
     author: "The Appnary Team",
     readingMinutes: 4,
     tags: ["Pixel Tracker", "Launch", "Shopify"],
+    tldr: `Pixel Tracker is still in development. It will connect Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels from one Shopify dashboard, with server-side support for Meta and TikTok.`,
     body: `When we started Appnary, we picked one question to anchor every decision: would a solo merchant running their first six-figure store get value out of this?
 
 That lens shaped Pixel Tracker more than any technical constraint. Most pixel tracking tools are built for marketing teams that already know what they want to measure. Independent merchants usually don't — they want to know what's working, what's not, and what to do next.
 
-Here's what shipped:
+Here's what we're building:
 
 - Multi-platform pixel support for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn
 - Server-side tracking for Facebook Conversions API and TikTok Events API
@@ -30,28 +32,30 @@ Here's what shipped:
 
 The scope is deliberately small. We picked the platforms merchants actually use, ran them past beta testers, and cut anything that didn't earn its place.
 
-If you're on the waitlist, check your email for install instructions. If you're new, visit appnary.com to get started.`,
+Pixel Tracker is still in development, and its Shopify App Store listing is not live yet. Join the [waitlist](/#waitlist) for launch updates.`,
   },
   {
     slug: "why-we-built-pixel-tracker-cookieless",
     title: "Why server-side tracking matters for Shopify stores",
     excerpt:
-      "Ad blockers and browser restrictions are breaking client-side pixels. Server-side tracking is the fix.",
+      "Ad blockers and browser restrictions can drop client-side conversion events. Server-side tracking adds another delivery path.",
     category: "Engineering",
     publishedAt: "2026-06-11",
+    updatedAt: "2026-09-22",
     author: "The Appnary Team",
     readingMinutes: 5,
     tags: ["Privacy", "Pixel Tracker", "Engineering"],
+    tldr: `Browser pixels can lose conversion events to ad blockers and browser restrictions. Meta Conversions API and TikTok Events API provide another delivery path, but they do not remove consent or privacy obligations.`,
     body: `Every Shopify store we've worked on eventually has the same problem: their tracking pixels stop firing.
 
 Ad blockers, iOS 14.5+ App Tracking Transparency, and browser cookie restrictions have made client-side tracking unreliable. Merchants see gaps in their data and can't figure out why their ROAS numbers don't match their actual sales.
 
 When we designed Pixel Tracker, we built server-side tracking from day one. Here's why:
 
-- Client-side pixels get blocked by ad blockers (used by 27% of internet users)
-- iOS App Tracking Transparency requires explicit opt-in (most users decline)
+- Client-side pixels can be blocked by ad blockers
+- iOS App Tracking Transparency can limit event collection
 - Browser cookie restrictions limit cross-session tracking
-- Server-side tracking bypasses all of these limitations
+- Server-side events provide another delivery path where the ad platform supports it
 
 What Pixel Tracker supports:
 
@@ -59,9 +63,9 @@ What Pixel Tracker supports:
 - TikTok Events API for server-side event tracking
 - Both work alongside client-side pixels for maximum coverage
 
-The result is more accurate conversion data. Merchants see the full picture of which ads are actually driving sales, not just the ones that weren't blocked.
+The result can be more complete conversion data. Merchants recover some events that browser-only tracking would miss, instead of relying on the subset of visitors whose browsers allowed the pixel through.
 
-GDPR and CCPA compliance is also easier with server-side tracking. Less reliance on client-side cookies means fewer consent requirements.
+Server-side tracking does not remove GDPR, CCPA, or other privacy obligations. Review your consent setup and disclosures for every platform you send events to.
 
 If your ROAS numbers don't match your actual revenue, server-side tracking is likely the missing piece.`,
   },
@@ -118,37 +122,6 @@ Trap 3: Ignoring the denominator.
 A 3% conversion rate sounds great until you realize it's 3% of 100 visitors. The absolute number matters as much as the percentage. A small percent of a big number is bigger than a big percent of a small one.
 
 If you only remember one thing: when a report makes you feel something, double-check it. Feelings are fine, but they shouldn't be the only thing driving the next decision.`,
-  },
-  {
-    slug: "announcing-appnary-public-launch",
-    title: "Announcing the Appnary public launch on the Shopify App Store",
-    excerpt:
-      "Pixel Tracker is live with multi-platform pixel support. Here's what we shipped and what's next.",
-    category: "Announcements",
-    publishedAt: "2026-06-25",
-    author: "The Appnary Team",
-    readingMinutes: 3,
-    tags: ["Launch", "Pixel Tracker", "Shopify"],
-    body: `Today we're flipping the switch. Pixel Tracker is live in the Shopify App Store.
-
-To everyone who joined the waitlist, answered a survey, or installed a beta build — thank you. This launch is the shape it is because of you.
-
-What shipped:
-
-- Multi-platform pixel support for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn
-- Server-side tracking for Facebook Conversions API and TikTok Events API
-- Simple dashboard to manage all pixels from one place
-- No code or theme editing required
-- Free plan with 1 active pixel included
-- Paid plans starting at $7/month for 3 pixels
-
-What's coming next:
-
-- More integrations and platform support
-- Advanced analytics and reporting
-- Shopify Flow integration
-
-If you're on the waitlist, check your email for install instructions. If you're not on it yet, visit appnary.com to get started.`,
   },
   {
     slug: "why-shopify-roas-is-inaccurate",
