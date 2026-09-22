@@ -76,6 +76,43 @@ export function Footer() {
           ))}
         </div>
 
+        <div
+          className="mt-10 flex flex-wrap items-center gap-4 opacity-70"
+          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, and Super Launch"
+        >
+          <a href="https://neeed.directory" target="_blank" rel="noopener">
+            <img
+              src="https://neeed.directory/badges/neeed-badge-light.svg"
+              alt="Featured on neeed.directory"
+              width="139"
+            />
+          </a>
+          <a href="https://earlyhunt.com/project/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg"
+              alt="Featured on EarlyHunt"
+              width="265"
+              height="58"
+            />
+          </a>
+          <a href="https://indiehunt.io/project/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://indiehunt.io/badges/indiehunt-badge-light.svg"
+              alt="Featured on IndieHunt"
+              width="265"
+              height="58"
+            />
+          </a>
+          <a href="https://www.superlaun.ch/products/3530" target="_blank" rel="noopener">
+            <img
+              src="https://www.superlaun.ch/badge.png"
+              alt="Featured on Super Launch"
+              width="300"
+              height="300"
+            />
+          </a>
+        </div>
+
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col-reverse items-center gap-4 border-t border-border-themed pt-6 text-xs text-muted-foreground-faint md:flex-row md:justify-between">
           <p>&copy; {year} Appnary. All rights reserved.</p>
