@@ -39,6 +39,7 @@ export async function generateMetadata({
       url: `https://appnary.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishedAt,
+      ...(post.updatedAt ? { modifiedTime: post.updatedAt } : {}),
       authors: [post.author],
       images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     },
@@ -76,6 +77,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
     author: { "@type": "Organization", name: post.author },
     publisher: { "@type": "Organization", name: "Appnary" },
     mainEntityOfPage: `${baseUrl}/blog/${post.slug}`,
@@ -126,8 +128,11 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               {post.category}
             </span>
             <span className="inline-flex items-center gap-1">
-              <Calendar className="h-3 w-3" /> {formatDate(post.publishedAt)}
+              <Calendar className="h-3 w-3" /> Published {formatDate(post.publishedAt)}
             </span>
+            {post.updatedAt && post.updatedAt !== post.publishedAt && (
+              <span>Updated {formatDate(post.updatedAt)}</span>
+            )}
             <span className="inline-flex items-center gap-1">
               <Clock className="h-3 w-3" /> {post.readingMinutes} min read
             </span>
@@ -142,6 +147,17 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             By <span className="font-medium text-foreground">{post.author}</span>
           </p>
         </header>
+
+        {post.tldr && (
+          <aside className="mb-10 rounded-2xl border border-aqua/30 bg-aqua/5 p-6">
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Quick answer
+            </p>
+            <p className="mt-2 text-base font-medium leading-relaxed text-foreground">
+              {post.tldr}
+            </p>
+          </aside>
+        )}
 
         <div className="mt-10 space-y-5 text-base text-muted-foreground-strong leading-relaxed">
           {paragraphs.map((p, i) => (
