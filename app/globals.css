@@ -1,4 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+
+/* Only shipped UI can contribute utilities to the inlined stylesheet. */
+@source "../app";
+@source "../components";
+@source "../lib";
 
 /* ----------------------------------------------------------------
    Brand colors — fixed across themes (these define the Appnary look)

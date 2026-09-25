@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 
-const WAITLIST_API = process.env.NEXT_PUBLIC_WAITLIST_API || "/api/waitlist";
+const WAITLIST_API = process.env.NEXT_PUBLIC_WAITLIST_API || "https://cp.appnary.com/api/waitlist";
 
 export default function WaitlistForm() {
   const [email, setEmail] = useState("");
@@ -17,7 +17,7 @@ export default function WaitlistForm() {
     try {
       const res = await fetch(WAITLIST_API, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ email }),
       });
       const data = await res.json();
@@ -27,7 +27,7 @@ export default function WaitlistForm() {
         setEmail("");
       } else {
         setStatus("error");
-        setMessage(data.error || "Something went wrong");
+        setMessage(data.error || data.message || "Something went wrong");
       }
     } catch {
       setStatus("error");
