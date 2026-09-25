@@ -40,12 +40,15 @@ export default function WaitlistForm() {
       <div className="flex flex-col gap-3 sm:flex-row">
         <input
           type="email"
+          name="email"
+          autoComplete="email"
+          aria-label="Email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
           required
           disabled={status === "loading"}
-          className="flex-1 rounded-lg border border-input-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-input-placeholder focus:border-aqua focus:outline-none focus:ring-2 focus:ring-aqua/30 disabled:opacity-50"
+          className="min-w-0 flex-1 rounded-lg border border-input-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-input-placeholder focus:border-aqua focus:outline-none focus:ring-2 focus:ring-aqua/30 disabled:opacity-50"
         />
         <button
           type="submit"
@@ -57,8 +60,9 @@ export default function WaitlistForm() {
       </div>
       {message && (
         <p
+          role="status"
           className={`mt-2 text-sm ${
-            status === "success" ? "text-aqua" : "text-red-500"
+            status === "success" ? "text-accent-foreground" : "text-red-500"
           }`}
         >
           {message}
