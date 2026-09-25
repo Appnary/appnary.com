@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import WaitlistForm from "@/components/waitlist-form";
-import Link from "next/link";
 import { BarChart3, ChevronDown, Rocket, Sparkles, Tag } from "lucide-react";
 import { withPageSeo } from "@/lib/seo";
 
@@ -99,30 +98,26 @@ export default function Home() {
         id="hero"
         className="relative overflow-hidden bg-background text-foreground transition-colors"
       >
-        {/* Background gradient orbs */}
+        {/* Soft gradients without large animated blur layers. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 overflow-hidden"
-        >
-          <div className="animate-orb absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-aqua/20 to-lime/10 blur-3xl" />
-          <div className="animate-orb-delayed absolute -bottom-40 -right-32 h-[450px] w-[450px] rounded-full bg-gradient-to-tr from-aqua/15 to-lime/5 blur-3xl" />
-          <div className="animate-fade-in absolute left-1/3 top-1/3 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-aqua/5 to-transparent blur-2xl" />
-        </div>
+          className="hero-glow pointer-events-none absolute inset-0"
+        />
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pt-24 pb-24 text-center sm:pt-28 sm:pb-32 lg:pt-32 lg:pb-40">
-          <span className="animate-fade-in-up inline-flex items-center gap-2 rounded-full border border-border-themed bg-surface px-4 py-1.5 text-xs font-semibold text-foreground shadow-sm">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border-themed bg-surface px-4 py-1.5 text-xs font-semibold text-foreground shadow-sm">
             <Rocket className="h-3.5 w-3.5 text-aqua" strokeWidth={2.5} />
             Available soon on the Shopify App Store
           </span>
 
-          <h1 className="animate-fade-in-up animation-delay-200 mt-8 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             <span className="block text-foreground">Shopify apps that work</span>
-            <span className="mt-2 block bg-gradient-to-r from-aqua to-lime bg-clip-text text-transparent">
+            <span className="mt-2 block bg-gradient-to-r from-accent-foreground to-accent-heading-end bg-clip-text text-transparent">
               the way you do
             </span>
           </h1>
 
-          <p className="animate-fade-in-up animation-delay-400 mt-6 max-w-xl text-lg text-muted-foreground-strong sm:text-xl">
+          <p className="mt-6 max-w-xl text-lg text-muted-foreground-strong sm:text-xl">
             Simple, affordable tools built for merchants, not enterprise
             teams. Join the waitlist to get early-bird pricing and launch
             updates.
@@ -130,7 +125,7 @@ export default function Home() {
 
           <div
             id="waitlist"
-            className="animate-fade-in-up animation-delay-600 mt-12 w-full max-w-lg rounded-2xl border border-border-themed bg-surface p-8 text-left shadow-sm sm:p-10"
+            className="mt-12 w-full max-w-lg rounded-2xl border border-border-themed bg-surface p-8 text-left shadow-sm sm:p-10"
           >
             <h2 className="text-xl font-semibold text-foreground">
               Join the Waitlist
@@ -151,13 +146,13 @@ export default function Home() {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-surface border border-border-themed shadow-sm">
                 <BarChart3 className="h-6 w-6 text-aqua" />
               </div>
-              <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-aqua">Available Soon</span>
+              <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-accent-foreground">Available Soon</span>
               <h3 className="mt-3 text-lg font-semibold text-foreground">Pixel Tracker</h3>
               <p className="mt-2 text-sm text-muted-foreground">Connect Facebook, Google, TikTok &amp; more pixels from one simple dashboard.</p>
               <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
-                <Link href="/pixel-tracker" className="inline-block text-sm font-medium text-aqua hover:underline">Learn More →</Link>
-                <Link href="/pixel-tracker/guides" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-aqua hover:underline">Setup guides →</Link>
-                <Link href="/compare" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-aqua hover:underline">Compare tracking options →</Link>
+                <a href="/pixel-tracker" className="inline-block text-sm font-medium text-accent-foreground hover:underline">Learn More →</a>
+                <a href="/pixel-tracker/guides" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-accent-foreground hover:underline">Setup guides →</a>
+                <a href="/compare" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-accent-foreground hover:underline">Compare tracking options →</a>
               </div>
             </div>
 

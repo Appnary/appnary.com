@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./navbar";
 import { Footer } from "./footer";
 import { ThemeProvider, THEME_INIT_SCRIPT } from "@/components/theme-provider";
-
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 const baseUrl = "https://appnary.com";
 
@@ -63,7 +60,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Set theme before first paint to avoid FOUC. */}
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />

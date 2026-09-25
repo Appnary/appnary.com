@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Mail } from "lucide-react";
 
 const year = new Date().getFullYear();
@@ -42,13 +41,13 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4 md:gap-8">
           {/* Brand column */}
           <div className="md:col-span-1 md:pr-8">
-            <Link
+            <a
               href="/"
               className="text-lg font-bold text-foreground"
               aria-label="Appnary home"
             >
               appnary
-            </Link>
+            </a>
             <p className="mt-2 max-w-xs text-sm text-muted-foreground">
               Simple, affordable Shopify apps.
             </p>
@@ -63,12 +62,12 @@ export function Footer() {
               <ul className="mt-4 space-y-3">
                 {col.links.map((link) => (
                   <li key={link.href}>
-                    <Link
+                    <a
                       href={link.href}
                       className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -82,33 +81,42 @@ export function Footer() {
         >
           <a href="https://neeed.directory" target="_blank" rel="noopener">
             <img
-              src="https://neeed.directory/badges/neeed-badge-light.svg"
+              src="/badges/neeed.svg"
               alt="Featured on neeed.directory"
               width="139"
+              height="44"
+              loading="lazy"
+              decoding="async"
             />
           </a>
           <a href="https://earlyhunt.com/project/appnary" target="_blank" rel="noopener">
             <img
-              src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg"
+              src="/badges/earlyhunt.svg"
               alt="Featured on EarlyHunt"
+              loading="lazy"
+              decoding="async"
               width="265"
               height="58"
             />
           </a>
           <a href="https://indiehunt.io/project/appnary" target="_blank" rel="noopener">
             <img
-              src="https://indiehunt.io/badges/indiehunt-badge-light.svg"
+              src="/badges/indiehunt.svg"
               alt="Featured on IndieHunt"
+              loading="lazy"
+              decoding="async"
               width="265"
               height="58"
             />
           </a>
           <a href="https://www.superlaun.ch/products/3530" target="_blank" rel="noopener">
             <img
-              src="https://www.superlaun.ch/badge.png"
+              src="/badges/superlaunch.webp"
               alt="Featured on Super Launch"
+              loading="lazy"
+              decoding="async"
               width="300"
-              height="300"
+              height="83"
             />
           </a>
         </div>
@@ -119,7 +127,6 @@ export function Footer() {
           <a
             href="mailto:hello@appnary.com"
             className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
-            aria-label="Email Appnary"
           >
             <Mail className="h-3.5 w-3.5" aria-hidden="true" />
             hello@appnary.com
