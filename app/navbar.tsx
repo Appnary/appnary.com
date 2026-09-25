@@ -31,7 +31,6 @@ export function Navbar() {
 
   return (
     <header
-      data-theme={theme}
       className={`sticky top-0 z-50 w-full border-b transition-colors ${
         scrolled
           ? "border-border-themed bg-background/85 backdrop-blur-md"
