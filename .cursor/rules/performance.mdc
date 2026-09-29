@@ -1,0 +1,13 @@
+---
+description: Use when changing landing page rendering, client components, assets, styles, or third-party scripts.
+alwaysApply: false
+---
+# Homepage performance
+
+- Keep the homepage server-rendered or static where possible; add client JavaScript only for necessary interaction.
+- Preserve accessible labels, contrast, semantic links, and SEO while optimizing.
+- Treat Lighthouse Performance 90+ on both mobile and desktop as the green release target.
+- Run three audits sequentially per device and report individual scores plus the median in readable text.
+- Separate local build measurements from public production measurements; do not call a change shipped until the live site is verified.
+- Show Lighthouse results in the terminal or report. Keep machine-readable JSON temporary; do not send JSON files as the human-facing result.
+- Do not change analytics or Cloudflare settings as a side effect of a performance audit.

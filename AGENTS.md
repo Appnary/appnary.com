@@ -11,3 +11,8 @@ Public landing site for **appnary.com** (Next.js, Railway). Workspace docs live 
 - Do not add `SoftwareApplication.installUrl` until `https://apps.shopify.com/pixel-tracker` returns 200.
 - Do not add Compare to the main nav. Footer and in-page links are enough.
 - Canonicals are HTTPS apex only (`https://appnary.com/...`).
+## Performance
+
+Use `.cursor/rules/performance.mdc` for homepage performance changes and `.cursor/skills/lighthouse-performance/SKILL.md` for score measurement and production verification.
+
+Use `.cursor/rules/performance.mdc` for homepage performance changes and `.cursor/skills/lighthouse-performance/SKILL.md` for score measurement and production verification.
