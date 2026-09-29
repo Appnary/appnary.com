@@ -28,7 +28,9 @@ That result uses a different measurement method and isn't included in the median
 
 The baseline and updated build use different hosts. Local results don't verify
 production scores. The live site also injects Cloudflare analytics and email
-decoding scripts, which aren't present locally. Changes haven't been deployed.
+decoding scripts, which aren't present locally. At the time of this 25 September
+audit, the changes had not been deployed. See [the 29 September production
+verification](lighthouse-2026-09-29.md) for the later live result.
 
 ## Changes
 
