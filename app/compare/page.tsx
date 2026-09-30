@@ -6,11 +6,11 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/compare", {
   title: "Shopify Pixel Tracking Software: Compare Options | Appnary",
   description:
-    "Compare Shopify pixel tracking software, apps, DIY theme setup, and attribution tools. See Pixel Tracker features, pricing, and side-by-side comparisons.",
+    "Compare Shopify pixel tracking software, apps, DIY theme setup, and attribution tools. Review category fit, setup options, and app-specific billing through Shopify.",
   openGraph: {
     title: "Shopify Pixel Tracking Software: Compare Options",
     description:
-      "Compare Shopify pixel tracking software, apps, DIY setup, and attribution tools, with pricing details.",
+      "Compare Shopify pixel tracking software, apps, DIY setup, and attribution tools, with category guidance and app-specific billing through Shopify.",
     url: "https://appnary.com/compare",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -67,13 +67,6 @@ const alternativesCategories = [
   },
 ];
 
-const pricingTiers = [
-  { plan: "Free", price: "$0", pixels: "1 pixel" },
-  { plan: "Starter", price: "$7/mo", pixels: "3 pixels" },
-  { plan: "Growth", price: "$15/mo", pixels: "10 pixels" },
-  { plan: "Pro", price: "$29/mo", pixels: "Unlimited pixels" },
-];
-
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -91,30 +84,6 @@ const softwareJsonLd = {
   operatingSystem: "Shopify",
   description:
     "Connect Facebook, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn tracking pixels from one simple Shopify dashboard. No coding required.",
-  offers: [
-    { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-    {
-      "@type": "Offer",
-      name: "Starter",
-      price: "7.00",
-      priceCurrency: "USD",
-      billingIncrement: "P1M",
-    },
-    {
-      "@type": "Offer",
-      name: "Growth",
-      price: "15.00",
-      priceCurrency: "USD",
-      billingIncrement: "P1M",
-    },
-    {
-      "@type": "Offer",
-      name: "Pro",
-      price: "29.00",
-      priceCurrency: "USD",
-      billingIncrement: "P1M",
-    },
-  ],
 };
 
 export default function ComparePage() {
@@ -166,8 +135,9 @@ export default function ComparePage() {
           Pixel Tracker vs competitors
         </h2>
         <p className="mt-3 text-base text-muted-foreground-strong">
-          Detailed, honest breakdowns against specific Shopify tracking
-          apps, native channels, and DIY setups.
+          Compare specific Shopify tracking apps, native channels, and DIY setups.
+          Pixel Tracker is in development, so its comparisons describe the
+          intended product rather than an app you can install today.
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {vsCompetitors.map((c) => (
@@ -191,8 +161,9 @@ export default function ComparePage() {
           Best-of categories
         </h2>
         <p className="mt-3 text-base text-muted-foreground-strong">
-          Roundups ranking Pixel Tracker against a wider field of Shopify
-          apps in each category.
+          Browse tools for different jobs: installing ad pixels, measuring
+          conversions, or analyzing revenue. Pixel Tracker is an ad-pixel
+          integration product; it is not a full analytics or profit-reporting suite.
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {alternativesCategories.map((cat) => (
@@ -213,49 +184,44 @@ export default function ComparePage() {
         </div>
       </section>
 
-      {/* Quick pricing overview */}
       <section className="mx-auto max-w-3xl px-6 pb-16">
         <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-          Quick pricing overview
+          Choose by the measurement job
         </h2>
-        <div className="mt-6 overflow-x-auto rounded-2xl border border-border-themed bg-surface shadow-sm">
-          <table className="w-full min-w-[420px] text-left text-sm">
-            <thead className="bg-section">
-              <tr>
-                <th className="px-5 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Plan
-                </th>
-                <th className="px-5 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Price
-                </th>
-                <th className="px-5 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Pixels included
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-border-themed">
-              {pricingTiers.map((tier) => (
-                <tr key={tier.plan}>
-                  <td className="px-5 py-4 text-sm font-medium text-foreground">
-                    {tier.plan}
-                  </td>
-                  <td className="px-5 py-4 text-sm text-muted-foreground">
-                    {tier.price}
-                  </td>
-                  <td className="px-5 py-4 text-sm text-muted-foreground">
-                    {tier.pixels}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="mt-3 text-xs text-muted-foreground">
-          Pricing and pixel limits apply per Shopify store. See{" "}
+        <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground-strong">
+          <li>
+            For ad-event delivery, compare supported platforms, purchase events,
+            consent handling, and the diagnostics each integration provides.
+          </li>
+          <li>
+            For server-side tracking, check the specific ad platform and delivery
+            path. A browser pixel installer does not automatically include a
+            server connection for every platform.
+          </li>
+          <li>
+            For sales analysis or profit reporting, use the analytics and ROAS
+            categories. Installing an ad pixel does not create those reports.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-16">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+          Pricing and Shopify billing
+        </h2>
+        <p className="mt-4 text-sm leading-relaxed text-muted-foreground-strong">
+          Each Shopify app has its own pricing. For Appnary apps, billing is
+          handled through Shopify. Check the specific app&apos;s public Shopify
+          listing and subscription confirmation for its price, limits, and any
+          trial terms before subscribing.
+        </p>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground-strong">
+          Pixel Tracker&apos;s public listing is not available yet, so this page
+          does not confirm launch prices. See the{" "}
           <Link href="/pixel-tracker" className="text-aqua hover:underline">
-            Pixel Tracker
+            product overview
           </Link>{" "}
-          for the full feature list.
+          for its intended scope, and join the waitlist for launch updates.
         </p>
       </section>
 
