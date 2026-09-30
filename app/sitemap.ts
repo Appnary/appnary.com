@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/pixel-tracker/guides/roas-calculation`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${baseUrl}/pixel-tracker/guides/multi-channel-attribution`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${baseUrl}/about`, priority: 0.6, changeFrequency: "monthly" },
+    { url: `${baseUrl}/products`, priority: 0.6, changeFrequency: "monthly" },
     { url: `${baseUrl}/blog`, priority: 0.7, changeFrequency: "weekly" },
     { url: `${baseUrl}/docs`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${baseUrl}/contact`, priority: 0.5, changeFrequency: "yearly" },
