@@ -1,8 +1,7 @@
 /* Product collection ported from Binary Labs; scoped to this route. */
-@font-face { font-family: "Binary Collection Inter"; src: url("/products/inter-latin.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
-.binary-products { font-family: "Binary Collection Inter", Arial, sans-serif; display: flow-root; line-height: 1.5; }
+.binary-products { font-family: var(--font-sans); display: flow-root; line-height: 1.5; }
 
-.binary-products { --paper: #f8f7f3; --ink: #252721; --ink-soft: #6c6e65; --line: #e1e2d9; --orange: #ec623d; --orange-dark: #b63b1b; --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+.binary-products { --paper: #f8f7f3; --ink: #252721; --ink-soft: #6c6e65; --line: #e1e2d9; --orange: #ec623d; --orange-dark: #b63b1b; }
 .binary-products { background: var(--paper); color: var(--ink); -webkit-font-smoothing: antialiased; }
 .binary-products ::selection { background: #f9c2a9; color: var(--ink); }
 .binary-products button, .binary-products a, .binary-products input, .binary-products textarea, .binary-products select, .binary-products summary { -webkit-tap-highlight-color: transparent; }
