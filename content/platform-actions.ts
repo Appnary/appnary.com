@@ -232,66 +232,86 @@ export const platformActionPages: PlatformActionPage[] = [
     "pixelName": "Google Ads conversion tag",
     "badge": "Server-Side Tracking",
     "title": "Google Ads Server-Side Tracking: What's Actually Possible",
-    "description": "Pixel Tracker doesn't offer Google Ads server-side tracking today. Here's what Enhanced Conversions actually does, and where server-side support does exist.",
+    "description": "Google Ads supports server-side conversion tracking through GTM. Compare that with Enhanced Conversions, verify purchases, and see Pixel Tracker's limits.",
     "h1": "Google Ads Server-Side Tracking: What's Actually Possible",
     "intro": [
-      "Server-side tracking usually means sending conversion data to an ad platform directly from a server, bypassing the shopper's browser so ad blockers and cookie restrictions can't interrupt it. Meta has the Conversions API, TikTok has the Events API, and Pixel Tracker supports both. Google Ads doesn't have a direct equivalent that Pixel Tracker connects to, and it's important to be upfront about that rather than imply otherwise.",
-      "Google Ads does have its own answer to signal loss, called Enhanced Conversions, but it's a Google feature configured through Google's own tools, not something Pixel Tracker sets up or manages. This page explains what that actually means, what Enhanced Conversions does and doesn't do, and what your realistic options are if you want stronger conversion data for Google Ads today."
+      "Google Ads supports server-side conversion tracking through Google Tag Manager. Pixel Tracker doesn't currently manage that setup: its Google Ads connection is browser-based. These are different limits, and choosing a tool starts with separating them.",
+      "Enhanced Conversions adds customer matching data to conversion measurement; it isn't another name for server-side tagging. This guide covers Google's supported options and a purchase-verification checklist. Pixel Tracker is still in development and isn't publicly installable yet."
     ],
     "sections": [
       {
-        "heading": "Why there's no direct Google Ads server-side option through Pixel Tracker",
+        "heading": "What Google Ads server-side tracking requires",
         "paragraphs": [
-          "Pixel Tracker's Google Ads connection is a client-side tag: the Google tag (gtag.js) loads in the shopper's browser and reports the purchase conversion from there. That's different from Meta and TikTok, where Pixel Tracker also supports sending the same conversion server to server, through Facebook's Conversions API and TikTok's Events API, as a backup path that doesn't depend on the browser. Google Ads doesn't currently have a Pixel Tracker managed server-side path, and we'd rather say that plainly than describe something that doesn't exist."
+          "[Google's server-side Ads setup guide](https://developers.google.com/tag-platform/tag-manager/server-side/ads-setup) uses a GTM web container, a server container, and a GA4 client. A server-side Conversion Linker and Ads Conversion Tracking tag send the conversion to Google Ads. Pixel Tracker doesn't create or manage those containers.",
+          "Server-side delivery doesn't make an event source independent of the browser. Google's documented GTM path still needs incoming event data. Test that path and respect the consent settings of the store; a server container doesn't guarantee recovery of every missing purchase."
         ]
       },
       {
-        "heading": "What Enhanced Conversions actually is",
+        "heading": "Enhanced Conversions and server-side tagging solve different problems",
         "paragraphs": [
-          "Enhanced Conversions is Google's own feature for improving conversion matching, not a Pixel Tracker feature. It works by sending hashed first-party customer data, most commonly a shopper's email address, alongside the standard conversion hit, so Google can match a sale back to an ad click even when browser-based tracking is incomplete. It's a real and useful feature, but it's set up and managed inside Google Ads, or via Google Tag Manager, separate from anything in the Pixel Tracker dashboard."
+          "Enhanced Conversions adds first-party customer matching data to a conversion. Google's server-side Ads guide also supports Enhanced Conversions, so it isn't limited to a browser-only Ads tag. Choose the collection method for your implementation and verify it separately from whether the purchase tag fires."
         ]
       },
       {
-        "heading": "How Enhanced Conversions differs from true server-side tracking",
+        "heading": "Choose one purchase-tracking path before adding more tags",
         "paragraphs": [
-          "Server-side tracking, in the Meta and TikTok sense, sends the entire conversion event from a server, independent of whether the browser tag fired at all. Enhanced Conversions still relies on the browser-based Google tag firing as the base event, and layers additional hashed customer data on top of it to improve matching. It helps with signal quality, but it doesn't solve the same problem that a fully server-side connection solves, and it isn't something Pixel Tracker configures for you."
+          "For Shopify's supported native integration, start with [Google's Shopify tag setup instructions](https://support.google.com/analytics/answer/12183125). If you instead need a custom GTM server container, follow Google's server-side guide with the person responsible for your tagging infrastructure. Neither route requires an unreleased Pixel Tracker feature.",
+          "List the existing purchase sources first: the Google & YouTube app, theme code, custom pixels, and GTM. Check the conversion action each sends to. A GA4 purchase event and an Ads conversion are separate destinations; don't make multiple purchase actions primary without deciding what your campaigns should count."
         ]
       },
       {
-        "heading": "What you can actually do today",
+        "heading": "Check transaction IDs before trusting the totals",
         "paragraphs": [
-          "If better Google Ads signal quality matters to your account, Enhanced Conversions is worth turning on directly inside Google Ads, under your conversion action settings, since it's a native Google feature and doesn't depend on Pixel Tracker. Beyond that, the most reliable lever you have through Pixel Tracker is making sure the client-side conversion tag is set up correctly and firing consistently. If server-side reliability is the priority for your ad spend, it's currently available through Pixel Tracker for Meta and TikTok, not Google Ads."
+          "[Google's transaction-ID guidance](https://support.google.com/google-ads/answer/6386790) explains that duplicate hits to the same conversion action can be identified by the same transaction ID. Use one stable ID for an order and a different ID for a different order. A transaction ID doesn't merge unrelated conversion actions.",
+          "If a purchase is sent through multiple supported sources, check that they use the same order ID format. Hashing or a server container doesn't replace this check. Inspect consent handling and avoid putting customer identifiers into a transaction ID."
         ]
       },
       {
-        "heading": "Where Pixel Tracker does support server-side tracking",
+        "heading": "Pixel Tracker availability and scope",
         "paragraphs": [
-          "Today, Pixel Tracker's server-side tracking covers Meta, via Conversions API, and TikTok, via Events API, only. If your ad spend leans heavily on those two platforms, that's where a server-side connection will do the most for your data quality. The [server-side tracking guide](/pixel-tracker/guides/server-side-tracking) covers how that works in more detail and why it doesn't currently extend to Google Ads, Snapchat, Pinterest, LinkedIn, or X."
+          "Pixel Tracker is in development. Its Google Ads connection is described as browser-based; Google Ads server-side tagging and Enhanced Conversions aren't managed by Pixel Tracker. The product roadmap also describes Meta and TikTok server-side integrations, but that doesn't establish Google Ads support. See the [product overview](/pixel-tracker) and [comparison directory](/compare) for the current product context."
         ]
       }
     ],
-    "steps": [],
+    "steps": [
+      {
+        "title": "Choose the destination",
+        "body": "Record the intended Ads conversion ID and label, purchase value, and currency. Check that the campaign uses the intended primary purchase action."
+      },
+      {
+        "title": "Run a test purchase",
+        "body": "Use a test store/order and Tag Assistant to follow the purchase. For a GTM server implementation, open server-container Preview and check the Ads tag fired and its Console has no transmission errors."
+      },
+      {
+        "title": "Inspect the order ID",
+        "body": "Verify the transaction ID is present and consistent for the same order. Repeat with a second order and confirm its ID differs; a fixed test value will undercount real purchases."
+      },
+      {
+        "title": "Check competing sources",
+        "body": "Look for another theme, app, custom pixel, or GTM tag sending the same purchase. After verifying a replacement path, remove the equivalent legacy sender using the integration documentation."
+      },
+      {
+        "title": "Review reporting separately",
+        "body": "A fired tag proves a delivery attempt, not an attributed ad sale. Check the conversion action diagnostics and reporting after processing; keep test purchases separate from business performance."
+      }
+    ],
     "symptoms": [],
     "faqs": [
       {
-        "q": "Does Pixel Tracker support server-side tracking for Google Ads?",
-        "a": "No, not today. Pixel Tracker's Google Ads connection is client-side only, firing the Google tag in the shopper's browser. Server-side tracking through Pixel Tracker is currently available for Meta and TikTok only."
+        "q": "Does Google Ads support server-side conversion tracking?",
+        "a": "Yes. Google documents an Ads Conversion Tracking tag for GTM server containers. That requires a separate implementation; Pixel Tracker does not manage it."
+      },
+      {
+        "q": "Does Pixel Tracker support Google Ads server-side tracking?",
+        "a": "No. Pixel Tracker is in development and its described Google Ads connection is browser-based. It does not configure GTM server containers or Enhanced Conversions."
       },
       {
         "q": "Is Enhanced Conversions the same as server-side tracking?",
-        "a": "Not exactly. Enhanced Conversions is a Google Ads feature that adds hashed customer data on top of the existing browser-based tag to improve conversion matching. It still depends on the tag firing in the browser, unlike a true server-side connection that can send data independent of the browser."
+        "a": "No. Enhanced Conversions supplies customer matching data. Server-side tagging controls where a tag runs. Google supports using them together."
       },
       {
-        "q": "Can I set up Enhanced Conversions through Pixel Tracker?",
-        "a": "No. Enhanced Conversions is configured directly inside Google Ads, or through Google Tag Manager, under your conversion action settings. Pixel Tracker doesn't set it up or manage it."
-      },
-      {
-        "q": "Which platforms does Pixel Tracker support for server-side tracking?",
-        "a": "Meta, through Facebook's Conversions API, and TikTok, through TikTok's Events API. Google Ads, Snapchat, Pinterest, LinkedIn, and X are not currently supported for server-side tracking through Pixel Tracker."
-      },
-      {
-        "q": "Will Pixel Tracker add Google Ads server-side tracking later?",
-        "a": "It's not currently supported. For now, if server-side reliability matters most to your account, that's available through Pixel Tracker for Meta and TikTok, and Google's own Enhanced Conversions feature is the closest native option for Google Ads."
+        "q": "Will transaction IDs prevent all duplicate conversions?",
+        "a": "No. The ID must be stable for the same order and unique across orders. Deduplication for one conversion action does not combine separate conversion actions."
       }
     ],
     "related": [
@@ -316,7 +336,7 @@ export const platformActionPages: PlatformActionPage[] = [
         "href": "/pixel-tracker/google-ads/events"
       }
     ]
-  },
+  }
   {
     "platformSlug": "linkedin-pixel",
     "actionSlug": "troubleshooting",
