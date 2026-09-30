@@ -336,7 +336,7 @@ export const platformActionPages: PlatformActionPage[] = [
         "href": "/pixel-tracker/google-ads/events"
       }
     ]
-  }
+  },
   {
     "platformSlug": "linkedin-pixel",
     "actionSlug": "troubleshooting",
