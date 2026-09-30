@@ -1,3 +1,4 @@
+import { ProductStatus } from "@/components/product-status";
 import Link from "next/link";
 import { Check, ChevronDown, Minus, X } from "lucide-react";
 
@@ -130,7 +131,7 @@ export function VsGuide({
     applicationCategory: "BusinessApplication",
     operatingSystem: "Shopify",
     description:
-      "Connect Facebook, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn tracking pixels from one simple Shopify dashboard. No coding required.",
+      "Pixel Tracker is a prelaunch Shopify pixel-configuration app. Intended platform coverage is still being verified. Billing will be through Shopify.",
   };
 
   return (
@@ -148,6 +149,7 @@ export function VsGuide({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
 
+      <ProductStatus />
       <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-6 pt-6">
         <ol className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
           <li>

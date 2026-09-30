@@ -1,3 +1,4 @@
+import { ProductStatus } from "@/components/product-status";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { InlineText } from "@/components/inline-text";
@@ -71,6 +72,7 @@ export function VsComparisonGuide({ page }: { page: VsComparisonPage }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonJsonLd) }}
       />
 
+      <ProductStatus />
       <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-6 pt-6">
         <ol className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
           <li>

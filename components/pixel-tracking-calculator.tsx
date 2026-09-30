@@ -56,7 +56,7 @@ const COMPARISON_ROWS: {
     feature: "Server-side tracking",
     diy: "Rare, needs custom dev work",
     multiple: "Varies by app",
-    pixel: "Facebook CAPI + TikTok Events API",
+    pixel: "Not confirmed",
   },
   {
     feature: "Theme edits required",

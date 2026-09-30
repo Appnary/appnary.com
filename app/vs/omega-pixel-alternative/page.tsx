@@ -16,15 +16,15 @@ export const metadata: Metadata = withPageSeo("/vs/omega-pixel-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: false },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: true },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: false },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: false },
-  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Free plan for live stores", pixelTracker: "Not confirmed", competitor: true },
   { feature: "4 pricing tiers matched to usage", pixelTracker: "Not confirmed", competitor: true },
 ];
@@ -39,7 +39,7 @@ const pricingRows = [
 const faqs = [
   {
     q: "Does Omega support Google Ads or Pinterest?",
-    a: "No — Omega covers Facebook/Meta, TikTok, and Snapchat only. Pixel Tracker additionally supports Google Ads, Pinterest, LinkedIn, and X (Twitter).",
+    a: "No — Omega covers Facebook/Meta, TikTok, and Snapchat only. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Is Omega more expensive than Pixel Tracker?",
@@ -51,23 +51,23 @@ const faqs = [
   },
   {
     q: "Can I switch from Omega to Pixel Tracker?",
-    a: "Yes — both install pixels via Shopify ScriptTags rather than theme code, so switching means re-adding your existing pixel IDs in Pixel Tracker and removing the other app.",
+    a: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Is Omega's price increase across tiers justified by extra features?",
-    a: "Omega's pricing scales steeply mostly with usage limits rather than adding new platforms — Basic, Advanced, and Pro all cover the same three platforms (Facebook, TikTok, Snapchat). If you need broader platform coverage rather than just higher pixel limits, Pixel Tracker's planned scope adds four more platforms, with pricing still unconfirmed.",
+    a: "Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today.",
   },
 ];
 
 const overview = [
-  "Omega Pixel and Pixel Tracker both install and manage ad-platform tracking pixels on Shopify without theme code edits, and both support server-side event forwarding. The difference is scope: Omega focuses tightly on three platforms — Facebook/Meta, TikTok, and Snapchat — and has built a strong reputation doing it, with 158 reviews at a perfect 5.0★ average on the Shopify App Store.",
-  "Pixel Tracker covers those same three platforms plus four more — Google Ads, Pinterest, LinkedIn, and X. The trade-off is straightforward: Omega has the longer track record in a narrower lane, while Pixel Tracker trades some of that track record for broader planned coverage.",
+  "The difference is scope: Omega focuses tightly on three platforms — Facebook/Meta, TikTok, and Snapchat — and has built a strong reputation doing it, with 158 reviews at a perfect 5.0★ average on the Shopify App Store. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Omega Pixel supports only Facebook/Meta, TikTok, and Snapchat. It doesn't support Google Ads, Pinterest, LinkedIn, or X (Twitter) at all — a real limitation for any store running paid search or B2B campaigns alongside social ads. Pixel Tracker covers all seven of those platforms from one dashboard.",
+    body: "Omega Pixel supports only Facebook/Meta, TikTok, and Snapchat. It doesn't support Google Ads, Pinterest, LinkedIn, or X (Twitter) at all — a real limitation for any store running paid search or B2B campaigns alongside social ads. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Review history and reputation",
@@ -86,8 +86,8 @@ const featureBreakdown = [
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You need Google Ads, Pinterest, LinkedIn, or X pixel tracking alongside Facebook, TikTok, or Snapchat",
-  "You want broader platform coverage from one dashboard as your ad mix grows",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -98,7 +98,7 @@ const chooseWhenCompetitor = [
 
 const verdict = [
   "Omega has a genuinely excellent track record — 158 reviews at a perfect 5.0★ average — but it only covers three ad platforms: Facebook/Meta, TikTok, and Snapchat.",
-  "If you also run Google Ads, Pinterest, LinkedIn, or X campaigns, Omega doesn't cover them at all — Pixel Tracker supports all seven platforms from one dashboard."
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
 ];
 
 export default function OmegaPixelVsPage() {
@@ -110,15 +110,13 @@ export default function OmegaPixelVsPage() {
       competitorPricing="Free – $69.99/mo"
       competitorBestFor="Stores running only Facebook/Meta, TikTok, and Snapchat campaigns that want a well-reviewed, established app."
       competitorHref="https://apps.shopify.com/facebook-multiple-pixel"
-      positioning="Both connect ad-platform pixels to Shopify without touching theme code. Here's how Omega's proven reputation but narrower platform list compares to Pixel Tracker's broader planned coverage."
+      positioning="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Supports 4 more platforms (Google Ads, Pinterest, LinkedIn, X) than Omega's 3",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
         "No perfect 5.0★ track record yet — pre-launch",
       ]}

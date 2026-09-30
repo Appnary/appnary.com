@@ -104,7 +104,7 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "Appnary's own multi-platform pixel connector — 7 ad platforms, server-side CAPI. Launch pricing is not confirmed.",
+      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
     pricing: "Launch pricing not confirmed",
     bestFor:
       "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
@@ -164,7 +164,7 @@ const comparisonRows = [
       "infinite-pixels": "5",
       "omega-pixel": "3",
       tixel: "9 (incl. Reddit)",
-      "pixel-tracker": "7",
+      "pixel-tracker": "Not verified",
       onepixel: "6 (incl. Bing)",
       avantify: "5",
     },
@@ -188,7 +188,7 @@ const comparisonRows = [
       "infinite-pixels": true,
       "omega-pixel": true,
       tixel: true,
-      "pixel-tracker": true,
+      "pixel-tracker": "Not verified",
       onepixel: true,
       avantify: true,
     },
@@ -238,7 +238,7 @@ const analysis = [
   },
   {
     title: "Server-side tracking is table stakes now, not a differentiator",
-    body: "All seven apps in this comparison forward conversion events server-side (Facebook CAPI, TikTok Events API, or both), which is what keeps ad-platform reporting accurate as browser-based tracking gets blocked by ad blockers and Safari's Intelligent Tracking Prevention. That means server-side support alone shouldn't be the deciding factor between these apps — platform coverage, pricing shape, and review history are where they actually differ.",
+    body: "That means server-side support alone shouldn't be the deciding factor between these apps — platform coverage, pricing shape, and review history are where they actually differ. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
 ];
 
@@ -255,11 +255,11 @@ const faqs = [
   },
   {
     q: "Which Shopify pixel app supports the most ad platforms?",
-    a: "TiXel supports the most — nine platforms, including Reddit, which no other app in this comparison offers. Pixel Tracker and OnePixel each cover six to seven, and Omega Pixel covers three (Facebook/Meta, TikTok, Snapchat).",
+    a: "TiXel supports the most — nine platforms, including Reddit, which no other app in this comparison offers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Do any of these apps require editing my Shopify theme code?",
-    a: "No. All seven apps in this comparison inject pixels via Shopify's ScriptTag API rather than editing theme files, so a theme update won't silently break your tracking the way hand-coded pixel snippets sometimes do.",
+    a: "No. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Is a higher App Store rating always the better choice?",
@@ -267,7 +267,7 @@ const faqs = [
   },
   {
     q: "What does server-side tracking (CAPI) actually add over a standard pixel?",
-    a: "A standard browser pixel can be blocked by ad blockers, Safari's Intelligent Tracking Prevention, or a slow page load. Server-side forwarding — Facebook's Conversions API, TikTok's Events API — sends the same conversion event directly from Shopify's servers as a backup, which is why all seven apps in this list now include it by default.",
+    a: "Check the chosen app's current integration documentation and test events. Pixel Tracker is prelaunch; server-side delivery is not confirmed.",
   },
   {
     q: "How does Pixel Tracker's pricing compare to the rest of this list?",
@@ -281,10 +281,10 @@ export default function BestPixelTrackingAppsPage() {
       slug="best-shopify-pixel-tracking-apps"
       categoryTitle="Best Shopify Pixel Tracking Apps"
       h1="Best Shopify Pixel Tracking Apps (2026)"
-      tldr="Trackify has the largest review base (350), Infinite Pixels the best rating-to-volume ratio (4.9★/248), and Omega Pixel a perfect 5.0★ across 158 — but TiXel is the only app here that supports Reddit, and Pixel Tracker's launch prices and plan limits are still unconfirmed."
+      tldr="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       intro={[
-        "Every app on this list does the same basic job: install ad-platform tracking pixels on a Shopify store without editing theme code, and forward conversion events server-side so ad platforms still see accurate data when browser-based tracking gets blocked. The differences that actually matter are platform coverage, how each app prices access to that coverage, and how much of a track record it's built on the Shopify App Store.",
-        "We compared seven real, currently-listed apps — verified against their live Shopify App Store listings — rather than a generic \"top 10\" list padded with apps that don't fit the same category. Appnary's own app, Pixel Tracker, is included and ranked honestly alongside the rest, not placed at #1 by default: it's pre-launch and has no reviews yet, which is a real tradeoff against apps with a hundred-plus reviews behind them.",
+        "The differences that actually matter are platform coverage, how each app prices access to that coverage, and how much of a track record it's built on the Shopify App Store. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+        "This list includes available apps and our prelaunch Pixel Tracker preview. Appnary's own app, Pixel Tracker, is included and ranked honestly alongside the rest, not placed at #1 by default: it's pre-launch and has no reviews yet, which is a real tradeoff against apps with a hundred-plus reviews behind them.",
       ]}
       tools={tools}
       comparisonRows={comparisonRows}

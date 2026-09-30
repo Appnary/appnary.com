@@ -1,3 +1,4 @@
+import { ProductStatus } from "@/components/product-status";
 import Link from "next/link";
 import { Check, ChevronDown, X } from "lucide-react";
 
@@ -137,6 +138,7 @@ export function AlternativesRoundup({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
 
+      <ProductStatus />
       <nav aria-label="Breadcrumb" className="mx-auto max-w-3xl px-6 pt-6">
         <ol className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
           <li>

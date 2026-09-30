@@ -6,11 +6,11 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/pixel-tracker", {
   title: "Shopify Pixel Tracking: Meta, Google Ads, TikTok & More | Appnary",
   description:
-    "Connect Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels in Shopify. App-specific pricing, billed through Shopify.",
+    "Pixel Tracker is a prelaunch Shopify pixel-configuration app. Intended platform coverage is still being verified. Billing will be through Shopify.",
   openGraph: {
     title: "Shopify Pixel Tracking: Meta, Google Ads, TikTok & More",
     description:
-      "Connect Meta, Google Ads, TikTok, and more from one Shopify dashboard. App-specific pricing, billed through Shopify.",
+      "Pixel Tracker is a prelaunch Shopify pixel-configuration app. Intended platform coverage is still being verified. Billing will be through Shopify.",
     url: "https://appnary.com/pixel-tracker",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -20,22 +20,22 @@ const features = [
   {
     title: "Multi-platform tracking",
     description:
-      "Facebook, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn — all in one place.",
+      "Intended coverage includes Meta, Google, TikTok, Snapchat, Pinterest, X, and LinkedIn. Availability will be confirmed at launch.",
   },
   {
-    title: "One-click setup",
+    title: "Theme app extension",
     description:
-      "Paste your Pixel ID and you're done. No theme editing, no code changes required.",
+      "The current approach uses an app embed activated in Shopify's theme editor. Launch setup still needs end-to-end verification.",
   },
   {
-    title: "Automatic injection",
+    title: "Browser pixel setup",
     description:
-      "Pixels fire on every storefront page automatically via Shopify ScriptTags.",
+      "The theme app extension loads browser tags when enabled. Event coverage must be tested before relying on the reports.",
   },
   {
-    title: "Server-side events",
+    title: "Server-side status",
     description:
-      "Facebook Conversions API (CAPI) and TikTok Events API for more accurate conversion tracking.",
+      "Meta CAPI and TikTok Events API are not confirmed launch features. Browser pixel support does not establish server-side delivery.",
   },
   {
     title: "Simple dashboard",
@@ -52,15 +52,15 @@ const features = [
 const faqs = [
   {
     q: "What platforms do you support?",
-    a: "Facebook/Meta Pixel, Google Ads Tag, TikTok Pixel, Snapchat Pixel, Pinterest Tag, X (Twitter) Pixel, and LinkedIn Insight Tag.",
+    a: "The intended scope includes Meta, Google, TikTok, Snapchat, Pinterest, X, and LinkedIn. The app is prelaunch; check the launch listing for verified platform coverage.",
   },
   {
     q: "How do I install it?",
-    a: "Install from the Shopify App Store, paste your Pixel ID for each platform, and your pixels fire automatically. No code editing needed.",
+    a: "It isn't available to install yet. Join the waitlist for launch updates. The current setup approach uses a Shopify theme app extension that must be activated and tested.",
   },
   {
     q: "Does it work with server-side events?",
-    a: "Yes. Facebook Conversions API (CAPI) and TikTok Events API are supported for more accurate conversion tracking that isn't blocked by ad blockers.",
+    a: "Server-side event delivery is not confirmed. Do not rely on Pixel Tracker for Meta CAPI or TikTok Events API until the launch documentation and test events verify those features.",
   },
   {
     q: "Is there a free plan?",
@@ -68,7 +68,7 @@ const faqs = [
   },
   {
     q: "Do I need to edit my theme?",
-    a: "No. Pixels are injected automatically via Shopify ScriptTags — your theme stays untouched.",
+    a: "The current approach does not require editing theme files by hand. It uses an app embed that must be activated in Shopify's theme editor, then tested on the store.",
   },
   {
     q: "Can I track multiple stores?",
@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     q: "What about GDPR/CCPA compliance?",
-    a: "You're responsible for your own compliance. Pixel Tracker connects your existing platform pixels — it doesn't collect or store visitor data itself.",
+    a: "Review your store's consent settings and the data collected by each ad integration before enabling tracking. Launch documentation will need to describe Pixel Tracker's verified data flow.",
   },
   {
     q: "How do I cancel?",
@@ -110,7 +110,7 @@ const softwareJsonLd = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Shopify",
   description:
-    "Connect Facebook, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn tracking pixels from one simple Shopify dashboard. No coding required.",
+    "Pixel Tracker is a prelaunch Shopify pixel-configuration app. Intended platform coverage is still being verified. Billing will be through Shopify.",
 };
 
 export default function PixelTrackerPage() {
@@ -156,9 +156,8 @@ export default function PixelTrackerPage() {
             Pixel Tracker
           </h1>
           <p className="mt-3 max-w-xl text-lg text-muted-foreground">
-            Connect all your tracking pixels from one simple dashboard.
-            Facebook, Google, TikTok, Snapchat, Pinterest, X, and LinkedIn —
-            no coding required.
+            We are building a Shopify app for multi-platform pixel configuration.
+            Launch integrations and event coverage are still being verified.
           </p>
           <div className="mt-8 flex items-center gap-4">
             <button
@@ -244,7 +243,7 @@ export default function PixelTrackerPage() {
             Platform setup guides
           </h2>
           <p className="mt-2 text-sm text-muted-foreground-strong">
-            Step-by-step instructions for connecting each ad platform once Pixel Tracker is installed.
+            Prepare and verify an existing tracking setup while Pixel Tracker is in development.
           </p>
           <ul className="mt-4 grid gap-2 sm:grid-cols-3">
             <li>

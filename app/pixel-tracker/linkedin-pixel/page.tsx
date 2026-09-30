@@ -3,80 +3,60 @@ import { PixelGuide } from "@/components/pixel-guide";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker/linkedin-pixel", {
-  title: "LinkedIn Insight Tag for Shopify: Setup Guide | Appnary",
-  description:
-    "Add the LinkedIn Insight Tag to Shopify with Pixel Tracker. Paste your Partner ID — no theme edits required.",
-  keywords: [
-    "LinkedIn Insight Tag Shopify",
-    "LinkedIn Pixel setup",
-    "Shopify LinkedIn tracking",
-    "LinkedIn conversion tracking Shopify",
-  ],
-  openGraph: {
-    title: "LinkedIn Insight Tag for Shopify: Setup Guide",
-    description:
-      "Paste your LinkedIn Partner ID into Pixel Tracker. No theme code.",
-    url: "https://appnary.com/pixel-tracker/linkedin-pixel",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-  },
+  title: "LinkedIn Pixel on Shopify: Setup and Event Checks | Appnary",
+  description: "Prepare a LinkedIn tracking setup, verify identifiers and test purchases, and check consent. Pixel Tracker is still in development.",
 });
 
 const steps = [
   {
-    title: "Get your LinkedIn Insight Tag ID",
-    body: "In LinkedIn Campaign Manager, go to Account Assets → Insight Tag and copy your Partner ID.",
+    "title": "Confirm the Partner ID and conversion rule",
+    "body": "Use your LinkedIn ad account to identify the data source and the conversion action you intend to measure. Installing the Insight Tag is separate from defining a conversion. Confirm the rule measures the intended action; a page visit is not proof of a purchase."
   },
   {
-    title: "Open the Pixel Tracker dashboard",
-    body: "From your Shopify admin, open Pixel Tracker's dashboard.",
+    "title": "Choose an available Shopify integration",
+    "body": "Check the provider's current Shopify setup instructions and checkout coverage. Pixel Tracker is not available to install yet. Do not remove working tracking to switch to a prelaunch app."
   },
   {
-    title: "Paste the Partner ID",
-    body: "Enter your LinkedIn Partner ID in the LinkedIn field and save. No theme editing is required.",
+    "title": "Check activation and consent",
+    "body": "Follow the chosen integration's activation instructions. A theme app embed must be enabled in the theme editor; it does not establish checkout coverage. Review consent settings before testing."
   },
   {
-    title: "Confirm events are firing",
-    body: "Pixel Tracker injects the Insight Tag automatically on every storefront page via Shopify ScriptTags. Use LinkedIn's Insight Tag Helper browser extension to confirm it's firing correctly.",
+    "title": "Verify events and purchase details",
+    "body": "Use Insight Tag diagnostics to inspect browser activity and LinkedIn Campaign Manager to check receipt. Complete a test purchase and compare conversion rule, value, and event identifier against the order. A page-view event alone does not prove purchase tracking."
   },
+  {
+    "title": "Inspect server delivery separately",
+    "body": "If your chosen integration includes server delivery, check it separately using the provider's diagnostics and deduplication instructions. Pixel Tracker server-side delivery is not confirmed."
+  }
 ];
-
 const faqs = [
   {
-    q: "What does the LinkedIn Insight Tag track?",
-    a: "Visitor actions like page views, add-to-cart, and purchases, so LinkedIn ad campaigns can measure results and retarget visitors.",
+    "q": "Can I connect LinkedIn with Pixel Tracker today?",
+    "a": "Pixel Tracker is in development and not available to install. Launch platform coverage is still being verified."
   },
   {
-    q: "Do I need to edit my Shopify theme to add the LinkedIn Insight Tag?",
-    a: "No. Pixel Tracker injects the tag automatically via Shopify ScriptTags once you paste your Partner ID.",
+    "q": "Does installing a pixel guarantee purchase tracking?",
+    "a": "No. A base tag can load while checkout events are missing or incorrect. Test a complete order and confirm the intended conversion event, value, and currency."
   },
   {
-    q: "Can I use the LinkedIn Insight Tag alongside other platforms?",
-    a: "Yes. Pixel Tracker lets you connect LinkedIn alongside Facebook, Google, TikTok, Snapchat, Pinterest, and X pixels from the same dashboard.",
+    "q": "Does Pixel Tracker provide server-side tracking?",
+    "a": "Server-side delivery and browser/server deduplication are not confirmed launch features."
   },
   {
-    q: "How much does Pixel Tracker cost?",
-    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
-  },
-  {
-    q: "Is Pixel Tracker available on the Shopify App Store yet?",
-    a: "It's available soon on the Shopify App Store. Join the waitlist at appnary.com for early access.",
-  },
+    "q": "How will Pixel Tracker billing work?",
+    "a": "Pricing varies by Shopify app and billing will be through Shopify. Pixel Tracker launch prices and plan limits are not confirmed."
+  }
 ];
 
-export default function LinkedInPixelGuidePage() {
-  return (
-    <PixelGuide
-      slug="linkedin-pixel"
-      platformName="LinkedIn Insight Tag"
-      h1="How to Set Up the LinkedIn Insight Tag on Shopify with Pixel Tracker"
-      intro="Connect your LinkedIn Insight Tag to your Shopify store in a few minutes — no theme code changes required."
-      steps={steps}
-      faqs={faqs}
+export default function PlatformSetupGuide() {
+  return <PixelGuide
+    slug="linkedin-pixel" platformName="LinkedIn" h1="LinkedIn Pixel on Shopify: Setup and Event Checks"
+    intro="Prepare a LinkedIn tracking setup, verify identifiers and test purchases, and check consent. Pixel Tracker is still in development." steps={steps} faqs={faqs}
       relatedLinks={[
+        { label: "Official LinkedIn tracking documentation", href: "https://learn.microsoft.com/en-us/linkedin/marketing/conversions/conversions-overview?view=li-lms-2026-02" },
         { label: "LinkedIn Insight Tag troubleshooting", href: "/pixel-tracker/linkedin-pixel/troubleshooting" },
         { label: "LinkedIn Insight Tag events explained", href: "/pixel-tracker/linkedin-pixel/events" },
         { label: "LinkedIn server-side tracking", href: "/pixel-tracker/linkedin-pixel/server-side" },
       ]}
-    />
-  );
+  />;
 }

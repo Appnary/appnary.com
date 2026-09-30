@@ -5,10 +5,10 @@ import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/", {
   description:
-    "Appnary builds Pixel Tracker, connecting Facebook, Google, and TikTok pixels on your Shopify store from one dashboard — no code or theme edits required.",
+    "Appnary is building Pixel Tracker, a Shopify pixel-configuration app. Join the waitlist for verified launch coverage and availability.",
   openGraph: {
     description:
-      "Pixel Tracker connects Shopify pixel tracking for Facebook, Google, and TikTok from one dashboard — no code required.",
+      "Pixel Tracker is in development. Follow launch updates for this planned Shopify pixel-configuration app.",
   },
 });
 
@@ -19,11 +19,11 @@ const homeFaqs = [
   },
   {
     q: "What is Pixel Tracker?",
-    a: "Pixel Tracker connects tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard, with no theme code editing required.",
+    a: "Pixel Tracker is a planned Shopify pixel-configuration app. Intended coverage includes Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn; launch integrations are still being verified.",
   },
   {
     q: "Is Pixel Tracker available now?",
-    a: "Pixel Tracker is available soon on the Shopify App Store. Join the waitlist for early access and launch pricing.",
+    a: "Pixel Tracker is in development and not available to install. Join the waitlist for launch updates.",
   },
   {
     q: "How much does Pixel Tracker cost?",
@@ -48,7 +48,7 @@ const softwareJsonLd = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Shopify",
   description:
-    "Connect tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard.",
+    "Pixel Tracker is a prelaunch Shopify pixel-configuration app. Intended platform coverage is still being verified. Billing will be through Shopify.",
   url: "https://appnary.com/pixel-tracker",
 };
 
@@ -118,7 +118,7 @@ export default function Home() {
               </div>
               <span className="inline-block rounded-full bg-aqua/15 px-3 py-1 text-xs font-medium text-accent-foreground">Available Soon</span>
               <h3 className="mt-3 text-lg font-semibold text-foreground">Pixel Tracker</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Connect Facebook, Google, TikTok &amp; more pixels from one simple dashboard.</p>
+              <p className="mt-2 text-sm text-muted-foreground">A planned Shopify app for multi-platform pixel configuration. Launch coverage is still being verified.</p>
               <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
                 <a href="/pixel-tracker" className="inline-block text-sm font-medium text-accent-foreground hover:underline">Learn More →</a>
                 <a href="/pixel-tracker/guides" className="inline-block text-sm font-medium text-muted-foreground-strong hover:text-accent-foreground hover:underline">Setup guides →</a>

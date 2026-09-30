@@ -18,7 +18,7 @@ export const metadata: Metadata = withPageSeo("/pixel-tracker/guides/multi-chann
 const intro = [
   `Running a Shopify store's ad account dashboards side by side is a strange experience. Meta Ads Manager says it drove $12,000 in purchases this month. Google Ads says $9,000. TikTok says $4,000. Add those up and the total is bigger than the store actually made in revenue. Nothing is broken. This is what happens by default the moment a store advertises on more than one platform, and it's the reason attribution has to be understood on purpose rather than assumed.`,
   `Attribution is just the set of rules used to decide which ad gets credit for a sale. A shopper might watch a TikTok video on Monday, click a Meta retargeting ad on Wednesday, then search the brand name on Google and buy on Friday. All three platforms were involved. Each one, left to its own reporting, will tend to claim the sale as its own.`,
-  `This guide covers what attribution actually means, the models used to divide credit between touchpoints, why Meta, Google, and TikTok routinely report the same conversion as their own, and what has to be true about a store's pixel setup before any of these numbers are worth comparing. It ends with a practical walkthrough for getting a Shopify store instrumented for multi-channel tracking using [Pixel Tracker](/pixel-tracker).`,
+  `Pixel Tracker is a prelaunch pixel-configuration app, not an attribution model or reporting dashboard. Verify the data supplied by your current tracking integrations before comparing the attribution models described here.`,
 ];
 
 const sections = [
@@ -48,7 +48,7 @@ const sections = [
     heading: "You can't attribute what you haven't instrumented",
     paragraphs: [
       `None of the above matters if a platform's pixel was never properly connected in the first place. If Google's conversion tag isn't installed on a store, Google Ads will report close to zero conversions from that channel, not because the ads didn't work, but because nothing was ever measured. A platform with no pixel looks worthless in the reporting regardless of how it actually performed.`,
-      `That's the unglamorous prerequisite underneath everything else in this guide: every ad platform a store is spending on needs its pixel or tag actually firing before any attribution comparison means anything. That's the specific problem [Pixel Tracker](/pixel-tracker) solves. It connects tracking pixels for Meta, Google's conversion tag (not GA4), TikTok, Snapchat, Pinterest, X, and LinkedIn from one Shopify dashboard, injected automatically through Shopify ScriptTags so there's no theme code to edit. It doesn't calculate attribution, build a blended dashboard, or model ROAS across channels. It makes sure every platform is actually seeing what happens on the store, which is the condition every attribution model above depends on.`,
+      `Pixel Tracker is a prelaunch pixel-configuration app, not an attribution model or reporting dashboard. Verify the data supplied by your current tracking integrations before comparing the attribution models described here.`,
     ],
   },
 ];
@@ -57,27 +57,27 @@ const steps = [
   {
     title: "Audit which platforms you're actually running ads on",
     body: `List every paid channel currently spending money: Meta, Google, TikTok, Snapchat, Pinterest, X, LinkedIn, whichever apply. For each one, check whether a pixel or conversion tag is actually installed and firing on the storefront, not just configured somewhere inside the ad account's settings. It's common to find a platform that's been spending for months with no pixel connected at all, which explains why its reported conversions look suspiciously low compared to what was actually spent.`,
-    screenshotCaption: "A checklist of ad platforms with monthly spend next to a column showing whether a pixel is actually firing on the store.",
+
   },
   {
-    title: "Connect each pixel through Pixel Tracker",
-    body: `Add every platform from the audit into Pixel Tracker's dashboard, one pixel ID at a time. Each pixel gets injected through a Shopify ScriptTag automatically, so there's no editing theme.liquid or hunting for the right template file. Choose an app whose confirmed plan limits cover the platforms you need. Pixel Tracker's launch limits and prices are not confirmed yet; billing will be through Shopify. The [Meta pixel](/pixel-tracker/meta-pixel) and [TikTok pixel](/pixel-tracker/tiktok-pixel) setup pages cover platform-specific details.`,
-    screenshotCaption: "Pixel Tracker's dashboard listing connected pixels for Meta, Google, and TikTok with status indicators next to each.",
+    title: "Verify each installed pixel integration",
+    body: `Choose an available integration for each platform you advertise on. Follow its setup documentation, test purchase events, and verify server delivery separately if included. Pixel Tracker is not available to install yet.`,
+
   },
   {
     title: "Turn on server-side tracking where it's available",
-    body: `Browser-based pixels alone miss conversions to ad blockers, iOS privacy restrictions, and cookie limits. Pixel Tracker supports server-side tracking for Facebook Conversions API and TikTok Events API, sending conversion events directly from Shopify's servers as a backup to the browser pixel for those two platforms. Google, Snapchat, Pinterest, X, and LinkedIn currently rely on browser-side tracking only within Pixel Tracker, so correct pixel placement and consent handling matter more for those.`,
-    screenshotCaption: "Toggle switches for enabling Facebook Conversions API and TikTok Events API server-side tracking.",
+    body: `Choose an available integration for each platform you advertise on. Follow its setup documentation, test purchase events, and verify server delivery separately if included. Pixel Tracker is not available to install yet.`,
+
   },
   {
     title: "Pick one blended metric as your source of truth",
     body: `Stop treating any single platform's dashboard as the truth. Calculate blended ROAS (total ad spend across every platform divided by total store revenue in the same period) or blended CAC (total spend divided by total new customers), using Shopify's own order data as the revenue side of the equation rather than the sum of each platform's self-reported conversions. It won't say which platform deserves credit for which sale, but it will say honestly whether the total ad spend is paying off. The [ROAS calculation guide](/pixel-tracker/guides/roas-calculation) walks through the math in more detail.`,
-    screenshotCaption: "A spreadsheet comparing blended ROAS from total store revenue against the sum of each platform's self-reported ROAS.",
+
   },
   {
     title: "Revisit the setup every time you add or drop a platform",
     body: `Pixel connections and attribution assumptions go stale the moment the ad mix changes. Adding Pinterest or dropping X changes which platforms can even claim credit for a sale, so repeat the audit whenever spend starts or stops on a channel, and confirm pixels are still firing after any theme or checkout update.`,
-    screenshotCaption: "A quarterly reminder checklist for reviewing connected pixels against current ad platform spend.",
+
   },
 ];
 
@@ -91,7 +91,7 @@ const closingSections = [
   {
     heading: "Where this fits with Pixel Tracker",
     paragraphs: [
-      `Pixel Tracker isn't an attribution tool, and it won't tell a store whether last-click or linear is the better model to use. What it does is make sure Meta, Google's conversion tag, TikTok, Snapchat, Pinterest, X, and LinkedIn are all actually connected and reporting, which is the prerequisite every attribution approach above depends on. It's currently pre-launch, so there's no install yet and no free trial to sign up for, but merchants can [join the waitlist](/#waitlist) for early access. For stores comparing tools before committing to one, this [roundup of Shopify ad tracking apps](/alternatives/best-shopify-ad-tracking-tools) covers where Pixel Tracker sits next to the alternatives.`,
+      `Pixel Tracker is a prelaunch pixel-configuration app, not an attribution model or reporting dashboard. Verify the data supplied by your current tracking integrations before comparing the attribution models described here.`,
     ],
   },
 ];
@@ -111,7 +111,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker calculate attribution?",
-    a: "No. Pixel Tracker connects tracking pixels for Meta, Google's conversion tag, TikTok, Snapchat, Pinterest, X, and LinkedIn from one Shopify dashboard, plus server-side tracking for Facebook Conversions API and TikTok Events API. It doesn't build a cross-channel dashboard or run attribution modeling, that happens inside each platform's own reporting or in a separate analytics tool once every pixel is properly connected.",
+    a: "Pixel Tracker is a prelaunch pixel-configuration app, not an attribution model or reporting dashboard. Verify the data supplied by your current tracking integrations before comparing the attribution models described here.",
   },
   {
     q: "Is data-driven attribution more accurate than the standard models?",

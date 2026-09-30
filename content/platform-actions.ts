@@ -11,32 +11,13 @@ export const platformActionPages: PlatformActionPage[] = [
     "description": "Google Ads conversion tag showing zero conversions? Learn how to check tag firing, Ads diagnostics, and the GA4 mix-up before you assume tracking is broken.",
     "h1": "Fix a Google Ads Conversion Tag That's Not Tracking",
     "intro": [
-      "If your Google Ads account shows \"No recent conversions\" or a conversion count that doesn't match your actual Shopify orders, the Google Ads conversion tag connected through Pixel Tracker usually isn't the first place to look. Most of the time the tag is firing fine, and the real issue is somewhere else: a mismatched conversion label, an ad blocker, or confusion between Google Ads and Google Analytics 4 reporting.",
-      "This page walks through the checks worth running in order, starting with the ones inside Google Ads itself, before you assume Pixel Tracker's connection is broken. If you haven't set up Google Ads conversion tracking yet, the [Google Ads conversion tracking guide](/pixel-tracker/guides/google-ads-conversion-tracking) covers the initial setup."
+      "Check the conversion ID and label in your existing integration and compare it with Google Ads conversion diagnostics. Use Tag Assistant to inspect browser activity, then test checkout separately. GA4 key events and Google Ads conversion actions are separate. Confirm which action is primary for bidding before comparing their totals."
     ],
     "sections": [
-      {
-        "heading": "Check Google Ads diagnostics before anything else",
-        "paragraphs": [
-          "Google Ads has a built-in Diagnostics tab under Goals > Conversions > Summary that tells you the actual health of your conversion tag, including whether it has received a hit in the last 24 hours. This is more reliable than eyeballing the conversion count, because a tag can be firing correctly while conversions are still processing or attributed to a different action. Start here before touching anything in your Shopify admin or the Pixel Tracker dashboard."
-        ]
-      },
       {
         "heading": "You might be looking at GA4, not Google Ads",
         "paragraphs": [
           "Google Analytics 4 and Google Ads track conversions separately, using different IDs and different dashboards, even though both use a version of Google's tag. It's common for a merchant to see purchase events reporting fine in GA4 and assume Google Ads tracking is also fine, when the Ads account is actually using a completely different conversion action with its own conversion ID and label. Confirm you're checking the conversion action inside the Google Ads interface, not a GA4 report, before troubleshooting further."
-        ]
-      },
-      {
-        "heading": "Confirm the conversion tag is actually firing",
-        "paragraphs": [
-          "Install Google's Tag Assistant browser extension, visit your storefront, and complete a real or test purchase while Tag Assistant is recording. If the extension shows the Google tag firing with the correct conversion ID, the tag is working, and the problem is downstream in how Google Ads is counting or attributing it. If Tag Assistant shows nothing firing at all, check that Pixel Tracker's Google Ads connection is still active in your dashboard and that the conversion ID and label match what's configured in Google Ads."
-        ]
-      },
-      {
-        "heading": "Ad blockers and consent tools can silently block gtag.js",
-        "paragraphs": [
-          "Browser extensions, privacy-focused browsers, and cookie consent banners that default to blocking marketing scripts can prevent Google's tag from loading at all, with no visible error to the shopper. This affects a meaningful share of traffic and will always make your reported conversions lower than actual Shopify orders. It's not something Pixel Tracker or Google Ads can fix from the backend, but it does explain a gap between real sales and tracked conversions, especially in privacy-conscious markets."
         ]
       },
       {
@@ -48,8 +29,8 @@ export const platformActionPages: PlatformActionPage[] = [
     ],
     "steps": [
       {
-        "title": "Check Google Ads Diagnostics",
-        "body": "Go to Goals > Conversions > Summary in Google Ads and open the conversion action tied to Pixel Tracker. Look for tag health warnings or a \"No recent conversions\" status."
+        "title": "Check your Google Ads integration",
+        "body": "Use the settings in your installed integration to confirm the conversion ID and label. Pixel Tracker is not available to install. If your integration uses a theme app embed, activate it in the theme editor and test checkout separately."
       },
       {
         "title": "Confirm you're not reading GA4",
@@ -58,10 +39,6 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "title": "Run Tag Assistant on a live checkout",
         "body": "Complete a test purchase with Google's Tag Assistant extension open and confirm the Google tag fires with the correct conversion ID and label."
-      },
-      {
-        "title": "Check the Pixel Tracker connection status",
-        "body": "In your Pixel Tracker dashboard, confirm the Google Ads connection is active and the conversion ID matches your Google Ads account."
       },
       {
         "title": "Rule out ad blockers",
@@ -95,7 +72,7 @@ export const platformActionPages: PlatformActionPage[] = [
       },
       {
         "q": "Can an ad blocker stop the Google Ads conversion tag from firing?",
-        "a": "Yes. Ad blockers, privacy browsers, and some cookie consent tools block gtag.js by default, so those visits never get counted, with no error visible to the shopper. This will always make tracked conversions lower than actual orders, and it isn't something that can be fixed from the Pixel Tracker or Google Ads side."
+        "a": "Yes. An extension or browser setting can block the tag or its request. Compare a test with extensions disabled against normal browsing, and check consent settings separately."
       },
       {
         "q": "What's the difference between Tag Assistant and Google Ads Diagnostics?",
@@ -103,12 +80,16 @@ export const platformActionPages: PlatformActionPage[] = [
       },
       {
         "q": "My conversion count is lower than my Shopify order count, is that normal?",
-        "a": "Some gap is normal and expected, mostly from ad blockers, privacy settings, and reporting delays. But if the gap is large or growing, work through the diagnostic checklist above starting with Google Ads Diagnostics before assuming Pixel Tracker's connection has failed."
+        "a": "The totals measure different things. Shopify records orders, while Google Ads reports conversions attributed under your selected settings. Check dates, conversion actions, attribution windows, consent, and delivery before treating a difference as a broken tag."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
       {
-        "label": "Google Ads events Pixel Tracker tracks",
+        "label": "Google Ads conversion event checks",
         "href": "/pixel-tracker/google-ads/events"
       },
       {
@@ -139,42 +120,17 @@ export const platformActionPages: PlatformActionPage[] = [
     "platformName": "Google Ads",
     "pixelName": "Google Ads conversion tag",
     "badge": "Events",
-    "title": "Google Ads Conversion Actions: What Pixel Tracker Sends",
-    "description": "Google Ads tracks conversion actions, not standard events like Meta or TikTok. Here's what Pixel Tracker fires, and how it differs from your GA4 setup.",
-    "h1": "Google Ads Conversion Actions: What Pixel Tracker Sends",
+    "title": "Google Ads Conversion Actions: What to Verify",
+    "description": "Check Google Ads tracking on Shopify: verify the conversion ID and label, event receipt, and purchase details with your current integration.",
+    "h1": "Google Ads Conversion Actions: What to Verify",
     "intro": [
-      "Google Ads doesn't use the \"standard events\" idea that Meta and TikTok use, where a single pixel reports a fixed list of named actions like Purchase or Add to Cart. Instead, Google Ads tracks conversion actions: individual, separately configured tracking targets that each get their own conversion ID and label inside your Google Ads account. Understanding that difference matters if you're comparing Pixel Tracker's Google Ads connection to how it works for Meta or TikTok.",
-      "It also matters because of a second, very common mix-up: confusing the Google Ads conversion tag with Google Analytics 4. They look similar, both use a version of Google's tag, but they are two separate tracking systems with separate IDs, and only one of them, the Google Ads conversion action, is what Pixel Tracker connects to for your ad account."
+      "Check the conversion ID and label in your existing integration and compare it with Google Ads conversion diagnostics. Use Tag Assistant to inspect browser activity, then test checkout separately. GA4 key events and Google Ads conversion actions are separate. Confirm which action is primary for bidding before comparing their totals."
     ],
     "sections": [
       {
-        "heading": "Conversion actions, not standard events",
-        "paragraphs": [
-          "In Meta or TikTok, Purchase and Add to Cart are fixed, pre-named events that any pixel can send once it's installed. Google Ads works differently: each conversion action, Purchase, Add to Cart, Begin Checkout, or anything else you want tracked, is created inside your Google Ads account first, with its own conversion ID and conversion label. Pixel Tracker's job is to fire the Google tag across your storefront and pass the purchase data to the conversion action you've set up, but the conversion action itself lives in Google Ads, not in a fixed Pixel Tracker event list."
-        ]
-      },
-      {
-        "heading": "The Google Ads conversion tag and GA4 are not the same tool",
-        "paragraphs": [
-          "Google Analytics 4 (GA4) and Google Ads conversion tracking are separate products with separate IDs, even though they share the same underlying gtag.js script and get confused constantly. GA4 is built for analytics and reporting across your whole site. The Google Ads conversion tag exists specifically to tell Google Ads which visits turned into sales, so it can optimize your campaigns and bidding. Pixel Tracker connects to the Google Ads conversion action, not your GA4 property, so a working GA4 setup doesn't automatically mean Google Ads conversion tracking is working too."
-        ]
-      },
-      {
-        "heading": "What Pixel Tracker's Google Ads connection fires",
-        "paragraphs": [
-          "You add your Google Ads conversion ID and conversion label to Pixel Tracker, and Pixel Tracker injects the Google tag storefront-wide through a Shopify ScriptTag, no theme code editing required. The primary action is firing the purchase conversion when a checkout completes, which is what most merchants care about for return-on-ad-spend reporting. If you want supporting conversion actions tracked, like Add to Cart or Begin Checkout, those still need to be created as separate conversion actions in your Google Ads account first, with their own IDs and labels."
-        ]
-      },
-      {
         "heading": "Enhanced Conversions and why event accuracy matters",
         "paragraphs": [
-          "Enhanced Conversions is a feature Google Ads offers directly, not something Pixel Tracker sets up, that sends hashed first-party customer data, like a shopper's email, alongside a conversion to improve how confidently Google can match it to an ad click. It's configured inside your Google Ads account, or through Google Tag Manager, separate from your Pixel Tracker connection. It's worth knowing about because it directly affects how well your purchase conversion action performs, even though Pixel Tracker itself doesn't manage it. See the [server-side tracking page](/pixel-tracker/google-ads/server-side) for more on what it does and doesn't cover."
-        ]
-      },
-      {
-        "heading": "Setting up additional conversion actions",
-        "paragraphs": [
-          "If you decide you want more than the purchase conversion tracked, say, Begin Checkout for remarketing signals, you'll create that new conversion action inside Google Ads, get its conversion label, and use it alongside your existing purchase tracking. Pixel Tracker fires the base tag that these conversion actions rely on, but each new action still has to be built on the Google Ads side."
+          "Browser and server delivery are separate checks. Verify the provider's documented Google Ads server integration and inspect receipt in Google Ads conversion diagnostics. Pixel Tracker server-side delivery is not confirmed."
         ]
       }
     ],
@@ -182,24 +138,16 @@ export const platformActionPages: PlatformActionPage[] = [
     "symptoms": [],
     "faqs": [
       {
-        "q": "Does Pixel Tracker send standard events like Meta or TikTok does for Google Ads?",
-        "a": "No. Google Ads doesn't have a fixed standard events list. It uses conversion actions that you, or your Google Ads account, define individually, each with its own conversion ID and label. Pixel Tracker fires the Google tag that feeds those actions, mainly the purchase conversion, rather than sending a preset roster of named events."
-      },
-      {
         "q": "What's the actual difference between GA4 and the Google Ads conversion tag?",
-        "a": "GA4 is Google's analytics platform, tracking overall site behavior under its own property and measurement ID. The Google Ads conversion tag is a separate system tied to a conversion ID and label inside your Google Ads account, used specifically for ad optimization and bidding. Pixel Tracker connects to the Google Ads conversion action, not your GA4 property."
-      },
-      {
-        "q": "Which conversion action does Pixel Tracker track automatically?",
-        "a": "The purchase conversion is the main one, firing when a checkout completes. Any additional conversion actions, like Add to Cart or Begin Checkout, need to be created in your Google Ads account first, with their own conversion ID and label, before Pixel Tracker's tag can report to them."
+        "a": "GA4 measures site activity in an Analytics property. Google Ads conversion actions measure outcomes used for Ads reporting and bidding. Confirm the intended action and import settings; a GA4 event does not automatically prove the separate Ads conversion tag works."
       },
       {
         "q": "Do I need to build conversion actions myself in Google Ads?",
-        "a": "Yes, for anything beyond the primary purchase conversion. Creating a conversion action, naming it, and getting its conversion label, is a Google Ads account setting, not something toggled from the Pixel Tracker dashboard."
+        "a": "You need an appropriate conversion action in the intended Ads account. Some integrations create or import actions, while others require an existing ID and label. Follow the provider's documented setup and check the action used for bidding."
       },
       {
-        "q": "Are Enhanced Conversions the same thing as Pixel Tracker's tracking?",
-        "a": "No. Enhanced Conversions is a Google Ads feature that sends hashed customer data to improve conversion matching, and it's configured directly in Google Ads or Google Tag Manager. Pixel Tracker doesn't set up or manage Enhanced Conversions."
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -235,7 +183,7 @@ export const platformActionPages: PlatformActionPage[] = [
     "description": "Google Ads supports server-side conversion tracking through GTM. Compare that with Enhanced Conversions, verify purchases, and see Pixel Tracker's limits.",
     "h1": "Google Ads Server-Side Tracking: What's Actually Possible",
     "intro": [
-      "Google Ads supports server-side conversion tracking through Google Tag Manager. Pixel Tracker doesn't currently manage that setup: its Google Ads connection is browser-based. These are different limits, and choosing a tool starts with separating them.",
+      "Google Ads supports server-side conversion tracking through Google Tag Manager. Pixel Tracker is in development and does not manage that setup; its own launch event coverage is still being verified.",
       "Enhanced Conversions adds customer matching data to conversion measurement; it isn't another name for server-side tagging. This guide covers Google's supported options and a purchase-verification checklist. Pixel Tracker is still in development and isn't publicly installable yet."
     ],
     "sections": [
@@ -269,7 +217,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Pixel Tracker availability and scope",
         "paragraphs": [
-          "Pixel Tracker is in development. Its Google Ads connection is described as browser-based; Google Ads server-side tagging and Enhanced Conversions aren't managed by Pixel Tracker. The product roadmap also describes Meta and TikTok server-side integrations, but that doesn't establish Google Ads support. See the [product overview](/pixel-tracker) and [comparison directory](/compare) for the current product context."
+          "Pixel Tracker is in development. Launch platform coverage and server-side delivery are not confirmed. It does not configure Google Tag Manager server containers or Enhanced Conversions. Use an available integration if you need those features today."
         ]
       }
     ],
@@ -302,10 +250,6 @@ export const platformActionPages: PlatformActionPage[] = [
         "a": "Yes. Google documents an Ads Conversion Tracking tag for GTM server containers. That requires a separate implementation; Pixel Tracker does not manage it."
       },
       {
-        "q": "Does Pixel Tracker support Google Ads server-side tracking?",
-        "a": "No. Pixel Tracker is in development and its described Google Ads connection is browser-based. It does not configure GTM server containers or Enhanced Conversions."
-      },
-      {
         "q": "Is Enhanced Conversions the same as server-side tracking?",
         "a": "No. Enhanced Conversions supplies customer matching data. Server-side tagging controls where a tag runs. Google supports using them together."
       },
@@ -332,7 +276,7 @@ export const platformActionPages: PlatformActionPage[] = [
         "href": "/pixel-tracker/google-ads/troubleshooting"
       },
       {
-        "label": "Google Ads events Pixel Tracker tracks",
+        "label": "Google Ads conversion event checks",
         "href": "/pixel-tracker/google-ads/events"
       }
     ]
@@ -347,14 +291,13 @@ export const platformActionPages: PlatformActionPage[] = [
     "description": "LinkedIn Insight Tag showing no activity on your Shopify store? Fix Partner ID mismatches, conversion rule errors, and ad blocker issues step by step.",
     "h1": "LinkedIn Insight Tag Not Firing on Shopify? Troubleshoot",
     "intro": [
-      "If you connected LinkedIn Insight Tag through Pixel Tracker and your Shopify store still shows no conversions in Campaign Manager, you're not imagining it. LinkedIn's reporting is slower and less forthcoming than Meta's or Google's, and the Insight Tag itself has fewer diagnostic signals built in, so a tag that's actually working fine can look broken for a day or two.",
+      "Check the Partner ID and conversion rule in your existing integration and compare it with LinkedIn Campaign Manager. Use Insight Tag diagnostics to inspect browser activity, then test checkout separately. Installing the Insight Tag is separate from defining a conversion. Confirm the rule measures the intended action; a page visit is not proof of a purchase.",
       "This guide walks through the specific places things go wrong: mismatched Partner IDs, conversion rules that don't match real page behavior, ad blockers and consent tools quietly dropping the tag's request, and Campaign Manager's own reporting lag. If you haven't looked at what LinkedIn Insight Tag can and can't track yet, it's worth reading the [events page](/pixel-tracker/linkedin-pixel/events) first so you know what to expect before you start debugging."
     ],
     "sections": [
       {
-        "heading": "Start With the Partner ID, Not the Pixel Tracker Dashboard",
+        "heading": "Verify your LinkedIn configuration",
         "paragraphs": [
-          "LinkedIn Insight Tag is tied to a Partner ID, found in Campaign Manager under Account Assets > Insight Tag. If that ID doesn't match what's set up in your Pixel Tracker connection, the tag will load on your storefront but report to the wrong Insight Tag, or to nothing at all. Open Campaign Manager, confirm the exact Partner ID shown there, and cross-check it against what you entered when connecting LinkedIn in Pixel Tracker. This single mismatch is the most common reason merchants see zero activity for a tag they're sure is installed.",
           "Also check that you're looking at the right ad account. It's easy to have access to multiple Campaign Manager accounts, and to check tag status on one while the Insight Tag is actually registered under another."
         ]
       },
@@ -368,7 +311,6 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Use LinkedIn Insight Tag Helper to Confirm What's Firing",
         "paragraphs": [
-          "LinkedIn Insight Tag Helper is a free browser extension built for exactly this problem: it inspects a live page and tells you whether the Insight Tag fired, which Partner ID it reported to, and whether any conversion events triggered. Install it, load your storefront and a couple of product pages in a fresh incognito window, and check what the extension actually sees. If it reports no tag found, the problem is upstream of LinkedIn's reporting, most likely the ScriptTag not loading or being blocked.",
           "If Insight Tag Helper does show the tag firing with the correct Partner ID but Campaign Manager still shows nothing, the issue is more likely reporting lag or a conversion rule that isn't matching real page behavior, not the tag installation itself."
         ]
       },
@@ -389,8 +331,8 @@ export const platformActionPages: PlatformActionPage[] = [
     ],
     "steps": [
       {
-        "title": "Match the Partner ID",
-        "body": "Compare the Partner ID in Campaign Manager (Account Assets > Insight Tag) against what's configured in Pixel Tracker's LinkedIn connection. A mismatch here is the most common cause of zero activity."
+        "title": "Check your LinkedIn integration",
+        "body": "Use the settings in your installed integration to confirm the Partner ID and conversion rule. Pixel Tracker is not available to install. If your integration uses a theme app embed, activate it in the theme editor and test checkout separately."
       },
       {
         "title": "Check tag status in Campaign Manager",
@@ -427,10 +369,6 @@ export const platformActionPages: PlatformActionPage[] = [
     ],
     "faqs": [
       {
-        "q": "Why does LinkedIn Campaign Manager show no activity even though Pixel Tracker says the Insight Tag is connected?",
-        "a": "Most often it's a Partner ID mismatch, or Campaign Manager simply hasn't caught up yet. Confirm the Partner ID in Account Assets > Insight Tag matches your Pixel Tracker connection, then give it 24 to 48 hours before assuming something's broken."
-      },
-      {
         "q": "How do I check if the Insight Tag is actually loading on my Shopify store?",
         "a": "Install the LinkedIn Insight Tag Helper browser extension and load your storefront in an incognito window. It will show whether the tag fired and which Partner ID it reported to."
       },
@@ -445,6 +383,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "My conversion rule never fires even though the tag is active. What's wrong?",
         "a": "Check the rule's URL or event condition against a real completed order. If you want to understand how LinkedIn's conversion rules differ from a full ecommerce event set, see the [events page](/pixel-tracker/linkedin-pixel/events)."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -485,7 +427,7 @@ export const platformActionPages: PlatformActionPage[] = [
     "h1": "LinkedIn Insight Tag Events on Shopify: What It Tracks",
     "intro": [
       "LinkedIn Insight Tag doesn't work like Meta Pixel or TikTok's Events API. There's no built-in PageView, ViewContent, AddToCart, or Purchase event waiting to be mapped to your Shopify store. Instead, LinkedIn tracks activity through conversion rules you define yourself in Campaign Manager, each one tied to a specific URL pattern or a general page visit, not a rich taxonomy of ecommerce actions.",
-      "That's not a limitation of Pixel Tracker's connection, it's how LinkedIn Insight Tag is built. LinkedIn's ad platform grew up around lead generation and B2B demand, where a form fill or a pricing page visit matters more than a granular shopping funnel, so the tag reflects that. This page explains exactly what you can track for a Shopify store, and where the ceiling is compared to platforms with a full ecommerce event set."
+      "Check the Partner ID and conversion rule in your existing integration and compare it with LinkedIn Campaign Manager. Use Insight Tag diagnostics to inspect browser activity, then test checkout separately. Installing the Insight Tag is separate from defining a conversion. Confirm the rule measures the intended action; a page visit is not proof of a purchase."
     ],
     "sections": [
       {
@@ -505,7 +447,6 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Why LinkedIn's Event Model Is Lighter Than Meta or TikTok's",
         "paragraphs": [
-          "This isn't a gap Pixel Tracker or any third-party tool can fill in on LinkedIn's behalf, it reflects what LinkedIn built the Insight Tag for. LinkedIn's core advertising business is B2B lead generation and brand campaigns, not direct-to-consumer ecommerce, so the tag was designed around form submissions and key page visits rather than a shopping cart funnel. Snapchat, Pinterest, and TikTok all built pixels with commerce use cases in mind from early on; LinkedIn's Insight Tag wasn't.",
           "If you're used to Meta's event taxonomy or TikTok's Events API and expect the same depth from LinkedIn, it's worth resetting that expectation upfront rather than troubleshooting for a granularity that isn't there to find."
         ]
       },
@@ -545,6 +486,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "How do I check whether Insight Tag is actually reporting on my store?",
         "a": "Use LinkedIn Insight Tag Helper in an incognito browser window, or see the [troubleshooting guide](/pixel-tracker/linkedin-pixel/troubleshooting) if Campaign Manager shows no activity despite real traffic."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -580,65 +525,73 @@ export const platformActionPages: PlatformActionPage[] = [
     "platformName": "LinkedIn",
     "pixelName": "LinkedIn Insight Tag",
     "badge": "Server-Side Tracking",
-    "title": "LinkedIn Server-Side Tracking on Shopify: The Real Story",
-    "description": "Pixel Tracker doesn't support LinkedIn server-side tracking. Here's why it's lower priority than Meta and TikTok, and what Shopify merchants can do instead.",
-    "h1": "LinkedIn Server-Side Tracking on Shopify: The Real Story",
+    "title": "LinkedIn Server-Side Tracking for Shopify: What to Verify",
+    "description": "Check LinkedIn server event delivery, consent, purchase details, and duplicate handling on Shopify. Pixel Tracker server-side support is not confirmed.",
+    "h1": "LinkedIn Server-Side Tracking for Shopify: What to Verify",
     "intro": [
-      "Pixel Tracker's LinkedIn connection is client-side only: the Insight Tag runs in the visitor's browser, the same way it would if you'd pasted LinkedIn's own script into your theme. There's no server-side or Conversions API equivalent for LinkedIn in Pixel Tracker today, and this page is here to be upfront about that rather than let you assume it works the same way Meta or TikTok does.",
-      "If you came here expecting a LinkedIn version of Meta's Conversions API, the short answer is that LinkedIn doesn't really have one in the same sense, and Pixel Tracker doesn't build server-side support for platforms that don't have a solid one to build on. Below is what server-side tracking would actually solve for LinkedIn, why it's a lower priority than Meta or TikTok for most Shopify stores, and what your realistic options are right now."
+      "Server-side delivery needs a working integration that sends events from your store to LinkedIn. Adding a browser pixel does not establish that connection.",
+      "Pixel Tracker is in development. Its server-side delivery and browser/server deduplication are not confirmed. The checks below are for evaluating an available integration."
     ],
     "sections": [
       {
-        "heading": "What Pixel Tracker Supports for LinkedIn Today",
+        "heading": "Check the LinkedIn integration, not just the pixel",
         "paragraphs": [
-          "Pixel Tracker connects the LinkedIn Insight Tag as a browser-based pixel, injected via Shopify ScriptTags without any theme code editing, the same mechanism used for Meta, TikTok, Snapchat, Pinterest, Google Ads, and X. It fires page visits and whatever conversion rules you've set up in Campaign Manager. That's the full extent of the LinkedIn integration: client-side tracking, subject to the same browser-level limitations as any pixel, ad blockers, cookie restrictions, and third-party tracking prevention in browsers like Safari.",
-          "Server-side tracking for Facebook Conversions API and TikTok Events API is available in Pixel Tracker today. LinkedIn isn't part of that, and there's no timeline to add it."
+          "Start with [LinkedIn Conversions API documentation](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/conversions-overview?view=li-lms-2026-02) and the documentation for the provider you use. Confirm which Shopify events it supports and whether it sends them from the browser, server, or both.",
+          "Installing the Insight Tag is separate from defining a conversion. Confirm the rule measures the intended action; a page visit is not proof of a purchase."
         ]
       },
       {
-        "heading": "What Server-Side Tracking Would Actually Mean for LinkedIn",
+        "heading": "Verify receipt separately from attribution",
         "paragraphs": [
-          "Server-side tracking sends conversion data directly from Shopify's servers to the ad platform, bypassing the browser entirely, so it isn't affected by ad blockers, Safari's tracking prevention, or a visitor's cookie choices. For Meta and TikTok, that means capturing orders that the browser-side pixel misses. Applied to LinkedIn, it would mean conversion rule data that doesn't erode over time as more visitors block third-party scripts or reject consent banners, today one of the more common causes of undercounted LinkedIn conversions.",
-          "But LinkedIn's own server-side tooling isn't built out the way Meta's or TikTok's is. There's no single, standardized, widely adopted server-to-server option for ecommerce conversions on LinkedIn's side the way there is for the other two, so there's a real limit to what any third-party tool, including Pixel Tracker, could offer here even if it tried."
+          "Look for server-event receipt in LinkedIn Campaign Manager or the delivery logs supplied by your integration. A successful browser request in Insight Tag diagnostics does not prove a server event arrived. An accepted event also does not guarantee an attributed conversion.",
+          "Compare conversion rule, value, and event identifier against a test order. Check failed deliveries and retries before relying on totals."
         ]
       },
       {
-        "heading": "Why LinkedIn Is a Lower Priority for Server-Side Support",
+        "heading": "Prevent duplicate purchases",
         "paragraphs": [
-          "For most Shopify stores, LinkedIn is a smaller slice of paid ad spend than Meta, TikTok, or Google. It's a strong channel for B2B, recruiting, and account-based marketing, but for direct-to-consumer ecommerce it typically sits well behind the platforms people actually buy sneakers, skincare, and home goods through. That's the practical reason Pixel Tracker built server-side support for Facebook and TikTok first: those are the two platforms where undercounted conversions most directly cost Shopify merchants money on their largest ad budgets.",
-          "If LinkedIn is a meaningful ad channel for your store specifically, perhaps you're B2B, wholesale, or running account-based campaigns, this priority order won't match your situation as well. That's a fair complaint, and it's exactly why we're upfront about what's supported today rather than implying LinkedIn server-side tracking is on the way."
+          "If browser and server report the same action, follow the platform's deduplication requirements. Preserve the same event identity across the two paths and across retries where required; a new purchase needs a new identity. Do not add another independent purchase sender without checking the existing one."
         ]
       },
       {
-        "heading": "Your Realistic Options Right Now",
+        "heading": "Respect the same customer choices",
         "paragraphs": [
-          "If undercounting on LinkedIn is hurting your reporting, the first lever to pull is reducing what's already being lost client-side: tighten your conversion rule's URL pattern so it reliably matches real orders, keep LinkedIn Insight Tag Helper handy to spot-check that the tag fires correctly, and treat Campaign Manager's numbers as a directional signal rather than a source of truth for revenue. Reconciling LinkedIn's conversion count against your actual Shopify order data periodically is the most reliable way to know how much you're losing to ad blockers and browser restrictions.",
-          "For the ad platforms where undercounting has the biggest financial impact, Facebook and TikTok, Pixel Tracker's server-side tracking is the better investment of your setup time. See how it works for those two in the [server-side tracking guide](/pixel-tracker/guides/server-side-tracking)."
+          "Server delivery does not override consent or privacy settings. Confirm how the integration handles declined consent, permitted matching data, and data retention before enabling it."
         ]
       }
     ],
-    "steps": [],
-    "symptoms": [],
+    "steps": [
+      {
+        "title": "Confirm the supported delivery path",
+        "body": "Read the chosen provider's current LinkedIn setup instructions and supported Shopify events. Pixel Tracker does not have a verified server setup to follow yet."
+      },
+      {
+        "title": "Check a test purchase",
+        "body": "Complete a test order and inspect LinkedIn Campaign Manager. Compare conversion rule, value, and event identifier with that order."
+      },
+      {
+        "title": "Check overlap and retries",
+        "body": "Confirm the browser/server pair is deduplicated according to platform requirements. Ensure a retry does not become a second purchase."
+      },
+      {
+        "title": "Test consent states",
+        "body": "Verify the integration respects the store's collection settings before using the events for reporting."
+      }
+    ],
+    "symptoms": [
+      "Browser events arrive but no server events appear",
+      "Two purchase events appear for one test order",
+      "Purchase value or currency differs from the order",
+      "The provider shows failed requests or repeated retries"
+    ],
     "faqs": [
       {
-        "q": "Does Pixel Tracker support server-side tracking for LinkedIn?",
-        "a": "No. Pixel Tracker's LinkedIn connection is client-side only, the Insight Tag running in the browser. Server-side tracking is currently available for Facebook Conversions API and TikTok Events API, not LinkedIn."
+        "q": "Does a browser helper prove server delivery?",
+        "a": "No. Check server receipt separately in LinkedIn Campaign Manager or your integration's delivery logs."
       },
       {
-        "q": "Does LinkedIn have its own version of Meta's Conversions API?",
-        "a": "Not in any standardized, widely adopted sense. LinkedIn's own server-side and offline conversion options exist in limited forms, but they're not comparable in scope or adoption to Meta's or TikTok's server-side APIs."
-      },
-      {
-        "q": "Why did Pixel Tracker add server-side tracking for Meta and TikTok but not LinkedIn?",
-        "a": "Meta and TikTok are typically the largest ecommerce ad channels for Shopify stores, and undercounting there has the biggest revenue impact. LinkedIn is usually a smaller slice of direct-to-consumer ad spend, and its own server-side tooling isn't built out the same way."
-      },
-      {
-        "q": "Will LinkedIn server-side tracking be added to Pixel Tracker later?",
-        "a": "There's no timeline for it. If LinkedIn is a major channel for your store, [Facebook](/pixel-tracker/meta-pixel/server-side) and TikTok server-side tracking are the options available today."
-      },
-      {
-        "q": "What can I do to reduce undercounting on LinkedIn without server-side tracking?",
-        "a": "Tighten your conversion rule's URL pattern, confirm the tag fires correctly with LinkedIn Insight Tag Helper, and periodically reconcile Campaign Manager's conversion counts against your actual Shopify orders to gauge how much is being lost client-side."
+        "q": "Will server-side tracking make every order appear in ad reporting?",
+        "a": "No. Delivery, customer consent, matching, and attribution are separate. Reconcile test events before interpreting campaign totals."
       }
     ],
     "related": [
@@ -678,32 +631,14 @@ export const platformActionPages: PlatformActionPage[] = [
     "description": "See why your Meta Pixel shows no data on Shopify, from ad blockers to duplicate pixels to missing Purchase events, and how to fix each cause.",
     "h1": "Meta Pixel Not Firing on Shopify: Troubleshooting Guide",
     "intro": [
-      "If Meta Pixel looks connected in Pixel Tracker but Events Manager stays quiet, or Ads Manager reports far fewer conversions than you know you're getting, something in the chain between your Shopify storefront and Meta is being blocked, duplicated, or simply never tested correctly. Before assuming the integration is broken, it helps to check each link in that chain in order.",
+      "Check theme code, custom pixels, and installed apps for duplicate Meta senders. Keep one intended source for each event, with platform-specific deduplication if browser and server both send it. Test before removing an existing integration.",
       "This guide walks through the most common reasons Meta Pixel appears to stop working on a Shopify store, using Meta Pixel Helper and the Test Events tool in Events Manager to actually see what's happening rather than guessing from Ads Manager totals, which can lag by a day or more."
     ],
     "sections": [
       {
         "heading": "Read what Meta Pixel Helper is actually telling you",
         "paragraphs": [
-          "Install the Meta Pixel Helper browser extension and open your storefront, ideally a product page rather than the homepage, since some themes exclude certain templates from Pixel Tracker's script injection. A grey icon with no number usually means the pixel script never loaded on that page at all. A pixel ID with a warning triangle next to it means the pixel is present but something about the event itself, like a missing parameter, is off. These are two very different problems, so don't reinstall anything until you know which one you're dealing with."
-        ]
-      },
-      {
-        "heading": "Ad blockers and Safari's tracking prevention",
-        "paragraphs": [
-          "Browser extensions like uBlock Origin, Ghostery, and Brave's built-in shields block requests to connect.facebook.net by default, which stops the pixel from firing before Pixel Helper even gets a chance to detect it. Safari's Intelligent Tracking Prevention behaves similarly on repeat visits. Always test in a plain browser window with extensions disabled, or a fresh browser profile, before concluding that Pixel Tracker itself isn't working."
-        ]
-      },
-      {
-        "heading": "A second pixel firing on the same page",
-        "paragraphs": [
-          "If your store previously had a pixel added by hand in theme.liquid, through a different app, or via Meta's own Facebook & Instagram sales channel, that older pixel can keep firing alongside Pixel Tracker without anyone noticing. Pixel Helper will flag this as a duplicate PageView or duplicate Purchase event, and Ads Manager numbers can look inflated or oddly split between two pixel IDs. Search your theme code for a leftover fbq('init'... snippet and check whether the sales channel still has its own pixel connected."
-        ]
-      },
-      {
-        "heading": "Cookie consent banners holding the script back",
-        "paragraphs": [
-          "Many Shopify consent management apps block all third-party scripts, Pixel Tracker's included, until a shopper actively accepts cookies. If you're testing the pixel yourself and clicking through the banner without accepting it, no events will fire at all, which looks identical to a broken integration. Confirm your consent tool's settings and accept the banner yourself before treating this as a bug."
+          "Check the pixel or dataset ID in your existing integration and compare it with Meta Events Manager. Use Meta Pixel Helper to inspect browser activity, then test checkout separately. Shopify documents the Facebook & Instagram by Meta channel. Check its data-sharing settings and the connected pixel before adding a second integration."
         ]
       },
       {
@@ -715,20 +650,12 @@ export const platformActionPages: PlatformActionPage[] = [
     ],
     "steps": [
       {
-        "title": "Confirm the pixel ID matches",
-        "body": "In Pixel Tracker's dashboard, check that the Meta Pixel ID connected to your store is character-for-character the same one shown in Events Manager. A typo here is more common than it sounds."
+        "title": "Check your Meta integration",
+        "body": "Use the settings in your installed integration to confirm the pixel or dataset ID. Pixel Tracker is not available to install. If your integration uses a theme app embed, activate it in the theme editor and test checkout separately."
       },
       {
         "title": "Run Meta Pixel Helper on a real storefront page",
         "body": "Visit a product page and an actual cart, not just the homepage, and note whether PageView and ViewContent register at all before digging further."
-      },
-      {
-        "title": "Test with extensions and blockers disabled",
-        "body": "Open an incognito window with extensions off, or a clean browser profile, to rule out ad blockers and privacy tools before assuming Pixel Tracker is at fault."
-      },
-      {
-        "title": "Look for a second pixel on the page",
-        "body": "Check your theme code and the Facebook & Instagram sales channel for a leftover or duplicate pixel that could be firing alongside Pixel Tracker."
       },
       {
         "title": "Check your cookie consent settings",
@@ -759,7 +686,7 @@ export const platformActionPages: PlatformActionPage[] = [
       },
       {
         "q": "Why do I see duplicate events in Pixel Helper?",
-        "a": "This almost always means two sources are firing the same pixel ID at once, usually a manually added pixel snippet left over from before Pixel Tracker, or Meta's own sales channel still connected. Remove the older source and keep just one."
+        "a": "Check for the same pixel loaded by theme code, a custom pixel, and one or more apps. Repeated browser requests can indicate duplicate senders. If browser and server both report a purchase, check event deduplication separately in Events Manager."
       },
       {
         "q": "How long should I wait before treating missing data as a bug?",
@@ -772,6 +699,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "Why isn't the Purchase event showing up even though everything else works?",
         "a": "Shopify's checkout and order status pages follow different rules than product and cart pages, so it's worth checking the order confirmation setup on its own. See the [server-side tracking](/pixel-tracker/meta-pixel/server-side) page if you'd rather send Purchase events independently of what happens in the shopper's browser."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -808,10 +739,10 @@ export const platformActionPages: PlatformActionPage[] = [
     "pixelName": "Meta Pixel",
     "badge": "Events",
     "title": "Meta Pixel Events on Shopify: PageView to Purchase",
-    "description": "A plain-English guide to the Meta Pixel events Pixel Tracker sends from your Shopify store, what each one means, and why Purchase matters most.",
+    "description": "Check Meta tracking on Shopify: verify the pixel or dataset ID, event receipt, and purchase details with your current integration.",
     "h1": "Meta Pixel Events on Shopify: PageView to Purchase",
     "intro": [
-      "Pixel Tracker sends Meta's standard e-commerce events from your Shopify store the moment it's connected: PageView, ViewContent, AddToCart, InitiateCheckout, and Purchase, without you touching theme.liquid or adding a single line of code. Each one maps to a specific shopper action, and together they're what Meta's ad system uses to build audiences and decide who to show your ads to.",
+      "Check the pixel or dataset ID in your existing integration and compare it with Meta Events Manager. Use Meta Pixel Helper to inspect browser activity, then test checkout separately. Shopify documents the Facebook & Instagram by Meta channel. Check its data-sharing settings and the connected pixel before adding a second integration.",
       "This page breaks down what each event actually captures, what data goes with it, and why sticking to Meta's own standard events, rather than inventing custom ones, matters for how well your campaigns perform."
     ],
     "sections": [
@@ -840,7 +771,7 @@ export const platformActionPages: PlatformActionPage[] = [
         ]
       },
       {
-        "heading": "Why Pixel Tracker sticks to Meta's standard events",
+        "heading": "Verify your Meta / Facebook configuration",
         "paragraphs": [
           "Meta's algorithm, lookalike audiences, and dynamic ads are all built around a fixed set of standard events rather than arbitrary custom ones. Sending PageView, ViewContent, AddToCart, InitiateCheckout, and Purchase in the format Meta expects means your data plugs directly into features like Advantage+ campaigns without extra mapping work on your end."
         ]
@@ -850,12 +781,8 @@ export const platformActionPages: PlatformActionPage[] = [
     "symptoms": [],
     "faqs": [
       {
-        "q": "What events does Pixel Tracker send to Meta from my Shopify store?",
-        "a": "PageView on every page, ViewContent on product pages, AddToCart when a shopper adds an item to their cart, InitiateCheckout once they move from cart to checkout, and Purchase on a completed order, each one carrying the standard parameters Meta expects to see for that event type."
-      },
-      {
         "q": "Do I need to configure these events manually in Events Manager?",
-        "a": "No. Pixel Tracker sends them automatically as soon as your Meta Pixel is connected, without any manual setup in Events Manager. Events Manager is still useful for viewing and debugging what's arriving, but you don't need to build the events yourself."
+        "a": "That depends on the integration. Check its supported event mappings, then use Events Manager to verify receipt. Do not assume an installed base pixel also reports cart and checkout events."
       },
       {
         "q": "What's the practical difference between ViewContent and AddToCart?",
@@ -866,8 +793,8 @@ export const platformActionPages: PlatformActionPage[] = [
         "a": "It's the event most ad campaigns are optimized toward, and its value and currency data feed directly into how Meta judges return on ad spend. Our [ROAS calculation guide](/pixel-tracker/guides/roas-calculation) explains how that value data turns into a return figure you can act on."
       },
       {
-        "q": "Can Pixel Tracker send custom events beyond the standard five?",
-        "a": "Pixel Tracker focuses on Meta's recognized standard e-commerce events rather than custom ones, since those are what Meta's targeting, optimization, and dynamic ad tools are actually built around and understand automatically."
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -903,88 +830,73 @@ export const platformActionPages: PlatformActionPage[] = [
     "platformName": "Meta / Facebook",
     "pixelName": "Meta Pixel",
     "badge": "Server-Side Tracking",
-    "title": "Meta Conversions API Setup for Shopify Merchants",
-    "description": "How to connect Meta's Conversions API to Pixel Tracker on Shopify, get your access token from Events Manager, and avoid duplicate events.",
-    "h1": "Meta Conversions API Setup for Shopify Merchants",
+    "title": "Meta Server-Side Tracking for Shopify: What to Verify",
+    "description": "Check Meta server event delivery, consent, purchase details, and duplicate handling on Shopify. Pixel Tracker server-side support is not confirmed.",
+    "h1": "Meta Server-Side Tracking for Shopify: What to Verify",
     "intro": [
-      "Browser-based Meta Pixel tracking alone tends to undercount conversions today, thanks to ad blockers, Safari's tracking prevention, and shoppers who simply close the tab before a script fully loads. Meta's Conversions API, or CAPI, fixes part of that by sending the same events directly from a server instead of relying only on the shopper's browser, and Pixel Tracker supports it for Facebook alongside the standard pixel.",
-      "Setting it up takes a token from Events Manager and a few minutes in Pixel Tracker's dashboard. This guide covers where to find that token, how event_id deduplication keeps a single sale from being counted twice, and how to check whether it's actually improving your match quality."
+      "Server-side delivery needs a working integration that sends events from your store to Meta. Adding a browser pixel does not establish that connection.",
+      "Pixel Tracker is in development. Its server-side delivery and browser/server deduplication are not confirmed. The checks below are for evaluating an available integration."
     ],
     "sections": [
       {
-        "heading": "Why the browser pixel alone isn't enough anymore",
+        "heading": "Check the Meta integration, not just the pixel",
         "paragraphs": [
-          "Ad blockers, privacy-focused browsers, and Safari's Intelligent Tracking Prevention all interfere with pixel requests before they ever reach Meta, and none of that is something a Shopify store owner can control from their side. Conversions API sends the same event from your server, which isn't affected by what's installed in a shopper's browser, so it fills in gaps the pixel alone will always have."
+          "Start with [Meta Conversions API documentation](https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/meta-pixel) and the documentation for the provider you use. Confirm which Shopify events it supports and whether it sends them from the browser, server, or both.",
+          "Shopify documents the Facebook & Instagram by Meta channel. Check its data-sharing settings and the connected pixel before adding a second integration."
         ]
       },
       {
-        "heading": "Getting a Conversions API access token from Events Manager",
+        "heading": "Verify receipt separately from attribution",
         "paragraphs": [
-          "In business.facebook.com, open Events Manager, select the pixel connected to your store, and go to Settings. Under the Conversions API section, generate an access token and copy it. Paste that token into Pixel Tracker's dashboard under the same Meta Pixel connection, save it, and server-side delivery starts working alongside your existing browser pixel."
+          "Look for server-event receipt in Meta Events Manager or the delivery logs supplied by your integration. A successful browser request in Meta Pixel Helper does not prove a server event arrived. An accepted event also does not guarantee an attributed conversion.",
+          "Compare event name, event ID, value, and currency against a test order. Check failed deliveries and retries before relying on totals."
         ]
       },
       {
-        "heading": "How event_id deduplication prevents double counting",
+        "heading": "Prevent duplicate purchases",
         "paragraphs": [
-          "When both the browser pixel and Conversions API send an event like Purchase for the same order, Meta needs a way to know it's one sale, not two. Pixel Tracker assigns a matching event_id to both the browser and server versions of the same event, and Meta uses that shared ID, along with the event name and a short time window, to deduplicate them automatically. Without matching event_ids, the same purchase can show up twice in your reporting."
+          "If browser and server report the same action, follow the platform's deduplication requirements. Preserve the same event identity across the two paths and across retries where required; a new purchase needs a new identity. Do not add another independent purchase sender without checking the existing one."
         ]
       },
       {
-        "heading": "Checking match quality after you turn it on",
+        "heading": "Respect the same customer choices",
         "paragraphs": [
-          "Events Manager's Diagnostics and Overview tabs show a match quality score for each event, based on how much customer information, like email or phone, was hashed and passed along with it. It's normal for this score to take a few days to stabilize after you add Conversions API, so check back after your store has processed a reasonable number of orders rather than judging it from the first sale."
-        ]
-      },
-      {
-        "heading": "What server-side tracking doesn't fix",
-        "paragraphs": [
-          "Conversions API improves match rates for events that already have some customer data attached, but it doesn't recover a visitor's activity if they never gave the underlying consent for tracking in the first place, and it isn't a substitute for properly configuring your cookie consent tool. It's also worth knowing that Pixel Tracker's server-side support currently covers Facebook Conversions API and TikTok's Events API, not the other platforms it connects on the browser side."
+          "Server delivery does not override consent or privacy settings. Confirm how the integration handles declined consent, permitted matching data, and data retention before enabling it."
         ]
       }
     ],
     "steps": [
       {
-        "title": "Open Events Manager for your Meta Pixel",
-        "body": "Go to business.facebook.com, select the pixel connected to your Shopify store, and open its Settings tab."
+        "title": "Confirm the supported delivery path",
+        "body": "Read the chosen provider's current Meta setup instructions and supported Shopify events. Pixel Tracker does not have a verified server setup to follow yet."
       },
       {
-        "title": "Generate a Conversions API access token",
-        "body": "Under the Conversions API section of Settings, generate a new access token and copy it somewhere safe."
+        "title": "Check a test purchase",
+        "body": "Complete a test order and inspect Meta Events Manager. Compare event name, event ID, value, and currency with that order."
       },
       {
-        "title": "Add the token to Pixel Tracker",
-        "body": "Paste the token into Pixel Tracker's dashboard under your Meta Pixel connection and save the change."
+        "title": "Check overlap and retries",
+        "body": "Confirm the browser/server pair is deduplicated according to platform requirements. Ensure a retry does not become a second purchase."
       },
       {
-        "title": "Send a test event and confirm it in Test Events",
-        "body": "Trigger a test action on your store and check the Test Events tool in Events Manager for both the browser and server versions of the event."
-      },
-      {
-        "title": "Review match quality after a few days",
-        "body": "Come back to the Diagnostics or Overview tab in Events Manager once your store has processed several orders to see whether match quality improved."
+        "title": "Test consent states",
+        "body": "Verify the integration respects the store's collection settings before using the events for reporting."
       }
     ],
-    "symptoms": [],
+    "symptoms": [
+      "Browser events arrive but no server events appear",
+      "Two purchase events appear for one test order",
+      "Purchase value or currency differs from the order",
+      "The provider shows failed requests or repeated retries"
+    ],
     "faqs": [
       {
-        "q": "Where do I get a Conversions API access token for my Meta Pixel?",
-        "a": "In business.facebook.com, open Events Manager, select your pixel, go to Settings, and generate the token under the Conversions API section. Paste it into Pixel Tracker's dashboard for that same pixel connection."
+        "q": "Does a browser helper prove server delivery?",
+        "a": "No. Check server receipt separately in Meta Events Manager or your integration's delivery logs."
       },
       {
-        "q": "Does turning on Conversions API mean I can remove the browser pixel?",
-        "a": "No, they're meant to work together. The browser pixel still captures rich on-site behavior, while Conversions API fills in events the browser missed. Removing the browser pixel would actually reduce the data Meta has to work with."
-      },
-      {
-        "q": "Will I get duplicate Purchase events after adding Conversions API?",
-        "a": "Not if event_id deduplication is working correctly. Pixel Tracker sends a matching event_id with both the browser and server copies of the same event, and Meta uses that to treat them as one event rather than two."
-      },
-      {
-        "q": "Does Pixel Tracker support server-side tracking for platforms other than Meta?",
-        "a": "Server-side support currently covers Facebook Conversions API and TikTok's Events API. Google Ads, Snapchat, Pinterest, LinkedIn, and X are tracked through the browser pixel only, not server-side."
-      },
-      {
-        "q": "How do I know if match quality actually improved after setup?",
-        "a": "Check the Diagnostics or Overview tab in Events Manager a few days after enabling Conversions API, once your store has processed a normal run of orders. See the [server-side tracking guide](/pixel-tracker/guides/server-side-tracking) for a deeper walkthrough of what the score means."
+        "q": "Will server-side tracking make every order appear in ad reporting?",
+        "a": "No. Delivery, customer consent, matching, and attribution are separate. Reconcile test events before interpreting campaign totals."
       }
     ],
     "related": [
@@ -1024,22 +936,14 @@ export const platformActionPages: PlatformActionPage[] = [
     "description": "Pinterest Tag connected but Ads Manager shows no data? Diagnose duplicate tags, ad blockers, and event gaps on your Shopify store step by step.",
     "h1": "Pinterest Tag Not Firing on Shopify: Troubleshooting Guide",
     "intro": [
-      "Your Pixel Tracker dashboard says the Pinterest Tag is connected, but Pinterest Ads Manager still shows zero events, or the numbers look wrong. That gap between \"connected\" and \"actually receiving data\" is the most common support question for any Shopify pixel, and Pinterest has a few quirks that make it worse than most.",
-      "This guide walks through the checks in order, starting with the fastest ones. Most Pinterest Tag problems on Shopify come down to duplicate tags, ad blockers, or simply not waiting long enough for Pinterest's Conversions dashboard to catch up. If you haven't confirmed which events Pixel Tracker sends yet, start with the [Pinterest event reference](/pixel-tracker/pinterest-pixel/events) so you know what you're looking for."
+      "Check the tag ID in your existing integration and compare it with Pinterest conversion diagnostics. Use Pinterest Tag Helper to inspect browser activity, then test checkout separately. Pinterest uses Checkout for completed transactions. Check the selected event and product details rather than assuming a generic PageVisit represents a sale.",
+      "Check theme code, custom pixels, and installed apps for duplicate Pinterest senders. Keep one intended source for each event, with platform-specific deduplication if browser and server both send it. Test before removing an existing integration."
     ],
     "sections": [
       {
-        "heading": "Why \"Connected\" in Pixel Tracker Doesn't Mean Pinterest Is Receiving Data",
+        "heading": "Verify your Pinterest configuration",
         "paragraphs": [
-          "Pixel Tracker's dashboard confirms that the Pinterest Tag was successfully injected into your storefront via a Shopify ScriptTag, that's a statement about your store, not about Pinterest. Pinterest Ads Manager is the only place that confirms the tag actually reached Pinterest's servers and was matched to your ad account.",
-          "When the two disagree, the ScriptTag connection is almost never the problem. It's usually something happening in the browser between the tag loading and the event reaching Pinterest, an ad blocker, a consent banner, or a duplicate tag competing for the same event."
-        ]
-      },
-      {
-        "heading": "Duplicate Tags Are the Most Common Cause of Bad Numbers",
-        "paragraphs": [
-          "Shopify stores accumulate tracking code over time. A Pinterest Tag added years ago through theme.liquid, a Google Tag Manager container nobody remembers installing, or a previous pixel app that was never fully removed can all leave a second Pinterest Tag firing alongside Pixel Tracker's.",
-          "Two tags don't cancel out, they double count. If your conversion numbers look suspiciously close to twice what you'd expect from actual orders, this is the first thing to check, not a Pixel Tracker configuration issue."
+          "Browser and server delivery are separate checks. Verify the provider's documented Pinterest server integration and inspect receipt in Pinterest conversion diagnostics. Pixel Tracker server-side delivery is not confirmed."
         ]
       },
       {
@@ -1055,30 +959,12 @@ export const platformActionPages: PlatformActionPage[] = [
           "If Pinterest Tag Helper shows page_visit firing on every page but add_to_cart or checkout never appears, the base tag is working and the problem is specific to those triggers. Custom cart drawers, AJAX-based add-to-cart buttons, and heavily customized checkout flows can all prevent an event trigger from running the way a standard Shopify theme would.",
           "Check whether the missing event corresponds to a customized part of your theme. If add_to_cart never fires, test with your theme's default cart button rather than a custom quick-add widget first."
         ]
-      },
-      {
-        "heading": "Pixel Tracker vs Pinterest Ads Manager: Who to Check First",
-        "paragraphs": [
-          "Use Pixel Tracker to confirm the tag is connected and which events are configured. Use Pinterest Ads Manager's Conversions dashboard, alongside Tag Helper for real-time checks, to confirm Pinterest is actually receiving and matching that data. Most \"it's not working\" reports turn out to be one of the two working fine while the other hasn't been checked yet."
-        ]
       }
     ],
     "steps": [
       {
-        "title": "Check the connection status in Pixel Tracker",
-        "body": "Open your Pixel Tracker dashboard and confirm the Pinterest platform shows as connected with the correct store domain. If it shows disconnected or pending, the ScriptTag may not have been injected yet, reconnect it before doing anything else."
-      },
-      {
-        "title": "Look for a duplicate Pinterest Tag",
-        "body": "If you or a previous developer ever added the Pinterest Tag manually through theme.liquid, Google Tag Manager, or another pixel app, you now have two tags firing on every page. This is the single biggest cause of inflated Pinterest numbers on Shopify, so check your theme code and any other tracking apps before assuming Pixel Tracker is at fault."
-      },
-      {
-        "title": "Confirm the Tag ID matches Pinterest Ads Manager",
-        "body": "In Pinterest Ads Manager, go to Ads, then Conversions, then Pinterest tag, and copy the exact Tag ID. Compare it to what's saved in Pixel Tracker. A mismatched or outdated Tag ID from a previous ad account is a common reason data never arrives."
-      },
-      {
-        "title": "Install Pinterest Tag Helper and reload the page",
-        "body": "The Pinterest Tag Helper browser extension shows exactly which events fired on the page you're viewing, in real time. If it reports no tag, the ScriptTag isn't loading, if it shows the tag but no events, the problem is with individual event triggers, not the base connection."
+        "title": "Check your Pinterest integration",
+        "body": "Use the settings in your installed integration to confirm the tag ID. Pixel Tracker is not available to install. If your integration uses a theme app embed, activate it in the theme editor and test checkout separately."
       },
       {
         "title": "Rule out ad blockers and cookie consent tools",
@@ -1098,22 +984,18 @@ export const platformActionPages: PlatformActionPage[] = [
       "Ads Manager's Conversions dashboard shows zero events after setup",
       "page_visit fires but add_to_cart or checkout never appears",
       "Conversion counts look roughly double what you'd expect",
-      "Pixel Tracker shows \"connected\" but Pinterest shows nothing",
+      "Check the tag ID in your existing integration and compare it with Pinterest conversion diagnostics. Use Pinterest Tag Helper to inspect browser activity, then test checkout separately. Pinterest uses Checkout for completed transactions. Check the selected event and product details rather than assuming a generic PageVisit represents a sale.",
       "Events show up on desktop but not on mobile Safari",
       "The tag worked in theme preview but vanished after publishing"
     ],
     "faqs": [
       {
-        "q": "Why does Pixel Tracker show my Pinterest Tag as connected when Ads Manager shows no data?",
-        "a": "Pixel Tracker confirms the ScriptTag was injected into your store, which is different from Pinterest confirming it received the data. Use Pinterest Tag Helper to check in real time, then give Ads Manager a few hours to reflect what it sees."
-      },
-      {
         "q": "How do I find my Pinterest Tag ID?",
-        "a": "In Pinterest Ads Manager, go to Ads, then Conversions, then Pinterest tag. Your Tag ID is listed there, and it's the value that needs to match what's saved in Pixel Tracker."
+        "a": "Open the tag configuration in the intended Pinterest business account and copy its tag ID. Confirm the same ID is configured in your Shopify integration and appears in your browser test. It is separate from a server API credential."
       },
       {
         "q": "Can Pinterest Tag end up installed twice by accident?",
-        "a": "Yes, and it's common. If the tag was ever added manually through theme.liquid, Google Tag Manager, or another app before you connected Pixel Tracker, both will fire and your conversion counts will look roughly doubled."
+        "a": "Yes. Theme code, custom pixels, and apps can each add a tag. Inventory the active senders and use a test visit and order to confirm that each intended event is reported once."
       },
       {
         "q": "Will an ad blocker affect my own testing?",
@@ -1122,6 +1004,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "How long does Pinterest take to show events after they fire?",
         "a": "Tag Helper shows events in real time, but Pinterest Ads Manager's own Conversions dashboard can take a few hours to reflect the same data. If Tag Helper confirms firing, treat the dashboard delay as normal rather than a connection problem."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -1158,20 +1044,13 @@ export const platformActionPages: PlatformActionPage[] = [
     "pixelName": "Pinterest Tag",
     "badge": "Events",
     "title": "Pinterest Standard Events for Shopify: Which Ones Fire",
-    "description": "See exactly which Pinterest standard events Pixel Tracker sends from your Shopify store, from page_visit to checkout, and what each one tracks.",
+    "description": "Check Pinterest tracking on Shopify: verify the tag ID, event receipt, and purchase details with your current integration.",
     "h1": "Pinterest Standard Events for Shopify: Which Ones Fire",
     "intro": [
-      "Pixel Tracker sends Pinterest's standard events using the exact lowercase, snake_case names Pinterest expects: page_visit, view_category, add_to_cart, checkout, and signup. Knowing which event maps to which action on your Shopify store makes it much easier to read your Conversions dashboard and to spot when something stops firing.",
+      "Check the tag ID in your existing integration and compare it with Pinterest conversion diagnostics. Use Pinterest Tag Helper to inspect browser activity, then test checkout separately. Pinterest uses Checkout for completed transactions. Check the selected event and product details rather than assuming a generic PageVisit represents a sale.",
       "This page covers what each event tracks, when it fires, and why some matter more than others for ad reporting. If an event isn't showing up the way you expect, check the [troubleshooting guide](/pixel-tracker/pinterest-pixel/troubleshooting) after confirming the setup here."
     ],
     "sections": [
-      {
-        "heading": "The Five Pinterest Events Pixel Tracker Sends",
-        "paragraphs": [
-          "Pixel Tracker maps common Shopify storefront actions to Pinterest's standard event set: browsing any page sends page_visit, viewing a collection sends view_category, adding an item to the cart sends add_to_cart, completing an order sends checkout, and creating a customer account sends signup.",
-          "Pinterest's naming convention is lowercase with underscores, not the camelCase or Title Case you'll see on other ad platforms, so don't assume event names line up character for character if you're auditing tracking across Meta, TikTok, and Pinterest in the same spreadsheet. When you're checking Ads Manager against what Pixel Tracker sends, match on the exact snake_case spelling."
-        ]
-      },
       {
         "heading": "page_visit: The Baseline Event on Every Page",
         "paragraphs": [
@@ -1205,14 +1084,6 @@ export const platformActionPages: PlatformActionPage[] = [
     "symptoms": [],
     "faqs": [
       {
-        "q": "What events does Pixel Tracker send to Pinterest?",
-        "a": "page_visit, view_category, add_to_cart, checkout, and signup, using Pinterest's standard lowercase snake_case naming."
-      },
-      {
-        "q": "Does Pixel Tracker send custom Pinterest events?",
-        "a": "No, Pixel Tracker sends Pinterest's standard event set. It doesn't currently support defining custom event names beyond those five."
-      },
-      {
         "q": "Why is checkout the most important event for ad reporting?",
         "a": "checkout is the event Pinterest uses to attribute a completed order back to an ad click, and it typically carries order value, which is what powers conversion rate and ROAS reporting in Ads Manager."
       },
@@ -1223,6 +1094,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "Does view_category fire on every product listing page?",
         "a": "It fires on Shopify collection pages, which are the closest equivalent to Pinterest's category page concept. Individual product pages trigger page_visit rather than view_category."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -1258,72 +1133,73 @@ export const platformActionPages: PlatformActionPage[] = [
     "platformName": "Pinterest",
     "pixelName": "Pinterest Tag",
     "badge": "Server-Side Tracking",
-    "title": "Pinterest Server-Side Tracking on Shopify: The Real Options",
-    "description": "Pixel Tracker's Pinterest Tag is client-side only. Here's what Pinterest's Conversions API offers, and where Pixel Tracker does support server-side tracking.",
-    "h1": "Pinterest Server-Side Tracking on Shopify: The Real Options",
+    "title": "Pinterest Server-Side Tracking for Shopify: What to Verify",
+    "description": "Check Pinterest server event delivery, consent, purchase details, and duplicate handling on Shopify. Pixel Tracker server-side support is not confirmed.",
+    "h1": "Pinterest Server-Side Tracking for Shopify: What to Verify",
     "intro": [
-      "Pixel Tracker's Pinterest connection is a client-side browser tag, injected via Shopify ScriptTag, the same pintrk() tracking that runs in a visitor's browser. It does not include server-side tracking for Pinterest today, so if you're looking for a Pixel Tracker Conversions API setup for Pinterest, it doesn't exist yet.",
-      "Pinterest does have its own server-side product, separate from Pixel Tracker, and it's worth understanding what it does before deciding whether you need it. This page covers what Pinterest's server-side option offers, why it matters more than it used to, and where Pixel Tracker's own server-side support actually lives today."
+      "Server-side delivery needs a working integration that sends events from your store to Pinterest. Adding a browser pixel does not establish that connection.",
+      "Pixel Tracker is in development. Its server-side delivery and browser/server deduplication are not confirmed. The checks below are for evaluating an available integration."
     ],
     "sections": [
       {
-        "heading": "Pixel Tracker's Pinterest Tag Is Client-Side Only",
+        "heading": "Check the Pinterest integration, not just the pixel",
         "paragraphs": [
-          "Everything Pixel Tracker sends to Pinterest, page_visit, view_category, add_to_cart, checkout, and signup, runs through the browser-based Pinterest Tag. There's no server-to-server connection between your store and Pinterest through Pixel Tracker, which means any event that gets blocked or dropped in the browser, by an ad blocker, a slow connection, or Safari's tracking prevention, never reaches Pinterest at all.",
-          "That's an honest limitation, not a bug. If you need Pinterest events that survive browser-level blocking, that requires Pinterest's own Conversions API, set up independently of Pixel Tracker."
+          "Start with [Pinterest API for Conversions documentation](https://help.pinterest.com/en/business/article/getting-started-with-the-conversions-api) and the documentation for the provider you use. Confirm which Shopify events it supports and whether it sends them from the browser, server, or both.",
+          "Pinterest uses Checkout for completed transactions. Check the selected event and product details rather than assuming a generic PageVisit represents a sale."
         ]
       },
       {
-        "heading": "What Pinterest's Conversions API Actually Does",
+        "heading": "Verify receipt separately from attribution",
         "paragraphs": [
-          "Pinterest offers its own server-side product, sometimes called the Pinterest Conversions API or Pinterest API for Conversions, that sends event data directly from your server, or a middleware layer, to Pinterest, bypassing the browser entirely. It's built to work alongside the browser tag, not replace it, matching events on both sides using hashed customer data like email or phone number to fill in gaps the browser tag misses.",
-          "Setting it up means either building a direct integration with Pinterest's API or using a server-side tag management solution that supports it. It's a separate project from anything Pixel Tracker configures."
+          "Look for server-event receipt in Pinterest conversion diagnostics or the delivery logs supplied by your integration. A successful browser request in Pinterest Tag Helper does not prove a server event arrived. An accepted event also does not guarantee an attributed conversion.",
+          "Compare event type, order value, currency, and order identifier against a test order. Check failed deliveries and retries before relying on totals."
         ]
       },
       {
-        "heading": "Why This Matters More for Pinterest Than It Used To",
+        "heading": "Prevent duplicate purchases",
         "paragraphs": [
-          "Safari's Intelligent Tracking Prevention, iOS app tracking restrictions, and the growing share of shoppers running ad blockers all chip away at what a browser-only tag can see. Pinterest's Conversions dashboard likely undercounts real conversions to some degree for any store relying purely on the client-side tag, the only question is by how much.",
-          "For most small and mid-size Shopify stores, the browser tag alone is still a reasonable starting point. It becomes a real gap once Pinterest is a meaningful part of your ad spend and you're making budget decisions based on its reported ROAS."
+          "If browser and server report the same action, follow the platform's deduplication requirements. Preserve the same event identity across the two paths and across retries where required; a new purchase needs a new identity. Do not add another independent purchase sender without checking the existing one."
         ]
       },
       {
-        "heading": "Where Pixel Tracker Does Support Server-Side Tracking Today",
+        "heading": "Respect the same customer choices",
         "paragraphs": [
-          "Pixel Tracker's server-side support currently covers two platforms: Meta, through [Facebook's Conversions API](/pixel-tracker/meta-pixel/server-side), and TikTok, through the TikTok Events API. Both work alongside their respective browser tags to recover events that would otherwise be lost. Pinterest, Google Ads, Snapchat, LinkedIn, and X aren't part of that today.",
-          "If Pinterest is one of several platforms you run ads on, the [server-side tracking guide](/pixel-tracker/guides/server-side-tracking) explains how Meta and TikTok's server-side setup works in Pixel Tracker, and how to think about the platforms that aren't covered yet."
-        ]
-      },
-      {
-        "heading": "Realistic Options If You Need Better Pinterest Data",
-        "paragraphs": [
-          "If Pinterest is a small part of your ad mix, the client-side tag combined with Pinterest's own Conversions dashboard is usually good enough to make directional decisions. If Pinterest spend is significant enough that undercounting is costing you real budget accuracy, setting up Pinterest's Conversions API directly, independent of Pixel Tracker, is the option that exists today.",
-          "Either way, don't treat Pinterest's reported numbers as the full picture. Cross-check them against your Shopify order data, and lean on the platforms where you do have server-side coverage, Meta and TikTok, for a more complete view of paid performance."
+          "Server delivery does not override consent or privacy settings. Confirm how the integration handles declined consent, permitted matching data, and data retention before enabling it."
         ]
       }
     ],
-    "steps": [],
-    "symptoms": [],
+    "steps": [
+      {
+        "title": "Confirm the supported delivery path",
+        "body": "Read the chosen provider's current Pinterest setup instructions and supported Shopify events. Pixel Tracker does not have a verified server setup to follow yet."
+      },
+      {
+        "title": "Check a test purchase",
+        "body": "Complete a test order and inspect Pinterest conversion diagnostics. Compare event type, order value, currency, and order identifier with that order."
+      },
+      {
+        "title": "Check overlap and retries",
+        "body": "Confirm the browser/server pair is deduplicated according to platform requirements. Ensure a retry does not become a second purchase."
+      },
+      {
+        "title": "Test consent states",
+        "body": "Verify the integration respects the store's collection settings before using the events for reporting."
+      }
+    ],
+    "symptoms": [
+      "Browser events arrive but no server events appear",
+      "Two purchase events appear for one test order",
+      "Purchase value or currency differs from the order",
+      "The provider shows failed requests or repeated retries"
+    ],
     "faqs": [
       {
-        "q": "Does Pixel Tracker support Pinterest server-side tracking?",
-        "a": "No. Pixel Tracker's Pinterest connection is client-side only today, sent through the browser-based Pinterest Tag. Pixel Tracker's server-side support currently covers Meta and TikTok only."
+        "q": "Does a browser helper prove server delivery?",
+        "a": "No. Check server receipt separately in Pinterest conversion diagnostics or your integration's delivery logs."
       },
       {
-        "q": "What is Pinterest's Conversions API?",
-        "a": "It's Pinterest's own server-side tracking product, separate from Pixel Tracker, that sends event data directly from a server to Pinterest rather than through a visitor's browser. Setting it up is a separate integration project from anything Pixel Tracker configures."
-      },
-      {
-        "q": "Will Pixel Tracker add Pinterest server-side tracking?",
-        "a": "That's not something we can commit to a timeline on here. Today, Pixel Tracker's server-side support is Meta Conversions API and TikTok Events API only."
-      },
-      {
-        "q": "How much data am I actually losing without server-side tracking on Pinterest?",
-        "a": "It varies by store, but Safari's tracking prevention, ad blockers, and iOS restrictions all reduce what a browser-only tag can capture. There's no fixed percentage, the safest approach is to cross-check Pinterest's reported conversions against your actual Shopify order count."
-      },
-      {
-        "q": "Should I prioritize Pinterest server-side tracking over Meta or TikTok?",
-        "a": "For most stores, no. Meta and TikTok typically carry more ad spend and already have working server-side support in Pixel Tracker, so that's where the accuracy gain is easiest to capture today."
+        "q": "Will server-side tracking make every order appear in ad reporting?",
+        "a": "No. Delivery, customer consent, matching, and attribution are separate. Reconcile test events before interpreting campaign totals."
       }
     ],
     "related": [
@@ -1360,17 +1236,17 @@ export const platformActionPages: PlatformActionPage[] = [
     "pixelName": "Snapchat Pixel",
     "badge": "Troubleshooting",
     "title": "Snapchat Pixel Not Firing on Shopify: Troubleshooting Guide",
-    "description": "Snap Pixel not tracking on your Shopify store? Diagnose ScriptTag issues, ad blockers, and event mismatches with this step-by-step fix guide.",
+    "description": "Check Snapchat tracking on Shopify: verify the Snap Pixel ID, event receipt, and purchase details with your current integration.",
     "h1": "Snapchat Pixel Not Firing on Shopify: Troubleshooting Guide",
     "intro": [
-      "When your Snap Pixel stops showing activity in Snapchat Ads Manager, or a fresh Shopify install never registers a single PAGE_VIEW, the cause is almost always one of a handful of predictable issues: a mismatched Pixel ID, a ScriptTag that never loaded, an ad blocker eating the request, or events that fire under a name Snapchat doesn't recognize. None of this is exotic. It's the same five or six things every merchant running Pixel Tracker's Snapchat connection eventually runs into.",
+      "Check the Snap Pixel ID in your existing integration and compare it with Snapchat Events Manager. Use Snap Pixel Helper to inspect browser activity, then test checkout separately. Test the path from a Snap ad landing page through checkout. A working landing-page pixel does not establish that the checkout integration sends PURCHASE.",
       "This guide works through each one in order, starting with the fastest checks first. If you get through the whole list and pixel activity still isn't showing up, the [events reference](/pixel-tracker/snapchat-pixel/events) is worth checking next, since a surprising number of \"not firing\" reports turn out to be events that fired correctly but under names Snapchat's Ads Manager doesn't map the way you'd expect."
     ],
     "sections": [
       {
-        "heading": "Why 'Connected' in Pixel Tracker Doesn't Guarantee Data in Snapchat",
+        "heading": "Verify your Snapchat configuration",
         "paragraphs": [
-          "Pixel Tracker connects Snapchat by injecting a Shopify ScriptTag, so there's no theme code to edit. But \"connected\" in the dashboard only confirms that Shopify accepted and registered that ScriptTag. It doesn't confirm that a shopper's browser actually loaded the script, that Snapchat's servers received the event, or that Ads Manager has finished processing it. Those are three separate points of failure, and most troubleshooting is really about figuring out which one you're looking at."
+          "Browser and server delivery are separate checks. Verify the provider's documented Snapchat server integration and inspect receipt in Snapchat Events Manager. Pixel Tracker server-side delivery is not confirmed."
         ]
       },
       {
@@ -1384,28 +1260,12 @@ export const platformActionPages: PlatformActionPage[] = [
         "paragraphs": [
           "The Snap Pixel script loads from Snapchat's own domains, which puts it squarely in the crosshairs of ad blockers, privacy-focused browsers like Brave, and cookie consent tools configured to block third-party scripts by default. Safari's Intelligent Tracking Prevention can also interfere with cross-site requests. If your own testing happens in a browser with any of these active, you'll see a broken pixel that isn't actually broken for your real customers."
         ]
-      },
-      {
-        "heading": "Reading Snapchat's Pixel Health in Ads Manager",
-        "paragraphs": [
-          "Ads Manager's event tracking screen shows which events it has actually received, broken out by event type, along with basic diagnostics when something looks off. Reporting typically lags 24 to 48 hours behind real activity, so a quiet dashboard the same day you reconnect the pixel isn't necessarily a problem. Compare what you see there against the five events Pixel Tracker sends: PAGE_VIEW, VIEW_CONTENT, ADD_CART, START_CHECKOUT, and PURCHASE."
-        ]
-      },
-      {
-        "heading": "When Checkout Events Specifically Go Missing",
-        "paragraphs": [
-          "START_CHECKOUT and PURCHASE depend on a shopper actually reaching Shopify's checkout, which runs on a separate, more locked-down domain than your storefront. If PAGE_VIEW and VIEW_CONTENT look healthy but checkout events don't, it's rarely a Pixel Tracker configuration problem. More often, no one has actually completed a checkout since you reconnected the pixel, or a browser blocker is stripping scripts specifically on the checkout domain."
-        ]
       }
     ],
     "steps": [
       {
-        "title": "Confirm the Pixel ID matches Ads Manager exactly",
-        "body": "Open Events Manager in Snapchat Ads Manager, copy the Pixel ID character for character, and paste it into Pixel Tracker's Snapchat connection. Save and reconnect rather than editing in place."
-      },
-      {
-        "title": "Reconnect Snapchat to force the ScriptTag to re-register",
-        "body": "Disconnect and reconnect the Snapchat platform in Pixel Tracker. This forces Shopify to re-register the ScriptTag, which clears up issues caused by a stale or partially failed install."
+        "title": "Check your Snapchat integration",
+        "body": "Use the settings in your installed integration to confirm the Snap Pixel ID. Pixel Tracker is not available to install. If your integration uses a theme app embed, activate it in the theme editor and test checkout separately."
       },
       {
         "title": "Test in a clean browser with blockers off",
@@ -1435,10 +1295,6 @@ export const platformActionPages: PlatformActionPage[] = [
     ],
     "faqs": [
       {
-        "q": "Why does Pixel Tracker show Snapchat as connected but Ads Manager shows zero events?",
-        "a": "Connected only means Shopify accepted the ScriptTag, not that Snapchat has processed any traffic yet. Give it 24 to 48 hours, then check for ad blockers or a Pixel ID mismatch if it's still empty."
-      },
-      {
         "q": "Can an ad blocker really stop the Snap Pixel from working?",
         "a": "Yes. Ad blockers, privacy browsers, and some consent banners block requests to Snapchat's tracking domains outright. Always test with them disabled before assuming the pixel itself is misconfigured."
       },
@@ -1453,6 +1309,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "What if I've checked everything and events still aren't showing?",
         "a": "Double-check for a second Snap Pixel installed through your theme or another app, since duplicate pixels cause inconsistent reporting. If that's clean, the [events reference](/pixel-tracker/snapchat-pixel/events) covers exactly which events to expect and when."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -1489,19 +1349,13 @@ export const platformActionPages: PlatformActionPage[] = [
     "pixelName": "Snapchat Pixel",
     "badge": "Events",
     "title": "Snapchat Pixel Events on Shopify: Full Reference Guide",
-    "description": "See which Snapchat Pixel events Pixel Tracker sends from your Shopify store, from PAGE_VIEW to PURCHASE, and how they map to checkout.",
+    "description": "Check Snapchat tracking on Shopify: verify the Snap Pixel ID, event receipt, and purchase details with your current integration.",
     "h1": "Snapchat Pixel Events on Shopify: Full Reference Guide",
     "intro": [
-      "Pixel Tracker maps your Shopify store's actions to Snapchat's own event taxonomy automatically, so there's no manual event builder to configure. Snapchat's standard events use SCREAMING_SNAKE_CASE names like PAGE_VIEW, VIEW_CONTENT, ADD_CART, START_CHECKOUT, and PURCHASE, and Pixel Tracker sends all five directly from the ScriptTag it installs on your storefront.",
+      "Check the Snap Pixel ID in your existing integration and compare it with Snapchat Events Manager. Use Snap Pixel Helper to inspect browser activity, then test checkout separately. Test the path from a Snap ad landing page through checkout. A working landing-page pixel does not establish that the checkout integration sends PURCHASE.",
       "This page breaks down what each event means, when it fires, and what it tells Snapchat's ad system. If you've confirmed events are set up but they're not showing up in Ads Manager, the [troubleshooting guide](/pixel-tracker/snapchat-pixel/troubleshooting) covers the common causes, from Pixel ID mismatches to ad blockers."
     ],
     "sections": [
-      {
-        "heading": "PAGE_VIEW: Every Storefront Page Load",
-        "paragraphs": [
-          "PAGE_VIEW fires on every page a shopper loads across your store, not just product pages. It's the broadest signal Pixel Tracker sends to Snapchat and forms the baseline traffic data Snapchat uses for retargeting audiences and lookalike modeling. It's also the first event worth checking if something looks off, since a store with zero PAGE_VIEW activity almost always points to an installation problem rather than an event-mapping one."
-        ]
-      },
       {
         "heading": "VIEW_CONTENT: Product Page Visits",
         "paragraphs": [
@@ -1531,12 +1385,8 @@ export const platformActionPages: PlatformActionPage[] = [
     "symptoms": [],
     "faqs": [
       {
-        "q": "Which Snapchat events does Pixel Tracker send automatically?",
-        "a": "PAGE_VIEW, VIEW_CONTENT, ADD_CART, START_CHECKOUT, and PURCHASE, all mapped from standard Shopify storefront and checkout actions with no manual setup."
-      },
-      {
         "q": "Do I need to name events in SCREAMING_SNAKE_CASE myself?",
-        "a": "No. That naming convention is just how Snapchat's own system labels and expects events. Pixel Tracker handles the mapping so you never touch event names directly."
+        "a": "Use the event names required by Snap's API for a custom implementation. A managed integration should document its mappings; verify those mappings in Snapchat diagnostics rather than renaming events based on a display label."
       },
       {
         "q": "Why does VIEW_CONTENT show far more volume than PURCHASE?",
@@ -1544,11 +1394,15 @@ export const platformActionPages: PlatformActionPage[] = [
       },
       {
         "q": "Can I add custom Snapchat events beyond the standard five?",
-        "a": "Not currently. Pixel Tracker sends the five standard events mapped from Shopify's own storefront and checkout actions, and there's no custom event builder in the app today."
+        "a": "Available events depend on Snapchat's current API and your integration. Check both before implementing another event. A list of common events in this guide does not establish Pixel Tracker launch support."
       },
       {
         "q": "Where do I check which events Snapchat actually received?",
         "a": "Snapchat Ads Manager's Events Manager shows a per-event breakdown of what's come through. If counts look wrong, the [troubleshooting guide](/pixel-tracker/snapchat-pixel/troubleshooting) walks through the most common causes."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -1584,67 +1438,73 @@ export const platformActionPages: PlatformActionPage[] = [
     "platformName": "Snapchat",
     "pixelName": "Snapchat Pixel",
     "badge": "Server-Side Tracking",
-    "title": "Snapchat Server-Side Tracking on Shopify: What's Possible",
-    "description": "Pixel Tracker's Snapchat pixel is client-side only. Here's what Snap Conversions API offers, why it matters, and your realistic options today.",
-    "h1": "Snapchat Server-Side Tracking on Shopify: What's Possible",
+    "title": "Snapchat Server-Side Tracking for Shopify: What to Verify",
+    "description": "Check Snapchat server event delivery, consent, purchase details, and duplicate handling on Shopify. Pixel Tracker server-side support is not confirmed.",
+    "h1": "Snapchat Server-Side Tracking for Shopify: What to Verify",
     "intro": [
-      "Pixel Tracker's Snapchat connection today is a client-side pixel only, installed through a Shopify ScriptTag and firing directly from the shopper's browser. There's no server-side or Conversions API support for Snapchat in Pixel Tracker right now, and this page won't pretend otherwise. That's the current state of the integration, not a temporary gap while a feature ships.",
-      "If server-side tracking is the reason you're evaluating Pixel Tracker, it's worth being direct about where that stands: it exists today for [Meta and TikTok](/pixel-tracker/guides/server-side-tracking), not for Snapchat. What follows is what server-side tracking would actually mean for Snapchat, why it's become more relevant since Apple's App Tracking Transparency rollout, and what your realistic options are as a Shopify merchant right now."
+      "Server-side delivery needs a working integration that sends events from your store to Snapchat. Adding a browser pixel does not establish that connection.",
+      "Pixel Tracker is in development. Its server-side delivery and browser/server deduplication are not confirmed. The checks below are for evaluating an available integration."
     ],
     "sections": [
       {
-        "heading": "What Pixel Tracker Sends to Snapchat Today",
+        "heading": "Check the Snapchat integration, not just the pixel",
         "paragraphs": [
-          "Pixel Tracker injects the Snap Pixel through a Shopify ScriptTag, no theme code editing required. From there, the pixel fires PAGE_VIEW, VIEW_CONTENT, ADD_CART, START_CHECKOUT, and PURCHASE events directly from the shopper's browser to Snapchat's servers. That's standard client-side tracking, the same way most Shopify pixel integrations have worked for years."
+          "Start with [Snap Conversions API documentation](https://businesshelp.snapchat.com/s/topic/0TO8b000000P7mXGAS/integration-methods?language=en_US) and the documentation for the provider you use. Confirm which Shopify events it supports and whether it sends them from the browser, server, or both.",
+          "Test the path from a Snap ad landing page through checkout. A working landing-page pixel does not establish that the checkout integration sends PURCHASE."
         ]
       },
       {
-        "heading": "Why Server-Side Tracking Matters More Since 2021",
+        "heading": "Verify receipt separately from attribution",
         "paragraphs": [
-          "Client-side pixels only work if the request actually leaves the browser and reaches the advertiser's server. Apple's App Tracking Transparency prompts, Safari's Intelligent Tracking Prevention, and ad blockers all interrupt that path in different ways, and the cumulative effect has been real, measurable undercounting across the industry, Snapchat included. Server-side tracking sends the same event from a server instead of the browser, which sidesteps a lot of that browser-level interference. That undercounting tends to compound for Snapchat in particular, since a large share of its traffic is mobile and app-embedded, exactly the environments where client-side pixels are weakest."
+          "Look for server-event receipt in Snapchat Events Manager or the delivery logs supplied by your integration. A successful browser request in Snap Pixel Helper does not prove a server event arrived. An accepted event also does not guarantee an attributed conversion.",
+          "Compare event type, price, currency, and transaction identifier against a test order. Check failed deliveries and retries before relying on totals."
         ]
       },
       {
-        "heading": "Snap Conversions API Is a Real Feature, Just Not a Pixel Tracker One",
+        "heading": "Prevent duplicate purchases",
         "paragraphs": [
-          "Snapchat does offer its own server-side option, called Snap Conversions API, and it's a legitimate part of Snapchat's advertising platform. Pixel Tracker doesn't build, configure, or manage that integration for you, though. Setting it up today would mean working directly with Snapchat's documentation and either your own developer or an agency, independent of anything Pixel Tracker does."
+          "If browser and server report the same action, follow the platform's deduplication requirements. Preserve the same event identity across the two paths and across retries where required; a new purchase needs a new identity. Do not add another independent purchase sender without checking the existing one."
         ]
       },
       {
-        "heading": "Where Pixel Tracker Does Support Server-Side Tracking",
+        "heading": "Respect the same customer choices",
         "paragraphs": [
-          "Pixel Tracker's server-side support today covers two platforms: [Meta Conversions API](/pixel-tracker/meta-pixel/server-side) and TikTok Events API. Both send events from a server rather than relying solely on the browser, recovering conversions that ad blockers and privacy settings would otherwise hide."
-        ]
-      },
-      {
-        "heading": "Realistic Options for Snapchat Merchants Right Now",
-        "paragraphs": [
-          "The client-side Snap Pixel Pixel Tracker already installs is still useful for prospecting and retargeting, even with some signal loss baked in. If overall measurement accuracy matters more than any one platform, leaning on Meta and TikTok's server-side coverage helps offset part of the gap, and cross-checking ad platform numbers against your actual Shopify order data keeps your read on performance honest regardless of what any single pixel reports. None of that replaces true server-side coverage for Snapchat, but it keeps your numbers honest while that gap exists."
+          "Server delivery does not override consent or privacy settings. Confirm how the integration handles declined consent, permitted matching data, and data retention before enabling it."
         ]
       }
     ],
-    "steps": [],
-    "symptoms": [],
+    "steps": [
+      {
+        "title": "Confirm the supported delivery path",
+        "body": "Read the chosen provider's current Snapchat setup instructions and supported Shopify events. Pixel Tracker does not have a verified server setup to follow yet."
+      },
+      {
+        "title": "Check a test purchase",
+        "body": "Complete a test order and inspect Snapchat Events Manager. Compare event type, price, currency, and transaction identifier with that order."
+      },
+      {
+        "title": "Check overlap and retries",
+        "body": "Confirm the browser/server pair is deduplicated according to platform requirements. Ensure a retry does not become a second purchase."
+      },
+      {
+        "title": "Test consent states",
+        "body": "Verify the integration respects the store's collection settings before using the events for reporting."
+      }
+    ],
+    "symptoms": [
+      "Browser events arrive but no server events appear",
+      "Two purchase events appear for one test order",
+      "Purchase value or currency differs from the order",
+      "The provider shows failed requests or repeated retries"
+    ],
     "faqs": [
       {
-        "q": "Does Pixel Tracker support server-side tracking for Snapchat?",
-        "a": "No. Pixel Tracker's Snapchat connection is a client-side pixel only, delivered through a Shopify ScriptTag. Today, Pixel Tracker's server-side support covers Meta Conversions API and TikTok Events API only."
+        "q": "Does a browser helper prove server delivery?",
+        "a": "No. Check server receipt separately in Snapchat Events Manager or your integration's delivery logs."
       },
       {
-        "q": "What is Snap Conversions API, and can Pixel Tracker set it up?",
-        "a": "It's Snapchat's own server-side tracking feature, separate from Pixel Tracker. Pixel Tracker doesn't build, configure, or manage it, so using it would require setting it up independently."
-      },
-      {
-        "q": "Why does server-side tracking matter more since iOS changed its privacy rules?",
-        "a": "App Tracking Transparency prompts and Safari's tracking prevention block a meaningful share of client-side pixel activity. Server-side tracking sends events from a server instead of the browser, recovering some of that lost signal."
-      },
-      {
-        "q": "If I want the most complete Snapchat data possible, what should I do?",
-        "a": "Keep the client-side Snap Pixel running for prospecting and retargeting, and cross-check reported conversions against your actual Shopify orders using something like the [pixel tracking calculator](/tools/pixel-tracking-calculator) rather than trusting any single platform's numbers alone."
-      },
-      {
-        "q": "Will Pixel Tracker add Snapchat server-side tracking in the future?",
-        "a": "Server-side support today is limited to Meta and TikTok. Any expansion to additional platforms would show up in the app itself, not as a promise made here."
+        "q": "Will server-side tracking make every order appear in ad reporting?",
+        "a": "No. Delivery, customer consent, matching, and attribution are separate. Reconcile test events before interpreting campaign totals."
       }
     ],
     "related": [
@@ -1685,7 +1545,7 @@ export const platformActionPages: PlatformActionPage[] = [
     "h1": "TikTok Pixel Not Firing on Shopify: Troubleshooting Guide",
     "intro": [
       "If TikTok Pixel Helper shows a green checkmark on your Shopify store but TikTok Ads Manager still reports almost no events, you're not imagining it. The browser extension only confirms the base pixel code loaded in that one tab. It says nothing about whether TikTok's servers actually received the event, whether it arrived in time to match a click, or whether the shopper even used a normal browser to get to your store.",
-      "This is one of the most common support questions for Shopify merchants running TikTok ads, and it usually comes down to one of a handful of causes: the in-app browser TikTok uses for its own traffic, script injection timing on your theme, browser privacy settings, or events firing twice and confusing the reporting. Below is a step-by-step way to isolate which one you're dealing with, plus what a tool like [Pixel Tracker](/pixel-tracker) checks for automatically."
+      "Check theme code, custom pixels, and installed apps for duplicate TikTok senders. Keep one intended source for each event, with platform-specific deduplication if browser and server both send it. Test before removing an existing integration."
     ],
     "sections": [
       {
@@ -1704,7 +1564,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Confirm the Pixel Is Actually Loading on Every Page",
         "paragraphs": [
-          "Shopify injects third-party tracking through ScriptTags, and the order in which scripts load can matter, especially on the checkout pages where AddToCart, InitiateCheckout, and PlaceAnOrder events need to fire reliably. Open your storefront in an incognito window, load the homepage, a product page, and go through checkout, watching Pixel Helper at each step. If PageView fires everywhere but AddToCart or InitiateCheckout never shows up, the problem usually isn't the pixel itself, it's that the trigger tied to that specific page or button was never wired up correctly."
+          "Shopify injects third-party tracking through theme app extensions, and the order in which scripts load can matter, especially on the checkout pages where AddToCart, InitiateCheckout, and PlaceAnOrder events need to fire reliably. Open your storefront in an incognito window, load the homepage, a product page, and go through checkout, watching Pixel Helper at each step. If PageView fires everywhere but AddToCart or InitiateCheckout never shows up, the problem usually isn't the pixel itself, it's that the trigger tied to that specific page or button was never wired up correctly."
         ]
       },
       {
@@ -1775,6 +1635,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "How do I stop TikTok from counting the same purchase twice?",
         "a": "Make sure your browser pixel and any server-side event share the same event ID for the same order, so TikTok can deduplicate them into a single event. See our [server-side tracking guide](/pixel-tracker/guides/server-side-tracking) for how event ID matching works."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -1873,6 +1737,10 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "q": "What is Event Match Quality and why does it matter for events?",
         "a": "It's TikTok's score for how well an event's customer parameters, like email, phone, or an external ID, let TikTok match it to a real user. Higher match quality generally means more of your events get counted and attributed correctly, which is one reason server-side tracking through the Events API tends to improve reported conversions."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -1908,89 +1776,73 @@ export const platformActionPages: PlatformActionPage[] = [
     "platformName": "TikTok",
     "pixelName": "TikTok Pixel",
     "badge": "Server-Side Tracking",
-    "title": "TikTok Events API Setup for Shopify (Server-Side Tracking)",
-    "description": "How to connect TikTok's Events API to your Shopify store, deduplicate events with the browser pixel, and check your match rate in Ads Manager.",
-    "h1": "TikTok Events API Setup for Shopify: Server-Side Tracking",
+    "title": "TikTok Server-Side Tracking for Shopify: What to Verify",
+    "description": "Check TikTok server event delivery, consent, purchase details, and duplicate handling on Shopify. Pixel Tracker server-side support is not confirmed.",
+    "h1": "TikTok Server-Side Tracking for Shopify: What to Verify",
     "intro": [
-      "TikTok's Events API lets you send conversion events directly from your server to TikTok, alongside, not instead of, the browser pixel. That matters on Shopify specifically because TikTok's in-app browser and standard mobile ad blockers both cause the browser pixel to miss a real share of events, and the Events API is the way to recover them without touching your theme code.",
-      "Pixel Tracker supports TikTok's Events API, connecting it through Shopify ScriptTags so you don't need to edit theme files or maintain custom code. This page walks through what the Events API actually does, how to connect it, and how to confirm it's working by checking your match rate in TikTok Ads Manager. For the general setup of the pixel itself, see our [TikTok pixel setup guide](/pixel-tracker/guides/tiktok-pixel-setup)."
+      "Server-side delivery needs a working integration that sends events from your store to TikTok. Adding a browser pixel does not establish that connection.",
+      "Pixel Tracker is in development. Its server-side delivery and browser/server deduplication are not confirmed. The checks below are for evaluating an available integration."
     ],
     "sections": [
       {
-        "heading": "What the Events API Actually Adds",
+        "heading": "Check the TikTok integration, not just the pixel",
         "paragraphs": [
-          "The browser pixel depends on JavaScript running successfully in the shopper's browser, which fails more often than most merchants realize once you account for ad blockers, Safari's tracking prevention, and TikTok's own in-app browser environment. The Events API sends the same events, PageView, AddToCart, InitiateCheckout, PlaceAnOrder, directly from Shopify's servers instead, so an event can still reach TikTok even when the browser-side pixel didn't fire. It's a supplement to the pixel, not a replacement for it."
+          "Start with [TikTok Events API documentation](https://ads.tiktok.com/help/article/event-deduplication?lang=en) and the documentation for the provider you use. Confirm which Shopify events it supports and whether it sends them from the browser, server, or both.",
+          "Test both a normal browser and the path a visitor takes from a TikTok ad. Browser event receipt and campaign attribution answer different questions."
         ]
       },
       {
-        "heading": "Getting Your Events API Access Token",
+        "heading": "Verify receipt separately from attribution",
         "paragraphs": [
-          "In TikTok Ads Manager, open Assets, then Events, then select your pixel and go to its Events API setup screen. Generate an access token there, this is what authorizes Pixel Tracker to send events to TikTok on your store's behalf. Treat this token like a password: anyone with it can send events to your ad account, so only paste it into a connection you trust."
+          "Look for server-event receipt in TikTok Events Manager or the delivery logs supplied by your integration. A successful browser request in TikTok Pixel Helper does not prove a server event arrived. An accepted event also does not guarantee an attributed conversion.",
+          "Compare event name, event ID, value, and currency against a test order. Check failed deliveries and retries before relying on totals."
         ]
       },
       {
-        "heading": "Connecting Pixel Tracker to the Events API",
+        "heading": "Prevent duplicate purchases",
         "paragraphs": [
-          "Paste the access token into Pixel Tracker's TikTok connection settings, alongside your pixel ID. Pixel Tracker sends the matching server-side events for the same standard events your browser pixel already tracks, so you don't need to choose one over the other or maintain two separate event schemas."
+          "If browser and server report the same action, follow the platform's deduplication requirements. Preserve the same event identity across the two paths and across retries where required; a new purchase needs a new identity. Do not add another independent purchase sender without checking the existing one."
         ]
       },
       {
-        "heading": "Event Deduplication: Why Matching Event IDs Matter",
+        "heading": "Respect the same customer choices",
         "paragraphs": [
-          "When the same purchase fires from both the browser pixel and the Events API, TikTok needs a way to know it's one event, not two. That's done by giving both the browser event and the server event the same event ID for the same order. Without matching event IDs, you'll see conversions in Ads Manager running higher than your actual Shopify order count, because TikTok counted the same sale twice.",
-          "Pixel Tracker handles this matching automatically so you don't have to manage event IDs by hand."
-        ]
-      },
-      {
-        "heading": "Checking Your Match Rate After Setup",
-        "paragraphs": [
-          "Give it a few days of real traffic, then check the Event Match Quality or match rate figures in TikTok Ads Manager for your pixel. A meaningful jump in matched events after connecting the Events API is the clearest sign it's working. If you don't see improvement, double check that the access token is still valid and that your event IDs are actually deduplicating rather than creating duplicate events."
+          "Server delivery does not override consent or privacy settings. Confirm how the integration handles declined consent, permitted matching data, and data retention before enabling it."
         ]
       }
     ],
     "steps": [
       {
-        "title": "Open your pixel's Events API setup screen in TikTok Ads Manager",
-        "body": "Go to Assets, then Events, select your TikTok pixel, and find the Events API section to generate an access token."
+        "title": "Confirm the supported delivery path",
+        "body": "Read the chosen provider's current TikTok setup instructions and supported Shopify events. Pixel Tracker does not have a verified server setup to follow yet."
       },
       {
-        "title": "Generate and copy the access token",
-        "body": "TikTok generates a token scoped to that pixel. Keep it private since it authorizes sending events to your ad account."
+        "title": "Check a test purchase",
+        "body": "Complete a test order and inspect TikTok Events Manager. Compare event name, event ID, value, and currency with that order."
       },
       {
-        "title": "Paste the token into Pixel Tracker",
-        "body": "Add the access token and pixel ID to Pixel Tracker's TikTok connection settings. No theme edits or custom code are required."
+        "title": "Check overlap and retries",
+        "body": "Confirm the browser/server pair is deduplicated according to platform requirements. Ensure a retry does not become a second purchase."
       },
       {
-        "title": "Confirm events are deduplicating correctly",
-        "body": "Compare TikTok-reported conversions against actual Shopify order counts for the same window. Matching numbers mean event IDs are deduplicating properly."
-      },
-      {
-        "title": "Check match rate after a few days",
-        "body": "Give TikTok a few days of live traffic, then check Event Match Quality in Ads Manager to confirm the Events API connection is improving matched events."
+        "title": "Test consent states",
+        "body": "Verify the integration respects the store's collection settings before using the events for reporting."
       }
     ],
-    "symptoms": [],
+    "symptoms": [
+      "Browser events arrive but no server events appear",
+      "Two purchase events appear for one test order",
+      "Purchase value or currency differs from the order",
+      "The provider shows failed requests or repeated retries"
+    ],
     "faqs": [
       {
-        "q": "What does TikTok's Events API do that the browser pixel doesn't?",
-        "a": "It sends conversion events directly from Shopify's servers to TikTok, so events can still be recorded even when the browser pixel is blocked by an ad blocker, Safari's tracking prevention, or restrictions inside TikTok's in-app browser."
+        "q": "Does a browser helper prove server delivery?",
+        "a": "No. Check server receipt separately in TikTok Events Manager or your integration's delivery logs."
       },
       {
-        "q": "Where do I get my TikTok Events API access token?",
-        "a": "In TikTok Ads Manager, go to Assets, then Events, select your pixel, and open its Events API setup screen. You'll generate the access token there and paste it into Pixel Tracker."
-      },
-      {
-        "q": "Will the Events API cause duplicate conversions in Ads Manager?",
-        "a": "Only if the browser and server events for the same order aren't tagged with a matching event ID. Pixel Tracker handles this deduplication automatically, so the same purchase isn't counted twice."
-      },
-      {
-        "q": "Does Pixel Tracker support server-side tracking for platforms other than TikTok?",
-        "a": "Yes, Pixel Tracker also supports Facebook's Conversions API. Server-side tracking for Google Ads, Snapchat, Pinterest, LinkedIn, and X isn't available."
-      },
-      {
-        "q": "How do I know if the Events API connection is actually working?",
-        "a": "Check your Event Match Quality or match rate in TikTok Ads Manager a few days after connecting it. A visible increase in matched events is the clearest confirmation. See our [server-side tracking guide](/pixel-tracker/guides/server-side-tracking) for more on reading these numbers."
+        "q": "Will server-side tracking make every order appear in ad reporting?",
+        "a": "No. Delivery, customer consent, matching, and attribution are separate. Reconcile test events before interpreting campaign totals."
       }
     ],
     "related": [
@@ -2050,26 +1902,14 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Rule out ad blockers and browser privacy settings",
         "paragraphs": [
-          "X's website tag is one of the tags most commonly blocked by browser extensions like uBlock Origin and by Safari's and Firefox's built-in tracking protection. Before assuming your setup is broken, test in a plain browser profile with no extensions installed. If events appear cleanly there but not in your everyday browser, the issue is blocking on your end, not the tracking setup itself, and no fix on the Shopify or Pixel Tracker side will change that."
-        ]
-      },
-      {
-        "heading": "Check for conflicting or duplicate pixel installs",
-        "paragraphs": [
-          "If an X pixel was ever added manually through a theme edit, a Shopify app, or a tag manager, and Pixel Tracker was later connected on top of it, you can end up with two tags firing at once or, in some cases, one canceling the other out. Check your theme code, any tag manager containers, and your installed apps list for a second X tag before assuming the pixel itself is broken."
-        ]
-      },
-      {
-        "heading": "When the pixel is installed correctly but numbers still look off",
-        "paragraphs": [
-          "Even a correctly firing pixel will under-report compared to your actual Shopify orders. Ad blockers, iOS privacy changes, and browser cookie restrictions all remove a portion of client-side tracking regardless of platform, and X sees more of this loss than most. If the gap is large and consistent, that is expected behavior for a browser-only pixel, not a sign something is broken. For a fuller picture of true order volume against what pixels report, see [Pixel Tracker's guide to multi-channel attribution](/pixel-tracker/guides/multi-channel-attribution)."
+          "Check the pixel ID and conversion event ID in your existing integration and compare it with X Ads conversion diagnostics. Use browser network tools to inspect browser activity, then test checkout separately. A base pixel ID is not a purchase conversion event ID. Verify the configured purchase action instead of treating a page-view request as a completed sale."
         ]
       }
     ],
     "steps": [
       {
-        "title": "Check Pixel Tracker's connection status",
-        "body": "In your Pixel Tracker dashboard, confirm the X (Twitter) pixel shows as connected and that the pixel ID listed matches the one in your X Ads Manager account. A mismatch here is the single most common cause of a pixel that looks set up but reports nothing."
+        "title": "Check your X integration",
+        "body": "Use the settings in your installed integration to confirm the pixel ID and conversion event ID. Pixel Tracker is not available to install. If your integration uses a theme app embed, activate it in the theme editor and test checkout separately."
       },
       {
         "title": "Test with a clean browser profile",
@@ -2084,16 +1924,8 @@ export const platformActionPages: PlatformActionPage[] = [
         "body": "X Ads Manager can take longer to reflect new events than Meta or TikTok. Look at raw event data rather than conversion totals, and give it at least a few hours before concluding nothing is arriving."
       },
       {
-        "title": "Look for a second pixel firing on the same store",
-        "body": "Search your theme code and any tag manager for another X tag installed outside Pixel Tracker. Duplicate tags can create inconsistent or doubled event counts that look like a tracking bug."
-      },
-      {
         "title": "Compare pixel data against Shopify orders over the same window",
         "body": "Pull your actual order count for a specific day and compare it to what X Ads Manager reports for that same day. Some gap between the two is normal for any browser-only pixel; a near-total gap points to a setup issue."
-      },
-      {
-        "title": "Reconnect the pixel if X's dashboard has changed",
-        "body": "Because X's ad tooling changes without much notice, a pixel that was working can break after X updates its own systems. If everything above checks out, disconnect and reconnect the X pixel in Pixel Tracker to force a fresh handshake."
       }
     ],
     "symptoms": [
@@ -2108,7 +1940,7 @@ export const platformActionPages: PlatformActionPage[] = [
     "faqs": [
       {
         "q": "How do I check if my X (Twitter) pixel is actually installed on Shopify?",
-        "a": "Open your store in an incognito window, open developer tools, and watch the Network tab for a request to X's tracking domain while you browse a product and add it to cart. If Pixel Tracker shows the connection as active but you see no request, the issue is on the browser or blocking side, not the setup."
+        "a": "Inspect browser requests during a test visit and compare the pixel ID with X Events Manager. Then complete a test order and verify the intended purchase conversion event; a base page-view request is not enough."
       },
       {
         "q": "Why does X Ads Manager show fewer conversions than my Shopify orders?",
@@ -2120,11 +1952,15 @@ export const platformActionPages: PlatformActionPage[] = [
       },
       {
         "q": "Can I run an X pixel alongside Meta and TikTok pixels on the same store?",
-        "a": "Yes, running multiple platform pixels together is normal and Pixel Tracker manages all of them from one dashboard. Just check you haven't also added an X tag manually somewhere else, since two X tags firing at once can cause double-counted events."
+        "a": "Separate platform pixels can coexist. Verify each destination, consent behavior, and performance independently, and avoid adding duplicate senders for the same platform. Pixel Tracker launch coverage is still unverified."
       },
       {
         "q": "Why does new pixel data take so long to show up in X Ads Manager?",
         "a": "X's reporting has historically lagged behind Meta's or TikTok's, especially since its ad tooling has changed hands. Give it several hours before assuming an event did not arrive, and check raw event data rather than conversion totals first."
+      },
+      {
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -2161,23 +1997,17 @@ export const platformActionPages: PlatformActionPage[] = [
     "pixelName": "X (Twitter) Pixel",
     "badge": "Events",
     "title": "Tracking X (Twitter) Events on Shopify: PageView, Purchase",
-    "description": "See exactly which X (Twitter) events Pixel Tracker sends from your Shopify store, including PageView, ViewContent, AddToCart, and Purchase.",
+    "description": "Check X tracking on Shopify: verify the pixel ID and conversion event ID, event receipt, and purchase details with your current integration.",
     "h1": "X (Twitter) Events Tracked on Shopify",
     "intro": [
-      "Pixel Tracker's X (Twitter) pixel sends the standard website events X's ad platform uses for conversion tracking: PageView, ViewContent, AddToCart, and Purchase. These are the same event types X Ads Manager expects for building audiences and measuring conversions, mapped automatically once you connect your store, with no manual event coding required.",
+      "Check the pixel ID and conversion event ID in your existing integration and compare it with X Ads conversion diagnostics. Use browser network tools to inspect browser activity, then test checkout separately. A base pixel ID is not a purchase conversion event ID. Verify the configured purchase action instead of treating a page-view request as a completed sale.",
       "This page breaks down what each event tracks, when it fires, and what to expect from X's side of the reporting. If you're checking whether server-side tracking is available for X as well, see the [server-side tracking page](/pixel-tracker/twitter-pixel/server-side) for what is and is not supported today."
     ],
     "sections": [
       {
-        "heading": "The events Pixel Tracker sends to X",
-        "paragraphs": [
-          "Pixel Tracker maps four core Shopify storefront actions to X's standard events: a storefront page load becomes PageView, viewing a product page becomes ViewContent, adding an item to cart becomes AddToCart, and a completed order becomes Purchase. These four cover what most Shopify merchants need for prospecting and retargeting audiences in X Ads Manager, along with basic conversion measurement. They match the standard event names X's own documentation describes, so anything you build in X Ads Manager around these events should behave the same way it would with a pixel installed any other way."
-        ]
-      },
-      {
         "heading": "How these events are installed",
         "paragraphs": [
-          "The pixel is added through a Shopify ScriptTag, which runs directly on your storefront pages without editing any theme files. That means installation doesn't touch your theme code, and events fire from the customer's browser as they move through your store. It also means, like any client-side pixel, the events depend on the browser actually loading and running that script, so ad blockers or disabled JavaScript will prevent an event from ever reaching X, regardless of how correctly the pixel is configured."
+          "The pixel is added through a Shopify theme app extension, which runs directly on your storefront pages without editing any theme files. That means installation doesn't touch your theme code, and events fire from the customer's browser as they move through your store. It also means, like any client-side pixel, the events depend on the browser actually loading and running that script, so ad blockers or disabled JavaScript will prevent an event from ever reaching X, regardless of how correctly the pixel is configured."
         ]
       },
       {
@@ -2189,7 +2019,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "What these events do not include",
         "paragraphs": [
-          "The four events above are client-side only and do not include server-side confirmation, deduplication with a server-side event, or advanced matching using hashed customer data. If you need that level of tracking, X is not currently one of the platforms Pixel Tracker supports server-side; Meta and TikTok are. See [Pixel Tracker's server-side tracking guide](/pixel-tracker/guides/server-side-tracking) for what that involves on the platforms where it's available."
+          "Browser and server delivery are separate checks. Verify the provider's documented X server integration and inspect receipt in X Ads conversion diagnostics. Pixel Tracker server-side delivery is not confirmed."
         ]
       },
       {
@@ -2203,24 +2033,16 @@ export const platformActionPages: PlatformActionPage[] = [
     "symptoms": [],
     "faqs": [
       {
-        "q": "Which events does Pixel Tracker send to X (Twitter)?",
-        "a": "PageView, ViewContent, AddToCart, and Purchase, the same standard set X's ad platform uses for retargeting audiences and conversion tracking."
-      },
-      {
         "q": "Do I need to configure event mapping myself?",
-        "a": "No. Once you connect your X pixel in Pixel Tracker, the four events are mapped automatically to your Shopify storefront actions; there's no manual coding step."
-      },
-      {
-        "q": "Does Pixel Tracker send custom or dynamic product events to X?",
-        "a": "No, Pixel Tracker sends the four standard events (PageView, ViewContent, AddToCart, Purchase). It does not send custom events or dynamic product feed-based events to X."
+        "a": "For a custom X setup, configure the base pixel and intended conversion event IDs using X's documentation. For a managed integration, check its supported mappings and verify a test purchase. Pixel Tracker does not yet have verified launch coverage."
       },
       {
         "q": "Why do events sometimes take a while to show up in X Ads Manager?",
         "a": "X's reporting has generally lagged Meta's and TikTok's, and that has not changed much since the platform's rebrand. Check raw event data rather than campaign conversion totals if you are testing right after setup."
       },
       {
-        "q": "Does Pixel Tracker support server-side event tracking for X?",
-        "a": "Not currently. Pixel Tracker's X connection is a client-side pixel only; server-side tracking is available today for [Meta and TikTok](/pixel-tracker/meta-pixel/server-side)."
+        "q": "Can I use Pixel Tracker for this today?",
+        "a": "No. Pixel Tracker is in development and not available to install. Use an available integration and verify its documented event coverage."
       }
     ],
     "related": [
@@ -2256,61 +2078,73 @@ export const platformActionPages: PlatformActionPage[] = [
     "platformName": "X (Twitter)",
     "pixelName": "X (Twitter) Pixel",
     "badge": "Server-Side Tracking",
-    "title": "X (Twitter) Server-Side Tracking on Shopify: What's Possible",
-    "description": "Pixel Tracker does not support server-side tracking for X (Twitter) today. Here's what that means, why it's a lower priority, and your real options.",
-    "h1": "X (Twitter) Server-Side Tracking on Shopify",
+    "title": "X Server-Side Tracking for Shopify: What to Verify",
+    "description": "Check X server event delivery, consent, purchase details, and duplicate handling on Shopify. Pixel Tracker server-side support is not confirmed.",
+    "h1": "X Server-Side Tracking for Shopify: What to Verify",
     "intro": [
-      "If you've set up server-side tracking for Meta or TikTok and are wondering whether X (Twitter) offers something similar, the short answer is that Pixel Tracker doesn't support it for X today. X does have its own server-side and API-based conversion options in some form, but they are less standardized and less consistently documented than Meta's Conversions API or TikTok's Events API, largely a byproduct of how much the platform's ad tooling has changed since the Twitter to X rebrand.",
-      "This page explains what server-side tracking would actually do for your X campaigns, why it's a lower priority for most Shopify merchants right now, and what your realistic options are given where Pixel Tracker's support stands today. For the full picture of what Pixel Tracker does support for X, see the [X (Twitter) Pixel overview](/pixel-tracker/twitter-pixel)."
+      "Server-side delivery needs a working integration that sends events from your store to X. Adding a browser pixel does not establish that connection.",
+      "Pixel Tracker is in development. Its server-side delivery and browser/server deduplication are not confirmed. The checks below are for evaluating an available integration."
     ],
     "sections": [
       {
-        "heading": "What Pixel Tracker supports for X today",
+        "heading": "Check the X integration, not just the pixel",
         "paragraphs": [
-          "Pixel Tracker connects X (Twitter) through a client-side, browser-based pixel only. It sends PageView, ViewContent, AddToCart, and Purchase events directly from the customer's browser via a Shopify ScriptTag, the same installation method used for the other six platforms Pixel Tracker supports. There is no server-side or API-based component to this connection, and Pixel Tracker does not set up, manage, or maintain any such integration for X."
+          "Start with [X conversion tracking documentation](https://business.x.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites) and the documentation for the provider you use. Confirm which Shopify events it supports and whether it sends them from the browser, server, or both.",
+          "A base pixel ID is not a purchase conversion event ID. Verify the configured purchase action instead of treating a page-view request as a completed sale."
         ]
       },
       {
-        "heading": "What server-side tracking would mean for X",
+        "heading": "Verify receipt separately from attribution",
         "paragraphs": [
-          "Server-side tracking sends event data from your server, or a middle layer, directly to the ad platform, instead of relying only on the customer's browser. For platforms like Meta and TikTok, this recovers events lost to ad blockers, Safari's and Firefox's tracking protections, and iOS privacy restrictions, often a meaningful percentage of total conversions. In principle, the same benefit would apply to X: more complete conversion data, especially since X's client-side tag is commonly blocked. In practice, X's server-side options are less mature and less standardized than Meta's or TikTok's, which makes building and maintaining a reliable integration harder to justify right now. For more on how server-side tracking works generally and why Meta and TikTok are the two platforms Pixel Tracker supports, see [Pixel Tracker's server-side tracking guide](/pixel-tracker/guides/server-side-tracking)."
+          "Look for server-event receipt in X Ads conversion diagnostics or the delivery logs supplied by your integration. A successful browser request in browser network tools does not prove a server event arrived. An accepted event also does not guarantee an attributed conversion.",
+          "Compare conversion event ID, order value, and currency against a test order. Check failed deliveries and retries before relying on totals."
         ]
       },
       {
-        "heading": "Why this is a lower priority for most Shopify merchants",
+        "heading": "Prevent duplicate purchases",
         "paragraphs": [
-          "For most Shopify stores, X (Twitter) is a smaller share of ad spend and conversions than Meta or TikTok, and its tracking documentation and product surface have changed enough since the rebrand that building against it carries more risk of breaking without notice. Pixel Tracker has prioritized server-side support for Meta and TikTok because those integrations, Conversions API and Events API respectively, are well documented, stable, and used by the largest share of merchants running paid ads on Shopify. X may get equivalent support in the future if its own tooling stabilizes, but there's no committed timeline for that today."
+          "If browser and server report the same action, follow the platform's deduplication requirements. Preserve the same event identity across the two paths and across retries where required; a new purchase needs a new identity. Do not add another independent purchase sender without checking the existing one."
         ]
       },
       {
-        "heading": "Your realistic options right now",
+        "heading": "Respect the same customer choices",
         "paragraphs": [
-          "For X specifically, the practical options are to run the client-side pixel as-is and accept some data loss from blockers and browser privacy settings, or to reduce reliance on X's own attribution by looking at your actual Shopify order data alongside pixel numbers. If accurate cross-channel measurement matters more than any single platform's own reporting, Pixel Tracker's multi-channel attribution guide covers how to do that without needing server-side tracking on every platform. Pixel Tracker's server-side tracking is available today for Meta and TikTok; both are covered in detail on their own server-side pages, linked below."
+          "Server delivery does not override consent or privacy settings. Confirm how the integration handles declined consent, permitted matching data, and data retention before enabling it."
         ]
       }
     ],
-    "steps": [],
-    "symptoms": [],
+    "steps": [
+      {
+        "title": "Confirm the supported delivery path",
+        "body": "Read the chosen provider's current X setup instructions and supported Shopify events. Pixel Tracker does not have a verified server setup to follow yet."
+      },
+      {
+        "title": "Check a test purchase",
+        "body": "Complete a test order and inspect X Ads conversion diagnostics. Compare conversion event ID, order value, and currency with that order."
+      },
+      {
+        "title": "Check overlap and retries",
+        "body": "Confirm the browser/server pair is deduplicated according to platform requirements. Ensure a retry does not become a second purchase."
+      },
+      {
+        "title": "Test consent states",
+        "body": "Verify the integration respects the store's collection settings before using the events for reporting."
+      }
+    ],
+    "symptoms": [
+      "Browser events arrive but no server events appear",
+      "Two purchase events appear for one test order",
+      "Purchase value or currency differs from the order",
+      "The provider shows failed requests or repeated retries"
+    ],
     "faqs": [
       {
-        "q": "Does Pixel Tracker support server-side tracking for X (Twitter)?",
-        "a": "No. Pixel Tracker's X connection is a client-side browser pixel only. Server-side tracking is available today for Meta and TikTok, not for X."
+        "q": "Does a browser helper prove server delivery?",
+        "a": "No. Check server receipt separately in X Ads conversion diagnostics or your integration's delivery logs."
       },
       {
-        "q": "Does X (Twitter) itself offer server-side conversion tracking?",
-        "a": "X has some form of server-side and API-based conversion tracking, but it is less standardized and less consistently documented than Meta's Conversions API or TikTok's Events API, and it isn't something Pixel Tracker sets up or manages."
-      },
-      {
-        "q": "Will Pixel Tracker add X server-side tracking in the future?",
-        "a": "It's possible if X's ad tooling and documentation stabilize, but there's no committed timeline. Meta and TikTok were prioritized because their server-side APIs are stable and widely used."
-      },
-      {
-        "q": "How much conversion data am I actually losing without server-side tracking on X?",
-        "a": "It varies by store, but client-side-only tracking on X tends to lose more to ad blockers and browser privacy protections than Meta or TikTok do, since X's tracking domain is more commonly blocked."
-      },
-      {
-        "q": "What should I do instead if X server-side tracking matters to me?",
-        "a": "Compare your actual Shopify order totals against what X Ads Manager reports to gauge the real gap, and consider [Pixel Tracker's multi-channel attribution guide](/pixel-tracker/guides/multi-channel-attribution) for a more complete view across all your ad channels, not just X."
+        "q": "Will server-side tracking make every order appear in ad reporting?",
+        "a": "No. Delivery, customer consent, matching, and attribution are separate. Reconcile test events before interpreting campaign totals."
       }
     ],
     "related": [

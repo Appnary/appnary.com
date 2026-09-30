@@ -11,7 +11,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "description": "Pixel Tracker and Elevar both solve Shopify tracking problems, but for very different stores and budgets. Compare features, pricing, and who each tool is built for.",
     "h1": "Pixel Tracker vs Elevar: Which Shopify Tracking Solution Fits Your Store?",
     "intro": [
-      "Pixel Tracker and Elevar are both Shopify tracking tools, but they serve different audiences. Pixel Tracker is a pixel installer that connects ad platforms to your store with no code required. Elevar is a full server-side data pipeline for stores that need custom event schemas, warehouse sync, and agency-grade infrastructure.",
+      "Elevar is a full server-side data pipeline for stores that need custom event schemas, warehouse sync, and agency-grade infrastructure. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
       "If you're a solo merchant who wants Facebook, Google Ads, TikTok, and other pixels running without touching theme code, Pixel Tracker is the simpler option to evaluate after launch. If you're an agency or technical team managing complex data infrastructure across multiple stores, Elevar is the right tool for that job."
     ],
     "quickComparison": [
@@ -27,12 +27,12 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad platforms supported",
-        "pixelTracker": "7 (Meta, Google, TikTok, Snapchat, Pinterest, X, LinkedIn)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Meta, Google, TikTok, Snap (pixel layer only)"
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "Full data pipeline (custom events, webhooks)"
       },
       {
@@ -42,7 +42,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup complexity",
-        "pixelTracker": "Paste Pixel IDs, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Technical setup, often agency-assisted"
       },
       {
@@ -54,52 +54,52 @@ export const vsComparisonPages: VsComparisonPage[] =
     "featureMatrix": [
       {
         "feature": "Facebook/Meta pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "Google Ads conversion tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "TikTok pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "Snapchat pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "Pinterest tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "LinkedIn Insight Tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "X (Twitter) pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "Facebook CAPI",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Not verified",
         "competitor": "Yes (deeper)"
       },
       {
         "feature": "TikTok Events API",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Not verified",
         "competitor": "Yes"
       },
       {
         "feature": "Custom event schemas",
-        "pixelTracker": "Standard events only",
+        "pixelTracker": "Not verified",
         "competitor": "Fully customizable"
       },
       {
@@ -114,7 +114,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "No-code setup",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Requires configuration"
       },
       {
@@ -147,10 +147,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You want to install ad pixels without code or developer help",
-        "You manage 1-3 ad platforms and need a simple dashboard",
-        "You're a solo merchant or small team watching costs",
-        "You want transparent pricing without a sales call"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You need a full server-side data pipeline, not just pixel installation",
@@ -162,7 +160,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "faqs": [
       {
         "q": "Can Pixel Tracker replace Elevar?",
-        "a": "For pixel installation, yes. Pixel Tracker connects 7 ad platforms from one dashboard with no code. For full data pipeline infrastructure (custom events, warehouse sync, agency multi-store views), Elevar is the more complete tool."
+        "a": "For pixel installation, yes. For full data pipeline infrastructure (custom events, warehouse sync, agency multi-store views), Elevar is the more complete tool. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       },
       {
         "q": "Is Elevar worth the price for a small store?",
@@ -170,15 +168,15 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Does Pixel Tracker support server-side tracking like Elevar?",
-        "a": "Pixel Tracker supports Facebook Conversions API and TikTok Events API for server-side event tracking. Elevar offers a broader data pipeline with custom event schemas, but that depth comes for more complex data requirements."
+        "a": "Elevar offers a broader data pipeline with custom event schemas, but that depth comes for more complex data requirements. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       },
       {
         "q": "Can I start with Pixel Tracker and move to Elevar later?",
-        "a": "Yes. Pixel Tracker's pixel connections are standard integrations ,  there's no lock-in. If your store grows to need full data pipeline infrastructure, you can migrate to Elevar without losing historical pixel data."
+        "a": "Pixel Tracker is not available to install yet. After launch, confirm the required integrations and test a replacement before removing working tracking. Historical data and migration behavior depend on the platforms and providers involved."
       },
       {
         "q": "Which is better for Facebook Conversions API?",
-        "a": "Both support CAPI. Elevar's implementation is deeper (custom deduplication, advanced match quality). Pixel Tracker's is simpler to set up. For most stores, Pixel Tracker's CAPI is sufficient."
+        "a": "Pixel Tracker CAPI delivery is not verified, so this comparison cannot establish parity. Check an available provider's current Meta integration and verify test events before choosing."
       }
     ],
     "relatedLinks": [
@@ -206,11 +204,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "Free (included with Shopify)",
     "competitorCategory": "BusinessApplication",
     "title": "Pixel Tracker vs Facebook & Instagram Channel: Comparison",
-    "description": "The Facebook & Instagram sales channel is free and Meta-only. Pixel Tracker covers 7 ad platforms with optional server-side tracking. Compare what each does well.",
+    "description": "The Facebook & Instagram sales channel is free and Meta-only. Compare what each does well. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
     "h1": "Pixel Tracker vs Facebook & Instagram Channel: Do You Need Both?",
     "intro": [
       "Most Shopify stores already have the Facebook & Instagram sales channel installed. It's free, it connects your Meta pixel, and it lets you manage your Facebook and Instagram shop from Shopify. The question is whether that's enough for your tracking needs, or whether a multi-platform pixel installer adds something the native channel doesn't.",
-      "The short answer: if you only run ads on Meta and don't need server-side tracking, the native channel is probably fine. If you advertise on more than one platform, want a unified dashboard, or need Conversions API support without theme code changes, Pixel Tracker covers the gaps."
+      "The short answer: if you only run ads on Meta and don't need server-side tracking, the native channel is probably fine. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -220,12 +218,12 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad platforms",
-        "pixelTracker": "7 platforms",
+        "pixelTracker": "Planned; not available",
         "competitor": "Meta only (Facebook + Instagram)"
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "CAPI (via channel settings)"
       },
       {
@@ -252,47 +250,47 @@ export const vsComparisonPages: VsComparisonPage[] =
     "featureMatrix": [
       {
         "feature": "Facebook/Meta pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "Google Ads conversion tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "TikTok pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "Snapchat pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "Pinterest tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "LinkedIn Insight Tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "X (Twitter) pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "Facebook CAPI",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Not verified",
         "competitor": "Yes"
       },
       {
         "feature": "TikTok Events API",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Not verified",
         "competitor": "No"
       },
       {
@@ -307,12 +305,12 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Multi-platform dashboard",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "Setup time",
-        "pixelTracker": "5 minutes",
+        "pixelTracker": "Planned; not available",
         "competitor": "10-15 minutes"
       }
     ],
@@ -330,10 +328,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You advertise on more than one platform (Meta + Google, Meta + TikTok, etc.)",
-        "You want one dashboard for all your pixel connections",
-        "You need TikTok Events API alongside Meta CAPI",
-        "You're switching away from Meta and want to keep tracking on other platforms"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You only advertise on Meta (Facebook + Instagram)",
@@ -345,11 +341,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "faqs": [
       {
         "q": "Can I use both Pixel Tracker and the Facebook & Instagram channel?",
-        "a": "Yes, but you'd be sending duplicate Meta pixel events. If you install Pixel Tracker for Meta, remove the pixel connection from the native channel to avoid double-firing. Keep the channel for shop management if you use it."
+        "a": "Pixel Tracker is not available to install, and interoperability is not verified. Keep working tracking in place. Before combining future integrations, confirm which one sends each event and test for duplicates."
       },
       {
         "q": "Does the native channel support server-side tracking?",
-        "a": "Yes, the Facebook & Instagram channel includes Conversions API (CAPI) support. You can enable it in the channel settings. Pixel Tracker also supports CAPI with the same setup path."
+        "a": "Yes, the Facebook & Instagram channel includes Conversions API (CAPI) support. You can enable it in the channel settings. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       },
       {
         "q": "What does Pixel Tracker offer that the native channel doesn't?",
@@ -357,7 +353,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Should I switch from the native channel to Pixel Tracker?",
-        "a": "Only if you advertise on platforms beyond Meta or want a single dashboard for all pixels. If Meta is your only ad channel and you use the shop management features, the native channel covers what you need."
+        "a": "Pixel Tracker is not available to install yet. After launch, confirm the required integrations and test a replacement before removing working tracking. Historical data and migration behavior depend on the platforms and providers involved."
       },
       {
         "q": "Is Pixel Tracker available on the Shopify App Store?",
@@ -393,7 +389,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "Pixel Tracker vs Google Tag Manager: DIY Tags vs Managed Pixel Installation",
     "intro": [
       "Google Tag Manager (GTM) is the most powerful tag management tool available ,  it's free, it handles virtually any tracking script, and it gives you full control over when and how tags fire. The trade-off is complexity: GTM requires understanding tags, triggers, variables, and data layers, and a misconfigured trigger can silently break your conversion tracking.",
-      "Pixel Tracker takes the opposite approach: paste your Pixel IDs, and the app handles injection, event firing, and dashboard visibility across 7 platforms. You trade flexibility for simplicity. For most Shopify merchants who want ad pixels running correctly without learning tag management infrastructure, that's a good trade."
+      "You trade flexibility for simplicity. For most Shopify merchants who want ad pixels running correctly without learning tag management infrastructure, that's a good trade. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -403,7 +399,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup time",
-        "pixelTracker": "5 minutes",
+        "pixelTracker": "Planned; not available",
         "competitor": "1-4 hours (first time)"
       },
       {
@@ -413,17 +409,17 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad platforms",
-        "pixelTracker": "7 managed platforms",
+        "pixelTracker": "Planned; not available",
         "competitor": "Unlimited (any script)"
       },
       {
         "feature": "Event customization",
-        "pixelTracker": "Standard events only",
+        "pixelTracker": "Not verified",
         "competitor": "Fully custom"
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "Server-side GTM (complex)"
       },
       {
@@ -435,37 +431,37 @@ export const vsComparisonPages: VsComparisonPage[] =
     "featureMatrix": [
       {
         "feature": "Facebook/Meta pixel",
-        "pixelTracker": "Yes (managed)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (manual config)"
       },
       {
         "feature": "Google Ads conversion tag",
-        "pixelTracker": "Yes (managed)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (native integration)"
       },
       {
         "feature": "TikTok pixel",
-        "pixelTracker": "Yes (managed)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (manual config)"
       },
       {
         "feature": "Snapchat pixel",
-        "pixelTracker": "Yes (managed)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (manual config)"
       },
       {
         "feature": "Pinterest tag",
-        "pixelTracker": "Yes (managed)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (manual config)"
       },
       {
         "feature": "LinkedIn Insight Tag",
-        "pixelTracker": "Yes (managed)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (manual config)"
       },
       {
         "feature": "X (Twitter) pixel",
-        "pixelTracker": "Yes (managed)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (manual config)"
       },
       {
@@ -475,7 +471,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Custom event triggers",
-        "pixelTracker": "Standard events only",
+        "pixelTracker": "Not verified",
         "competitor": "Fully custom"
       },
       {
@@ -485,7 +481,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side GTM",
-        "pixelTracker": "No",
+        "pixelTracker": "Not verified",
         "competitor": "Yes (advanced)"
       },
       {
@@ -513,10 +509,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You want pixels running in 5 minutes with zero technical setup",
-        "You advertise on 2-7 platforms and want a dashboard for all of them",
-        "You don't have a developer on staff",
-        "You want someone else to handle tag updates when platforms change their scripts"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You need custom event triggers beyond standard Purchase/PageView",
@@ -528,7 +522,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "faqs": [
       {
         "q": "Can I use Pixel Tracker alongside GTM?",
-        "a": "Yes, but you'd be managing pixels in two places. If GTM already handles your tracking correctly, adding Pixel Tracker is redundant. If GTM handles some platforms and you want easier coverage for others, using both is an option ,  just avoid duplicate pixel fires on the same platform."
+        "a": "Pixel Tracker is not available to install, and interoperability is not verified. Keep working tracking in place. Before combining future integrations, confirm which one sends each event and test for duplicates."
       },
       {
         "q": "Is GTM really free?",
@@ -544,7 +538,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Which is better for Google Ads conversion tracking specifically?",
-        "a": "Both work. GTM has a native Google Ads tag template with advanced options (enhanced conversions, value rules). Pixel Tracker's Google Ads support is simpler ,  paste your Conversion ID and label, and it fires. For basic conversion tracking, both are equivalent."
+        "a": "GTM documents Google Ads tags and conversion configuration. Pixel Tracker's Google integration is not verified for launch, so this page cannot claim equivalent functionality. Check a test purchase using the integration you choose."
       }
     ],
     "relatedLinks": [
@@ -572,11 +566,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "$199+/mo (enterprise pricing)",
     "competitorCategory": "BusinessApplication",
     "title": "Pixel Tracker vs Littledata: Comparison",
-    "description": "Littledata fixes analytics data pipelines. Pixel Tracker installs ad pixels. They solve different problems for different stores.",
+    "description": "Pixel Tracker is in development. Launch platform coverage and server-side delivery are not confirmed. Compare the intended pixel-configuration role with the other tool's documented features.",
     "h1": "Pixel Tracker vs Littledata: Analytics Pipeline vs Pixel Installation",
     "intro": [
       "Littledata is a server-side analytics layer that fixes tracking accuracy in GA4, Segment, and ad platforms. It's built for stores with complex analytics needs, subscription businesses, and teams that need clean data flowing into their analytics stack.",
-      "Pixel Tracker is a pixel installer that connects ad platforms to your Shopify store. It's focused on a narrower problem: getting your Meta, Google, TikTok, and other ad pixels firing correctly without code."
+      "It's focused on a narrower problem: getting your Meta, Google, TikTok, and other ad pixels firing correctly without code. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -596,17 +590,17 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup complexity",
-        "pixelTracker": "Paste IDs, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Technical setup required"
       },
       {
         "feature": "Ad platforms",
-        "pixelTracker": "7 platforms",
+        "pixelTracker": "Planned; not available",
         "competitor": "GA4, Segment, ad platform pixels"
       },
       {
         "feature": "Server-side GA4",
-        "pixelTracker": "No",
+        "pixelTracker": "Not verified",
         "competitor": "Yes"
       },
       {
@@ -618,42 +612,42 @@ export const vsComparisonPages: VsComparisonPage[] =
     "featureMatrix": [
       {
         "feature": "Facebook/Meta pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (via pipeline)"
       },
       {
         "feature": "Google Ads conversion tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (via pipeline)"
       },
       {
         "feature": "TikTok pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Limited"
       },
       {
         "feature": "Snapchat pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "Pinterest tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "LinkedIn Insight Tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "Server-side GA4",
-        "pixelTracker": "No",
+        "pixelTracker": "Not verified",
         "competitor": "Yes"
       },
       {
         "feature": "Server-side ad platform pixels",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "Via Segment/GA4 pipeline"
       },
       {
@@ -663,7 +657,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "No-code setup",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
@@ -686,10 +680,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You want ad pixels installed and managed simply",
-        "You advertise on multiple platforms and need a dashboard",
-        "Focused on pixel setup rather than attribution analysis for tracking tools",
-        "No developer on staff"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You need clean GA4 data with server-side tracking",
@@ -709,11 +701,11 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Can I use both together?",
-        "a": "Yes. Pixel Tracker installs and manages your ad pixels. Littledata can clean the analytics data flowing into GA4. They operate at different layers ,  pixel installation vs analytics data repair."
+        "a": "Pixel Tracker is a prelaunch pixel-configuration app, not an analytics or attribution service. Launch tracking coverage is not verified. Keep any working integration until you can test an available replacement."
       },
       {
         "q": "Does Pixel Tracker fix GA4 tracking accuracy?",
-        "a": "No. Pixel Tracker installs ad platform pixels. GA4 accuracy issues (missing events, wrong attribution, subscription tracking) are what Littledata solves. They're complementary tools for different problems."
+        "a": "Pixel Tracker is a prelaunch pixel-configuration app, not an analytics or attribution service. Launch tracking coverage is not verified. Keep any working integration until you can test an available replacement."
       },
       {
         "q": "Is Pixel Tracker available on the Shopify App Store?",
@@ -745,11 +737,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "~$19/mo (entry)",
     "competitorCategory": "BusinessApplication",
     "title": "Pixel Tracker vs TrackBee: Comparison",
-    "description": "Both are Shopify pixel installers at similar price points. Compare platform coverage, server-side support, and dashboard features.",
+    "description": "Compare TrackBee with the intended scope of prelaunch Pixel Tracker. Launch coverage and prices for Pixel Tracker are not confirmed.",
     "h1": "Pixel Tracker vs TrackBee: Multi-Platform Pixel Installation Compared",
     "intro": [
-      "Pixel Tracker and TrackBee are both Shopify pixel installers that let you connect ad platforms without editing theme code. They're close competitors, and the right choice depends on which platforms you advertise on and whether you need server-side tracking.",
-      "Pixel Tracker covers 7 platforms (Meta, Google Ads, TikTok, Snapchat, Pinterest, X, LinkedIn) with optional Facebook CAPI and TikTok Events API support. TrackBee focuses primarily on Meta and a smaller set of platforms."
+      "They're close competitors, and the right choice depends on which platforms you advertise on and whether you need server-side tracking. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+      "TrackBee focuses primarily on Meta and a smaller set of platforms. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -764,12 +756,12 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad platforms",
-        "pixelTracker": "7 platforms",
+        "pixelTracker": "Planned; not available",
         "competitor": "Meta, Google, TikTok (fewer platforms)"
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "Limited"
       },
       {
@@ -784,64 +776,64 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup time",
-        "pixelTracker": "5 minutes",
+        "pixelTracker": "Planned; not available",
         "competitor": "5-10 minutes"
       }
     ],
     "featureMatrix": [
       {
         "feature": "Facebook/Meta pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "Google Ads conversion tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "TikTok pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "Snapchat pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "Pinterest tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "LinkedIn Insight Tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "X (Twitter) pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Not standard"
       },
       {
         "feature": "Facebook CAPI",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Not verified",
         "competitor": "Limited"
       },
       {
         "feature": "TikTok Events API",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Not verified",
         "competitor": "Not standard"
       },
       {
         "feature": "No-code setup",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       },
       {
         "feature": "Multi-platform dashboard",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Basic"
       }
     ],
@@ -859,10 +851,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You advertise on more than 3 platforms",
-        "You need Snapchat, Pinterest, LinkedIn, or X pixels",
-        "You want server-side CAPI and TikTok Events API",
-        "You can wait for confirmed launch plans"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You only advertise on Meta and want a simple Meta pixel installer",
@@ -877,15 +867,15 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Can I switch from TrackBee to Pixel Tracker?",
-        "a": "Yes. Both are standard pixel integrations ,  there's no lock-in. Switching involves disconnecting TrackBee and connecting Pixel Tracker with the same Pixel IDs. Your historical ad platform data stays in the ad platforms themselves."
+        "a": "Pixel Tracker is not available to install yet. After launch, confirm the required integrations and test a replacement before removing working tracking. Historical data and migration behavior depend on the platforms and providers involved."
       },
       {
         "q": "Which has better server-side support?",
-        "a": "Pixel Tracker supports both Facebook CAPI and TikTok Events API for server-side tracking. TrackBee's server-side support is more limited. If server-side tracking is a priority, Pixel Tracker covers more ground."
+        "a": "TrackBee's server-side support is more limited. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       },
       {
         "q": "Does TrackBee support all the same platforms?",
-        "a": "No. TrackBee focuses on Meta, Google, and TikTok. Pixel Tracker adds Snapchat, Pinterest, LinkedIn, and X (Twitter). If you advertise on any of those four additional platforms, Pixel Tracker covers them without a second app."
+        "a": "TrackBee lists a narrower platform scope. Pixel Tracker intends broader coverage, but its launch integrations are not verified. Check the current provider documentation for each platform you need."
       },
       {
         "q": "Is Pixel Tracker available on the Shopify App Store?",
@@ -917,11 +907,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "~$230+/mo (revenue-tiered)",
     "competitorCategory": "BusinessApplication",
     "title": "Pixel Tracker vs Hyros: Comparison",
-    "description": "Hyros is AI-powered attribution. Pixel Tracker installs ad pixels. Different tools, different budgets, different problems.",
+    "description": "Pixel Tracker is in development. Launch platform coverage and server-side delivery are not confirmed. Compare the intended pixel-configuration role with the other tool's documented features.",
     "h1": "Pixel Tracker vs Hyros: Attribution Intelligence vs Pixel Installation",
     "intro": [
       "Hyros is an AI-powered attribution platform that tracks ad spend across multiple channels and provides cross-device, cross-platform attribution modeling. It's built for stores spending $10k+/mo on ads and needing accurate ROAS data across Meta, Google, TikTok, and other platforms.",
-      "Pixel Tracker is a pixel installer. It connects ad platforms to your Shopify store so events fire correctly. It doesn't model attribution or provide cross-channel reporting ,  it makes sure the data gets to the platforms in the first place."
+      "It connects ad platforms to your Shopify store so events fire correctly. It doesn't model attribution or provide cross-channel reporting ,  it makes sure the data gets to the platforms in the first place. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -941,7 +931,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad platforms tracked",
-        "pixelTracker": "7 (installation only)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Meta, Google, TikTok + more (attribution)"
       },
       {
@@ -956,24 +946,24 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup complexity",
-        "pixelTracker": "Paste IDs, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Technical integration"
       }
     ],
     "featureMatrix": [
       {
         "feature": "Installs Meta pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No (uses existing pixel data)"
       },
       {
         "feature": "Installs Google Ads tag",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "Installs TikTok pixel",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
@@ -993,12 +983,12 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side pixel support",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "No (reads platform data)"
       },
       {
         "feature": "No-code setup",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
@@ -1021,10 +1011,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You need pixels installed, not attributed",
-        "You spend under $10k/mo on ads",
-        "Focused on pixel setup rather than attribution analysis for tracking tools",
-        "You want a 5-minute setup with no technical work"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You spend $10k+/mo across multiple ad platforms",
@@ -1036,11 +1024,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "faqs": [
       {
         "q": "Does Hyros install pixels for me?",
-        "a": "No. Hyros reads data from existing pixel connections ,  it doesn't install or manage pixels. If your pixels aren't firing correctly, Hyros can't help with that. Pixel Tracker installs and manages the pixel layer."
+        "a": "Pixel Tracker is a prelaunch pixel-configuration app, not an analytics or attribution service. Launch tracking coverage is not verified. Keep any working integration until you can test an available replacement."
       },
       {
         "q": "Can I use both together?",
-        "a": "Yes, and they're complementary. Pixel Tracker ensures your pixels fire correctly across 7 platforms. Hyros reads that data and provides cross-platform attribution. They solve different problems at different layers."
+        "a": "Yes, and they're complementary. Hyros reads that data and provides cross-platform attribution. They solve different problems at different layers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       },
       {
         "q": "Is Hyros worth $230+/mo for a small store?",
@@ -1084,7 +1072,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "Pixel Tracker vs Northbeam: Multi-Touch Attribution vs Pixel Installation",
     "intro": [
       "Northbeam provides multi-touch attribution for Shopify stores, showing which ads across Meta, Google, TikTok, and other platforms actually drive conversions. It uses server-side tracking and first-party data to model customer journeys across channels.",
-      "Pixel Tracker installs the pixels that make attribution possible. Without correctly firing ad platform pixels, attribution tools have incomplete data to work with. They solve different problems at different layers of the tracking stack."
+      "Pixel Tracker is in development. Launch platform coverage and server-side delivery are not confirmed. Compare the intended pixel-configuration role with the other tool's documented features."
     ],
     "quickComparison": [
       {
@@ -1104,12 +1092,12 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad platforms",
-        "pixelTracker": "7 (installation)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Meta, Google, TikTok, Snap + more (attribution)"
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "Server-side attribution layer"
       },
       {
@@ -1119,14 +1107,14 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup complexity",
-        "pixelTracker": "5 minutes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Technical integration"
       }
     ],
     "featureMatrix": [
       {
         "feature": "Installs ad pixels",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No (reads existing data)"
       },
       {
@@ -1146,7 +1134,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side pixel support",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "Server-side attribution"
       },
       {
@@ -1156,7 +1144,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "No-code setup",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
@@ -1179,10 +1167,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You need pixels installed across multiple platforms",
-        "Focused on pixel setup rather than attribution analysis for tracking tools",
-        "You don't need cross-platform attribution yet",
-        "You want a no-code, 5-minute setup"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You need to know which ad drove which sale across platforms",
@@ -1198,7 +1184,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Can I use both together?",
-        "a": "Yes. Pixel Tracker ensures pixels fire correctly. Northbeam reads that data and provides multi-touch attribution. They're complementary tools at different layers of the stack."
+        "a": "Pixel Tracker is a prelaunch pixel-configuration app, not an analytics or attribution service. Launch tracking coverage is not verified. Keep any working integration until you can test an available replacement."
       },
       {
         "q": "Which should I set up first?",
@@ -1238,11 +1224,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "$24-$120+/mo",
     "competitorCategory": "BusinessApplication",
     "title": "Pixel Tracker vs Lifetimely: Comparison",
-    "description": "Lifetimely tracks profit and customer lifetime value. Pixel Tracker installs ad pixels. Different tools for different jobs.",
+    "description": "Pixel Tracker is in development. Launch platform coverage and server-side delivery are not confirmed. Compare the intended pixel-configuration role with the other tool's documented features.",
     "h1": "Pixel Tracker vs Lifetimely: Profit Analytics vs Pixel Installation",
     "intro": [
       "Lifetimely is a profit analytics and LTV tool built for Shopify. It shows your actual profit after costs, tracks customer lifetime value, and provides cohort analysis. It's built for understanding whether your business is actually making money, not just generating revenue.",
-      "Pixel Tracker installs ad platform pixels. It ensures the data flows to Meta, Google, TikTok, and other platforms so their reporting works. It doesn't analyze profit or LTV ,  it makes sure the ad platforms have the conversion data they need."
+      "Pixel Tracker is in development. Launch platform coverage and server-side delivery are not confirmed. Compare the intended pixel-configuration role with the other tool's documented features."
     ],
     "quickComparison": [
       {
@@ -1262,7 +1248,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad platforms",
-        "pixelTracker": "7 (installation)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Reads ad spend data"
       },
       {
@@ -1277,14 +1263,14 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup complexity",
-        "pixelTracker": "5 minutes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Connect Shopify, set COGS"
       }
     ],
     "featureMatrix": [
       {
         "feature": "Installs ad pixels",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
@@ -1304,7 +1290,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Ad spend integration",
-        "pixelTracker": "No (installs pixel)",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes (reads platform data)"
       },
       {
@@ -1314,12 +1300,12 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Multi-platform pixel dashboard",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No"
       },
       {
         "feature": "No-code setup",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "Yes"
       }
     ],
@@ -1347,10 +1333,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You need ad pixels installed across multiple platforms",
-        "You want a unified dashboard for pixel management",
-        "Focused on pixel setup rather than attribution analysis for tracking tools",
-        "You don't need profit analytics yet"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You need to know your actual profit after costs",
@@ -1366,7 +1350,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Can I use both together?",
-        "a": "Yes, and they're complementary. Pixel Tracker ensures your ad pixels fire correctly so platform reporting works. Lifetimely analyzes whether your business is profitable after accounting for all costs. Different layers of the same stack."
+        "a": "Pixel Tracker is a prelaunch pixel-configuration app, not an analytics or attribution service. Launch tracking coverage is not verified. Keep any working integration until you can test an available replacement."
       },
       {
         "q": "Which should I set up first?",
@@ -1410,7 +1394,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "DIY Theme Code vs Pixel Tracker App: Should You Install Pixels Yourself?",
     "intro": [
       "Adding pixel code directly to your Shopify theme is free and gives you full control. The trade-off: theme code changes break on theme updates, are hard to debug, and get messy when you're managing multiple platforms. Every pixel needs its own code snippet, placed in the right template, firing at the right time.",
-      "Pixel Tracker handles injection through Shopify ScriptTags, which stay separate from your theme. Updates to your theme don't break pixel tracking, and you manage all platforms from one dashboard. The trade-off: you give up some control over exactly when and where scripts fire."
+      "Pixel Tracker's current approach uses a Shopify theme app extension. Its app embed requires activation, and a theme change still needs event testing. Pixel Tracker is not available to install; launch coverage and performance are unverified."
     ],
     "quickComparison": [
       {
@@ -1420,84 +1404,84 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup time (first pixel)",
-        "pixelTracker": "5 minutes",
+        "pixelTracker": "Planned; not available",
         "competitor": "30-60 minutes"
       },
       {
         "feature": "Setup time (7 pixels)",
-        "pixelTracker": "5 minutes total",
+        "pixelTracker": "Planned; not available",
         "competitor": "3-7 hours"
       },
       {
         "feature": "Theme updates break tracking",
-        "pixelTracker": "No",
+        "pixelTracker": "Not verified",
         "competitor": "Yes (common)"
       },
       {
         "feature": "Debugging difficulty",
-        "pixelTracker": "Easy (dashboard)",
+        "pixelTracker": "Not verified",
         "competitor": "Hard (manual code review)"
       },
       {
         "feature": "Multi-platform management",
-        "pixelTracker": "One dashboard",
+        "pixelTracker": "Planned; not available",
         "competitor": "Separate code per platform"
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "CAPI + TikTok Events API",
+        "pixelTracker": "Not verified",
         "competitor": "Manual setup per platform"
       }
     ],
     "featureMatrix": [
       {
         "feature": "Facebook/Meta pixel",
-        "pixelTracker": "Paste ID, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Add fbq() code to theme"
       },
       {
         "feature": "Google Ads tag",
-        "pixelTracker": "Paste ID, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Add gtag() code to theme"
       },
       {
         "feature": "TikTok pixel",
-        "pixelTracker": "Paste ID, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Add TikTok snippet to theme"
       },
       {
         "feature": "Snapchat pixel",
-        "pixelTracker": "Paste ID, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Add snaptr() to theme"
       },
       {
         "feature": "Pinterest tag",
-        "pixelTracker": "Paste ID, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Add pintrk() to theme"
       },
       {
         "feature": "LinkedIn Insight Tag",
-        "pixelTracker": "Paste ID, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Add LinkedIn snippet to theme"
       },
       {
         "feature": "X (Twitter) pixel",
-        "pixelTracker": "Paste ID, done",
+        "pixelTracker": "Planned; not available",
         "competitor": "Add twq() to theme"
       },
       {
         "feature": "Survives theme updates",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Not verified",
         "competitor": "No"
       },
       {
         "feature": "Duplicate detection",
-        "pixelTracker": "Dashboard view",
+        "pixelTracker": "Not verified",
         "competitor": "Manual"
       },
       {
         "feature": "Enable/disable per platform",
-        "pixelTracker": "One toggle",
+        "pixelTracker": "Planned; not available",
         "competitor": "Remove/add code"
       }
     ],
@@ -1515,10 +1499,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You advertise on multiple platforms and don't want to manage code",
-        "Your theme gets updated frequently",
-        "You want server-side tracking without custom development",
-        "You prefer a dashboard over editing liquid templates"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You only need one pixel and want zero monthly cost",
@@ -1534,11 +1516,11 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Will a pixel app slow down my store more than theme code?",
-        "a": "Both load the same pixel scripts from the same ad platform servers. The app uses Shopify ScriptTags, which inject scripts after page load ,  the same timing as most theme-code installations. Performance impact is comparable."
+        "a": "Either approach loads browser scripts with real network and execution costs. An app extension does not guarantee a particular loading time or performance score. Measure your store before and after changes, and remove duplicate tags."
       },
       {
         "q": "Can I switch from theme code to Pixel Tracker later?",
-        "a": "Yes. Remove the pixel snippets from your theme, install Pixel Tracker, and connect the same Pixel IDs. Your ad platform data is stored in the platforms themselves, not in the theme code, so nothing is lost."
+        "a": "Pixel Tracker is not available to install yet. After launch, confirm the required integrations and test a replacement before removing working tracking. Historical data and migration behavior depend on the platforms and providers involved."
       },
       {
         "q": "What if I only use one ad platform?",
@@ -1574,11 +1556,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "Varies by method",
     "competitorCategory": "BusinessApplication",
     "title": "Server-Side Tracking Setup Options for Shopify: Comparison",
-    "description": "Compare the four main ways to set up server-side tracking on Shopify: Conversions API, Server-side GTM, native app channels, and Pixel Tracker.",
+    "description": "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
     "h1": "Server-Side Tracking Setup Options for Shopify: CAPI, GTM, Native, and Pixel Tracker",
     "intro": [
       "Server-side tracking sends conversion events directly from your server (or Shopify's) to ad platforms, bypassing browser blockers that kill client-side pixels. There are four main ways to set it up on Shopify, each with different trade-offs in complexity, cost, and platform coverage.",
-      "This page compares Facebook Conversions API (CAPI), Server-side Google Tag Manager (sGTM), native Shopify sales channel integrations, and Pixel Tracker's built-in server-side support ,  so you can pick the approach that fits your store."
+      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -1588,7 +1570,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Setup time",
-        "pixelTracker": "5 minutes",
+        "pixelTracker": "Planned; not available",
         "competitor": "1-4 hours (CAPI), 4-8 hours (sGTM), 15 min (native), 30 min (Elevar)"
       },
       {
@@ -1598,7 +1580,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Platforms covered",
-        "pixelTracker": "Meta CAPI + TikTok Events API",
+        "pixelTracker": "Planned; not available",
         "competitor": "CAPI: Meta only; sGTM: any; Native: per channel"
       },
       {
@@ -1608,44 +1590,44 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Event customization",
-        "pixelTracker": "Standard events",
+        "pixelTracker": "Not verified",
         "competitor": "Custom (sGTM/Elevar), Standard (CAPI/native/PT)"
       }
     ],
     "featureMatrix": [
       {
         "feature": "Facebook CAPI",
-        "pixelTracker": "Yes (built-in)",
+        "pixelTracker": "Not verified",
         "competitor": "CAPI: Yes | sGTM: Yes | Native: Yes | Elevar: Yes"
       },
       {
         "feature": "TikTok Events API",
-        "pixelTracker": "Yes (built-in)",
+        "pixelTracker": "Not verified",
         "competitor": "CAPI: No | sGTM: Manual | Native: No | Elevar: Yes"
       },
       {
         "feature": "Google Ads server-side",
-        "pixelTracker": "No",
+        "pixelTracker": "Not verified",
         "competitor": "CAPI: No | sGTM: Yes | Native: No | Elevar: Yes"
       },
       {
         "feature": "Snapchat CAPI",
-        "pixelTracker": "No",
+        "pixelTracker": "Not verified",
         "competitor": "CAPI: No | sGTM: Manual | Native: No | Elevar: Possible"
       },
       {
         "feature": "No-code setup",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "CAPI: Partial | sGTM: No | Native: Yes | Elevar: No"
       },
       {
         "feature": "Browser + server deduplication",
-        "pixelTracker": "Yes (event ID)",
+        "pixelTracker": "Not verified",
         "competitor": "CAPI: Manual | sGTM: Manual | Native: Yes | Elevar: Yes"
       },
       {
         "feature": "Multi-platform from one dashboard",
-        "pixelTracker": "Yes",
+        "pixelTracker": "Planned; not available",
         "competitor": "No (each method is per-platform)"
       }
     ],
@@ -1678,10 +1660,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "whoShouldChoose": {
       "choosePT": [
-        "You want server-side CAPI and TikTok Events API without technical setup",
-        "You advertise on Meta and TikTok and want both covered simply",
-        "You want browser + server deduplication handled automatically",
-        "Focused on pixel setup rather than attribution analysis and no developer on staff"
+        "You are researching a future pixel connector and can wait for a verified launch.",
+        "You will compare confirmed platform coverage, event delivery, and Shopify billing terms before switching."
       ],
       "chooseCompetitor": [
         "You need server-side for Google Ads (use sGTM)",
@@ -1697,15 +1677,15 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Which server-side method should I use?",
-        "a": "For most solo merchants: Pixel Tracker covers Meta CAPI and TikTok Events API with no code. For Google Ads server-side, use Server-side GTM. For full data infrastructure, use Elevar. For Meta-only, the native Facebook & Instagram channel works."
+        "a": "For Google Ads server-side, use Server-side GTM. For full data infrastructure, use Elevar. For Meta-only, the native Facebook & Instagram channel works. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       },
       {
         "q": "Can I use Pixel Tracker's server-side alongside sGTM?",
-        "a": "Yes, but you'd be managing server-side tracking in two places. If sGTM already handles your server-side needs, adding Pixel Tracker's CAPI is redundant. If you want simpler Meta/TikTok server-side without sGTM complexity, Pixel Tracker covers those two platforms."
+        "a": "Pixel Tracker server-side delivery is not confirmed. For any future combination, define which provider sends each event and verify duplicate handling before running overlapping integrations."
       },
       {
         "q": "Does Pixel Tracker support Google Ads server-side?",
-        "a": "Not currently. Pixel Tracker's server-side support covers Facebook CAPI and TikTok Events API. For Google Ads server-side tracking, Server-side GTM is the standard approach."
+        "a": "Not currently. For Google Ads server-side tracking, Server-side GTM is the standard approach. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       },
       {
         "q": "Is Pixel Tracker available on the Shopify App Store?",

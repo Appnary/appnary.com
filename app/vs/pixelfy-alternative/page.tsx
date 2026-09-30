@@ -16,16 +16,16 @@ export const metadata: Metadata = withPageSeo("/vs/pixelfy-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: false },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: true },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: true },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: false },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: false },
   { feature: "Taboola pixel", pixelTracker: false, competitor: true },
-  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
+  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Free plan available", pixelTracker: "Not confirmed", competitor: false },
   { feature: "Pricing tiers that scale down for smaller stores", pixelTracker: "Not confirmed", competitor: false },
 ];
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "Does Pixelfy support Google Ads?",
-    a: "No — Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker additionally supports Google Ads, LinkedIn, and X (Twitter), though not Taboola.",
+    a: "No — Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "How is Pixelfy rated on the Shopify App Store?",
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker support Taboola?",
-    a: "Not currently. If Taboola pixel tracking is a specific requirement, Pixelfy supports it and Pixel Tracker doesn't.",
+    a: "Not currently. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Should a lower App Store rating rule out Pixelfy?",
@@ -61,14 +61,14 @@ const faqs = [
 ];
 
 const overview = [
-  "Pixelfy runs a single flat-rate plan — $7.99/mo for unlimited pixels — covering Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker covers a different, broader mix (Facebook, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X) with launch pricing still to be confirmed.",
-  "The two apps make almost opposite bets: Pixelfy trades platform breadth for one simple price with unlimited pixels included from day one, while Pixel Tracker is planned for wider platform coverage, with pricing to be confirmed. Pixelfy is also the only app in this comparison series that supports Taboola.",
+  "Pixelfy runs a single flat-rate plan — $7.99/mo for unlimited pixels — covering Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker intends to support multiple platforms, but its launch coverage and pricing are not confirmed.",
+  "Pixelfy is also the only app in this comparison series that supports Taboola. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. It doesn't support Google Ads, LinkedIn, or X (Twitter), all of which Pixel Tracker supports. Taboola is Pixelfy's one differentiator no other app in this series offers.",
+    body: "Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. Taboola is Pixelfy's one differentiator no other app in this series offers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "App Store rating",
@@ -76,18 +76,19 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Pixelfy includes CAPI support alongside its pixel installation for the platforms it covers. Pixel Tracker's server-side forwarding covers Facebook CAPI and TikTok Events API specifically; plan availability will be confirmed at launch.",
+    body: "Pixelfy includes CAPI support alongside its pixel installation for the platforms it covers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Best fit by platform mix",
-    body: "If Taboola is part of your media mix, or you specifically want one flat unlimited price with no free tier to worry about, Pixelfy's model is straightforward. If you need Google Ads, LinkedIn, or X — Pixel Tracker covers more ground.",
+    body: "If Taboola is part of your media mix, or you specifically want one flat unlimited price with no free tier to worry about, Pixelfy's model is straightforward. If you need Google Ads, LinkedIn, or X, choose an available provider with verified coverage; Pixel Tracker is prelaunch.",
   }
 ];
 
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You need Google Ads, LinkedIn, or X pixel tracking",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -114,15 +115,13 @@ export default function PixelfyVsPage() {
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Supports Google Ads, LinkedIn, and X, which Pixelfy doesn't",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
         "Doesn't support Taboola",
       ]}
       competitorPros={[
         "Low, simple flat price ($7.99/mo)",
-        "Supports Taboola pixel tracking, which Pixel Tracker doesn't",
+        "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
       ]}
       competitorCons={[
         "No free plan",

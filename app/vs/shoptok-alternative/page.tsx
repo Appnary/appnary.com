@@ -16,15 +16,15 @@ export const metadata: Metadata = withPageSeo("/vs/shoptok-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: true },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: false },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: false },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: false },
-  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Free plan available", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Unlimited pixels across all supported platforms at entry paid tier", pixelTracker: "Not confirmed", competitor: false },
 ];
@@ -38,7 +38,7 @@ const pricingRows = [
 const faqs = [
   {
     q: "Does Shoptok support Snapchat or Pinterest?",
-    a: "No — Shoptok covers Facebook/Meta, TikTok, and Google Ads only. Pixel Tracker additionally supports Snapchat, Pinterest, LinkedIn, and X (Twitter).",
+    a: "No — Shoptok covers Facebook/Meta, TikTok, and Google Ads only. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "How does Shoptok's pricing work?",
@@ -59,14 +59,14 @@ const faqs = [
 ];
 
 const overview = [
-  "Shoptok is narrower in platform scope than Pixel Tracker — three platforms (Facebook, TikTok, Google Ads) versus seven — but it's also one of the few apps in this comparison series that includes Google Ads support at all. Its pricing has a structural quirk worth understanding before comparing the numbers directly.",
-  "The real decision point is whether Shoptok's narrower platform list, offset by Google Ads support and a well-rated track record, fits your ad mix better than Pixel Tracker's broader seven-platform coverage.",
+  "Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today.",
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Shoptok covers Facebook/Meta, TikTok, and Google Ads — no Snapchat, Pinterest, LinkedIn, or X (Twitter), all of which Pixel Tracker supports. Google Ads is the one platform most apps in this comparison series lack, and Shoptok is one of the few that includes it.",
+    body: "Google Ads is the one platform most apps in this comparison series lack, and Shoptok is one of the few that includes it. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "App Store rating",
@@ -74,14 +74,15 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI / Events API)",
-    body: "Both apps forward events server-side alongside the pixel, which helps recover conversions that ad blockers and browser privacy settings would otherwise hide from Facebook, TikTok, and Google Ads reporting.",
+    body: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   }
 ];
 
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You need Snapchat, Pinterest, LinkedIn, or X pixel tracking",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -91,8 +92,8 @@ const chooseWhenCompetitor = [
 ];
 
 const verdict = [
-  "Shoptok is narrower in scope than Pixel Tracker — three platforms (Facebook, TikTok, Google Ads) versus seven — but it's also one of the few apps in this comparison that includes Google Ads support at all.",
-  "If you only advertise on Facebook, TikTok, and Google, Shoptok is a reasonable, well-rated option. If you also use Snapchat, Pinterest, LinkedIn, or X, Pixel Tracker covers all seven from one dashboard."
+  "Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today.",
+  "If you only advertise on Facebook, TikTok, and Google, Shoptok is a reasonable, well-rated option. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
 ];
 
 export default function ShoptokVsPage() {
@@ -104,15 +105,13 @@ export default function ShoptokVsPage() {
       competitorPricing="Free – $19.99/mo"
       competitorBestFor="Stores running only Facebook, TikTok, and Google Ads campaigns who want unlimited pixels once on a paid plan."
       competitorHref="https://apps.shopify.com/shoptok"
-      positioning="Shoptok covers fewer platforms but includes Google Ads. Here's how its per-platform pricing quirk compares to Pixel Tracker's broader seven-platform coverage."
+      positioning="Shoptok covers fewer platforms but includes Google Ads. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Supports 4 more platforms (Snapchat, Pinterest, LinkedIn, X) than Shoptok's 3",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
 
       ]}

@@ -16,15 +16,15 @@ export const metadata: Metadata = withPageSeo("/vs/multipixels-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: false },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: true },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: true },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: true },
-  { feature: "Server-side event forwarding (CAPI / Events API) confirmed", pixelTracker: true, competitor: "varies" },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Server-side event forwarding (CAPI / Events API) confirmed", pixelTracker: "Not confirmed", competitor: "varies" },
   { feature: "Free plan available", pixelTracker: "Not confirmed", competitor: false },
   { feature: "Audience-builder tools bundled", pixelTracker: false, competitor: true },
 ];
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Does MultiPixels support Google Ads?",
-    a: "No — it covers Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. Pixel Tracker additionally supports Google Ads and LinkedIn.",
+    a: "No — it covers Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "How established is MultiPixels?",
@@ -60,14 +60,14 @@ const faqs = [
 ];
 
 const overview = [
-  "MultiPixels covers six social ad platforms — Facebook, Instagram, TikTok, Snapchat, Pinterest, and X — and bundles audience-building tools on top of pixel installation. Pixel Tracker covers those same six platforms plus Google Ads and LinkedIn, without the audience-builder extras. Pixel Tracker's launch prices are not confirmed.",
+  "MultiPixels covers six social ad platforms — Facebook, Instagram, TikTok, Snapchat, Pinterest, and X — and bundles audience-building tools on top of pixel installation. Pixel Tracker's intended scope includes Google Ads and LinkedIn, but launch integrations remain unverified. Pixel Tracker's launch prices are not confirmed.",
   "The biggest practical difference is cost and track record: MultiPixels has no free plan and its cheapest tier is $9.99/mo, while Pixel Tracker is awaiting confirmed launch pricing. MultiPixels also has a notably thin review history — just 10 reviews, despite a strong 4.8★ average — compared to the hundreds some other apps in this comparison series have accumulated.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "MultiPixels supports Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. It doesn't support Google Ads or LinkedIn, both of which Pixel Tracker covers. For a store running paid search or B2B campaigns, that's a real gap.",
+    body: "MultiPixels supports Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. For a store running paid search or B2B campaigns, that's a real gap. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Audience-builder tools",
@@ -79,14 +79,15 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Whether MultiPixels' CAPI/server-side event forwarding is confirmed isn't clearly documented in its own marketing. Pixel Tracker explicitly supports Facebook CAPI and TikTok Events API.",
+    body: "Whether MultiPixels' CAPI/server-side event forwarding is confirmed isn't clearly documented in its own marketing. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   }
 ];
 
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You need Google Ads or LinkedIn pixel tracking",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -96,7 +97,7 @@ const chooseWhenCompetitor = [
 ];
 
 const verdict = [
-  "It also doesn't support Google Ads or LinkedIn, both of which Pixel Tracker covers."
+  "It also doesn't support Google Ads or LinkedIn. Pixel Tracker intends to cover these platforms, but its launch integrations are unverified."
 ];
 
 export default function MultiPixelsVsPage() {
@@ -108,15 +109,13 @@ export default function MultiPixelsVsPage() {
       competitorPricing="$9.99 – $39.99/mo (no free plan)"
       competitorBestFor="Stores wanting audience-building extras bundled with pixel installation, that don't need Google Ads or LinkedIn."
       competitorHref="https://apps.shopify.com/multipixel"
-      positioning="MultiPixels adds audience-builder tools on top of pixel installation, with its own pricing and no free tier. Here's how it compares to Pixel Tracker's broader planned platform coverage. Pixel Tracker's launch prices are not confirmed."
+      positioning="Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Supports Google Ads and LinkedIn, which MultiPixels doesn't",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
         "Doesn't include audience-builder tooling",
       ]}

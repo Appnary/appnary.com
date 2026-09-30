@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/alternatives/best-shopify-conversion-tracking-apps", {
   title: "Best Shopify Conversion Tracking Apps (2026) | Appnary",
   description:
-    "TiXel, Pixel Tracker, Omega Pixel, Avantify, OnePixel, and Pixee compared on CAPI/Events API coverage, pricing, and reviews.",
+    "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   openGraph: {
     title: "Best Shopify Conversion Tracking Apps (2026)",
     description:
@@ -39,14 +39,14 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "Server-side conversion forwarding via Facebook Conversions API and TikTok Events API. Launch pricing is not confirmed.",
+      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
     pricing: "Launch pricing not confirmed",
     bestFor:
       "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
     pros: [],
     cons: [
       "Pre-launch — no App Store reviews yet",
-      "Server-side coverage is currently limited to Facebook and TikTok specifically",
+      "Platform coverage and server-side delivery are not verified",
     ],
     href: "/pixel-tracker",
   },
@@ -132,7 +132,7 @@ const comparisonRows = [
     feature: "Server-side event forwarding (CAPI / Events API)",
     values: {
       tixel: true,
-      "pixel-tracker": true,
+      "pixel-tracker": "Not verified",
       "omega-pixel": true,
       avantify: true,
       onepixel: true,
@@ -165,7 +165,7 @@ const comparisonRows = [
     feature: "Platforms with server-side coverage",
     values: {
       tixel: "9 (incl. Reddit)",
-      "pixel-tracker": "2 (FB, TikTok)",
+      "pixel-tracker": "Not confirmed",
       "omega-pixel": "3 (FB, TikTok, Snap)",
       avantify: "5",
       onepixel: "6 (incl. Bing)",
@@ -192,7 +192,7 @@ const analysis = [
   },
   {
     title: "Coverage breadth varies a lot even though every app supports CAPI",
-    body: "Supporting \"server-side tracking\" doesn't mean the same thing across these six apps. TiXel forwards events server-side for nine platforms including Reddit; Pixel Tracker and Pixee currently cover Facebook and TikTok specifically. If your ad spend is concentrated on platforms outside Facebook/TikTok — Microsoft/Bing Ads, for instance — that narrows your options to OnePixel regardless of how good the other apps' CAPI implementation is.",
+    body: "Supporting \"server-side tracking\" doesn't mean the same thing across these six apps. If your ad spend is concentrated on platforms outside Facebook/TikTok — Microsoft/Bing Ads, for instance — that narrows your options to OnePixel regardless of how good the other apps' CAPI implementation is. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Metered vs. flat CAPI pricing changes the real cost as you scale",
@@ -209,7 +209,7 @@ const analysis = [
 ];
 
 const buyingGuide = [
-  "Start with which platforms you need server-side coverage for. If it's Facebook and TikTok only, Pixee or Omega Pixel cover that with a free tier available. Pixel Tracker is prelaunch, with its plan limits and prices still to be confirmed. If you need Microsoft/Bing Ads specifically, OnePixel is the only option here. If you need the broadest coverage including Reddit, TiXel is the only app that supports it.",
+  "Start with which platforms you need server-side coverage for. If it's Facebook and TikTok only, Pixee or Omega Pixel cover that with a free tier available. If you need Microsoft/Bing Ads specifically, OnePixel is the only option here. If you need the broadest coverage including Reddit, TiXel is the only app that supports it. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   "If you want CAPI to be the primary feature rather than one part of a broader pixel app, Avantify's positioning fits that — but budget for its metered per-connection pricing if you plan to add server-side tracking for several platforms.",
   "If you'd rather have tooling that actively flags conversion-tracking problems instead of just forwarding events and hoping they arrive correctly, Pixee's AI diagnostics or TiXel's AI-assisted setup are the two apps in this list built around that idea specifically.",
 ];
@@ -237,7 +237,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker support server-side tracking for Google Ads?",
-    a: "No — Pixel Tracker's server-side coverage currently covers Facebook Conversions API and TikTok Events API specifically. Its Google Ads integration is the standard conversion tag, not a server-side API connection.",
+    a: "Its Google Ads integration is the standard conversion tag, not a server-side API connection. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
 ];
 
@@ -250,7 +250,7 @@ export default function BestConversionTrackingAppsPage() {
       tldr="All six apps in this comparison now support server-side conversion tracking (CAPI / Events API) by default — the real differences are which platforms get server-side coverage, whether it's bundled or metered, and how established each app's track record is."
       intro={[
         "Conversion tracking accuracy increasingly depends on server-side event forwarding, not just a browser pixel. Facebook's Conversions API and TikTok's Events API send the same conversion event directly from Shopify's servers, recovering data that ad blockers and browser privacy features would otherwise hide from a standard pixel.",
-        "This roundup compares six real, currently-listed Shopify apps specifically on their server-side conversion tracking capability — which platforms each covers, how pricing scales as you add more, and what their Shopify App Store review history says about reliability. All figures are verified against live App Store listings rather than each app's own marketing claims.",
+        "This roundup compares available Shopify conversion-tracking apps and includes Pixel Tracker as a prelaunch preview. Confirm current features and prices on each provider's listing. Pixel Tracker server delivery is not verified.",
       ]}
       tools={tools}
       comparisonRows={comparisonRows}

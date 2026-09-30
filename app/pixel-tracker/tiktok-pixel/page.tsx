@@ -3,78 +3,60 @@ import { PixelGuide } from "@/components/pixel-guide";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker/tiktok-pixel", {
-  title: "TikTok Pixel Setup for Shopify | Pixel Tracker | Appnary",
-  description:
-    "How to connect a TikTok Pixel to your Shopify store with Pixel Tracker. No theme code required, with optional Events API support.",
-  openGraph: {
-    title: "TikTok Pixel Setup for Shopify | Pixel Tracker",
-    description:
-      "Connect a TikTok Pixel to your Shopify store with Pixel Tracker. No code required.",
-    url: "https://appnary.com/pixel-tracker/tiktok-pixel",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-  },
+  title: "TikTok Pixel on Shopify: Setup and Event Checks | Appnary",
+  description: "Prepare a TikTok tracking setup, verify identifiers and test purchases, and check consent. Pixel Tracker is still in development.",
 });
 
 const steps = [
   {
-    title: "Get your TikTok Pixel ID",
-    body: "In TikTok Ads Manager, go to Assets → Events → Web Events and copy your Pixel ID.",
+    "title": "Confirm the Pixel ID",
+    "body": "Use your TikTok ad account to identify the data source and the conversion action you intend to measure. Test both a normal browser and the path a visitor takes from a TikTok ad. Browser event receipt and campaign attribution answer different questions."
   },
   {
-    title: "Open the Pixel Tracker dashboard",
-    body: "From your Shopify admin, open Pixel Tracker's dashboard.",
+    "title": "Choose an available Shopify integration",
+    "body": "Check the provider's current Shopify setup instructions and checkout coverage. Pixel Tracker is not available to install yet. Do not remove working tracking to switch to a prelaunch app."
   },
   {
-    title: "Paste the Pixel ID",
-    body: "Enter your TikTok Pixel ID in the TikTok field and save. No theme editing is required.",
+    "title": "Check activation and consent",
+    "body": "Follow the chosen integration's activation instructions. A theme app embed must be enabled in the theme editor; it does not establish checkout coverage. Review consent settings before testing."
   },
   {
-    title: "Enable Events API (optional)",
-    body: "Turn on TikTok Events API for server-side event tracking — this improves match rates and accuracy for ad blockers and tracking prevention.",
+    "title": "Verify events and purchase details",
+    "body": "Use TikTok Pixel Helper to inspect browser activity and TikTok Events Manager to check receipt. Complete a test purchase and compare event name, event ID, value, and currency against the order. A page-view event alone does not prove purchase tracking."
   },
   {
-    title: "Confirm events are firing",
-    body: "Pixel Tracker injects the pixel automatically on every storefront page via Shopify ScriptTags. Use TikTok Pixel Helper or Events Manager's test tool to confirm.",
-  },
+    "title": "Inspect server delivery separately",
+    "body": "If your chosen integration includes server delivery, check it separately using the provider's diagnostics and deduplication instructions. Pixel Tracker server-side delivery is not confirmed."
+  }
 ];
-
 const faqs = [
   {
-    q: "What does the TikTok Pixel track?",
-    a: "Visitor actions like page views, add-to-cart, and purchases, so TikTok ad campaigns can measure results and retarget visitors.",
+    "q": "Can I connect TikTok with Pixel Tracker today?",
+    "a": "Pixel Tracker is in development and not available to install. Launch platform coverage is still being verified."
   },
   {
-    q: "Do I need to edit my Shopify theme to add the TikTok Pixel?",
-    a: "No. Pixel Tracker injects the pixel automatically via Shopify ScriptTags once you paste your Pixel ID.",
+    "q": "Does installing a pixel guarantee purchase tracking?",
+    "a": "No. A base tag can load while checkout events are missing or incorrect. Test a complete order and confirm the intended conversion event, value, and currency."
   },
   {
-    q: "Does Pixel Tracker support TikTok Events API?",
-    a: "Yes. Enabling Events API sends events server-side in addition to the browser pixel, improving match rates for ad blockers and tracking prevention.",
+    "q": "Does Pixel Tracker provide server-side tracking?",
+    "a": "Server-side delivery and browser/server deduplication are not confirmed launch features."
   },
   {
-    q: "How much does Pixel Tracker cost?",
-    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
-  },
-  {
-    q: "Is Pixel Tracker available on the Shopify App Store yet?",
-    a: "Not yet — it's currently in development. Join the waitlist at appnary.com for early access.",
-  },
+    "q": "How will Pixel Tracker billing work?",
+    "a": "Pricing varies by Shopify app and billing will be through Shopify. Pixel Tracker launch prices and plan limits are not confirmed."
+  }
 ];
 
-export default function TikTokPixelGuidePage() {
-  return (
-    <PixelGuide
-      slug="tiktok-pixel"
-      platformName="TikTok Pixel"
-      h1="How to Set Up the TikTok Pixel on Shopify with Pixel Tracker"
-      intro="Connect your TikTok Pixel to your Shopify store in a few minutes — no theme code changes, with optional server-side Events API support."
-      steps={steps}
-      faqs={faqs}
+export default function PlatformSetupGuide() {
+  return <PixelGuide
+    slug="tiktok-pixel" platformName="TikTok" h1="TikTok Pixel on Shopify: Setup and Event Checks"
+    intro="Prepare a TikTok tracking setup, verify identifiers and test purchases, and check consent. Pixel Tracker is still in development." steps={steps} faqs={faqs}
       relatedLinks={[
+        { label: "Official TikTok tracking documentation", href: "https://ads.tiktok.com/help/article/event-deduplication?lang=en" },
         { label: "TikTok Pixel troubleshooting", href: "/pixel-tracker/tiktok-pixel/troubleshooting" },
         { label: "TikTok Pixel events explained", href: "/pixel-tracker/tiktok-pixel/events" },
         { label: "TikTok Pixel server-side tracking", href: "/pixel-tracker/tiktok-pixel/server-side" },
       ]}
-    />
-  );
+  />;
 }

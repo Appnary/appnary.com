@@ -16,15 +16,15 @@ export const metadata: Metadata = withPageSeo("/vs/trackify-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: false },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: true },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: false },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: false },
-  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Free plan with no order-volume cap", pixelTracker: "Not confirmed", competitor: false },
   { feature: "Unlimited pixels on every paid tier", pixelTracker: "Not confirmed", competitor: true },
 ];
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Does Trackify support Google Ads?",
-    a: "No. Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. Pixel Tracker additionally supports Google Ads, Pinterest, LinkedIn, and X (Twitter).",
+    a: "No. Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Is Trackify's free plan unlimited?",
@@ -60,14 +60,14 @@ const faqs = [
 ];
 
 const overview = [
-  "Trackify and Pixel Tracker both connect ad-platform pixels to Shopify with server-side event forwarding, but they make different trade-offs between platform breadth and pixel limits. Trackify has the largest review base of any app in this comparison — 350 reviews — and includes unlimited pixels starting at its lowest paid tier.",
-  "The platforms each one supports barely overlap outside the big two: Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat, while Pixel Tracker adds Google Ads, Pinterest, LinkedIn, and X on top of Facebook/Meta, TikTok, and Snapchat. Which one wins depends on whether your priority is unlimited pixels in a currently available app, or waiting for broader planned platform coverage.",
+  "Trackify has the largest review base of any app in this comparison — 350 reviews — and includes unlimited pixels starting at its lowest paid tier. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. It doesn't support Google Ads, Pinterest, LinkedIn, or X (Twitter) — all four of which Pixel Tracker supports. Instagram-specific tracking is one place Trackify is more explicit than Pixel Tracker, which tracks Facebook/Meta broadly.",
+    body: "Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Review history",
@@ -75,14 +75,15 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI / Events API)",
-    body: "Both apps forward events server-side for the platforms they support, helping recover conversions lost to ad blockers and browser tracking restrictions. The meaningful difference remains which platforms each app's CAPI actually reaches, not the quality of the server-side implementation itself.",
+    body: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   }
 ];
 
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You need Google Ads, Pinterest, LinkedIn, or X pixel tracking",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -103,15 +104,13 @@ export default function TrackifyVsPage() {
       competitorPricing="Free (capped) – $28.99/mo"
       competitorBestFor="Stores wanting unlimited pixels on every paid tier, not just the top one, and willing to trade that for narrower platform coverage."
       competitorHref="https://apps.shopify.com/trackify-1"
-      positioning="Both connect ad-platform pixels to Shopify without touching theme code. Here's how Trackify's unlimited-pixels-on-every-tier pricing compares to Pixel Tracker's broader platform coverage."
+      positioning="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Supports Google Ads, Pinterest, LinkedIn, and X, which Trackify doesn't",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
 
       ]}

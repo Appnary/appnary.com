@@ -232,7 +232,7 @@ export default function BestAnalyticsAppsPage() {
       calloutBox={{
         heading: "Where Pixel Tracker fits in",
         body: [
-          "Pixel Tracker isn't an analytics app, and it isn't ranked above as one — none of these six apps compete with what it actually does. Pixel Tracker manages pixel and server-side conversion tracking (Facebook CAPI, TikTok Events API) for your ad platforms; the apps above analyze and report on data that's already flowing into Shopify and those platforms.",
+          "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
           "The two layers work together rather than against each other: cleaner, more complete conversion data from a tool like Pixel Tracker means the reports and dashboards above have more accurate underlying numbers to work with, whichever one you choose for reporting itself.",
         ],
         ctaHref: "/pixel-tracker",
@@ -261,7 +261,7 @@ export default function BestAnalyticsAppsPage() {
         },
         {
           q: "Does Pixel Tracker provide reporting dashboards like these apps do?",
-          a: "No. Pixel Tracker focuses specifically on pixel and server-side conversion tracking (Facebook CAPI, TikTok Events API) — it doesn't build sales reports, cohort analysis, or BI dashboards. For that, you'd pair it with one of the apps above.",
+          a: "No. For that, you'd pair it with one of the apps above. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
         },
       ]}
     />
