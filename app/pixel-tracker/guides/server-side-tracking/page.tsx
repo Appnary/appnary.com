@@ -127,7 +127,7 @@ const faqs = [
   },
   {
     q: "Is server-side tracking available on every Pixel Tracker plan?",
-    a: "Server-side tracking is tied to having a Facebook or TikTok pixel connected within your plan's pixel limit, whether that's the Free plan's single pixel, Starter's three, Growth's ten, or Pro's unlimited pixels. Check the Pixel Tracker product page for current plan details before deciding which plan fits your setup.",
+    a: "Launch plan limits and feature inclusions are not confirmed. Check the app's Shopify listing when available to see which plan covers the integrations you need. Billing will be through Shopify.",
   },
   {
     q: "Does Pixel Tracker store customer personal information to do this?",

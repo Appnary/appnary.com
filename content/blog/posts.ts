@@ -12,7 +12,7 @@ export const posts: BlogPost[] = [
       "A look at Pixel Tracker's multi-platform tracking setup, planned pricing, and what remains before the Shopify App Store launch.",
     category: "Product update",
     publishedAt: "2026-06-18",
-    updatedAt: "2026-09-22",
+    updatedAt: "2026-09-30",
     author: "The Appnary Team",
     readingMinutes: 4,
     tags: ["Pixel Tracker", "Launch", "Shopify"],
@@ -27,8 +27,7 @@ Here's what we're building:
 - Server-side tracking for Facebook Conversions API and TikTok Events API
 - Simple dashboard to manage all pixels from one place
 - No code or theme editing required
-- Free plan with 1 active pixel included
-- Paid plans starting at $7/month for 3 pixels
+- App-specific pricing, billed through Shopify; launch plans to be confirmed
 
 The scope is deliberately small. We picked the platforms merchants actually use, ran them past beta testers, and cut anything that didn't earn its place.
 
@@ -198,6 +197,7 @@ Pixel Tracker is still pre-launch. If you want your store's pixels centralized a
     excerpt: `Facebook Pixel and the Google Ads tag aren't competing versions of the same tool, they track two different ad platforms. If you're running ads on both, the honest answer is you need both installed.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-07",
+    updatedAt: "2026-09-30",
     author: "The Appnary Team",
     readingMinutes: 6,
     tags: ["Facebook Pixel", "Google Ads", "Ad Tracking", "Shopify Ads"],
@@ -215,7 +215,7 @@ Say you're running Facebook ads and Google Shopping at the same time, but you on
 
 If time or budget only allows for setting up one platform this week, install the pixel for whichever platform you're actually spending money on right now. That sounds obvious, but it's common for stores to stall out trying to get both platforms perfectly configured before launching either, and end up with zero tracking on the campaign that's already live. If your ad budget currently lives in Meta Ads Manager, get the [Meta Pixel](/pixel-tracker/meta-pixel) connected first, and the [Facebook Pixel setup guide](/pixel-tracker/guides/facebook-pixel-setup) walks through it in full. If your spend is in Google Ads instead, prioritize the [Google Ads conversion tag](/pixel-tracker/google-ads), and the [Google Ads conversion tracking guide](/pixel-tracker/guides/google-ads-conversion-tracking) covers that setup end to end. Once the platform you're actively spending on is tracked, add the second one before you turn on that second campaign, not after it's already running unmeasured.
 
-This is the part where running both through one tool actually matters. Pixel Tracker connects Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels from a single Shopify dashboard, and they inject automatically through Shopify's own ScriptTags system, so none of it involves editing theme code. Adding a second or third platform later just means connecting another pixel, not redoing the setup you already have. Worth noting on the server-side question too, since it comes up: Pixel Tracker supports Facebook Conversions API alongside the browser pixel, for stores that want to backfill events that browser-based tracking misses. The Google Ads tag stays client-side only through Pixel Tracker; there's no server-side option for that one. The free plan covers one pixel; paid plans run from $7 a month for three pixels up to $29 a month for unlimited, per store, with no free trial. Pixel Tracker is pre-launch right now, so the way in is to [join the waitlist](/#waitlist).
+This is the part where running both through one tool actually matters. Pixel Tracker connects Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels from a single Shopify dashboard, and they inject automatically through Shopify's own ScriptTags system, so none of it involves editing theme code. Adding a second or third platform later just means connecting another pixel, not redoing the setup you already have. Worth noting on the server-side question too, since it comes up: Pixel Tracker supports Facebook Conversions API alongside the browser pixel, for stores that want to backfill events that browser-based tracking misses. The Google Ads tag stays client-side only through Pixel Tracker; there's no server-side option for that one. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify. Pixel Tracker is pre-launch right now, so the way in is to [join the waitlist](/#waitlist).
 
 Neither pixel is a lesser version of the other, and neither is optional once you're paying for ads on that platform. If your ad spend touches both Facebook and Google, plan on both pixels from day one. If it only touches one right now, install that one immediately and add the second the moment your budget or campaigns expand there.`,
     faqs: [
@@ -247,6 +247,7 @@ Neither pixel is a lesser version of the other, and neither is optional once you
     excerpt: `TikTok's algorithm can't optimize toward conversions it never sees, and your Meta or Google pixel won't tell it anything. Here's the short version of getting a TikTok pixel live on Shopify, plus the purchase-check step most merchants skip.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-10",
+    updatedAt: "2026-09-30",
     author: "The Appnary Team",
     readingMinutes: 6,
     tags: ["TikTok Ads", "Shopify", "Pixel Tracking", "Conversion Tracking"],
@@ -264,7 +265,7 @@ Step 4 is the one people skip because the pixel already "looks installed": runni
 
 Step 5, optional but worth doing once the basics are confirmed, is server-side tracking. Browser pixels miss conversions for reasons that have nothing to do with your setup, most commonly ad blockers and privacy settings that stop third-party scripts before they load. TikTok's Events API sends the same conversion events from your server instead of relying entirely on the browser to deliver them. Pixel Tracker supports TikTok Events API alongside Facebook Conversions API, so this is a reasonable next step once your browser pixel is confirmed working, not something you need on day one. The [server-side tracking guide](/pixel-tracker/guides/server-side-tracking) covers when it's worth setting up and how it differs from what you just installed.
 
-If you'd rather skip straight to connecting through the app instead of reading through the reasoning above, the [TikTok pixel setup page](/pixel-tracker/tiktok-pixel) is the direct version of step 2. One honest note on timing: Pixel Tracker is pre-launch right now, so the accurate thing to do is [join the waitlist](/#waitlist) for access when it opens, not install it this afternoon. On pricing, since it tends to come up early: plans start free for one pixel and scale to unlimited pixels at $29 a month, with $7 and $15 tiers in between, so if TikTok is the only platform you're tracking right now, you're not paying for tools you don't need yet.
+If you'd rather skip straight to connecting through the app instead of reading through the reasoning above, the [TikTok pixel setup page](/pixel-tracker/tiktok-pixel) is the direct version of step 2. One honest note on timing: Pixel Tracker is pre-launch right now, so the accurate thing to do is [join the waitlist](/#waitlist) for access when it opens, not install it this afternoon. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.
 
 None of this is complicated once it's done properly, which is exactly the point of doing it properly the first time. A pixel that's technically installed but never confirmed against a real purchase is just code sitting on your site, not a working tracking setup. Get the base pixel firing, confirm it against an actual order, and add server-side tracking once you know the campaigns you're running are worth protecting.`,
     faqs: [
@@ -286,7 +287,7 @@ None of this is complicated once it's done properly, which is exactly the point 
       },
       {
         q: `What does Pixel Tracker cost once it's available?`,
-        a: `Plans run from free for one pixel up to $29 a month for unlimited pixels, with $7 and $15 tiers in between for 3 and 10 pixels. Pricing is per store, and there's no free trial.`,
+        a: `Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.`,
       },
     ],
   },
@@ -296,6 +297,7 @@ None of this is complicated once it's done properly, which is exactly the point 
     excerpt: `When ad spend and conversions live in five different ad dashboards, none of them agree, and that's not an accident. Here's a practical, spreadsheet-based way to build one honest number for what your ads are actually doing.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-14",
+    updatedAt: "2026-09-30",
     author: "The Appnary Team",
     readingMinutes: 6,
     tags: ["ad tracking", "blended CAC", "multi-channel marketing", "Shopify ads", "pixel tracking"],
@@ -317,7 +319,7 @@ None of this works, though, if half your platforms aren't reporting real numbers
 
 Getting every pixel connected, not just the first one or two set up back at launch, is a prerequisite for this whole exercise, not an optional nice-to-have. This is the specific problem [Pixel Tracker](/pixel-tracker) is built around: connecting tracking pixels for Meta (Facebook), Google Ads (the conversion tag, not GA4), TikTok, Snapchat, Pinterest, X, and LinkedIn from one Shopify dashboard, with pixels injected automatically through Shopify ScriptTags so there's no theme code to touch. It's worth being clear about what it does and doesn't do: it connects the pixels, and for Facebook and TikTok it adds server-side tracking through Conversions API and Events API so the numbers those two platforms report are less dented by browser tracking loss. It does not calculate a blended CAC or ROAS for you, and there's no cross-platform dashboard built in. You still need the weekly spreadsheet described above. What it fixes is the step before that: making sure every platform you're spending money on is actually reporting real numbers to log in the first place.
 
-That distinction matters for picking a plan, too. The free tier covers one pixel, which is fine if you're only running Facebook ads and nothing else. The moment you're running ads on three or more platforms, which is exactly the situation this tracking exercise assumes, you're looking at Starter at $7 a month for three pixels, Growth at $15 a month for ten, or Pro at $29 a month for unlimited pixels on a single store. Growth and Pro exist specifically for merchants who've moved past one or two ad channels and need every platform they're actually spending on connected at once, not just the ones they got around to first.
+Choose an app whose confirmed plan limits cover every ad platform you need. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.
 
 If you're comparing options for pixel management on Shopify, it's worth looking at more than one tool before committing, since setups and pricing structures vary more than you'd expect for what sounds like a simple task. The [roundup of Shopify ad tracking tools](/alternatives/best-shopify-ad-tracking-tools) is a reasonable place to start that comparison.
 
@@ -393,6 +395,7 @@ The practical rule: add GA4 when you have a question Shopify's dashboard genuine
     excerpt: `A missed pixel event isn't a rounding error, it's lost signal that quietly skews your ad targeting and inflates your reported cost per acquisition. Here's why server-side tracking matters now, and where Pixel Tracker's server-side support actually starts and stops.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-21",
+    updatedAt: "2026-09-30",
     author: "The Appnary Team",
     readingMinutes: 6,
     tags: ["server-side tracking", "Conversions API", "TikTok Events API", "Shopify ads", "ad attribution"],
@@ -414,14 +417,14 @@ It's worth being precise here about what Pixel Tracker actually covers, since "s
 
 None of this requires a developer. Setup for the platforms Pixel Tracker supports happens in the dashboard, where you paste in pixel IDs and access tokens rather than opening theme.liquid or writing custom code. If you haven't set up the underlying pixels yet, the [Facebook pixel setup guide](/pixel-tracker/guides/facebook-pixel-setup) and [TikTok pixel setup guide](/pixel-tracker/guides/tiktok-pixel-setup) walk through that first, since server-side tracking supplements a working pixel rather than replacing one.
 
-Pixel Tracker is pre-launch right now, so there's no install-it-today option — you can [join the waitlist](/#waitlist) for access when it opens. Pricing is set: free at $0/month for one pixel, $7/month for three pixels on Starter, $15/month for ten pixels on Growth, and $29/month for unlimited pixels on Pro, per store, with no free trial.
+Pixel Tracker is pre-launch right now, so there's no install-it-today option — you can [join the waitlist](/#waitlist) for access when it opens. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.
 
 Server-side tracking and privacy-conscious tracking aren't opposites, even though the phrase can sound like it's about squeezing more data out of people who tried to opt out. It's really about not losing the data your own customers already generated by buying something from you. We get into that distinction more in [our post on privacy-first tracking for Shopify stores](/blog/privacy-first-tracking-shopify). The practical takeaway here is simpler: if your pixel is the only thing telling an ad platform what converted, you're leaking signal quietly, every day, in a way that's fixable without touching your theme.`,
     faqs: [
       { q: `What's the actual difference between a pixel and server-side tracking?`, a: `A pixel is JavaScript that fires in the customer's browser and depends on that browser letting it through, so ad blockers, tracking prevention, and dropped connections can all stop it. Server-side tracking sends the same conversion event from your store's server directly to the ad platform's API, so it doesn't depend on the browser cooperating. Pixel Tracker deduplicates the two so the platform doesn't count one sale twice. For the full technical breakdown, see the server-side tracking guide at /pixel-tracker/guides/server-side-tracking.` },
       { q: `Does Pixel Tracker support server-side tracking for Google Ads, Snapchat, Pinterest, X, or LinkedIn?`, a: `Not currently. Pixel Tracker's server-side support covers Meta's Conversions API and TikTok's Events API only. Google Ads, Snapchat, Pinterest, X, and LinkedIn are handled through standard browser pixels, injected automatically via Shopify ScriptTags.` },
       { q: `Do I need a developer or theme access to set this up?`, a: `No. Everything runs through the Pixel Tracker dashboard, where you paste in pixel IDs and access tokens rather than editing theme.liquid or writing custom scripts. The Facebook and TikTok pixel setup guides walk through the exact steps.` },
-      { q: `How much does Pixel Tracker cost?`, a: `Free for one pixel at $0/month, $7/month for three pixels on Starter, $15/month for ten pixels on Growth, and $29/month for unlimited pixels on Pro. Pricing is per store, and there's no free trial.` },
+      { q: `How much does Pixel Tracker cost?`, a: `Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.` },
       { q: `Can I install Pixel Tracker today?`, a: `Not yet. Pixel Tracker is pre-launch and currently taking signups on the waitlist. You can join the waitlist to get access when it opens.` },
     ],
   },

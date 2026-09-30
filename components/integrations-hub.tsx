@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: "Is there a limit to how many platforms I can connect?",
-    a: "The limit is on total pixels, not platforms. Free includes 1 pixel, Starter ($7/mo) includes 3, Growth ($15/mo) includes 10, and Pro ($29/mo) includes unlimited pixels across any combination of platforms.",
+    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
   },
 ];
 

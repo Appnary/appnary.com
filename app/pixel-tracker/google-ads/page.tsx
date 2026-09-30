@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "How much does Pixel Tracker cost?",
-    a: "The Free plan includes 1 active tracking pixel at no cost. Paid plans start at $7/month for 3 pixels, up to $29/month for unlimited pixels.",
+    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
   },
   {
     q: "Is Pixel Tracker available on the Shopify App Store yet?",

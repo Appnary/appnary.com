@@ -31,8 +31,8 @@ const entries: ChangelogEntry[] = [
       "Multi-platform pixel tracking for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn",
       "Server-side tracking support for Facebook Conversions API and TikTok Events API",
       "Shopify dashboard integration for pixel management",
-      "Free plan with 1 active pixel included",
-      "Starter ($7/mo), Growth ($15/mo), and Pro ($29/mo) pricing tiers",
+      "Launch plan limits to be confirmed",
+      "App-specific pricing and billing through Shopify; launch plans to be confirmed",
     ],
   },
   {

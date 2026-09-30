@@ -118,7 +118,7 @@ const faqs = [
   },
   {
     q: "How many Meta pixels can I connect?",
-    a: "That depends on your plan. Free covers one pixel at $0/mo, Starter covers three at $7/mo, Growth covers ten at $15/mo, and Pro is unlimited at $29/mo. Limits are per Shopify store.",
+    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
   },
   {
     q: "I already have a Meta Pixel installed manually. What happens if I also add it through Pixel Tracker?",

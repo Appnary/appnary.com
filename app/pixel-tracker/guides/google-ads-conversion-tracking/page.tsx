@@ -131,7 +131,7 @@ const faqs = [
   },
   {
     q: "Is Pixel Tracker available on the Shopify App Store right now?",
-    a: "Not yet. Pixel Tracker is in pre-launch, and access is currently through the [waitlist](/#waitlist). There's no free trial once it launches, just plans sized by how many pixels a store needs, and the Google Ads setup works exactly the way this guide describes.",
+    a: "Not yet. Pixel Tracker is in pre-launch, and access is currently through the [waitlist](/#waitlist). Launch pricing, trial availability, and plan limits will be confirmed with the Shopify listing. Billing will be through Shopify.",
   },
 ];
 

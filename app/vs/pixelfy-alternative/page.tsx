@@ -26,21 +26,21 @@ const featureRows = [
   { feature: "X (Twitter) pixel", pixelTracker: true, competitor: false },
   { feature: "Taboola pixel", pixelTracker: false, competitor: true },
   { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
-  { feature: "Free plan available", pixelTracker: true, competitor: false },
-  { feature: "Pricing tiers that scale down for smaller stores", pixelTracker: true, competitor: false },
+  { feature: "Free plan available", pixelTracker: "Not confirmed", competitor: false },
+  { feature: "Pricing tiers that scale down for smaller stores", pixelTracker: "Not confirmed", competitor: false },
 ];
 
 const pricingRows = [
-  { plan: "Free", pixelTracker: "$0 (1 pixel)", competitor: "Not available" },
+  { plan: "Free", pixelTracker: "Not confirmed", competitor: "Not available" },
   { plan: "Only plan", pixelTracker: "—", competitor: "$7.99/mo (all pixels)" },
-  { plan: "Entry paid", pixelTracker: "$7/mo (3 pixels)", competitor: "—" },
-  { plan: "Top tier", pixelTracker: "$29/mo (unlimited pixels)", competitor: "—" },
+  { plan: "Entry paid", pixelTracker: "Not confirmed", competitor: "—" },
+  { plan: "Top tier", pixelTracker: "Not confirmed", competitor: "—" },
 ];
 
 const faqs = [
   {
     q: "Is Pixelfy cheaper than Pixel Tracker?",
-    a: "Its single plan is $7.99/mo, close to Pixel Tracker's $7/mo Starter tier, but Pixelfy has no free plan while Pixel Tracker does.",
+    a: "Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify.",
   },
   {
     q: "Does Pixelfy support Google Ads?",
@@ -61,8 +61,8 @@ const faqs = [
 ];
 
 const overview = [
-  "Pixelfy runs a single flat-rate plan — $7.99/mo for unlimited pixels — covering Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker covers a different, broader mix (Facebook, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X) through tiered pricing that starts free.",
-  "The two apps make almost opposite bets: Pixelfy trades platform breadth for one simple price with unlimited pixels included from day one, while Pixel Tracker trades pricing simplicity for wider platform coverage and a free entry point. Pixelfy is also the only app in this comparison series that supports Taboola.",
+  "Pixelfy runs a single flat-rate plan — $7.99/mo for unlimited pixels — covering Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker covers a different, broader mix (Facebook, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X) with launch pricing still to be confirmed.",
+  "The two apps make almost opposite bets: Pixelfy trades platform breadth for one simple price with unlimited pixels included from day one, while Pixel Tracker is planned for wider platform coverage, with pricing to be confirmed. Pixelfy is also the only app in this comparison series that supports Taboola.",
 ];
 
 const featureBreakdown = [
@@ -71,44 +71,32 @@ const featureBreakdown = [
     body: "Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. It doesn't support Google Ads, LinkedIn, or X (Twitter), all of which Pixel Tracker supports. Taboola is Pixelfy's one differentiator no other app in this series offers.",
   },
   {
-    title: "Pricing simplicity vs. free tier",
-    body: "Pixelfy's single $7.99/mo plan includes unlimited pixels with no tiers to think about, but there's no free option — you pay from day one. Pixel Tracker's free plan covers one pixel at no cost, with paid tiers scaling up to $29/mo for unlimited pixels.",
-  },
-  {
     title: "App Store rating",
     body: "Pixelfy holds a 3.9★ average across 39 reviews — the lowest rating among the apps compared in this series, though still a real, established app with a meaningful review sample.",
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Pixelfy includes CAPI support alongside its pixel installation for the platforms it covers. Pixel Tracker's server-side forwarding covers Facebook CAPI and TikTok Events API specifically, included at every paid tier.",
+    body: "Pixelfy includes CAPI support alongside its pixel installation for the platforms it covers. Pixel Tracker's server-side forwarding covers Facebook CAPI and TikTok Events API specifically; plan availability will be confirmed at launch.",
   },
   {
     title: "Best fit by platform mix",
-    body: "If Taboola is part of your media mix, or you specifically want one flat unlimited price with no free tier to worry about, Pixelfy's model is straightforward. If you need Google Ads, LinkedIn, or X — or want to start on a free plan — Pixel Tracker covers more ground.",
-  },
+    body: "If Taboola is part of your media mix, or you specifically want one flat unlimited price with no free tier to worry about, Pixelfy's model is straightforward. If you need Google Ads, LinkedIn, or X — Pixel Tracker covers more ground.",
+  }
 ];
 
-const pricingNarrative = [
-  "Pixelfy's $7.99/mo flat rate is close to Pixel Tracker's $7/mo Starter tier in price, but the two aren't quite equivalent: Pixelfy includes unlimited pixels from the start, while Pixel Tracker's Starter tier caps at 3 pixels (unlimited requires the $29/mo Pro tier). Pixelfy also has no free plan, while Pixel Tracker does.",
-  "For a store that wants unlimited pixels cheaply and only needs Pixelfy's five supported platforms, that trade-off can work in Pixelfy's favor.",
-];
+const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
   "You need Google Ads, LinkedIn, or X pixel tracking",
-  "You want a free plan to start on before paying anything",
-  "You want pricing that scales down for a store using very few pixels",
 ];
 
 const chooseWhenCompetitor = [
   "You specifically need Taboola pixel tracking",
-  "You want unlimited pixels at a low flat price with no tiers to think about",
-  "Your ad platforms are limited to Facebook, TikTok, Snapchat, and Pinterest",
+  "Your ad platforms are limited to Facebook, TikTok, Snapchat, and Pinterest"
 ];
 
 const verdict = [
-  "Pixelfy's single $7.99/mo flat plan is simple and close in price to Pixel Tracker's Starter tier, and it's the only app in this comparison supporting Taboola pixel tracking.",
-  "Its 3.9★ rating is the lowest among the apps compared in this series, though its review count (39) is still a meaningful sample.",
-  "If you specifically need Taboola support and only advertise on Facebook, TikTok, Snapchat, and Pinterest, Pixelfy covers that at a low flat price. For broader platform coverage — Google Ads, LinkedIn, X — or a free tier to start on, Pixel Tracker is the better fit.",
+  "Its 3.9★ rating is the lowest among the apps compared in this series, though its review count (39) is still a meaningful sample."
 ];
 
 export default function PixelfyVsPage() {
@@ -120,18 +108,18 @@ export default function PixelfyVsPage() {
       competitorPricing="$7.99/mo flat (no free plan)"
       competitorBestFor="Stores wanting the single lowest flat monthly price and Taboola pixel support specifically."
       competitorHref="https://apps.shopify.com/pixelfy-facebook-pixels"
-      positioning="Pixelfy runs one flat plan for unlimited pixels across a narrower platform list. Here's how it compares to Pixel Tracker's tiered, wider-coverage pricing."
+      positioning="Pixelfy runs one flat plan for unlimited pixels across a narrower platform list. Here's how it compares to Pixel Tracker's planned platform coverage; its launch prices are not confirmed."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
       pixelTrackerPros={[
-        "Has a genuine free plan; Pixelfy has none",
         "Supports Google Ads, LinkedIn, and X, which Pixelfy doesn't",
-        "Offers tiered pricing that scales down for smaller stores",
       ]}
-      pixelTrackerCons={["Doesn't support Taboola"]}
+      pixelTrackerCons={[
+        "Doesn't support Taboola",
+      ]}
       competitorPros={[
         "Low, simple flat price ($7.99/mo)",
         "Supports Taboola pixel tracking, which Pixel Tracker doesn't",

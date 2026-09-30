@@ -206,7 +206,7 @@ export default function PixelHealthCheck() {
         detail:
           "Two apps sending the same Purchase event inflate platform-reported ROAS. Prefer one multi-platform installer, or disable overlapping tags.",
         href: "/tools/pixel-tracking-calculator",
-        hrefLabel: "Cost & coverage calculator",
+        hrefLabel: "Tracking coverage calculator",
       });
     }
 

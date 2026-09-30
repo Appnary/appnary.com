@@ -12,17 +12,17 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "Pixel Tracker vs Elevar: Which Shopify Tracking Solution Fits Your Store?",
     "intro": [
       "Pixel Tracker and Elevar are both Shopify tracking tools, but they serve different audiences. Pixel Tracker is a pixel installer that connects ad platforms to your store with no code required. Elevar is a full server-side data pipeline for stores that need custom event schemas, warehouse sync, and agency-grade infrastructure.",
-      "If you're a solo merchant who wants Facebook, Google Ads, TikTok, and other pixels running without touching theme code, Pixel Tracker is the simpler and cheaper option. If you're an agency or technical team managing complex data infrastructure across multiple stores, Elevar is the right tool for that job."
+      "If you're a solo merchant who wants Facebook, Google Ads, TikTok, and other pixels running without touching theme code, Pixel Tracker is the simpler option to evaluate after launch. If you're an agency or technical team managing complex data infrastructure across multiple stores, Elevar is the right tool for that job."
     ],
     "quickComparison": [
       {
         "feature": "Lowest paid plan",
-        "pixelTracker": "$7/mo (3 pixels)",
+        "pixelTracker": "Not confirmed",
         "competitor": "$225/mo"
       },
       {
         "feature": "Free plan",
-        "pixelTracker": "Yes (1 pixel)",
+        "pixelTracker": "Not confirmed",
         "competitor": "No"
       },
       {
@@ -119,29 +119,14 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Pricing transparency",
-        "pixelTracker": "Published on site",
+        "pixelTracker": "Not confirmed",
         "competitor": "Sales-driven"
       }
     ],
     "pricingBreakdown": [
       {
-        "plan": "Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pro",
-        "pixelTracker": "$29/mo (unlimited)",
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
         "competitor": "N/A"
       },
       {
@@ -181,11 +166,11 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Is Elevar worth the price for a small store?",
-        "a": "For most solo merchants, no. Elevar's entry plan costs 8x Pixel Tracker's top tier and is built for stores with complex data needs and agency support. If you just need pixels firing correctly, a simpler installer is usually enough."
+        "a": "For most solo merchants, no. Elevar is built for stores with complex data needs and agency support. Pixel Tracker's price comparison must wait for confirmed launch plans. If you just need pixels firing correctly, a simpler installer is usually enough."
       },
       {
         "q": "Does Pixel Tracker support server-side tracking like Elevar?",
-        "a": "Pixel Tracker supports Facebook Conversions API and TikTok Events API for server-side event tracking. Elevar offers a broader data pipeline with custom event schemas, but that depth comes at a much higher price point."
+        "a": "Pixel Tracker supports Facebook Conversions API and TikTok Events API for server-side event tracking. Elevar offers a broader data pipeline with custom event schemas, but that depth comes for more complex data requirements."
       },
       {
         "q": "Can I start with Pixel Tracker and move to Elevar later?",
@@ -206,7 +191,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides/server-side-tracking"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -230,7 +215,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "Free"
       },
       {
@@ -333,29 +318,14 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "Facebook & Instagram channel",
         "pixelTracker": "N/A",
         "competitor": "Free"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
@@ -404,7 +374,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/meta-pixel/server-side"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -428,7 +398,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "Free"
       },
       {
@@ -531,29 +501,14 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "Google Tag Manager",
         "pixelTracker": "N/A",
         "competitor": "Free"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
@@ -602,7 +557,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides/server-side-tracking"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -621,12 +576,12 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "Pixel Tracker vs Littledata: Analytics Pipeline vs Pixel Installation",
     "intro": [
       "Littledata is a server-side analytics layer that fixes tracking accuracy in GA4, Segment, and ad platforms. It's built for stores with complex analytics needs, subscription businesses, and teams that need clean data flowing into their analytics stack.",
-      "Pixel Tracker is a pixel installer that connects ad platforms to your Shopify store. It's simpler, cheaper, and focused on a narrower problem: getting your Meta, Google, TikTok, and other ad pixels firing correctly without code."
+      "Pixel Tracker is a pixel installer that connects ad platforms to your Shopify store. It's focused on a narrower problem: getting your Meta, Google, TikTok, and other ad pixels firing correctly without code."
     ],
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "$199+/mo"
       },
       {
@@ -719,36 +674,21 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "Littledata",
         "pixelTracker": "N/A",
         "competitor": "$199+/mo (enterprise)"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
       "choosePT": [
         "You want ad pixels installed and managed simply",
         "You advertise on multiple platforms and need a dashboard",
-        "Budget under $50/mo for tracking tools",
+        "Focused on pixel setup rather than attribution analysis for tracking tools",
         "No developer on staff"
       ],
       "chooseCompetitor": [
@@ -765,7 +705,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Is Littledata worth $199+/mo for a small store?",
-        "a": "For most solo merchants, no. Littledata's value is in cleaning GA4 data and fixing analytics attribution ,  problems that are most expensive at scale. If your primary need is installing ad pixels, a simpler tool at $0-$29/mo is more appropriate."
+        "a": "Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify."
       },
       {
         "q": "Can I use both together?",
@@ -790,7 +730,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -814,12 +754,12 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Lowest paid plan",
-        "pixelTracker": "$7/mo (3 pixels)",
+        "pixelTracker": "Not confirmed",
         "competitor": "~$19/mo"
       },
       {
         "feature": "Free plan",
-        "pixelTracker": "Yes (1 pixel)",
+        "pixelTracker": "Not confirmed",
         "competitor": "Limited"
       },
       {
@@ -907,29 +847,14 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "TrackBee entry",
         "pixelTracker": "N/A",
         "competitor": "~$19/mo"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
@@ -937,7 +862,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "You advertise on more than 3 platforms",
         "You need Snapchat, Pinterest, LinkedIn, or X pixels",
         "You want server-side CAPI and TikTok Events API",
-        "You prefer transparent, tiered pricing"
+        "You can wait for confirmed launch plans"
       ],
       "chooseCompetitor": [
         "You only advertise on Meta and want a simple Meta pixel installer",
@@ -948,7 +873,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "faqs": [
       {
         "q": "Is TrackBee cheaper than Pixel Tracker?",
-        "a": "TrackBee's entry plan (~$19/mo) is close to Pixel Tracker's Growth plan ($15/mo). Pixel Tracker's Starter plan ($7/mo) is cheaper if you only need 3 pixels. For unlimited pixels, Pixel Tracker's Pro ($29/mo) is competitive."
+        "a": "Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify."
       },
       {
         "q": "Can I switch from TrackBee to Pixel Tracker?",
@@ -977,7 +902,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -1001,7 +926,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "$230+/mo"
       },
       {
@@ -1084,36 +1009,21 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "Hyros entry",
         "pixelTracker": "N/A",
         "competitor": "~$230+/mo (revenue-tiered)"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
       "choosePT": [
         "You need pixels installed, not attributed",
         "You spend under $10k/mo on ads",
-        "Budget under $50/mo for tracking tools",
+        "Focused on pixel setup rather than attribution analysis for tracking tools",
         "You want a 5-minute setup with no technical work"
       ],
       "chooseCompetitor": [
@@ -1134,7 +1044,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Is Hyros worth $230+/mo for a small store?",
-        "a": "For stores spending under $10k/mo on ads, Hyros typically doesn't justify its cost. At that spend level, the attribution insights don't offset the monthly fee. Pixel Tracker at $7-$29/mo covers the pixel installation layer."
+        "a": "It depends on whether you need cross-platform attribution enough to justify the subscription. Start by checking whether your existing platform reports answer your questions. Pixel Tracker is intended for pixel setup, so it does not replace Hyros's attribution analysis, and its launch price is not confirmed."
       },
       {
         "q": "What's the difference between attribution and pixel installation?",
@@ -1155,7 +1065,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides/server-side-tracking"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -1179,7 +1089,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "$100-$200+/mo"
       },
       {
@@ -1257,35 +1167,20 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "Northbeam entry",
         "pixelTracker": "N/A",
         "competitor": "$100-$200+/mo"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
       "choosePT": [
         "You need pixels installed across multiple platforms",
-        "Budget under $50/mo for tracking tools",
+        "Focused on pixel setup rather than attribution analysis for tracking tools",
         "You don't need cross-platform attribution yet",
         "You want a no-code, 5-minute setup"
       ],
@@ -1311,7 +1206,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Is Northbeam worth $100+/mo for a small store?",
-        "a": "For stores spending under $5k/mo on ads, Northbeam's attribution insights usually don't justify the cost. At that spend level, the individual platform dashboards (Meta Ads Manager, Google Ads) provide sufficient reporting. Pixel Tracker at $7-$29/mo covers the pixel installation layer."
+        "a": "Compare the subscription cost with the decisions you need multi-touch attribution to support. Individual platform dashboards may be enough for a simpler ad setup. Pixel Tracker is intended for pixel installation rather than attribution analysis; its launch price is not confirmed."
       },
       {
         "q": "Is Pixel Tracker available on the Shopify App Store?",
@@ -1328,7 +1223,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides/roas-calculation"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -1352,7 +1247,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "$24-$120+/mo"
       },
       {
@@ -1430,6 +1325,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "Lifetimely Starter",
         "pixelTracker": "N/A",
         "competitor": "$24/mo"
@@ -1443,33 +1343,13 @@ export const vsComparisonPages: VsComparisonPage[] =
         "plan": "Lifetimely Advanced",
         "pixelTracker": "N/A",
         "competitor": "$120+/mo"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
       "choosePT": [
         "You need ad pixels installed across multiple platforms",
         "You want a unified dashboard for pixel management",
-        "Budget under $50/mo for tracking tools",
+        "Focused on pixel setup rather than attribution analysis for tracking tools",
         "You don't need profit analytics yet"
       ],
       "chooseCompetitor": [
@@ -1511,7 +1391,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides/roas-calculation"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -1535,7 +1415,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "Free (your time)"
       },
       {
@@ -1623,29 +1503,14 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "DIY (your time)",
         "pixelTracker": "N/A",
         "competitor": "Free (1-7 hours setup)"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
@@ -1677,7 +1542,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "What if I only use one ad platform?",
-        "a": "For a single platform with no plans to expand, DIY is perfectly reasonable and costs nothing. Pixel Tracker's Free plan ($0/mo for 1 pixel) is also an option if you want the dashboard and future flexibility without monthly cost."
+        "a": "A single-platform setup may be manageable through that platform's Shopify integration or a carefully tested manual installation. Pixel Tracker is prelaunch, so check its confirmed plan limits and pricing when the listing is available before choosing it."
       },
       {
         "q": "Is Pixel Tracker available on the Shopify App Store?",
@@ -1694,7 +1559,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/guides"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       },
       {
@@ -1718,7 +1583,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "quickComparison": [
       {
         "feature": "Monthly cost",
-        "pixelTracker": "$0-$29/mo",
+        "pixelTracker": "Not confirmed",
         "competitor": "Free (CAPI), Free (sGTM), Free (native), or $225+ (Elevar)"
       },
       {
@@ -1786,6 +1651,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     ],
     "pricingBreakdown": [
       {
+        "plan": "Pixel Tracker launch plans",
+        "pixelTracker": "Not confirmed; billed through Shopify",
+        "competitor": "N/A"
+      },
+      {
         "plan": "Facebook CAPI (DIY)",
         "pixelTracker": "N/A",
         "competitor": "Free (server hosting costs vary)"
@@ -1804,26 +1674,6 @@ export const vsComparisonPages: VsComparisonPage[] =
         "plan": "Elevar",
         "pixelTracker": "N/A",
         "competitor": "$225+/mo"
-      },
-      {
-        "plan": "Pixel Tracker Free",
-        "pixelTracker": "$0/mo (1 pixel)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Starter",
-        "pixelTracker": "$7/mo (3 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Growth",
-        "pixelTracker": "$15/mo (10 pixels)",
-        "competitor": "N/A"
-      },
-      {
-        "plan": "Pixel Tracker Pro",
-        "pixelTracker": "$29/mo (unlimited)",
-        "competitor": "N/A"
       }
     ],
     "whoShouldChoose": {
@@ -1831,7 +1681,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "You want server-side CAPI and TikTok Events API without technical setup",
         "You advertise on Meta and TikTok and want both covered simply",
         "You want browser + server deduplication handled automatically",
-        "Budget under $50/mo and no developer on staff"
+        "Focused on pixel setup rather than attribution analysis and no developer on staff"
       ],
       "chooseCompetitor": [
         "You need server-side for Google Ads (use sGTM)",
@@ -1876,7 +1726,7 @@ export const vsComparisonPages: VsComparisonPage[] =
         "href": "/pixel-tracker/tiktok-pixel/server-side"
       },
       {
-        "label": "Tracking cost calculator",
+        "label": "Tracking coverage calculator",
         "href": "/tools/pixel-tracking-calculator"
       }
     ]

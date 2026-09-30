@@ -6,7 +6,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/tools", {
   title: "Free Tools for Shopify Merchants | Appnary",
   description:
-    "Free calculators and tools for Shopify merchants: pixel tracking cost calculator and pixel health check. No signup required.",
+    "Free calculators and tools for Shopify merchants: pixel tracking coverage calculator and pixel health check. No signup required.",
   openGraph: {
     title: "Free Tools for Shopify Merchants",
     description:
@@ -18,9 +18,9 @@ export const metadata: Metadata = withPageSeo("/tools", {
 
 const tools = [
   {
-    title: "Pixel Tracking Cost & Coverage Calculator",
+    title: "Pixel Tracking Coverage Calculator",
     description:
-      "Estimate your recommended plan, tracking coverage score, and conversions missed from browser-only pixels.",
+      "Review your selected platforms, tracking coverage score, and conversions missed from browser-only pixels.",
     href: "/tools/pixel-tracking-calculator",
     icon: Calculator,
   },
