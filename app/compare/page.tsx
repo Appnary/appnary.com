@@ -6,11 +6,11 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/compare", {
   title: "Shopify Pixel Tracking Software: Compare Options | Appnary",
   description:
-    "Compare Shopify pixel tracking software, apps, DIY theme setup, and attribution tools. See Pixel Tracker features, pricing, and side-by-side comparisons.",
+    "Compare Shopify pixel tracking software, apps, DIY theme setup, and attribution tools. Review category fit, setup options, and app-specific billing through Shopify.",
   openGraph: {
     title: "Shopify Pixel Tracking Software: Compare Options",
     description:
-      "Compare Shopify pixel tracking software, apps, DIY setup, and attribution tools, with pricing details.",
+      "Compare Shopify pixel tracking software, apps, DIY setup, and attribution tools, with category guidance and app-specific billing through Shopify.",
     url: "https://appnary.com/compare",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
