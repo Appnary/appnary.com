@@ -16,15 +16,15 @@ export const metadata: Metadata = withPageSeo("/vs/infinite-pixel-alternative", 
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: false },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: true },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: true },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: true },
-  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Free plan for live stores", pixelTracker: "Not confirmed", competitor: true },
   { feature: "4 pricing tiers matched to usage", pixelTracker: "Not confirmed", competitor: true },
 ];
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Does Infinite support Google Ads?",
-    a: "No. Infinite covers Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter), but not Google Ads or LinkedIn. Pixel Tracker supports all seven, including Google Ads and LinkedIn.",
+    a: "No. Infinite covers Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter), but not Google Ads or LinkedIn. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Which has more reviews?",
@@ -60,14 +60,14 @@ const faqs = [
 ];
 
 const overview = [
-  "Infinite Pixels and Pixel Tracker are both no-code pixel installers built for Shopify, injecting tracking pixels via ScriptTags and forwarding events server-side so ad platforms keep receiving accurate conversion data despite ad blockers and browser tracking restrictions.",
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   "The biggest difference between them isn't features — it's track record and platform breadth. Infinite Pixels has been on the Shopify App Store long enough to accumulate 248 reviews at a 4.9★ average, the strongest review history of any app in this comparison series, but it covers five ad platforms rather than Pixel Tracker's seven, leaving out Google Ads and LinkedIn.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Infinite Pixels supports Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter). It doesn't support Google Ads or LinkedIn's Insight Tag, both of which Pixel Tracker includes. For a store that only advertises on social platforms, this gap doesn't matter; for one running Google Ads or B2B LinkedIn campaigns, it does.",
+    body: "Infinite Pixels supports Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter). For a store that only advertises on social platforms, this gap doesn't matter; for one running Google Ads or B2B LinkedIn campaigns, it does. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Review history and reliability signal",
@@ -75,20 +75,19 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Both apps forward events server-side in addition to the browser pixel. Neither app's marketing distinguishes itself strongly here — the practical difference for most merchants comes down to platform coverage and pricing rather than the CAPI implementation itself.",
+    body: "Neither app's marketing distinguishes itself strongly here — the practical difference for most merchants comes down to platform coverage and pricing rather than the CAPI implementation itself. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Setup and installation",
-    body: "Both are marketed as no-code installs via Shopify ScriptTags, meaning neither requires editing theme files or hiring a developer. A merchant switching between them just re-enters pixel IDs in the new app's dashboard.",
+    body: "Pixel Tracker uses a theme app extension in its current implementation. App embed activation and event testing are required; it is not available to install yet. Check the available provider's own setup instructions.",
   }
 ];
 
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You run Google Ads or LinkedIn campaigns alongside Meta and TikTok",
-  "You want the broadest platform coverage from one dashboard (7 platforms vs. Infinite's 5)",
-  "You're comfortable choosing a newer app in exchange for wider platform support",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -98,7 +97,7 @@ const chooseWhenCompetitor = [
 
 const verdict = [
   "Infinite has by far the strongest review track record of any app in this comparison — 248 reviews at a 4.9★ average — which is a real signal of reliability that a pre-launch app like Pixel Tracker can't yet match.",
-  "If you also run Google Ads or LinkedIn campaigns, Infinite doesn't cover them — Pixel Tracker supports both, alongside Meta, TikTok, Snapchat, Pinterest, and X, from the same dashboard."
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
 ];
 
 export default function InfinitePixelVsPage() {
@@ -110,15 +109,13 @@ export default function InfinitePixelVsPage() {
       competitorPricing="Free – $19.99/mo"
       competitorBestFor="Stores focused on Meta and TikTok specifically, comfortable without Google Ads or LinkedIn pixel support."
       competitorHref="https://apps.shopify.com/infinite-fb-tiktok-pixels"
-      positioning="Both connect ad-platform pixels to Shopify without touching theme code. Here's how Infinite's proven track record and narrower platform list compares to Pixel Tracker's broader coverage."
+      positioning="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Also supports Google Ads and LinkedIn, which Infinite doesn't",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
         "Far smaller review history since it's pre-launch, vs. Infinite's 248 reviews and 4.9★ rating",
       ]}
@@ -128,7 +125,7 @@ export default function InfinitePixelVsPage() {
       ]}
       competitorCons={[
         "No Google Ads or LinkedIn pixel support",
-        "Narrower platform coverage (5 platforms vs. Pixel Tracker's 7)",
+        "Its listed platforms exclude Google Ads and LinkedIn",
       ]}
       chooseWhenPixelTracker={chooseWhenPixelTracker}
       chooseWhenCompetitor={chooseWhenCompetitor}

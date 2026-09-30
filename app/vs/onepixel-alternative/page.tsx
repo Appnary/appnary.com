@@ -16,16 +16,16 @@ export const metadata: Metadata = withPageSeo("/vs/onepixel-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: true },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: true },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: true },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: true },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: true },
   { feature: "Microsoft/Bing Ads tag", pixelTracker: false, competitor: true },
-  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
+  { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Pricing tiered by exact pixel count", pixelTracker: "Not confirmed", competitor: true },
 ];
 
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker support Microsoft/Bing Ads?",
-    a: "Not currently. If Microsoft Ads pixel tracking is a requirement, OnePixel supports it and Pixel Tracker doesn't.",
+    a: "Not currently. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Which is cheaper?",
@@ -61,17 +61,17 @@ const faqs = [
 
 const overview = [
   "Compare the extra platforms each app supports. Pixel Tracker's launch prices are not confirmed yet.",
-  "OnePixel supports Microsoft/Bing Ads, which Pixel Tracker doesn't. Pixel Tracker supports LinkedIn's Insight Tag, which OnePixel doesn't. Everything else — Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, and X — is covered by both.",
+  "Everything else — Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, and X — is covered by both. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage: the one-for-one swap",
-    body: "Both apps cover six identical platforms: Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, and X (Twitter). Beyond that, OnePixel adds Microsoft/Bing Ads while Pixel Tracker adds LinkedIn's Insight Tag. Which one you need depends entirely on whether your paid search runs through Bing or your B2B campaigns run through LinkedIn.",
+    body: "OnePixel includes Microsoft/Bing Ads. Pixel Tracker has a planned multi-platform scope, but its launch integrations are not verified. Check the available app against your actual ad mix.",
   },
   {
     title: "Server-side tracking (CAPI / Events API)",
-    body: "Both apps support server-side event forwarding alongside the browser pixel, which is standard practice now for recovering conversions lost to ad blockers and privacy browser settings. Neither app differentiates meaningfully on CAPI quality — the decision comes down to platform coverage and price.",
+    body: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Ease of switching",
@@ -82,7 +82,8 @@ const featureBreakdown = [
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You run LinkedIn campaigns and need the Insight Tag",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -91,7 +92,7 @@ const chooseWhenCompetitor = [
 ];
 
 const verdict = [
-  "The real difference is platform coverage: OnePixel supports Microsoft/Bing Ads, which Pixel Tracker doesn't, but Pixel Tracker supports LinkedIn's Insight Tag, which OnePixel doesn't."
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
 ];
 
 export default function OnePixelVsPage() {
@@ -109,9 +110,7 @@ export default function OnePixelVsPage() {
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Supports LinkedIn Insight Tag, which OnePixel doesn't",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
         "Doesn't support Microsoft/Bing Ads",
       ]}

@@ -7,7 +7,7 @@ const integrations = [
   {
     name: "Facebook / Meta Pixel",
     slug: "meta-pixel",
-    blurb: "Conversions API plus browser pixel for Facebook and Instagram campaigns.",
+    blurb: "Planned browser pixel setup for Facebook and Instagram; CAPI is unverified.",
   },
   {
     name: "Google Ads",
@@ -17,7 +17,7 @@ const integrations = [
   {
     name: "TikTok Pixel",
     slug: "tiktok-pixel",
-    blurb: "Events API plus browser pixel for TikTok ad campaigns.",
+    blurb: "Planned TikTok browser pixel setup; Events API delivery is unverified.",
   },
   {
     name: "Snapchat Pixel",
@@ -43,38 +43,38 @@ const integrations = [
 
 const steps = [
   {
-    title: "Install Pixel Tracker",
+    title: "Check launch availability",
     description:
-      "Add Pixel Tracker to your Shopify store from your admin dashboard. No theme code to touch.",
+      "Pixel Tracker is prelaunch. Join the waitlist and check the launch listing for verified integrations.",
   },
   {
     title: "Paste in your pixel IDs",
     description:
-      "Add the pixel or tag ID for each ad platform you use. Connect one platform or all seven.",
+      "Add the pixel or tag ID for each ad platform you use. Confirm platform availability in the launch documentation.",
   },
   {
-    title: "Done",
+    title: "Activate and test",
     description:
-      "Pixel Tracker injects every pixel automatically via Shopify ScriptTags and starts sending events.",
+      "The current approach uses a theme app extension. Activate its app embed in Shopify's theme editor, then verify actual event delivery.",
   },
 ];
 
 const faqs = [
   {
     q: "Do I need a separate app for each ad platform?",
-    a: "No. Pixel Tracker connects Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X (Twitter) from a single dashboard, so one installation covers every platform you advertise on.",
+    a: "Pixel Tracker is intended to manage multiple platforms from one Shopify app, but launch coverage is still being verified. It is not available to install.",
   },
   {
     q: "Can I use Pixel Tracker alongside Shopify's native Facebook & Instagram channel?",
-    a: "Yes, though most merchants pick one or the other for Meta tracking to avoid duplicate events. Pixel Tracker's advantage is covering six other platforms from the same dashboard, not just Meta.",
+    a: "Pixel Tracker is not available to install. With any future integration, check your existing Meta sender before adding another, then verify duplicate handling.",
   },
   {
     q: "Which platforms support server-side tracking?",
-    a: "Facebook Conversions API and TikTok Events API today. Google Ads, Snapchat, Pinterest, LinkedIn, and X run as standard browser pixels through Pixel Tracker, with no server-side option yet.",
+    a: "Pixel Tracker is prelaunch and not available to install. Its launch integrations are still being verified; server-side event delivery is not a confirmed feature.",
   },
   {
     q: "What happens if I stop using a platform later?",
-    a: "Remove the pixel ID from your Pixel Tracker dashboard and the ScriptTag for that platform is removed. Your other integrations keep running normally.",
+    a: "For an installed integration, disable the intended platform in its settings and verify that its requests stop. Pixel Tracker launch controls and behavior still need verification.",
   },
   {
     q: "Is there a limit to how many platforms I can connect?",
@@ -106,7 +106,7 @@ const collectionJsonLd = {
   "@type": "CollectionPage",
   name: "Shopify Pixel Integrations",
   description:
-    "Tracking pixel integrations available in Pixel Tracker, one Shopify dashboard connecting seven ad platforms.",
+    "Guides to intended Pixel Tracker integrations. The app is in development; launch platform coverage is still being verified.",
   url: `${baseUrl}/integrations`,
   mainEntity: {
     "@type": "ItemList",
@@ -166,11 +166,7 @@ export function IntegrationsHub() {
           </span>
         </h1>
         <p className="mt-4 text-lg text-muted-foreground-strong">
-          Most Shopify stores advertise on more than one platform. If your
-          tracking only covers one, every other channel is a guess. Pixel
-          Tracker connects tracking pixels for seven ad platforms from a
-          single dashboard, so every dollar of ad spend gets measured the
-          same way.
+          Explore setup and verification guides for the platforms in Pixel Tracker's intended scope. The app is in development; use an available integration if you need tracking today.
         </p>
       </section>
 
@@ -251,12 +247,7 @@ export function IntegrationsHub() {
               Can I connect multiple platforms at once?
             </h2>
             <p className="mt-3 text-base text-muted-foreground-strong leading-relaxed">
-              Yes. Pixel Tracker isn&apos;t built around one platform, it&apos;s
-              built to run all of them from the same dashboard. Add Meta,
-              Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X
-              together on the same store, and manage every pixel ID in one
-              place instead of juggling separate apps or theme edits for
-              each platform.
+              The intended platform list includes Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X. Pixel Tracker is in development; confirm launch coverage before relying on any integration.
             </p>
           </div>
           <div>
@@ -264,11 +255,7 @@ export function IntegrationsHub() {
               Does adding more pixels slow down my store?
             </h2>
             <p className="mt-3 text-base text-muted-foreground-strong leading-relaxed">
-              No. Pixel Tracker injects every pixel through Shopify&apos;s
-              native ScriptTag API, which loads scripts asynchronously
-              instead of blocking page rendering. Adding a second, third, or
-              seventh platform doesn&apos;t add theme code, and it
-              doesn&apos;t slow down your storefront or checkout.
+              Every browser tag can add loading and execution work. Measure your actual store before and after changes, and remove duplicate tags. A Shopify theme app extension does not eliminate that cost.
             </p>
           </div>
         </div>

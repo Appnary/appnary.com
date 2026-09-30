@@ -3,80 +3,60 @@ import { PixelGuide } from "@/components/pixel-guide";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/pixel-tracker/snapchat-pixel", {
-  title: "Snapchat Pixel Setup for Shopify | Pixel Tracker | Appnary",
-  description:
-    "How to connect a Snapchat Pixel to your Shopify store with Pixel Tracker. No theme code required.",
-  keywords: [
-    "Snapchat Pixel Shopify",
-    "Snapchat Pixel setup",
-    "Shopify Snapchat tracking",
-    "Snap Pixel Shopify install",
-  ],
-  openGraph: {
-    title: "Snapchat Pixel Setup for Shopify | Pixel Tracker",
-    description:
-      "Connect a Snapchat Pixel to your Shopify store with Pixel Tracker. No code required.",
-    url: "https://appnary.com/pixel-tracker/snapchat-pixel",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-  },
+  title: "Snapchat Pixel on Shopify: Setup and Event Checks | Appnary",
+  description: "Prepare a Snapchat tracking setup, verify identifiers and test purchases, and check consent. Pixel Tracker is still in development.",
 });
 
 const steps = [
   {
-    title: "Get your Snapchat Pixel ID",
-    body: "In Snapchat Ads Manager, go to Business Details → Pixel (or Events Manager) and copy your Pixel ID.",
+    "title": "Confirm the Snap Pixel ID",
+    "body": "Use your Snapchat ad account to identify the data source and the conversion action you intend to measure. Test the path from a Snap ad landing page through checkout. A working landing-page pixel does not establish that the checkout integration sends PURCHASE."
   },
   {
-    title: "Open the Pixel Tracker dashboard",
-    body: "From your Shopify admin, open Pixel Tracker's dashboard.",
+    "title": "Choose an available Shopify integration",
+    "body": "Check the provider's current Shopify setup instructions and checkout coverage. Pixel Tracker is not available to install yet. Do not remove working tracking to switch to a prelaunch app."
   },
   {
-    title: "Paste the Pixel ID",
-    body: "Enter your Snapchat Pixel ID in the Snapchat field and save. No theme editing is required.",
+    "title": "Check activation and consent",
+    "body": "Follow the chosen integration's activation instructions. A theme app embed must be enabled in the theme editor; it does not establish checkout coverage. Review consent settings before testing."
   },
   {
-    title: "Confirm events are firing",
-    body: "Pixel Tracker injects the pixel automatically on every storefront page via Shopify ScriptTags. Use the Snap Pixel Helper browser extension to confirm it's firing correctly.",
+    "title": "Verify events and purchase details",
+    "body": "Use Snap Pixel Helper to inspect browser activity and Snapchat Events Manager to check receipt. Complete a test purchase and compare event type, price, currency, and transaction identifier against the order. A page-view event alone does not prove purchase tracking."
   },
+  {
+    "title": "Inspect server delivery separately",
+    "body": "If your chosen integration includes server delivery, check it separately using the provider's diagnostics and deduplication instructions. Pixel Tracker server-side delivery is not confirmed."
+  }
 ];
-
 const faqs = [
   {
-    q: "What does the Snapchat Pixel track?",
-    a: "Visitor actions like page views, add-to-cart, and purchases, so Snapchat ad campaigns can measure results and retarget visitors.",
+    "q": "Can I connect Snapchat with Pixel Tracker today?",
+    "a": "Pixel Tracker is in development and not available to install. Launch platform coverage is still being verified."
   },
   {
-    q: "Do I need to edit my Shopify theme to add the Snapchat Pixel?",
-    a: "No. Pixel Tracker injects the pixel automatically via Shopify ScriptTags once you paste your Pixel ID.",
+    "q": "Does installing a pixel guarantee purchase tracking?",
+    "a": "No. A base tag can load while checkout events are missing or incorrect. Test a complete order and confirm the intended conversion event, value, and currency."
   },
   {
-    q: "Can I use the Snapchat Pixel alongside other platforms?",
-    a: "Yes. Pixel Tracker lets you connect Snapchat alongside Facebook, Google, TikTok, Pinterest, LinkedIn, and X pixels from the same dashboard.",
+    "q": "Does Pixel Tracker provide server-side tracking?",
+    "a": "Server-side delivery and browser/server deduplication are not confirmed launch features."
   },
   {
-    q: "How much does Pixel Tracker cost?",
-    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
-  },
-  {
-    q: "Is Pixel Tracker available on the Shopify App Store yet?",
-    a: "It's available soon on the Shopify App Store. Join the waitlist at appnary.com for early access.",
-  },
+    "q": "How will Pixel Tracker billing work?",
+    "a": "Pricing varies by Shopify app and billing will be through Shopify. Pixel Tracker launch prices and plan limits are not confirmed."
+  }
 ];
 
-export default function SnapchatPixelGuidePage() {
-  return (
-    <PixelGuide
-      slug="snapchat-pixel"
-      platformName="Snapchat Pixel"
-      h1="How to Set Up the Snapchat Pixel on Shopify with Pixel Tracker"
-      intro="Connect your Snapchat Pixel to your Shopify store in a few minutes — no theme code changes required."
-      steps={steps}
-      faqs={faqs}
+export default function PlatformSetupGuide() {
+  return <PixelGuide
+    slug="snapchat-pixel" platformName="Snapchat" h1="Snapchat Pixel on Shopify: Setup and Event Checks"
+    intro="Prepare a Snapchat tracking setup, verify identifiers and test purchases, and check consent. Pixel Tracker is still in development." steps={steps} faqs={faqs}
       relatedLinks={[
+        { label: "Official Snapchat tracking documentation", href: "https://businesshelp.snapchat.com/s/topic/0TO8b000000P7mXGAS/integration-methods?language=en_US" },
         { label: "Snapchat Pixel troubleshooting", href: "/pixel-tracker/snapchat-pixel/troubleshooting" },
         { label: "Snapchat Pixel events explained", href: "/pixel-tracker/snapchat-pixel/events" },
         { label: "Snapchat server-side tracking", href: "/pixel-tracker/snapchat-pixel/server-side" },
       ]}
-    />
-  );
+  />;
 }

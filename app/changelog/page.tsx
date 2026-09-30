@@ -26,10 +26,10 @@ const entries: ChangelogEntry[] = [
   {
     version: "1.0.0",
     date: "2026-07-29",
-    title: "Pixel Tracker Launch",
+    title: "Pixel Tracker Launch Preview",
     changes: [
       "Multi-platform pixel tracking for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn",
-      "Server-side tracking support for Facebook Conversions API and TikTok Events API",
+      "Meta CAPI and TikTok Events API remain unverified launch capabilities",
       "Shopify dashboard integration for pixel management",
       "Launch plan limits to be confirmed",
       "App-specific pricing and billing through Shopify; launch plans to be confirmed",

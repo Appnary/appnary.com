@@ -241,7 +241,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker calculate ROAS?",
-    a: "No. Pixel Tracker installs and manages the ad-platform pixels that feed accurate ad-spend and conversion data into tools like the ones in this list — it doesn't calculate ROAS itself. See the note below for how the two fit together.",
+    a: "No. Pixel Tracker is a prelaunch pixel-configuration app, not a ROAS reporting tool. Its launch event coverage is not confirmed.",
   },
   {
     q: "Can I switch between these ROAS calculators without losing historical data?",
@@ -267,7 +267,7 @@ export default function BestRoasCalculatorsPage() {
       calloutBox={{
         heading: "Where Pixel Tracker fits in",
         body: [
-          "Pixel Tracker isn't a ROAS calculator, and it isn't ranked above as one — that would misrepresent what it does. It's the pixel/data layer: the app that installs and manages Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X tracking pixels on your Shopify store, with server-side event forwarding so conversion data stays accurate even when browser tracking gets blocked.",
+          "It's the pixel/data layer: the app that installs and manages Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X tracking pixels on your Shopify store, with server-side event forwarding so conversion data stays accurate even when browser tracking gets blocked. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
           "That matters for this category specifically because every ROAS calculator above depends on accurate conversion data reaching it. A profit-adjusted ROAS number is only as good as the ad-spend and conversion data feeding it — if a pixel is misfiring or missing server-side events, the ROAS calculator on top of it will produce a precise-looking number built on incomplete data.",
         ],
         ctaHref: "/pixel-tracker",

@@ -22,7 +22,7 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "No-code pixel installer covering 7 ad platforms with server-side CAPI. Launch pricing is not confirmed.",
+      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
     pricing: "Launch pricing not confirmed",
     bestFor:
       "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
@@ -141,7 +141,7 @@ const comparisonRows = [
   {
     feature: "No-code setup",
     values: {
-      "pixel-tracker": true,
+      "pixel-tracker": "Not verified",
       pixee: true,
       shoptok: true,
       multipixels: true,
@@ -163,7 +163,7 @@ const comparisonRows = [
   {
     feature: "Server-side event forwarding",
     values: {
-      "pixel-tracker": true,
+      "pixel-tracker": "Not verified",
       pixee: true,
       shoptok: true,
       multipixels: true,
@@ -198,7 +198,7 @@ const comparisonRows = [
 const analysis = [
   {
     title: "\"Ad tracking\" spans two genuinely different jobs",
-    body: "The first job is getting a pixel to fire correctly and forward the event server-side — that's what Pixel Tracker, Pixee, Shoptok, and MultiPixels do. The second job is turning that raw event data into attribution reports, blended ROAS, and cross-channel dashboards — that's what Triple Whale does, and partly what Elevar does for technical teams. Confusing the two leads to overpaying: buying Triple Whale to fix a broken pixel, or expecting a $10/mo pixel installer to give you multi-touch attribution.",
+    body: "The second job is turning that raw event data into attribution reports, blended ROAS, and cross-channel dashboards — that's what Triple Whale does, and partly what Elevar does for technical teams. Confusing the two leads to overpaying: buying Triple Whale to fix a broken pixel, or expecting a $10/mo pixel installer to give you multi-touch attribution. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "The price gap between installers and attribution platforms is real, not a rounding error",
@@ -227,7 +227,7 @@ const buyingGuide = [
 const faqs = [
   {
     q: "What's the difference between a pixel installer and an attribution platform?",
-    a: "A pixel installer (Pixel Tracker, Pixee, Shoptok, MultiPixels) gets an ad platform's tracking code firing correctly on your store and forwards conversion events server-side. An attribution platform (Triple Whale) sits on top of that data to report which channels and campaigns actually drove revenue. You typically need the first before the second is useful.",
+    a: "An attribution platform (Triple Whale) sits on top of that data to report which channels and campaigns actually drove revenue. You typically need the first before the second is useful. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Why is Triple Whale so much more expensive than the pixel installers on this list?",
@@ -235,7 +235,7 @@ const faqs = [
   },
   {
     q: "Can I use Pixel Tracker and Triple Whale together?",
-    a: "Yes. Pixel Tracker (or any installer in this list) handles getting pixels to fire correctly; Triple Whale can then ingest that cleaner event data for its attribution and reporting layer. They solve different problems and aren't competing for the same budget line.",
+    a: "Pixel Tracker is not available yet, and interoperability is not verified. For an available tracking app, check the reporting tool's integration requirements and validate the event flow before using them together.",
   },
   {
     q: "Is Elevar worth it for a smaller Shopify store?",

@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/vs/pixee-alternative", {
   title: "Pixel Tracker vs Pixee | Shopify Pixel Tracking Comparison | Appnary",
   description:
-    "How Pixel Tracker compares to Pixee for Shopify pixel tracking — platform support, feed sync features, and server-side tracking, compared honestly.",
+    "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   openGraph: {
     title: "Pixel Tracker vs Pixee",
     description:
@@ -16,15 +16,15 @@ export const metadata: Metadata = withPageSeo("/vs/pixee-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: false },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: false },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: true },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: false },
-  { feature: "Server-side event forwarding (CAPI / Events API) confirmed", pixelTracker: true, competitor: "varies" },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "Server-side event forwarding (CAPI / Events API) confirmed", pixelTracker: "Not confirmed", competitor: "varies" },
   { feature: "Free plan available", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Product-feed sync + AI ad diagnostics bundled", pixelTracker: false, competitor: true },
 ];
@@ -42,11 +42,11 @@ const faqs = [
   },
   {
     q: "Does Pixee support Google Ads or Snapchat?",
-    a: "No — Pixee covers Facebook, Instagram, TikTok, and Pinterest. Pixel Tracker additionally supports Google Ads, Snapchat, LinkedIn, and X (Twitter).",
+    a: "No — Pixee covers Facebook, Instagram, TikTok, and Pinterest. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Does Pixee support server-side tracking (CAPI)?",
-    a: "It isn't clearly documented in Pixee's own marketing. Pixel Tracker explicitly supports Facebook Conversions API and TikTok Events API.",
+    a: "It isn't clearly documented in Pixee's own marketing. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "Is Pixee cheaper than Pixel Tracker?",
@@ -60,29 +60,29 @@ const faqs = [
 
 const overview = [
   "Pixee is less a pure pixel connector and more a small Meta/TikTok ads toolkit — it bundles product-feed sync and AI-assisted ad diagnostics alongside pixel installation, on top of Facebook, Instagram, TikTok, and Pinterest tracking. Pixel Tracker focuses purely on getting more ad platforms' pixels firing reliably, without the extra ads-management tooling.",
-  "That difference in scope shapes everything else: Pixee covers fewer ad platforms and doesn't clearly document whether its server-side CAPI support is confirmed. Pixel Tracker is narrower in feature scope but broader in platform coverage and explicit about its CAPI/Events API support.",
+  "That difference in scope shapes everything else: Pixee covers fewer ad platforms and doesn't clearly document whether its server-side CAPI support is confirmed. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Pixee supports Facebook, Instagram, TikTok, and Pinterest. It doesn't support Google Ads, Snapchat, LinkedIn, or X (Twitter) — all four of which Pixel Tracker covers. A store running ads beyond Meta, TikTok, and Pinterest will hit a wall with Pixee.",
+    body: "Pixee supports Facebook, Instagram, TikTok, and Pinterest. A store running ads beyond Meta, TikTok, and Pinterest will hit a wall with Pixee. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Product-feed sync and AI ad diagnostics",
     body: "This is Pixee's main differentiator: beyond installing pixels, it also syncs your product feed and offers AI-assisted diagnostics for ad performance issues. Pixel Tracker doesn't offer either of these — it's built to do one thing, pixel connection, rather than double as an ads-management tool.",
   },
   {
-    title: "Server-side tracking (CAPI) — confirmed vs. unclear",
-    body: "Pixel Tracker explicitly documents Facebook Conversions API and TikTok Events API support. Pixee's own marketing doesn't clearly confirm whether CAPI/server-side event forwarding is included, which matters for accurate conversion tracking as ad blockers and browser restrictions cut into client-side pixel data.",
+    title: "Server-side tracking: verify before choosing",
+    body: "Pixee's own marketing doesn't clearly confirm whether CAPI/server-side event forwarding is included, which matters for accurate conversion tracking as ad blockers and browser restrictions cut into client-side pixel data. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   }
 ];
 
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You need Google Ads, Snapchat, LinkedIn, or X pixel tracking",
-  "You want confirmed, explicit CAPI/server-side tracking support",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -92,7 +92,7 @@ const chooseWhenCompetitor = [
 
 const verdict = [
   "Pixee is less a pure pixel connector and more a small Meta/TikTok ads toolkit — it bundles product-feed sync and AI-assisted ad diagnostics alongside pixel installation, features Pixel Tracker doesn't offer.",
-  "In exchange, it covers fewer platforms (Facebook, Instagram, TikTok, and Pinterest only) and doesn't clearly document server-side CAPI support the way Pixel Tracker does."
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
 ];
 
 export default function PixeeVsPage() {
@@ -110,10 +110,7 @@ export default function PixeeVsPage() {
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-        "Supports Google Ads, Snapchat, LinkedIn, and X, which Pixee doesn't",
-        "Server-side CAPI/Events API support is explicit and confirmed, not ambiguous",
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
 
       ]}
@@ -123,7 +120,7 @@ export default function PixeeVsPage() {
       ]}
       competitorCons={[
         "Narrower platform coverage — no Google Ads, Snapchat, LinkedIn, or X",
-        "Server-side (CAPI) support isn't clearly documented in its own marketing, unlike Pixel Tracker's explicit CAPI/Events API support",
+        "Pixee's marketing does not clearly document its server-side event coverage; check current provider documentation.",
       ]}
       chooseWhenPixelTracker={chooseWhenPixelTracker}
       chooseWhenCompetitor={chooseWhenCompetitor}

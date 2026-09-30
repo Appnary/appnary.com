@@ -13,7 +13,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/docs", {
   title: "Pixel Tracker Docs: Setup, Platforms & FAQs | Appnary",
   description:
-    "How Pixel Tracker connects Meta, Google Ads, TikTok, and more on Shopify. Setup steps, platform coverage, pricing, and FAQs.",
+    "Pixel Tracker is a prelaunch Shopify pixel-configuration app. Intended platform coverage is still being verified. Billing will be through Shopify.",
   openGraph: {
     title: "Pixel Tracker Docs: Setup, Platforms & FAQs",
     description:
@@ -57,23 +57,23 @@ const sections = [
 const howItWorksSteps = [
   {
     n: "01",
-    title: "Install the app",
-    body: "Install from the Shopify App Store when Pixel Tracker is live (join the waitlist today). The app uses Shopify ScriptTags so pixels load on your storefront without theme edits.",
+    title: "Check launch availability",
+    body: "Pixel Tracker is not available to install yet. The current approach uses a Shopify theme app extension: activate the app embed in the theme editor and verify events before relying on tracking.",
   },
   {
     n: "02",
-    title: "Paste your Pixel IDs",
-    body: "Add the ID for each ad platform you run: Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), or LinkedIn. Enable only what you need.",
+    title: "Confirm launch integrations",
+    body: "Check the launch documentation for supported platforms before entering any IDs. A planned platform is not a verified integration.",
   },
   {
     n: "03",
     title: "Events fire on the storefront",
-    body: "Browser pixels fire automatically on storefront pages. For Meta and TikTok, you can also send Conversions API / Events API from the server so blocked browsers don't drop the purchase signal.",
+    body: "The current implementation loads browser tags through an app embed. Meta CAPI and TikTok Events API delivery are not confirmed launch features. A browser event does not prove server-side delivery.",
   },
   {
     n: "04",
     title: "Manage everything in one place",
-    body: "See which platforms are connected, turn them on or off, and keep IDs and tokens in one dashboard instead of scattering snippets across the theme.",
+    body: "The planned dashboard manages platform IDs. Saved settings must be checked against real events; server tokens and delivery are not confirmed features.",
   },
 ];
 
@@ -86,12 +86,12 @@ const setupSteps = [
   {
     n: "2",
     title: "Add each platform's Pixel ID",
-    body: "Open the dashboard and paste the Pixel ID (and access token where CAPI or Events API is enabled) for Meta, Google Ads, TikTok, or any other supported platform you use.",
+    body: "At launch, follow the verified setup instructions for each supported platform. Activate the app embed in Shopify's theme editor and confirm the destination ID before testing events.",
   },
   {
     n: "3",
     title: "Confirm events on a test visit",
-    body: "Load a product page and run a test purchase or Meta/TikTok event debugger. You should see the browser pixel fire; Meta and TikTok can also show the server-side twin when CAPI / Events API is configured.",
+    body: "Load a product page, add an item to the cart, and complete a test purchase. Verify each expected event and its destination in the platform's test tools. Check server events separately if your chosen integration provides them.",
   },
   {
     n: "4",
@@ -103,19 +103,19 @@ const setupSteps = [
 const faqs = [
   {
     q: "What does Pixel Tracker actually do?",
-    a: "It connects ad-platform pixels for Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn from one Shopify dashboard. It is not a heatmap or session-analytics product.",
+    a: "Pixel Tracker is a prelaunch pixel-configuration app. Its intended platforms include Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn. Launch coverage still needs verification.",
   },
   {
     q: "Does Pixel Tracker slow down my Shopify store?",
-    a: "Pixels load through Shopify ScriptTags and run asynchronously. You're connecting the same platform tags you would install by hand, without stacking duplicate theme snippets.",
+    a: "The current approach loads browser tags through a Shopify theme app extension. Measure performance on your actual store and check for duplicate tags; using an app does not remove a tag's loading cost.",
   },
   {
     q: "Does it use cookies?",
-    a: "Pixel Tracker injects the platform pixels you configure. Those platforms may set their own cookies. Pixel Tracker itself isn't a cookieless analytics suite and doesn't replace your consent setup.",
+    a: "Browser pixels may set platform cookies. Pixel Tracker is not a cookieless analytics suite; review the chosen integration and consent settings before collecting events.",
   },
   {
     q: "Is it GDPR and CCPA compliant?",
-    a: "You're still responsible for consent and disclosures for the ad pixels you enable. Pixel Tracker connects your existing platform pixels; it doesn't collect a separate visitor profile for Appnary analytics.",
+    a: "Review consent and disclosures for every integration you use. Pixel Tracker is in development; its privacy behavior needs validation before launch.",
   },
   {
     q: "How much does it cost?",
@@ -127,7 +127,7 @@ const faqs = [
   },
   {
     q: "Does it support server-side events?",
-    a: "Yes for Meta Conversions API and TikTok Events API. Google Ads, Snapchat, Pinterest, X, and LinkedIn currently use the standard browser pixels only.",
+    a: "Pixel Tracker is prelaunch and not available to install. Its launch integrations are still being verified; server-side event delivery is not a confirmed feature.",
   },
   {
     q: "Will it conflict with Google Analytics or an existing Meta Pixel?",
@@ -143,17 +143,17 @@ const dashboardGuides = [
   {
     title: "Connected platforms",
     summary:
-      "Each supported network shows as connected or off. Enable only the platforms you advertise on so you aren't paying for unused pixel slots on higher tiers.",
+      "A saved platform ID does not prove events are arriving. Verify each intended integration independently; launch coverage and plan limits are not confirmed.",
   },
   {
     title: "Pixel status",
     summary:
-      "Use this as a quick health check: ID present, last known state, and whether server-side is configured for Meta or TikTok.",
+      "A saved ID is only a configuration check. Confirm actual delivery in the destination platform's test tools.",
   },
   {
     title: "Browser vs server-side",
     summary:
-      "Browser pixels cover every supported platform. Server-side today means Meta CAPI and TikTok Events API only. Don't assume Google Ads has a server twin yet.",
+      "Browser and server delivery need separate verification. Pixel Tracker's server-side integrations are not confirmed for launch.",
   },
   {
     title: "Per-store billing",

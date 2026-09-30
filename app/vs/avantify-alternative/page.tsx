@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/vs/avantify-alternative", {
   title: "Pixel Tracker vs Avantify | Shopify Pixel Tracking Comparison | Appnary",
   description:
-    "How Pixel Tracker compares to Avantify for Shopify pixel tracking — CAPI pricing, platform support, and free plan availability, compared honestly.",
+    "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   openGraph: {
     title: "Pixel Tracker vs Avantify",
     description:
@@ -16,15 +16,15 @@ export const metadata: Metadata = withPageSeo("/vs/avantify-alternative", {
 });
 
 const featureRows = [
-  { feature: "No theme code editing required", pixelTracker: true, competitor: true },
-  { feature: "Facebook/Meta pixel", pixelTracker: true, competitor: true },
-  { feature: "Google Ads tag", pixelTracker: true, competitor: false },
-  { feature: "TikTok pixel", pixelTracker: true, competitor: true },
-  { feature: "Snapchat pixel", pixelTracker: true, competitor: true },
-  { feature: "Pinterest tag", pixelTracker: true, competitor: true },
-  { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
-  { feature: "X (Twitter) pixel", pixelTracker: true, competitor: true },
-  { feature: "Server-side CAPI included at base price (no per-platform add-on fee)", pixelTracker: true, competitor: false },
+  { feature: "No theme code editing required", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Facebook/Meta pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Google Ads tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "TikTok pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Snapchat pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Pinterest tag", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "LinkedIn Insight Tag", pixelTracker: "Planned; not available", competitor: false },
+  { feature: "X (Twitter) pixel", pixelTracker: "Planned; not available", competitor: true },
+  { feature: "Server-side CAPI included at base price (no per-platform add-on fee)", pixelTracker: "Not confirmed", competitor: false },
   { feature: "Free plan available", pixelTracker: "Not confirmed", competitor: false },
   { feature: "Pricing based on number of pixels used", pixelTracker: "Not confirmed", competitor: false },
 ];
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "Does Avantify support Google Ads?",
-    a: "No — Avantify covers Meta, TikTok, Pinterest, Snapchat, and X. It doesn't support Google Ads or LinkedIn, both of which Pixel Tracker supports.",
+    a: "No — Avantify covers Meta, TikTok, Pinterest, Snapchat, and X. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     q: "How is Avantify's pricing structured?",
@@ -60,7 +60,7 @@ const faqs = [
 ];
 
 const overview = [
-  "Avantify and Pixel Tracker both offer server-side conversion tracking (CAPI) for Shopify stores, aimed at recovering ad data lost to browser tracking restrictions. The pricing philosophy is where they diverge sharply: Avantify prices by Shopify plan tier and charges extra per additional CAPI integration, while Pixel Tracker's launch plan terms are still unconfirmed.",
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   "Avantify's base price looks attractive at $5.99/mo, but that number doesn't include CAPI for more than the first platform integration — each additional server-side integration adds $3/mo. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.",
 ];
 
@@ -71,7 +71,7 @@ const featureBreakdown = [
   },
   {
     title: "Platform coverage",
-    body: "Avantify supports Meta, TikTok, Pinterest, Snapchat, and X. It doesn't support Google Ads or LinkedIn, both of which Pixel Tracker covers. Neither app supports Reddit or Microsoft/Bing Ads.",
+    body: "Avantify supports Meta, TikTok, Pinterest, Snapchat, and X. Neither app supports Reddit or Microsoft/Bing Ads. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
   },
   {
     title: "Total cost of ownership",
@@ -82,7 +82,8 @@ const featureBreakdown = [
 const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
-  "You need Google Ads or LinkedIn pixel tracking",
+  "You are researching a future pixel-configuration app and can wait for launch.",
+  "You will verify platform coverage and purchase events before replacing working tracking.",
 ];
 
 const chooseWhenCompetitor = [
@@ -92,7 +93,7 @@ const chooseWhenCompetitor = [
 ];
 
 const verdict = [
-  "Avantify doesn't support Google Ads or LinkedIn at all — Pixel Tracker supports both, alongside Meta, TikTok, Snapchat, Pinterest, and X."
+  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
 ];
 
 export default function AvantifyVsPage() {
@@ -104,18 +105,16 @@ export default function AvantifyVsPage() {
       competitorPricing="$5.99 – $12.99/mo + CAPI add-ons"
       competitorBestFor="Stores wanting a low entry price who are comfortable paying extra per additional CAPI integration."
       competitorHref="https://apps.shopify.com/avantify-multi-pixels"
-      positioning="Both offer server-side event forwarding for ad platforms. Compare Avantify's CAPI fees with your integration needs. Pixel Tracker's launch prices and plan inclusions are not confirmed."
+      positioning="Compare Avantify's CAPI fees with your integration needs. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}
       pricingRows={pricingRows}
       pricingNarrative={pricingNarrative}
-      pixelTrackerPros={[
-
-      ]}
+      pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
         "Still on the waitlist (not installable from the App Store yet)",
-        "Server-side events currently cover Meta and TikTok only",
+        "Server-side delivery is not confirmed",
       ]}
       competitorPros={[
         "Pricing tied to Shopify plan tier rather than pixel count may suit stores using many pixels on a Basic Shopify plan",

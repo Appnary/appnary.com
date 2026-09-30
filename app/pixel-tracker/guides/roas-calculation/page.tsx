@@ -67,32 +67,32 @@ const steps = [
   {
     title: "Add up total ad spend across every platform",
     body: `Pull ad spend for the period from each platform actually in use: Facebook Ads Manager, Google Ads, TikTok Ads Manager, and any others. Add them into one total spend figure. This step is easy to skip when a store only checks its best-performing platform, but blended ROAS needs the full spend picture, not just the one that looks good.`,
-    screenshotCaption: "A spreadsheet row listing ad spend pulled separately from Facebook Ads Manager, Google Ads, and TikTok Ads Manager, summed into a single total spend figure.",
+
   },
   {
     title: "Pull total revenue for the same period",
     body: `Go to Shopify's own sales reporting for total store revenue over that period, rather than adding up each platform's self-reported "conversion value," since those figures overlap whenever more than one platform claims credit for the same order. Using total store revenue as the numerator gives a conservative, defensible blended ROAS, even though it also credits ads with some sales that might have happened anyway.`,
-    screenshotCaption: "Shopify's sales-over-time analytics report for the month, showing the total revenue figure used as the numerator in the ROAS calculation.",
+
   },
   {
     title: "Check that the pixel data behind those numbers is actually reliable",
     body: `Before trusting any platform's conversion count, confirm its pixel is firing on every completed order, and that server-side tracking, such as Facebook Conversions API or TikTok Events API, is active where available. A pixel that silently stops firing after a checkout update, or loses events to browser-level blocking, will understate what a platform reports, which throws off both platform-reported and blended ROAS. The [server-side tracking guide](/pixel-tracker/guides/server-side-tracking) covers how this works in more detail.`,
-    screenshotCaption: "A dashboard view listing each connected ad pixel next to its status and whether server-side event tracking is active for it.",
+
   },
   {
     title: "Divide total revenue by total spend",
     body: `With both totals in hand, the math is one line: blended ROAS equals total revenue divided by total spend. If total revenue for the month was $9,500 and total spend across all platforms was $3,000, blended ROAS is roughly 3.17x. Keep this number in a running spreadsheet rather than recalculating from scratch every time.`,
-    screenshotCaption: "A spreadsheet formula cell dividing total monthly revenue by total monthly ad spend to produce the blended ROAS figure.",
+
   },
   {
     title: "Work out your breakeven ROAS",
     body: `Divide 1 by gross margin, expressed as a decimal, to find the ROAS at which ad spend stops being a loss. A 40% gross margin gives a breakeven ROAS of 2.5x. A 20% gross margin gives a breakeven ROAS of 5x. Compare blended ROAS from step 4 against this number, not against a generic benchmark from somewhere else.`,
-    screenshotCaption: "A small table listing gross margin percentages next to their corresponding breakeven ROAS thresholds.",
+
   },
   {
     title: "Repeat monthly and track the trend",
     body: `Run the same calculation every month using the same method and the same attribution window, and log it alongside spend and revenue. One month's ROAS is a snapshot. Several months in a row show whether ad performance relative to spend is improving, holding steady, or sliding, which is far more useful for planning next month's budget than any single number in isolation.`,
-    screenshotCaption: "A simple month-by-month line chart of blended ROAS, showing the trend over several months rather than one isolated figure.",
+
   },
 ];
 
@@ -101,14 +101,14 @@ const closingSections = [
     heading: "Tools That Can Help (and What Pixel Tracker Doesn't Do)",
     paragraphs: [
       `For most independent Shopify merchants, a spreadsheet is genuinely enough to track blended ROAS. Pull spend and revenue once a month, do the division, and watch the trend. Merchants who want more automation around the calculation itself, including automatic blending across platforms and historical trend charts, can look at dedicated [ROAS calculator and reporting apps](/alternatives/best-shopify-roas-calculators) built for that specific job.`,
-      `[Pixel Tracker](/pixel-tracker) is not one of those apps, and it's worth being direct about that. It doesn't calculate ROAS and it has no ROAS dashboard. What it does is connect Facebook, Google Ads (conversion tag), TikTok, Snapchat, Pinterest, X, and LinkedIn pixels to a Shopify store from one dashboard, with server-side tracking through Facebook Conversions API and TikTok Events API to recover events that browser-based pixels alone would miss. That matters for ROAS because every calculation above depends on the revenue and conversion numbers each platform reports being reasonably accurate in the first place. Better pixel data in means more trustworthy numbers to blend, even though the blending and the math stay with the merchant.`,
+      `Pixel Tracker is not a ROAS reporting tool. Use Shopify order data and ad spend for the calculation above. Pixel Tracker is prelaunch; platform coverage and server-side event delivery are not confirmed.`,
     ],
   },
   {
     heading: "Where to Go From Here",
     paragraphs: [
       `Multi-platform overlap, the mechanic behind the worked example above, is covered in more depth in the [multi-channel attribution guide](/pixel-tracker/guides/multi-channel-attribution). Returns and refunds cause a related but separate distortion, chipping away at revenue after the sale rather than before it. [How to calculate true ROAS](/blog/calculate-true-roas) covers adjusting for that specifically.`,
-      `Pixel Tracker is currently pre-launch. [Join the waitlist](/#waitlist) to get notified when it opens, along with early access to the pixel and server-side tracking setup described above.`,
+      `Pixel Tracker is not a ROAS reporting tool. Use Shopify order data and ad spend for the calculation above. Pixel Tracker is prelaunch; platform coverage and server-side event delivery are not confirmed.`,
     ],
   },
 ];
@@ -128,7 +128,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker calculate ROAS for me?",
-    a: "No. Pixel Tracker connects and manages tracking pixels, including server-side tracking through Facebook Conversions API and TikTok Events API, so the conversion data feeding each ad platform is more complete and accurate. It doesn't calculate, display, or report ROAS. Merchants still do that calculation themselves, whether in a spreadsheet, in each ad platform's dashboard, or in a dedicated ROAS reporting app.",
+    a: "Pixel Tracker is not a ROAS reporting tool. Use Shopify order data and ad spend for the calculation above. Pixel Tracker is prelaunch; platform coverage and server-side event delivery are not confirmed.",
   },
   {
     q: "How often should I recalculate my ROAS?",
