@@ -5,7 +5,7 @@ import { getAllVsComparisons } from "@/content/vs-comparisons";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://appnary.com";
-  const now = new Date();
+  // Omit lastModified where no content date is tracked; builds are not content updates.
 
   const staticRoutes: { url: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
     { url: baseUrl, priority: 1, changeFrequency: "monthly" },
@@ -55,21 +55,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPosts = getAllPosts().map((p) => ({
     url: `${baseUrl}/blog/${p.slug}`,
-    lastModified: new Date(p.publishedAt + "T00:00:00Z"),
+    lastModified: new Date((p.updatedAt ?? p.publishedAt) + "T00:00:00Z"),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const platformActionPages = getAllPlatformActionPages().map((p) => ({
     url: `${baseUrl}/pixel-tracker/${p.platformSlug}/${p.actionSlug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const vsComparisonPages = getAllVsComparisons().map((p) => ({
     url: `${baseUrl}/vs/${p.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -77,7 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticRoutes.map((r) => ({
       url: r.url,
-      lastModified: now,
       changeFrequency: r.changeFrequency,
       priority: r.priority,
     })),
