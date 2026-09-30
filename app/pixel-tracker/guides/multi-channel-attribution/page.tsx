@@ -61,7 +61,7 @@ const steps = [
   },
   {
     title: "Connect each pixel through Pixel Tracker",
-    body: `Add every platform from the audit into Pixel Tracker's dashboard, one pixel ID at a time. Each pixel gets injected through a Shopify ScriptTag automatically, so there's no editing theme.liquid or hunting for the right template file. Since multi-channel attribution requires having several platforms connected at once, this is where the Growth plan at $15 a month for 10 pixels, or the Pro plan at $29 a month for unlimited pixels, earns its keep over the Free tier's single pixel. The [Meta pixel](/pixel-tracker/meta-pixel) and [TikTok pixel](/pixel-tracker/tiktok-pixel) setup pages cover platform-specific details.`,
+    body: `Add every platform from the audit into Pixel Tracker's dashboard, one pixel ID at a time. Each pixel gets injected through a Shopify ScriptTag automatically, so there's no editing theme.liquid or hunting for the right template file. Choose an app whose confirmed plan limits cover the platforms you need. Pixel Tracker's launch limits and prices are not confirmed yet; billing will be through Shopify. The [Meta pixel](/pixel-tracker/meta-pixel) and [TikTok pixel](/pixel-tracker/tiktok-pixel) setup pages cover platform-specific details.`,
     screenshotCaption: "Pixel Tracker's dashboard listing connected pixels for Meta, Google, and TikTok with status indicators next to each.",
   },
   {

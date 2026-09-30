@@ -22,15 +22,11 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "No-code pixel installer covering 7 ad platforms with server-side CAPI, priced by how many pixels you use.",
-    pricing: "Free (1 pixel) – $29/mo (unlimited)",
+      "No-code pixel installer covering 7 ad platforms with server-side CAPI. Launch pricing is not confirmed.",
+    pricing: "Launch pricing not confirmed",
     bestFor:
-      "Stores that just need pixels firing reliably across several platforms, without paying for an attribution/reporting layer they won't use.",
-    pros: [
-      "Free plan works on live stores",
-      "Covers 7 major ad platforms from one dashboard",
-      "No developer or theme code required",
-    ],
+      "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
+    pros: ["Covers 7 major ad platforms from one dashboard", "No developer or theme code required"],
     cons: [
       "Pre-launch — no App Store reviews yet",
       "Doesn't do cross-channel attribution reporting, just pixel installation",
@@ -178,7 +174,7 @@ const comparisonRows = [
   {
     feature: "Free plan or trial available",
     values: {
-      "pixel-tracker": true,
+      "pixel-tracker": "Not confirmed",
       pixee: true,
       shoptok: true,
       multipixels: false,
@@ -189,7 +185,7 @@ const comparisonRows = [
   {
     feature: "Starting price",
     values: {
-      "pixel-tracker": "$0",
+      "pixel-tracker": "Not confirmed",
       pixee: "$0",
       shoptok: "$0",
       multipixels: "$9.99/mo",
@@ -223,7 +219,7 @@ const analysis = [
 ];
 
 const buyingGuide = [
-  "If you don't currently have reliable pixels firing on your store, start there. Pick a no-code installer from the top four in this list based on which platforms you actually run (Pixee and Shoptok for Facebook/TikTok-heavy stores, MultiPixels if you want bundled audience tools, Pixel Tracker if you want pixel-count pricing across seven platforms).",
+  "If you don't currently have reliable pixels firing on your store, start there. Pick a no-code installer from the top four in this list based on which platforms you actually run (Pixee and Shoptok for Facebook/TikTok-heavy stores, MultiPixels if you want bundled audience tools, Pixel Tracker if you can wait for its launch and confirmed pricing).",
   "Only add Triple Whale or Elevar once your pixel layer is solid and your ad spend is high enough that cross-channel attribution reporting — not just pixel firing — is the actual bottleneck. That's typically a store spending several thousand dollars a month or more across multiple ad platforms, since below that scale the $200+/mo cost is hard to justify against what a free spreadsheet or your ad platforms' native dashboards can already tell you.",
   "If you're an agency or technical team managing multiple stores, Elevar's server-side data-layer approach is built for that workflow specifically — it's the one tool in this list designed to be set up once and feed several downstream tools consistently, rather than installed per-merchant.",
 ];
@@ -261,10 +257,10 @@ export default function BestAdTrackingToolsPage() {
       slug="best-shopify-ad-tracking-tools"
       categoryTitle="Best Shopify Ad Tracking Tools"
       h1="Best Shopify Ad Tracking Tools (2026)"
-      tldr="No-code pixel installers (Pixel Tracker, Pixee, Shoptok, MultiPixels) cost under $40/mo and get your pixels firing; attribution platforms (Triple Whale, Elevar) cost $200+/mo and turn that pixel data into cross-channel reporting. Most stores need the first before the second is worth paying for."
+      tldr="No-code pixel installers such as Pixee, Shoptok, and MultiPixels cost under $40/mo and get your pixels firing; attribution platforms (Triple Whale, Elevar) cost $200+/mo and turn that pixel data into cross-channel reporting. Most stores need the first before the second is worth paying for."
       intro={[
         "\"Ad tracking tool\" covers more ground than a single pixel installer. On the Shopify App Store, that phrase spans two genuinely different categories of software: apps that install and fire ad-platform pixels (Facebook, TikTok, Google Ads, and similar), and platforms that sit on top of that pixel data to build cross-channel attribution reports and profit analytics.",
-        "This roundup compares six real, currently-listed tools across both categories — four no-code pixel installers and two attribution/data-layer platforms — verified against their live Shopify App Store listings. We've kept the price-tier differences visible rather than pretending a $10/mo pixel installer and a $749/mo attribution suite are competing for the same budget, because they aren't.",
+        "This roundup compares five listed tools and the prelaunch Pixel Tracker across both categories — four no-code pixel installers and two attribution/data-layer platforms — verified against their live Shopify App Store listings. We've kept the price-tier differences visible rather than pretending a $10/mo pixel installer and a $749/mo attribution suite are competing for the same budget, because they aren't.",
       ]}
       tools={tools}
       comparisonRows={comparisonRows}

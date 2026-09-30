@@ -41,12 +41,6 @@ export function VsComparisonGuide({ page }: { page: VsComparisonPage }) {
           name: "Pixel Tracker",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Shopify",
-          offers: [
-            { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-            { "@type": "Offer", name: "Starter", price: "7.00", priceCurrency: "USD", billingIncrement: "P1M" },
-            { "@type": "Offer", name: "Growth", price: "15.00", priceCurrency: "USD", billingIncrement: "P1M" },
-            { "@type": "Offer", name: "Pro", price: "29.00", priceCurrency: "USD", billingIncrement: "P1M" },
-          ],
         },
       },
       {

@@ -91,7 +91,7 @@ const closingSections = [
     heading: "Where TikTok Fits Into Your Broader Tracking Setup",
     paragraphs: [
       `TikTok is rarely the only platform a Shopify store advertises on, and Pixel Tracker isn't built around just one pixel. It connects TikTok alongside Facebook and Meta, Google Ads' conversion tag, Snapchat, Pinterest, X, and LinkedIn from the same Shopify dashboard, so adding a second ad platform later doesn't mean installing a second tracking app. The [guides hub](/pixel-tracker/guides) has a similar walkthrough for each one.`,
-      `Pixel Tracker hasn't launched on the Shopify App Store yet. There's no free trial, and access opens through the [waitlist](/#waitlist) rather than an install button once it's live. If you need something shorter to send to a teammate or a VA in the meantime, the [companion blog post](/blog/tiktok-pixel-setup-shopify) covers this same setup in about a third of the length.`,
+      `Pixel Tracker hasn't launched on the Shopify App Store yet. Join the [waitlist](/#waitlist) for launch updates. Pricing and trial availability will be confirmed with the Shopify listing. If you need something shorter to send to a teammate or a VA in the meantime, the [companion blog post](/blog/tiktok-pixel-setup-shopify) covers this same setup in about a third of the length.`,
     ],
   },
 ];
@@ -119,7 +119,7 @@ const faqs = [
   },
   {
     q: "Is Pixel Tracker live on the Shopify App Store?",
-    a: "Not yet. It's in pre-launch, there's no free trial, and the way to get access once it opens is to join the waitlist.",
+    a: "Not yet. It's prelaunch; join the waitlist for updates. Pricing and trial availability will be confirmed with the Shopify listing.",
   },
 ];
 

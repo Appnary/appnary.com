@@ -27,7 +27,7 @@ const homeFaqs = [
   },
   {
     q: "How much does Pixel Tracker cost?",
-    a: "Pixel Tracker starts free for 1 pixel, with paid plans from $7/month for 3 pixels up to $29/month for unlimited pixels, per Shopify store.",
+    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
   },
 ];
 
@@ -50,36 +50,6 @@ const softwareJsonLd = {
   description:
     "Connect tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard.",
   url: "https://appnary.com/pixel-tracker",
-  offers: [
-    {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      name: "Free",
-      description: "1 active pixel",
-    },
-    {
-      "@type": "Offer",
-      price: "7",
-      priceCurrency: "USD",
-      name: "Starter",
-      description: "3 active pixels",
-    },
-    {
-      "@type": "Offer",
-      price: "15",
-      priceCurrency: "USD",
-      name: "Growth",
-      description: "10 active pixels",
-    },
-    {
-      "@type": "Offer",
-      price: "29",
-      priceCurrency: "USD",
-      name: "Pro",
-      description: "Unlimited pixels",
-    },
-  ],
 };
 
 export default function Home() {

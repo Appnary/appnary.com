@@ -25,14 +25,14 @@ const featureRows = [
   { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
   { feature: "X (Twitter) pixel", pixelTracker: true, competitor: false },
   { feature: "Server-side event forwarding (CAPI / Events API) confirmed", pixelTracker: true, competitor: "varies" },
-  { feature: "Free plan available", pixelTracker: true, competitor: true },
+  { feature: "Free plan available", pixelTracker: "Not confirmed", competitor: true },
   { feature: "Product-feed sync + AI ad diagnostics bundled", pixelTracker: false, competitor: true },
 ];
 
 const pricingRows = [
-  { plan: "Free", pixelTracker: "$0 (1 pixel)", competitor: "$0 (1 pixel)" },
-  { plan: "Entry paid", pixelTracker: "$7/mo (3 pixels)", competitor: "$21/mo (Basic)" },
-  { plan: "Top tier", pixelTracker: "$29/mo (unlimited pixels)", competitor: "$25/mo (AI Pro)" },
+  { plan: "Free", pixelTracker: "Not confirmed", competitor: "$0 (1 pixel)" },
+  { plan: "Entry paid", pixelTracker: "Not confirmed", competitor: "$21/mo (Basic)" },
+  { plan: "Top tier", pixelTracker: "Not confirmed", competitor: "$25/mo (AI Pro)" },
 ];
 
 const faqs = [
@@ -50,17 +50,17 @@ const faqs = [
   },
   {
     q: "Is Pixee cheaper than Pixel Tracker?",
-    a: "Its paid plans ($21-25/mo) sit between Pixel Tracker's Starter ($7/mo) and Pro ($29/mo) tiers, but Pixee bundles extra feed-sync and AI features that Pixel Tracker doesn't include.",
+    a: "Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify.",
   },
   {
     q: "Is Pixee a good fit if I just want simple pixel tracking?",
-    a: "Probably not the best fit — its pricing reflects a bundle of feed-sync and AI diagnostics tools you'd be paying for even if you only want pixels installed. If pixel tracking alone is what you need, Pixel Tracker's $7/mo Starter plan is cheaper and covers more ad platforms.",
+    a: "Pixee bundles feed sync and AI ad diagnostics with pixel installation. If you only need pixels, check whether those extras are useful enough to justify its plan. Pixel Tracker focuses on pixel setup but is prelaunch, with pricing still unconfirmed.",
   },
 ];
 
 const overview = [
   "Pixee is less a pure pixel connector and more a small Meta/TikTok ads toolkit — it bundles product-feed sync and AI-assisted ad diagnostics alongside pixel installation, on top of Facebook, Instagram, TikTok, and Pinterest tracking. Pixel Tracker focuses purely on getting more ad platforms' pixels firing reliably, without the extra ads-management tooling.",
-  "That difference in scope shapes everything else: Pixee costs more at its paid tiers than Pixel Tracker's entry plan, covers fewer ad platforms, and doesn't clearly document whether its server-side CAPI support is confirmed. Pixel Tracker is narrower in feature scope but broader in platform coverage and explicit about its CAPI/Events API support.",
+  "That difference in scope shapes everything else: Pixee covers fewer ad platforms and doesn't clearly document whether its server-side CAPI support is confirmed. Pixel Tracker is narrower in feature scope but broader in platform coverage and explicit about its CAPI/Events API support.",
 ];
 
 const featureBreakdown = [
@@ -75,38 +75,24 @@ const featureBreakdown = [
   {
     title: "Server-side tracking (CAPI) — confirmed vs. unclear",
     body: "Pixel Tracker explicitly documents Facebook Conversions API and TikTok Events API support. Pixee's own marketing doesn't clearly confirm whether CAPI/server-side event forwarding is included, which matters for accurate conversion tracking as ad blockers and browser restrictions cut into client-side pixel data.",
-  },
-  {
-    title: "Pricing shape",
-    body: "Pixee has only two paid tiers — Basic at $21/mo and AI Pro at $25/mo — both sitting between Pixel Tracker's Starter ($7/mo) and Pro ($29/mo). There's no tier as cheap as Pixel Tracker's Starter, so a small store wanting just a couple of pixels pays considerably more on Pixee unless it stays on the free plan.",
-  },
-  {
-    title: "Free plan",
-    body: "Both apps offer a free plan covering one pixel, so testing either one costs nothing upfront. The gap opens up the moment a store needs to move past a single pixel.",
-  },
+  }
 ];
 
-const pricingNarrative = [
-  "Pixee's paid tiers ($21-25/mo) sit well above Pixel Tracker's Starter tier ($7/mo) and closer to its Pro tier ($29/mo) — but Pixee bundles feed-sync and AI diagnostics into that price, which Pixel Tracker doesn't offer at any tier. A store that only wants pixel installation is paying for extra tooling it may not use.",
-  "Both apps have a genuine free plan for one pixel, so the pricing gap only shows up once a store needs more than one pixel or platform.",
-];
+const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
   "You need Google Ads, Snapchat, LinkedIn, or X pixel tracking",
   "You want confirmed, explicit CAPI/server-side tracking support",
-  "You don't need feed-sync or AI ad diagnostics and want a cheaper entry-level plan",
 ];
 
 const chooseWhenCompetitor = [
   "You want feed-sync and AI ad diagnostics bundled with pixel installation",
-  "Your ad spend is limited to Facebook, Instagram, TikTok, and Pinterest",
-  "You're fine paying $21-25/mo for the extra tooling on top of pixel tracking",
+  "Your ad spend is limited to Facebook, Instagram, TikTok, and Pinterest"
 ];
 
 const verdict = [
   "Pixee is less a pure pixel connector and more a small Meta/TikTok ads toolkit — it bundles product-feed sync and AI-assisted ad diagnostics alongside pixel installation, features Pixel Tracker doesn't offer.",
-  "In exchange, it covers fewer platforms (Facebook, Instagram, TikTok, and Pinterest only) and doesn't clearly document server-side CAPI support the way Pixel Tracker does.",
-  "If you want the extra feed-sync/diagnostics tooling and only advertise on Meta, TikTok, and Pinterest, Pixee's bundle may be worth the $21-25/mo. If you need Google Ads, Snapchat, LinkedIn, or X pixel tracking, or want confirmed server-side event forwarding, Pixel Tracker covers that directly.",
+  "In exchange, it covers fewer platforms (Facebook, Instagram, TikTok, and Pinterest only) and doesn't clearly document server-side CAPI support the way Pixel Tracker does."
 ];
 
 export default function PixeeVsPage() {
@@ -128,7 +114,9 @@ export default function PixeeVsPage() {
         "Supports Google Ads, Snapchat, LinkedIn, and X, which Pixee doesn't",
         "Server-side CAPI/Events API support is explicit and confirmed, not ambiguous",
       ]}
-      pixelTrackerCons={["Doesn't bundle product-feed sync or AI ad diagnostics"]}
+      pixelTrackerCons={[
+
+      ]}
       competitorPros={[
         "Bundles product-feed sync and AI-assisted ad diagnostics on top of pixel installation — more of an all-in-one Meta/TikTok ads toolkit",
         "Free plan available",

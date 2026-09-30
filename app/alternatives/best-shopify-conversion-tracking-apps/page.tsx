@@ -39,15 +39,11 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "Server-side conversion forwarding via Facebook Conversions API and TikTok Events API, priced by how many pixels you use.",
-    pricing: "Free (1 pixel) – $29/mo (unlimited)",
+      "Server-side conversion forwarding via Facebook Conversions API and TikTok Events API. Launch pricing is not confirmed.",
+    pricing: "Launch pricing not confirmed",
     bestFor:
-      "Stores that want Facebook and TikTok server-side conversion tracking specifically, without paying for platforms they don't run ads on.",
-    pros: [
-      "Facebook CAPI and TikTok Events API included at every paid tier",
-      "Free plan works on live stores",
-      "Pricing scales with pixel count instead of a flat rate",
-    ],
+      "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
+    pros: [],
     cons: [
       "Pre-launch — no App Store reviews yet",
       "Server-side coverage is currently limited to Facebook and TikTok specifically",
@@ -158,7 +154,7 @@ const comparisonRows = [
     feature: "Free plan for live stores",
     values: {
       tixel: false,
-      "pixel-tracker": true,
+      "pixel-tracker": "Not confirmed",
       "omega-pixel": true,
       avantify: false,
       onepixel: true,
@@ -180,7 +176,7 @@ const comparisonRows = [
     feature: "Starting price",
     values: {
       tixel: "$19.99/mo (only tier)",
-      "pixel-tracker": "$0",
+      "pixel-tracker": "Not confirmed",
       "omega-pixel": "$0",
       avantify: "$5.99/mo",
       onepixel: "$0",
@@ -200,7 +196,7 @@ const analysis = [
   },
   {
     title: "Metered vs. flat CAPI pricing changes the real cost as you scale",
-    body: "Avantify charges $3/mo for each additional CAPI connection beyond the base tier, so the effective price rises with how many platforms you track server-side. TiXel, Omega Pixel, OnePixel, Pixee, and Pixel Tracker instead bundle server-side tracking into their existing pricing tiers, so adding CAPI for another platform doesn't add a separate line item.",
+    body: "Avantify charges $3/mo for each additional CAPI connection beyond the base tier, so the effective price rises with how many platforms you track server-side. TiXel, Omega Pixel, OnePixel, and Pixee instead bundle server-side tracking into their existing pricing tiers, so adding CAPI for another platform doesn't add a separate line item.",
   },
   {
     title: "AI-assisted setup is a real time-saver, not a marketing label, in two of these apps",
@@ -213,7 +209,7 @@ const analysis = [
 ];
 
 const buyingGuide = [
-  "Start with which platforms you need server-side coverage for. If it's Facebook and TikTok only, Pixel Tracker, Pixee, or Omega Pixel all cover that with a free tier available. If you need Microsoft/Bing Ads specifically, OnePixel is the only option here. If you need the broadest coverage including Reddit, TiXel is the only app that supports it.",
+  "Start with which platforms you need server-side coverage for. If it's Facebook and TikTok only, Pixee or Omega Pixel cover that with a free tier available. Pixel Tracker is prelaunch, with its plan limits and prices still to be confirmed. If you need Microsoft/Bing Ads specifically, OnePixel is the only option here. If you need the broadest coverage including Reddit, TiXel is the only app that supports it.",
   "If you want CAPI to be the primary feature rather than one part of a broader pixel app, Avantify's positioning fits that — but budget for its metered per-connection pricing if you plan to add server-side tracking for several platforms.",
   "If you'd rather have tooling that actively flags conversion-tracking problems instead of just forwarding events and hoping they arrive correctly, Pixee's AI diagnostics or TiXel's AI-assisted setup are the two apps in this list built around that idea specifically.",
 ];

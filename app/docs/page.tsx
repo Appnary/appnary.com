@@ -119,11 +119,11 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Free for 1 pixel, then $7/mo for 3 pixels (Starter), $15/mo for 10 (Growth), and $29/mo for unlimited (Pro), priced per Shopify store.",
+    a: "Pricing is specific to each Shopify app and billed through Shopify. Pixel Tracker's launch prices and plan limits are not confirmed yet.",
   },
   {
     q: "Can I install it today?",
-    a: "Not yet. Pixel Tracker is on the waitlist ahead of App Store launch. Join the waitlist for early access; pricing above is what launches with.",
+    a: "Not yet. Pixel Tracker is on the waitlist ahead of App Store launch. Join the waitlist for launch updates. Prices and plan limits will be published with the Shopify listing.",
   },
   {
     q: "Does it support server-side events?",
@@ -135,7 +135,7 @@ const faqs = [
   },
   {
     q: "How do I uninstall it?",
-    a: "Remove the app from Shopify admin like any other app. ScriptTags go with it. Cancel billing from the app's Billing page if you're on a paid plan.",
+    a: "Manage app subscriptions and uninstall apps through Shopify admin. Review the app's subscription terms in Shopify before approving any charges.",
   },
 ];
 
@@ -158,7 +158,7 @@ const dashboardGuides = [
   {
     title: "Per-store billing",
     summary:
-      "Plans are per Shopify store. A second store needs its own install and its own pixel count toward Free / Starter / Growth / Pro.",
+      "Each Shopify app has its own pricing and is billed through Shopify. Review the app's listing for store coverage and plan limits when it launches.",
   },
 ];
 

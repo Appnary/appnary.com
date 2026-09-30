@@ -104,15 +104,11 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "Appnary's own multi-platform pixel connector — 7 ad platforms, server-side CAPI, priced by how many pixels you actually use.",
-    pricing: "Free (1 pixel) – $29/mo (unlimited)",
+      "Appnary's own multi-platform pixel connector — 7 ad platforms, server-side CAPI. Launch pricing is not confirmed.",
+    pricing: "Launch pricing not confirmed",
     bestFor:
-      "Stores running 1-3 ad platforms that want pixel-count-based pricing instead of a flat rate, and are comfortable trying a newer, pre-launch app.",
-    pros: [
-      "Free plan works on live stores, not just dev/partner stores",
-      "Pricing tiers scale with pixel count, so a 1-3 platform store doesn't overpay",
-      "Covers Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X",
-    ],
+      "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
+    pros: ["Covers Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X"],
     cons: [
       "Pre-launch — no Shopify App Store reviews yet, unlike every other app in this list",
       "No Reddit pixel support",
@@ -180,7 +176,7 @@ const comparisonRows = [
       "infinite-pixels": true,
       "omega-pixel": true,
       tixel: false,
-      "pixel-tracker": true,
+      "pixel-tracker": "Not confirmed",
       onepixel: true,
       avantify: false,
     },
@@ -204,7 +200,7 @@ const comparisonRows = [
       "infinite-pixels": "$6.99/mo",
       "omega-pixel": "$12.99/mo",
       tixel: "$19.99/mo (only tier)",
-      "pixel-tracker": "$7/mo",
+      "pixel-tracker": "Not confirmed",
       onepixel: "$9.90/mo",
       avantify: "$5.99/mo",
     },
@@ -230,7 +226,7 @@ const analysis = [
   },
   {
     title: "Platform breadth vs. pixel-count pricing",
-    body: "TiXel's 9-platform, flat-$19.99/mo model and Omega Pixel's narrow-but-deep 3-platform approach sit at opposite ends of a real tradeoff. Apps that price by pixel count — Pixel Tracker, OnePixel — reward a store running only 1-3 platforms with a lower bill, while flat-rate apps like TiXel and Avantify start to look cheaper once you're running most of your ad budget through five or more channels.",
+    body: "TiXel's 9-platform, flat-$19.99/mo model and Omega Pixel's narrow-but-deep 3-platform approach sit at opposite ends of a real tradeoff. Apps that price by pixel count, such as OnePixel, reward a store running only 1-3 platforms with a lower bill, while flat-rate apps like TiXel and Avantify start to look cheaper once you're running most of your ad budget through five or more channels.",
   },
   {
     title: "Reddit and Microsoft/Bing are the two real platform-coverage gaps",
@@ -238,7 +234,7 @@ const analysis = [
   },
   {
     title: "Free plans differ more than they look",
-    body: "\"Free\" means different things across this list. Pixel Tracker, Infinite Pixels, and OnePixel all offer a free tier that works on a live, published store. TiXel's free tier is restricted to development and partner stores, so a live store has to start on the $19.99/mo plan from day one. Avantify skips a free plan entirely.",
+    body: "\"Free\" means different things across this list. Infinite Pixels and OnePixel offer a free tier that works on a live, published store. TiXel's free tier is restricted to development and partner stores, so a live store has to start on the $19.99/mo plan from day one. Avantify skips a free plan entirely.",
   },
   {
     title: "Server-side tracking is table stakes now, not a differentiator",
@@ -248,14 +244,14 @@ const analysis = [
 
 const buyingGuide = [
   "Start by listing the exact ad platforms you run campaigns on today, and any you're planning to add in the next 6-12 months. If Reddit or Microsoft/Bing Ads is on that list, that alone narrows your choice to TiXel or OnePixel respectively — no other app in this comparison covers them.",
-  "Next, estimate how many platforms you'll actually connect. Running 1-3 platforms favors pixel-count-tiered apps (Pixel Tracker, OnePixel), since you're not paying for capacity you don't use. Running 5+ platforms tends to favor flat-rate apps (TiXel, and Trackify once you're past its lowest paid tier).",
-  "Finally, weigh review history against how much risk you're comfortable with. Trackify, Infinite Pixels, and Omega Pixel each have a substantial, verifiable Shopify App Store track record. Pixel Tracker is pre-launch with no reviews yet — a real tradeoff if proven reliability matters more to you than trying a newer pixel-count pricing model.",
+  "Next, estimate how many platforms you'll actually connect. Running 1-3 platforms favors pixel-count-tiered apps such as OnePixel, since you're not paying for capacity you don't use. Running 5+ platforms tends to favor flat-rate apps (TiXel, and Trackify once you're past its lowest paid tier).",
+  "Finally, weigh review history against how much risk you're comfortable with. Trackify, Infinite Pixels, and Omega Pixel each have a substantial, verifiable Shopify App Store track record. Pixel Tracker is pre-launch with no reviews yet — a real tradeoff if proven reliability matters more to you than waiting for a new app and its confirmed launch plans.",
 ];
 
 const faqs = [
   {
     q: "What's the best free Shopify pixel tracking app?",
-    a: "Infinite Pixels, Omega Pixel, OnePixel, and Pixel Tracker all offer a free tier that works on a live store. Infinite Pixels has the strongest track record of the free options (4.9★ across 248 reviews); Pixel Tracker's free plan is the only one of the four priced by pixel count rather than platform limits.",
+    a: "Infinite Pixels, Omega Pixel, and OnePixel offer a free tier that works on a live store. Infinite Pixels has the strongest track record of the free options (4.9★ across 248 reviews). Pixel Tracker's launch prices and free-plan availability are not confirmed.",
   },
   {
     q: "Which Shopify pixel app supports the most ad platforms?",
@@ -275,7 +271,7 @@ const faqs = [
   },
   {
     q: "How does Pixel Tracker's pricing compare to the rest of this list?",
-    a: "Pixel Tracker's $0-$29/mo range sits in the middle of the field. It's cheaper than Omega Pixel's $69.99/mo top tier and TiXel's flat $19.99/mo for a 1-3 platform store, but its free plan is capped at one pixel rather than a full feature set, and it lacks a review history since it's still pre-launch.",
+    a: "Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.",
   },
 ];
 
@@ -285,7 +281,7 @@ export default function BestPixelTrackingAppsPage() {
       slug="best-shopify-pixel-tracking-apps"
       categoryTitle="Best Shopify Pixel Tracking Apps"
       h1="Best Shopify Pixel Tracking Apps (2026)"
-      tldr="Trackify has the largest review base (350), Infinite Pixels the best rating-to-volume ratio (4.9★/248), and Omega Pixel a perfect 5.0★ across 158 — but TiXel is the only app here that supports Reddit, and pixel-count-priced apps like Pixel Tracker and OnePixel cost less for stores running just 1-3 platforms."
+      tldr="Trackify has the largest review base (350), Infinite Pixels the best rating-to-volume ratio (4.9★/248), and Omega Pixel a perfect 5.0★ across 158 — but TiXel is the only app here that supports Reddit, and Pixel Tracker's launch prices and plan limits are still unconfirmed."
       intro={[
         "Every app on this list does the same basic job: install ad-platform tracking pixels on a Shopify store without editing theme code, and forward conversion events server-side so ad platforms still see accurate data when browser-based tracking gets blocked. The differences that actually matter are platform coverage, how each app prices access to that coverage, and how much of a track record it's built on the Shopify App Store.",
         "We compared seven real, currently-listed apps — verified against their live Shopify App Store listings — rather than a generic \"top 10\" list padded with apps that don't fit the same category. Appnary's own app, Pixel Tracker, is included and ranked honestly alongside the rest, not placed at #1 by default: it's pre-launch and has no reviews yet, which is a real tradeoff against apps with a hundred-plus reviews behind them.",

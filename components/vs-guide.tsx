@@ -131,12 +131,6 @@ export function VsGuide({
     operatingSystem: "Shopify",
     description:
       "Connect Facebook, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn tracking pixels from one simple Shopify dashboard. No coding required.",
-    offers: [
-      { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-      { "@type": "Offer", name: "Starter", price: "7.00", priceCurrency: "USD", billingIncrement: "P1M" },
-      { "@type": "Offer", name: "Growth", price: "15.00", priceCurrency: "USD", billingIncrement: "P1M" },
-      { "@type": "Offer", name: "Pro", price: "29.00", priceCurrency: "USD", billingIncrement: "P1M" },
-    ],
   };
 
   return (
@@ -213,7 +207,7 @@ export function VsGuide({
             <p className="mt-1 text-xs text-muted-foreground">
               Multi-platform tracking pixel connector for Shopify, from Appnary.
             </p>
-            <p className="mt-3 text-sm font-semibold text-foreground">Free – $29/mo</p>
+            <p className="mt-3 text-sm font-semibold text-foreground">Launch pricing not confirmed</p>
             <Link
               href="/pixel-tracker"
               className="mt-3 inline-block text-xs font-medium text-aqua hover:underline"

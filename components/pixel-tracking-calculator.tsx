@@ -16,13 +16,6 @@ const PLATFORMS: { key: string; label: string }[] = [
   { key: "twitter", label: "X (Twitter)" },
 ];
 
-const PLANS: { name: string; price: number; pixelCap: number }[] = [
-  { name: "Free", price: 0, pixelCap: 1 },
-  { name: "Starter", price: 7, pixelCap: 3 },
-  { name: "Growth", price: 15, pixelCap: 10 },
-  { name: "Pro", price: 29, pixelCap: Infinity },
-];
-
 const SETUP_OPTIONS: { key: SetupKey; label: string; points: number }[] = [
   { key: "diy", label: "DIY / theme code / GTM only", points: 10 },
   { key: "multiple", label: "Multiple Shopify pixel apps", points: 20 },
@@ -51,7 +44,7 @@ const COMPARISON_ROWS: {
     feature: "Monthly cost",
     diy: "$0 (your time)",
     multiple: "$10-$50+/mo*",
-    pixel: "$0-$29/mo",
+    pixel: "Launch pricing not confirmed",
   },
   {
     feature: "Platforms covered",
@@ -101,8 +94,6 @@ export default function PixelTrackingCalculator() {
 
   const results = useMemo(() => {
     const platformCount = platforms.size;
-    const recommendedPlan =
-      PLANS.find((p) => platformCount <= p.pixelCap) ?? PLANS[PLANS.length - 1];
 
     const setupOption = SETUP_OPTIONS.find((o) => o.key === setup)!;
     const serverSideOption = SERVER_SIDE_OPTIONS.find(
@@ -122,7 +113,6 @@ export default function PixelTrackingCalculator() {
 
     return {
       platformCount,
-      recommendedPlan,
       coverageScore,
       missedPctLow,
       missedPctHigh,
@@ -264,21 +254,14 @@ export default function PixelTrackingCalculator() {
         <div className="space-y-5 lg:sticky lg:top-24">
           <div className="rounded-2xl border border-aqua/30 bg-aqua/5 p-6 shadow-sm sm:p-8">
             <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Recommended plan
+              Platforms selected
             </p>
-            <div className="mt-2 flex items-baseline gap-2">
-              <span className="text-2xl font-bold text-foreground">
-                {results.recommendedPlan.name}
-              </span>
-              <span className="text-sm text-muted-foreground-strong">
-                {results.recommendedPlan.price === 0
-                  ? "Free"
-                  : `${formatCurrency(results.recommendedPlan.price)}/mo`}
-              </span>
-            </div>
+            <p className="mt-2 text-2xl font-bold text-foreground">
+              {results.platformCount}
+            </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Based on {results.platformCount} platform
-              {results.platformCount === 1 ? "" : "s"} selected
+              Pixel Tracker pricing and plan limits are not confirmed yet.
+              Each app has its own pricing, billed through Shopify.
             </p>
 
             <div className="mt-6">

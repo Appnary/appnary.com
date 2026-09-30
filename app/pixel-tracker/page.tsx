@@ -6,11 +6,11 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/pixel-tracker", {
   title: "Shopify Pixel Tracking: Meta, Google Ads, TikTok & More | Appnary",
   description:
-    "Connect Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels in Shopify. Free for one pixel. No theme edits.",
+    "Connect Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn pixels in Shopify. App-specific pricing, billed through Shopify.",
   openGraph: {
     title: "Shopify Pixel Tracking: Meta, Google Ads, TikTok & More",
     description:
-      "Connect Meta, Google Ads, TikTok, and more from one Shopify dashboard. Free for one pixel.",
+      "Connect Meta, Google Ads, TikTok, and more from one Shopify dashboard. App-specific pricing, billed through Shopify.",
     url: "https://appnary.com/pixel-tracker",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -43,44 +43,9 @@ const features = [
       "See all your pixels and their status at a glance. Enable or disable any platform instantly.",
   },
   {
-    title: "Free plan available",
+    title: "Billing through Shopify",
     description:
-      "Start with one pixel at no cost. Upgrade anytime to manage more platforms.",
-  },
-];
-
-const plans = [
-  {
-    name: "Free",
-    price: "$0",
-    period: "",
-    description: "1 pixel",
-    cta: "Get Started Free",
-    highlighted: false,
-  },
-  {
-    name: "Starter",
-    price: "$7",
-    period: "/mo",
-    description: "3 pixels",
-    cta: "Start Starter",
-    highlighted: false,
-  },
-  {
-    name: "Growth",
-    price: "$15",
-    period: "/mo",
-    description: "10 pixels",
-    cta: "Start Growth",
-    highlighted: true,
-  },
-  {
-    name: "Pro",
-    price: "$29",
-    period: "/mo",
-    description: "Unlimited pixels",
-    cta: "Start Pro",
-    highlighted: false,
+      "Review this app's own pricing and plan limits when its Shopify listing is available.",
   },
 ];
 
@@ -99,7 +64,7 @@ const faqs = [
   },
   {
     q: "Is there a free plan?",
-    a: "Yes. The Free plan includes 1 pixel with no time limit. Upgrade anytime to connect more platforms.",
+    a: "A free plan has not been confirmed for launch. Check the app's Shopify listing when it becomes available.",
   },
   {
     q: "Do I need to edit my theme?",
@@ -115,7 +80,7 @@ const faqs = [
   },
   {
     q: "How do I cancel?",
-    a: "Cancel anytime from the Billing page in your Shopify admin. No cancellation fees.",
+    a: "Manage app subscriptions through Shopify. Check the subscription terms shown in Shopify before approving a charge.",
   },
 ];
 
@@ -146,30 +111,6 @@ const softwareJsonLd = {
   operatingSystem: "Shopify",
   description:
     "Connect Facebook, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn tracking pixels from one simple Shopify dashboard. No coding required.",
-  offers: [
-    { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-    {
-      "@type": "Offer",
-      name: "Starter",
-      price: "7.00",
-      priceCurrency: "USD",
-      billingIncrement: "P1M",
-    },
-    {
-      "@type": "Offer",
-      name: "Growth",
-      price: "15.00",
-      priceCurrency: "USD",
-      billingIncrement: "P1M",
-    },
-    {
-      "@type": "Offer",
-      name: "Pro",
-      price: "29.00",
-      priceCurrency: "USD",
-      billingIncrement: "P1M",
-    },
-  ],
 };
 
 export default function PixelTrackerPage() {
@@ -265,44 +206,11 @@ export default function PixelTrackerPage() {
         <h2 id="pricing-heading" className="mb-8 text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
           Pricing
         </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`rounded-xl border p-6 shadow-sm flex flex-col ${
-                plan.highlighted
-                  ? "border-aqua bg-aqua/5"
-                  : "border-border-themed bg-surface"
-              }`}
-            >
-              {plan.highlighted && (
-                <span className="mb-3 self-start rounded-full bg-aqua/20 px-2.5 py-0.5 text-xs font-semibold text-aqua">
-                  Popular
-                </span>
-              )}
-              <p className="text-sm font-semibold text-muted-foreground">
-                {plan.name}
-              </p>
-              <p className="mt-1 text-3xl font-bold text-foreground">
-                {plan.price}
-                <span className="text-base font-normal text-muted-foreground">
-                  {plan.period}
-                </span>
-              </p>
-              <p className="mt-1 text-sm text-muted-foreground">
-                {plan.description}
-              </p>
-              <button
-                disabled
-                className="mt-6 w-full rounded-lg bg-muted-themed px-4 py-2 text-sm font-medium text-muted-foreground cursor-not-allowed"
-              >
-                {plan.cta}
-              </button>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-sm text-muted-foreground-faint text-center">
-          Planned for the Shopify App Store. Pricing is per store.
+        <p className="text-muted-foreground leading-relaxed">
+          Each Appnary app has its own pricing, with billing handled through
+          Shopify. Pixel Tracker is prelaunch; its prices and plan limits will be
+          published with its Shopify listing. Review the terms in Shopify before
+          approving a subscription.
         </p>
       </section>
 

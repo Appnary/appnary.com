@@ -25,21 +25,21 @@ const featureRows = [
   { feature: "LinkedIn Insight Tag", pixelTracker: true, competitor: false },
   { feature: "X (Twitter) pixel", pixelTracker: true, competitor: true },
   { feature: "Server-side event forwarding (CAPI / Events API)", pixelTracker: true, competitor: true },
-  { feature: "Free plan for live stores", pixelTracker: true, competitor: true },
-  { feature: "4 pricing tiers matched to usage", pixelTracker: true, competitor: true },
+  { feature: "Free plan for live stores", pixelTracker: "Not confirmed", competitor: true },
+  { feature: "4 pricing tiers matched to usage", pixelTracker: "Not confirmed", competitor: true },
 ];
 
 const pricingRows = [
-  { plan: "Free", pixelTracker: "$0 (1 pixel)", competitor: "$0 (1 pixel)" },
-  { plan: "Entry paid", pixelTracker: "$7/mo (3 pixels)", competitor: "$6.99/mo (Basic)" },
-  { plan: "Mid tier", pixelTracker: "$15/mo (10 pixels)", competitor: "$9.99/mo (Standard)" },
-  { plan: "Top tier", pixelTracker: "$29/mo (unlimited pixels)", competitor: "$19.99/mo (Premium)" },
+  { plan: "Free", pixelTracker: "Not confirmed", competitor: "$0 (1 pixel)" },
+  { plan: "Entry paid", pixelTracker: "Not confirmed", competitor: "$6.99/mo (Basic)" },
+  { plan: "Mid tier", pixelTracker: "Not confirmed", competitor: "$9.99/mo (Standard)" },
+  { plan: "Top tier", pixelTracker: "Not confirmed", competitor: "$19.99/mo (Premium)" },
 ];
 
 const faqs = [
   {
     q: "Is Infinite cheaper than Pixel Tracker?",
-    a: "Infinite's entry paid tier is $6.99/mo, versus Pixel Tracker's Starter at $7/mo — close to identical at the low end. Both offer a free plan for a single pixel.",
+    a: "Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify.",
   },
   {
     q: "Does Infinite support Google Ads?",
@@ -74,23 +74,16 @@ const featureBreakdown = [
     body: "248 reviews at a 4.9★ average is a meaningful, hard-to-fake signal that Infinite Pixels works reliably for a large number of merchants over time. Pixel Tracker is pre-launch and doesn't have public reviews yet, so this is a real, concrete advantage for Infinite on trust alone.",
   },
   {
-    title: "Pricing tiers",
-    body: "Both apps use four pricing tiers matched to usage, and both offer a free plan for one pixel. Infinite's paid tiers ($6.99/$9.99/$19.99) are cheaper at the entry and middle levels than Pixel Tracker's ($7/$15/$29), though Pixel Tracker's tiers unlock more pixels as you move up.",
-  },
-  {
     title: "Server-side tracking (CAPI)",
     body: "Both apps forward events server-side in addition to the browser pixel. Neither app's marketing distinguishes itself strongly here — the practical difference for most merchants comes down to platform coverage and pricing rather than the CAPI implementation itself.",
   },
   {
     title: "Setup and installation",
     body: "Both are marketed as no-code installs via Shopify ScriptTags, meaning neither requires editing theme files or hiring a developer. A merchant switching between them just re-enters pixel IDs in the new app's dashboard.",
-  },
+  }
 ];
 
-const pricingNarrative = [
-  "At the entry level, the two apps are close: Infinite's Basic plan is $6.99/mo versus Pixel Tracker's Starter at $7/mo, both aimed at stores running just a few pixels. The gap shows up more by the middle tier — Infinite's Standard is $9.99/mo versus Pixel Tracker's Growth at $15/mo — though Pixel Tracker's Growth tier also unlocks 10 pixels.",
-  "Both apps offer a free plan for a single pixel, so a merchant testing either one out can do so without paying anything upfront.",
-];
+const pricingNarrative = ["Pixel Tracker's launch prices and plan limits are not confirmed. Compare the app's Shopify listing when it becomes available; billing will be through Shopify."];
 
 const chooseWhenPixelTracker = [
   "You run Google Ads or LinkedIn campaigns alongside Meta and TikTok",
@@ -100,14 +93,12 @@ const chooseWhenPixelTracker = [
 
 const chooseWhenCompetitor = [
   "Your ad spend is entirely on Meta, TikTok, Snapchat, Pinterest, or X — the platforms it covers",
-  "A large, proven review history (248 reviews, 4.9★) matters more to you than platform breadth",
-  "You want a slightly cheaper entry-level plan ($6.99/mo vs. $7/mo)",
+  "A large, proven review history (248 reviews, 4.9★) matters more to you than platform breadth"
 ];
 
 const verdict = [
   "Infinite has by far the strongest review track record of any app in this comparison — 248 reviews at a 4.9★ average — which is a real signal of reliability that a pre-launch app like Pixel Tracker can't yet match.",
-  "If your ad spend is entirely on Meta and TikTok, Infinite's lower entry price ($6.99/mo) and proven history make it a reasonable default choice.",
-  "If you also run Google Ads or LinkedIn campaigns, Infinite doesn't cover them — Pixel Tracker supports both, alongside Meta, TikTok, Snapchat, Pinterest, and X, from the same dashboard.",
+  "If you also run Google Ads or LinkedIn campaigns, Infinite doesn't cover them — Pixel Tracker supports both, alongside Meta, TikTok, Snapchat, Pinterest, and X, from the same dashboard."
 ];
 
 export default function InfinitePixelVsPage() {
@@ -127,14 +118,12 @@ export default function InfinitePixelVsPage() {
       pricingNarrative={pricingNarrative}
       pixelTrackerPros={[
         "Also supports Google Ads and LinkedIn, which Infinite doesn't",
-        "Server-side CAPI included at every paid tier",
       ]}
       pixelTrackerCons={[
         "Far smaller review history since it's pre-launch, vs. Infinite's 248 reviews and 4.9★ rating",
       ]}
       competitorPros={[
         "Very large, highly-rated review base (248 reviews, 4.9★) — the most proven track record of any app in this comparison",
-        "Lower entry-level paid pricing ($6.99/mo)",
         "Free plan for live stores",
       ]}
       competitorCons={[

@@ -5,13 +5,13 @@ import PixelTrackingCalculator from "@/components/pixel-tracking-calculator";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/tools/pixel-tracking-calculator", {
-  title: "Pixel Tracking Cost & Coverage Calculator | Appnary",
+  title: "Pixel Tracking Coverage Calculator | Appnary",
   description:
-    "Estimate your Shopify tracking coverage, recommended plan cost, and missed conversions from browser-only pixels. Free, no signup required.",
+    "Estimate your Shopify tracking coverage, platform count, and missed conversions from browser-only pixels. Free, no signup required.",
   openGraph: {
-    title: "Pixel Tracking Cost & Coverage Calculator",
+    title: "Pixel Tracking Coverage Calculator",
     description:
-      "See your tracking coverage score, recommended plan, and estimated missed conversions in seconds.",
+      "See your tracking coverage score, platform count, and estimated missed conversions in seconds.",
     url: "https://appnary.com/tools/pixel-tracking-calculator",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = withPageSeo("/tools/pixel-tracking-calculator"
 const faqs = [
   {
     q: "What does this calculator estimate?",
-    a: "It estimates three things from your inputs: which Pixel Tracker plan fits your platform count, a 0-100 coverage score for how complete your tracking stack is, and a rough range of conversions that may go unreported if you're not using server-side tracking. It also shows a simple blended ROAS if you fill in ad spend, average order value, and monthly orders.",
+    a: "It estimates three things from your inputs: your selected platform count, a 0-100 coverage score for how complete your tracking stack is, and a rough range of conversions that may go unreported if you're not using server-side tracking. It also shows a simple blended ROAS if you fill in ad spend, average order value, and monthly orders.",
   },
   {
     q: "How is the coverage score calculated?",
@@ -68,12 +68,12 @@ const faqJsonLd = {
 const webApplicationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Pixel Tracking Cost & Coverage Calculator",
+  name: "Pixel Tracking Coverage Calculator",
   url: "https://appnary.com/tools/pixel-tracking-calculator",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Any",
   description:
-    "Free calculator that estimates Shopify tracking coverage, recommended pixel plan cost, and conversions missed from browser-only tracking.",
+    "Free calculator that estimates Shopify tracking coverage, platform count, and conversions missed from browser-only tracking.",
   offers: {
     "@type": "Offer",
     price: "0",
@@ -123,13 +123,13 @@ export default function PixelTrackingCalculatorPage() {
           Free Tool
         </span>
         <h1 className="mt-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-          Pixel Tracking Cost &amp;{" "}
+          Pixel Tracking{" "}
           <span className="bg-gradient-to-r from-aqua to-lime bg-clip-text text-transparent">
             Coverage Calculator
           </span>
         </h1>
         <p className="mt-4 text-lg text-muted-foreground-strong">
-          See which plan fits your platform count, how complete your
+          See your platform count, how complete your
           tracking stack is, and roughly how many conversions browser-only
           tracking might be missing.
         </p>
@@ -151,8 +151,8 @@ export default function PixelTrackingCalculatorPage() {
               This tool takes a few basic inputs, the ad platforms you run,
               your current tracking setup, and whether you use server-side
               events, and turns them into three plain-English numbers: a
-              recommended Pixel Tracker plan based on how many platforms you
-              need, a coverage score out of 100 that reflects how complete
+              count of the ad platforms you
+              selected, a coverage score out of 100 that reflects how complete
               your tracking stack is, and an estimated range of conversions
               that browser-only tracking might not be reporting. If you also
               enter your ad spend, average order value, and monthly orders,
