@@ -35,7 +35,7 @@ const features = [
   {
     title: "Server-side status",
     description:
-      "Meta CAPI and TikTok Events API are not confirmed launch features. Browser pixel support does not establish server-side delivery.",
+      "A saved G- measurement ID can send a GA4 purchase when an order is paid. The order id is the transaction id. Meta CAPI and TikTok Events API are not confirmed.",
   },
   {
     title: "Simple dashboard",
@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: "Does it work with server-side events?",
-    a: "Server-side event delivery is not confirmed. Do not rely on Pixel Tracker for Meta CAPI or TikTok Events API until the launch documentation and test events verify those features.",
+    a: "A saved G- measurement ID can send a GA4 purchase when an order is paid, using the order id as the transaction id. Meta CAPI and TikTok Events API are not confirmed, and Pixel Tracker does not run a Google Ads server container.",
   },
   {
     q: "Is there a free plan?",

@@ -68,12 +68,12 @@ const howItWorksSteps = [
   {
     n: "03",
     title: "Events fire on the storefront",
-    body: "The current implementation loads browser tags through an app embed. Meta CAPI and TikTok Events API delivery are not confirmed launch features. A browser event does not prove server-side delivery.",
+    body: "The theme embed loads browser tags. A saved G- measurement ID can also send a GA4 purchase when an order is paid. Meta CAPI and TikTok Events API are not confirmed. A browser event does not prove those server deliveries.",
   },
   {
     n: "04",
     title: "Manage everything in one place",
-    body: "The planned dashboard manages platform IDs. Saved settings must be checked against real events; server tokens and delivery are not confirmed features.",
+    body: "The dashboard stores platform IDs. A saved Google measurement ID is what the paid-order GA4 purchase uses. Other server tokens are not confirmed.",
   },
 ];
 
@@ -153,7 +153,7 @@ const dashboardGuides = [
   {
     title: "Browser vs server-side",
     summary:
-      "Browser and server delivery need separate verification. Pixel Tracker's server-side integrations are not confirmed for launch.",
+      "Browser and server delivery need separate checks. A saved G- measurement ID can send a GA4 purchase on paid orders. Meta CAPI and TikTok Events API are not confirmed.",
   },
   {
     title: "Per-store billing",

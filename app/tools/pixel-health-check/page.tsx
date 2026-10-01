@@ -212,10 +212,11 @@ export default function PixelHealthCheckPage() {
           <div className="space-y-4 text-base leading-relaxed text-muted-foreground-strong">
             <p>
               Pixel Tracker is a multi-platform pixel installer for Shopify: paste
-              IDs for Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and
-              X from one dashboard, without theme code. Server-side support focuses
-              on Facebook CAPI and TikTok Events API. It is a pixel layer, not a
-              full attribution or profit BI suite.
+              IDs for Meta, Google, TikTok, Snapchat, Pinterest, LinkedIn, and
+              X from one dashboard, without theme code. A saved G- measurement ID
+              can send a GA4 purchase when an order is paid. Meta CAPI and TikTok
+              Events API are not confirmed. It is a pixel layer, not a full
+              attribution or profit BI suite.
             </p>
             <p>
               The app is not on the Shopify App Store yet. Join the waitlist for

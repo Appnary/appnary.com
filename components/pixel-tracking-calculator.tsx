@@ -56,7 +56,7 @@ const COMPARISON_ROWS: {
     feature: "Server-side tracking",
     diy: "Rare, needs custom dev work",
     multiple: "Varies by app",
-    pixel: "Not confirmed",
+    pixel: "GA4 purchase only",
   },
   {
     feature: "Theme edits required",

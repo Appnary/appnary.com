@@ -26,7 +26,7 @@ const steps = [
   },
   {
     "title": "Inspect server delivery separately",
-    "body": "If your chosen integration includes server delivery, check it separately using the provider's diagnostics and deduplication instructions. Pixel Tracker server-side delivery is not confirmed."
+    "body": "A saved G- measurement ID can send a GA4 purchase when an order is paid, using the order id as the transaction id. That is not a Google Ads conversion and not a GTM server container. Pixel Tracker does not manage Ads server-side tagging."
   }
 ];
 const faqs = [
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     "q": "Does Pixel Tracker provide server-side tracking?",
-    "a": "Server-side delivery and browser/server deduplication are not confirmed launch features."
+    "a": "A saved G- measurement ID can send a GA4 purchase on paid orders. Google Ads server-side tagging is not part of Pixel Tracker."
   },
   {
     "q": "How will Pixel Tracker billing work?",

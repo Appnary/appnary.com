@@ -217,7 +217,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Pixel Tracker availability and scope",
         "paragraphs": [
-          "Pixel Tracker is in development. Launch platform coverage and server-side delivery are not confirmed. It does not configure Google Tag Manager server containers or Enhanced Conversions. Use an available integration if you need those features today."
+          "Pixel Tracker is in development and is not available to install. It does not configure Google Tag Manager server containers or Enhanced Conversions. A saved G- measurement ID can send a GA4 purchase when an order is paid, with the Shopify order id as the transaction id. That purchase is a GA4 event, not a Google Ads conversion."
         ]
       }
     ],
