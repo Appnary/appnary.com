@@ -1,5 +1,5 @@
 /** Public IndexNow key. The matching file in public/ must contain this value. */
-export const INDEXNOW_KEY = "02f765d66e9cfe724cdb16ec9930e062";
+export const INDEXNOW_KEY = "02f765d66e9cfe724cdb16ec9930e062"; // gitleaks:allow
 
 export const INDEXNOW_HOST = "appnary.com";
 
