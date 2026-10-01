@@ -5,10 +5,16 @@ const nextConfig: NextConfig = {
     inlineCss: true,
   },
   async headers() {
-    return [{
-      source: "/badges/:path*",
-      headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
-    }];
+    return [
+      {
+        source: "/badges/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }],
+      },
+      {
+        source: "/:path*",
+        headers: [{ key: "Content-Signal", value: "search=yes, ai-train=yes, ai-input=yes" }],
+      },
+    ];
   },
   async redirects() {
     return [

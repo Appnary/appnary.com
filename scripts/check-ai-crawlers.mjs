@@ -74,6 +74,31 @@ assert.equal(byAgent.get("Bytespider")?.disallow, "/", "Bytespider must be disal
 assert.equal(byAgent.get("PetalBot")?.disallow, "/", "PetalBot must be disallowed");
 assert.equal(byAgent.get("*")?.disallow, "/api/", "the default rule must keep /api/ closed");
 
+const robotsTxt = load("../app/robots.ts").renderRobotsTxt();
+assert.match(robotsTxt, /User-Agent: \*\nContent-Signal: search=yes, ai-train=yes, ai-input=yes\nAllow: \//);
+assert.match(
+  robotsTxt,
+  /User-Agent: Bytespider\nUser-Agent: PetalBot\nContent-Signal: search=no, ai-train=no, ai-input=no\nDisallow: \//,
+);
+assert.match(robotsTxt, /Crawl-delay: 10/);
+
+const { prefersMarkdown } = load("../lib/prefers-markdown.ts");
+assert.equal(prefersMarkdown("text/markdown, text/html;q=0.8, */*;q=0.5"), true);
+assert.equal(prefersMarkdown("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"), false);
+assert.equal(prefersMarkdown("text/markdown, text/html"), false);
+assert.equal(prefersMarkdown(null), false);
+
+const { htmlToMarkdown } = load("../lib/html-to-markdown.ts");
+const markdown = htmlToMarkdown(
+  "<!doctype html><html><head><title>Pixel Tracker</title></head><body><nav>Skip</nav><main><h1>Pixel Tracker</h1><p>Connects ad pixels.</p><ul><li><a href=\"/docs\">Docs</a></li></ul></main><footer>Footer</footer></body></html>",
+);
+assert.equal(markdown.startsWith("# Pixel Tracker"), true);
+assert.match(markdown, /Connects ad pixels/);
+assert.match(markdown, /\[Docs\]\(\/docs\)/);
+assert.equal(markdown.includes("Skip"), false);
+assert.equal(markdown.includes("Footer"), false);
+assert.equal(markdown.trimStart().startsWith("<"), false);
+
 const keyFile = readFileSync(new URL(`../public/${INDEXNOW_KEY}.txt`, import.meta.url), "utf8").trim();
 assert.equal(keyFile, INDEXNOW_KEY);
 assert.ok(indexNowKeyLocation().endsWith(`/${INDEXNOW_KEY}.txt`));
