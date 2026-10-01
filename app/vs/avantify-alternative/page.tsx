@@ -114,7 +114,7 @@ export default function AvantifyVsPage() {
       pixelTrackerPros={["Planned focus on pixel configuration from one Shopify app"]}
       pixelTrackerCons={[
         "Still on the waitlist (not installable from the App Store yet)",
-        "Server-side delivery is not confirmed",
+        "Meta CAPI and TikTok Events API are not confirmed",
       ]}
       competitorPros={[
         "Pricing tied to Shopify plan tier rather than pixel count may suit stores using many pixels on a Basic Shopify plan",

@@ -267,7 +267,7 @@ const faqs = [
   },
   {
     q: "What does server-side tracking (CAPI) actually add over a standard pixel?",
-    a: "Check the chosen app's current integration documentation and test events. Pixel Tracker is prelaunch; server-side delivery is not confirmed.",
+    a: "Check the chosen app's current integration documentation and test events. A saved G- measurement ID can send a GA4 purchase on paid orders. Meta CAPI and TikTok Events API are not confirmed.",
   },
   {
     q: "How does Pixel Tracker's pricing compare to the rest of this list?",

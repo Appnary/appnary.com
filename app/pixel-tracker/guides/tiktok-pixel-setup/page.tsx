@@ -43,7 +43,7 @@ const sections = [
   {
     "heading": "Pixel Tracker launch status",
     "paragraphs": [
-      "Pixel Tracker is in development and not available to install. Platform coverage, purchase events, and server-side delivery still need verification. There is no confirmed CAPI or Events API toggle to configure in Pixel Tracker.",
+      "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform purchase events still need verification. There is no confirmed CAPI or Events API toggle to configure in Pixel Tracker.",
       "The current app approach uses a Shopify theme app extension. An app embed requires activation in the theme editor; checkout event delivery needs a separate end-to-end test. [Join the waitlist](/#waitlist) for launch updates."
     ]
   }
