@@ -267,7 +267,7 @@ export default function BestRoasCalculatorsPage() {
       calloutBox={{
         heading: "Where Pixel Tracker fits in",
         body: [
-          "It's the pixel/data layer: the app that installs and manages Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, LinkedIn, and X tracking pixels on your Shopify store, with server-side event forwarding so conversion data stays accurate even when browser tracking gets blocked. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+          "It's the pixel layer: the app stores IDs for Meta, Google, TikTok, Snapchat, Pinterest, LinkedIn, and X and loads browser tags. A saved G- measurement ID can send a GA4 purchase on paid orders. Meta CAPI and TikTok Events API are not confirmed. Pixel Tracker is in development and is not available to install.",
           "That matters for this category specifically because every ROAS calculator above depends on accurate conversion data reaching it. A profit-adjusted ROAS number is only as good as the ad-spend and conversion data feeding it — if a pixel is misfiring or missing server-side events, the ROAS calculator on top of it will produce a precise-looking number built on incomplete data.",
         ],
         ctaHref: "/pixel-tracker",

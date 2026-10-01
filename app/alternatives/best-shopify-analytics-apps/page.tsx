@@ -232,7 +232,7 @@ export default function BestAnalyticsAppsPage() {
       calloutBox={{
         heading: "Where Pixel Tracker fits in",
         body: [
-          "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+          "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
           "The two layers work together rather than against each other: cleaner, more complete conversion data from a tool like Pixel Tracker means the reports and dashboards above have more accurate underlying numbers to work with, whichever one you choose for reporting itself.",
         ],
         ctaHref: "/pixel-tracker",
@@ -261,7 +261,7 @@ export default function BestAnalyticsAppsPage() {
         },
         {
           q: "Does Pixel Tracker provide reporting dashboards like these apps do?",
-          a: "No. For that, you'd pair it with one of the apps above. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+          a: "No. For that, you'd pair it with one of the apps above. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
         },
       ]}
     />

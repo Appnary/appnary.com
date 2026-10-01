@@ -39,7 +39,7 @@ const pricingRows = [
 const faqs = [
   {
     q: "Does Omega support Google Ads or Pinterest?",
-    a: "No — Omega covers Facebook/Meta, TikTok, and Snapchat only. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No — Omega covers Facebook/Meta, TikTok, and Snapchat only. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Is Omega more expensive than Pixel Tracker?",
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: "Can I switch from Omega to Pixel Tracker?",
-    a: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Is Omega's price increase across tiers justified by extra features?",
@@ -60,14 +60,14 @@ const faqs = [
 ];
 
 const overview = [
-  "The difference is scope: Omega focuses tightly on three platforms — Facebook/Meta, TikTok, and Snapchat — and has built a strong reputation doing it, with 158 reviews at a perfect 5.0★ average on the Shopify App Store. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "The difference is scope: Omega focuses tightly on three platforms — Facebook/Meta, TikTok, and Snapchat — and has built a strong reputation doing it, with 158 reviews at a perfect 5.0★ average on the Shopify App Store. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   "Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Omega Pixel supports only Facebook/Meta, TikTok, and Snapchat. It doesn't support Google Ads, Pinterest, LinkedIn, or X (Twitter) at all — a real limitation for any store running paid search or B2B campaigns alongside social ads. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Omega Pixel supports only Facebook/Meta, TikTok, and Snapchat. It doesn't support Google Ads, Pinterest, LinkedIn, or X (Twitter) at all — a real limitation for any store running paid search or B2B campaigns alongside social ads. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Review history and reputation",
@@ -98,7 +98,7 @@ const chooseWhenCompetitor = [
 
 const verdict = [
   "Omega has a genuinely excellent track record — 158 reviews at a perfect 5.0★ average — but it only covers three ad platforms: Facebook/Meta, TikTok, and Snapchat.",
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
 ];
 
 export default function OmegaPixelVsPage() {
@@ -110,7 +110,7 @@ export default function OmegaPixelVsPage() {
       competitorPricing="Free – $69.99/mo"
       competitorBestFor="Stores running only Facebook/Meta, TikTok, and Snapchat campaigns that want a well-reviewed, established app."
       competitorHref="https://apps.shopify.com/facebook-multiple-pixel"
-      positioning="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      positioning="Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}

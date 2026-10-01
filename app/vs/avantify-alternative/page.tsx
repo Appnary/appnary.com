@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/vs/avantify-alternative", {
   title: "Pixel Tracker vs Avantify | Shopify Pixel Tracking Comparison | Appnary",
   description:
-    "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   openGraph: {
     title: "Pixel Tracker vs Avantify",
     description:
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "Does Avantify support Google Ads?",
-    a: "No — Avantify covers Meta, TikTok, Pinterest, Snapchat, and X. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No — Avantify covers Meta, TikTok, Pinterest, Snapchat, and X. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "How is Avantify's pricing structured?",
@@ -60,7 +60,7 @@ const faqs = [
 ];
 
 const overview = [
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   "Avantify's base price looks attractive at $5.99/mo, but that number doesn't include CAPI for more than the first platform integration — each additional server-side integration adds $3/mo. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.",
 ];
 
@@ -71,7 +71,7 @@ const featureBreakdown = [
   },
   {
     title: "Platform coverage",
-    body: "Avantify supports Meta, TikTok, Pinterest, Snapchat, and X. Neither app supports Reddit or Microsoft/Bing Ads. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Avantify supports Meta, TikTok, Pinterest, Snapchat, and X. Neither app supports Reddit or Microsoft/Bing Ads. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Total cost of ownership",
@@ -93,7 +93,7 @@ const chooseWhenCompetitor = [
 ];
 
 const verdict = [
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
 ];
 
 export default function AvantifyVsPage() {
@@ -105,7 +105,7 @@ export default function AvantifyVsPage() {
       competitorPricing="$5.99 – $12.99/mo + CAPI add-ons"
       competitorBestFor="Stores wanting a low entry price who are comfortable paying extra per additional CAPI integration."
       competitorHref="https://apps.shopify.com/avantify-multi-pixels"
-      positioning="Compare Avantify's CAPI fees with your integration needs. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      positioning="Compare Avantify's CAPI fees with your integration needs. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}

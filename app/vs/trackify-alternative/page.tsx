@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Does Trackify support Google Ads?",
-    a: "No. Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No. Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Is Trackify's free plan unlimited?",
@@ -60,14 +60,14 @@ const faqs = [
 ];
 
 const overview = [
-  "Trackify has the largest review base of any app in this comparison — 350 reviews — and includes unlimited pixels starting at its lowest paid tier. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Trackify has the largest review base of any app in this comparison — 350 reviews — and includes unlimited pixels starting at its lowest paid tier. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   "Pixel Tracker targets multiple platforms, but its launch coverage is not verified. Choose an available app if you need working integrations today.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Trackify covers Facebook/Meta, Instagram, TikTok, and Snapchat. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Review history",
@@ -75,7 +75,7 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI / Events API)",
-    body: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   }
 ];
 
@@ -104,7 +104,7 @@ export default function TrackifyVsPage() {
       competitorPricing="Free (capped) – $28.99/mo"
       competitorBestFor="Stores wanting unlimited pixels on every paid tier, not just the top one, and willing to trade that for narrower platform coverage."
       competitorHref="https://apps.shopify.com/trackify-1"
-      positioning="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      positioning="Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}

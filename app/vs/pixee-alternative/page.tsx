@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/vs/pixee-alternative", {
   title: "Pixel Tracker vs Pixee | Shopify Pixel Tracking Comparison | Appnary",
   description:
-    "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   openGraph: {
     title: "Pixel Tracker vs Pixee",
     description:
@@ -42,11 +42,11 @@ const faqs = [
   },
   {
     q: "Does Pixee support Google Ads or Snapchat?",
-    a: "No — Pixee covers Facebook, Instagram, TikTok, and Pinterest. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No — Pixee covers Facebook, Instagram, TikTok, and Pinterest. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Does Pixee support server-side tracking (CAPI)?",
-    a: "It isn't clearly documented in Pixee's own marketing. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "It isn't clearly documented in Pixee's own marketing. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Is Pixee cheaper than Pixel Tracker?",
@@ -60,13 +60,13 @@ const faqs = [
 
 const overview = [
   "Pixee is less a pure pixel connector and more a small Meta/TikTok ads toolkit — it bundles product-feed sync and AI-assisted ad diagnostics alongside pixel installation, on top of Facebook, Instagram, TikTok, and Pinterest tracking. Pixel Tracker focuses purely on getting more ad platforms' pixels firing reliably, without the extra ads-management tooling.",
-  "That difference in scope shapes everything else: Pixee covers fewer ad platforms and doesn't clearly document whether its server-side CAPI support is confirmed. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "That difference in scope shapes everything else: Pixee covers fewer ad platforms and doesn't clearly document whether its server-side CAPI support is confirmed. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Pixee supports Facebook, Instagram, TikTok, and Pinterest. A store running ads beyond Meta, TikTok, and Pinterest will hit a wall with Pixee. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Pixee supports Facebook, Instagram, TikTok, and Pinterest. A store running ads beyond Meta, TikTok, and Pinterest will hit a wall with Pixee. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Product-feed sync and AI ad diagnostics",
@@ -74,7 +74,7 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking: verify before choosing",
-    body: "Pixee's own marketing doesn't clearly confirm whether CAPI/server-side event forwarding is included, which matters for accurate conversion tracking as ad blockers and browser restrictions cut into client-side pixel data. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Pixee's own marketing doesn't clearly confirm whether CAPI/server-side event forwarding is included, which matters for accurate conversion tracking as ad blockers and browser restrictions cut into client-side pixel data. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   }
 ];
 
@@ -92,7 +92,7 @@ const chooseWhenCompetitor = [
 
 const verdict = [
   "Pixee is less a pure pixel connector and more a small Meta/TikTok ads toolkit — it bundles product-feed sync and AI-assisted ad diagnostics alongside pixel installation, features Pixel Tracker doesn't offer.",
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
 ];
 
 export default function PixeeVsPage() {

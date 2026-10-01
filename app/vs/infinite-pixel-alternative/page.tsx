@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Does Infinite support Google Ads?",
-    a: "No. Infinite covers Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter), but not Google Ads or LinkedIn. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No. Infinite covers Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter), but not Google Ads or LinkedIn. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Which has more reviews?",
@@ -60,14 +60,14 @@ const faqs = [
 ];
 
 const overview = [
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   "The biggest difference between them isn't features — it's track record and platform breadth. Infinite Pixels has been on the Shopify App Store long enough to accumulate 248 reviews at a 4.9★ average, the strongest review history of any app in this comparison series, but it covers five ad platforms rather than Pixel Tracker's seven, leaving out Google Ads and LinkedIn.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Infinite Pixels supports Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter). For a store that only advertises on social platforms, this gap doesn't matter; for one running Google Ads or B2B LinkedIn campaigns, it does. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Infinite Pixels supports Facebook/Meta, TikTok, Snapchat, Pinterest, and X (Twitter). For a store that only advertises on social platforms, this gap doesn't matter; for one running Google Ads or B2B LinkedIn campaigns, it does. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Review history and reliability signal",
@@ -75,7 +75,7 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Neither app's marketing distinguishes itself strongly here — the practical difference for most merchants comes down to platform coverage and pricing rather than the CAPI implementation itself. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Neither app's marketing distinguishes itself strongly here — the practical difference for most merchants comes down to platform coverage and pricing rather than the CAPI implementation itself. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Setup and installation",
@@ -97,7 +97,7 @@ const chooseWhenCompetitor = [
 
 const verdict = [
   "Infinite has by far the strongest review track record of any app in this comparison — 248 reviews at a 4.9★ average — which is a real signal of reliability that a pre-launch app like Pixel Tracker can't yet match.",
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
 ];
 
 export default function InfinitePixelVsPage() {
@@ -109,7 +109,7 @@ export default function InfinitePixelVsPage() {
       competitorPricing="Free – $19.99/mo"
       competitorBestFor="Stores focused on Meta and TikTok specifically, comfortable without Google Ads or LinkedIn pixel support."
       competitorHref="https://apps.shopify.com/infinite-fb-tiktok-pixels"
-      positioning="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      positioning="Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}

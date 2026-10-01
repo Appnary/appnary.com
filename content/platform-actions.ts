@@ -130,7 +130,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Enhanced Conversions and why event accuracy matters",
         "paragraphs": [
-          "Browser and server delivery are separate checks. Verify the provider's documented Google Ads server integration and inspect receipt in Google Ads conversion diagnostics. Pixel Tracker server-side delivery is not confirmed."
+          "Browser and server delivery are separate checks. Verify the provider's documented Google Ads server integration and inspect receipt in Google Ads conversion diagnostics. Pixel Tracker can send a GA4 purchase on paid orders when a G- measurement ID is saved. It does not send Google Ads server-side conversions."
         ]
       }
     ],
@@ -943,7 +943,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Verify your Pinterest configuration",
         "paragraphs": [
-          "Browser and server delivery are separate checks. Verify the provider's documented Pinterest server integration and inspect receipt in Pinterest conversion diagnostics. Pixel Tracker server-side delivery is not confirmed."
+          "Browser and server delivery are separate checks. Verify the provider's documented Pinterest server integration and inspect receipt in Pinterest conversion diagnostics. Pixel Tracker does not send this platform's server events. A saved G- measurement ID can send a GA4 purchase on paid orders."
         ]
       },
       {
@@ -1246,7 +1246,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "Verify your Snapchat configuration",
         "paragraphs": [
-          "Browser and server delivery are separate checks. Verify the provider's documented Snapchat server integration and inspect receipt in Snapchat Events Manager. Pixel Tracker server-side delivery is not confirmed."
+          "Browser and server delivery are separate checks. Verify the provider's documented Snapchat server integration and inspect receipt in Snapchat Events Manager. Pixel Tracker does not send this platform's server events. A saved G- measurement ID can send a GA4 purchase on paid orders."
         ]
       },
       {
@@ -2019,7 +2019,7 @@ export const platformActionPages: PlatformActionPage[] = [
       {
         "heading": "What these events do not include",
         "paragraphs": [
-          "Browser and server delivery are separate checks. Verify the provider's documented X server integration and inspect receipt in X Ads conversion diagnostics. Pixel Tracker server-side delivery is not confirmed."
+          "Browser and server delivery are separate checks. Verify the provider's documented X server integration and inspect receipt in X Ads conversion diagnostics. Pixel Tracker does not send this platform's server events. A saved G- measurement ID can send a GA4 purchase on paid orders."
         ]
       },
       {

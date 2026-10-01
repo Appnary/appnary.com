@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Does MultiPixels support Google Ads?",
-    a: "No — it covers Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No — it covers Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "How established is MultiPixels?",
@@ -67,7 +67,7 @@ const overview = [
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "MultiPixels supports Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. For a store running paid search or B2B campaigns, that's a real gap. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "MultiPixels supports Facebook, Instagram, TikTok, Snapchat, Pinterest, and X. For a store running paid search or B2B campaigns, that's a real gap. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Audience-builder tools",
@@ -79,7 +79,7 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Whether MultiPixels' CAPI/server-side event forwarding is confirmed isn't clearly documented in its own marketing. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Whether MultiPixels' CAPI/server-side event forwarding is confirmed isn't clearly documented in its own marketing. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   }
 ];
 

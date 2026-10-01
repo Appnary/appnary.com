@@ -11,7 +11,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "description": "Pixel Tracker and Elevar both solve Shopify tracking problems, but for very different stores and budgets. Compare features, pricing, and who each tool is built for.",
     "h1": "Pixel Tracker vs Elevar: Which Shopify Tracking Solution Fits Your Store?",
     "intro": [
-      "Elevar is a full server-side data pipeline for stores that need custom event schemas, warehouse sync, and agency-grade infrastructure. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+      "Elevar is a full server-side data pipeline for stores that need custom event schemas, warehouse sync, and agency-grade infrastructure. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
       "If you're a solo merchant who wants Facebook, Google Ads, TikTok, and other pixels running without touching theme code, Pixel Tracker is the simpler option to evaluate after launch. If you're an agency or technical team managing complex data infrastructure across multiple stores, Elevar is the right tool for that job."
     ],
     "quickComparison": [
@@ -32,7 +32,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "Not verified",
+        "pixelTracker": "GA4 purchase only",
         "competitor": "Full data pipeline (custom events, webhooks)"
       },
       {
@@ -160,7 +160,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "faqs": [
       {
         "q": "Can Pixel Tracker replace Elevar?",
-        "a": "For pixel installation, yes. For full data pipeline infrastructure (custom events, warehouse sync, agency multi-store views), Elevar is the more complete tool. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+        "a": "For pixel installation, yes. For full data pipeline infrastructure (custom events, warehouse sync, agency multi-store views), Elevar is the more complete tool. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       },
       {
         "q": "Is Elevar worth the price for a small store?",
@@ -168,7 +168,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Does Pixel Tracker support server-side tracking like Elevar?",
-        "a": "Elevar offers a broader data pipeline with custom event schemas, but that depth comes for more complex data requirements. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+        "a": "Elevar offers a broader data pipeline with custom event schemas, but that depth comes for more complex data requirements. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       },
       {
         "q": "Can I start with Pixel Tracker and move to Elevar later?",
@@ -204,11 +204,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "Free (included with Shopify)",
     "competitorCategory": "BusinessApplication",
     "title": "Pixel Tracker vs Facebook & Instagram Channel: Comparison",
-    "description": "The Facebook & Instagram sales channel is free and Meta-only. Compare what each does well. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    "description": "The Facebook & Instagram sales channel is free and Meta-only. Compare what each does well. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
     "h1": "Pixel Tracker vs Facebook & Instagram Channel: Do You Need Both?",
     "intro": [
       "Most Shopify stores already have the Facebook & Instagram sales channel installed. It's free, it connects your Meta pixel, and it lets you manage your Facebook and Instagram shop from Shopify. The question is whether that's enough for your tracking needs, or whether a multi-platform pixel installer adds something the native channel doesn't.",
-      "The short answer: if you only run ads on Meta and don't need server-side tracking, the native channel is probably fine. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      "The short answer: if you only run ads on Meta and don't need server-side tracking, the native channel is probably fine. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -223,7 +223,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "Not verified",
+        "pixelTracker": "GA4 purchase only",
         "competitor": "CAPI (via channel settings)"
       },
       {
@@ -345,7 +345,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Does the native channel support server-side tracking?",
-        "a": "Yes, the Facebook & Instagram channel includes Conversions API (CAPI) support. You can enable it in the channel settings. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+        "a": "Yes, the Facebook & Instagram channel includes Conversions API (CAPI) support. You can enable it in the channel settings. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       },
       {
         "q": "What does Pixel Tracker offer that the native channel doesn't?",
@@ -389,7 +389,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "Pixel Tracker vs Google Tag Manager: DIY Tags vs Managed Pixel Installation",
     "intro": [
       "Google Tag Manager (GTM) is the most powerful tag management tool available ,  it's free, it handles virtually any tracking script, and it gives you full control over when and how tags fire. The trade-off is complexity: GTM requires understanding tags, triggers, variables, and data layers, and a misconfigured trigger can silently break your conversion tracking.",
-      "You trade flexibility for simplicity. For most Shopify merchants who want ad pixels running correctly without learning tag management infrastructure, that's a good trade. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      "You trade flexibility for simplicity. For most Shopify merchants who want ad pixels running correctly without learning tag management infrastructure, that's a good trade. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -419,7 +419,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "Not verified",
+        "pixelTracker": "GA4 purchase only",
         "competitor": "Server-side GTM (complex)"
       },
       {
@@ -570,7 +570,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "Pixel Tracker vs Littledata: Analytics Pipeline vs Pixel Installation",
     "intro": [
       "Littledata is a server-side analytics layer that fixes tracking accuracy in GA4, Segment, and ad platforms. It's built for stores with complex analytics needs, subscription businesses, and teams that need clean data flowing into their analytics stack.",
-      "It's focused on a narrower problem: getting your Meta, Google, TikTok, and other ad pixels firing correctly without code. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      "It's focused on a narrower problem: getting your Meta, Google, TikTok, and other ad pixels firing correctly without code. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -740,8 +740,8 @@ export const vsComparisonPages: VsComparisonPage[] =
     "description": "Compare TrackBee with the intended scope of prelaunch Pixel Tracker. Launch coverage and prices for Pixel Tracker are not confirmed.",
     "h1": "Pixel Tracker vs TrackBee: Multi-Platform Pixel Installation Compared",
     "intro": [
-      "They're close competitors, and the right choice depends on which platforms you advertise on and whether you need server-side tracking. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
-      "TrackBee focuses primarily on Meta and a smaller set of platforms. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      "They're close competitors, and the right choice depends on which platforms you advertise on and whether you need server-side tracking. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
+      "TrackBee focuses primarily on Meta and a smaller set of platforms. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -761,7 +761,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "Not verified",
+        "pixelTracker": "GA4 purchase only",
         "competitor": "Limited"
       },
       {
@@ -871,7 +871,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Which has better server-side support?",
-        "a": "TrackBee's server-side support is more limited. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+        "a": "TrackBee's server-side support is more limited. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       },
       {
         "q": "Does TrackBee support all the same platforms?",
@@ -911,7 +911,7 @@ export const vsComparisonPages: VsComparisonPage[] =
     "h1": "Pixel Tracker vs Hyros: Attribution Intelligence vs Pixel Installation",
     "intro": [
       "Hyros is an AI-powered attribution platform that tracks ad spend across multiple channels and provides cross-device, cross-platform attribution modeling. It's built for stores spending $10k+/mo on ads and needing accurate ROAS data across Meta, Google, TikTok, and other platforms.",
-      "It connects ad platforms to your Shopify store so events fire correctly. It doesn't model attribution or provide cross-channel reporting ,  it makes sure the data gets to the platforms in the first place. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      "It connects ad platforms to your Shopify store so events fire correctly. It doesn't model attribution or provide cross-channel reporting ,  it makes sure the data gets to the platforms in the first place. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -1028,7 +1028,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Can I use both together?",
-        "a": "Yes, and they're complementary. Hyros reads that data and provides cross-platform attribution. They solve different problems at different layers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+        "a": "Yes, and they're complementary. Hyros reads that data and provides cross-platform attribution. They solve different problems at different layers. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       },
       {
         "q": "Is Hyros worth $230+/mo for a small store?",
@@ -1097,7 +1097,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "Not verified",
+        "pixelTracker": "GA4 purchase only",
         "competitor": "Server-side attribution layer"
       },
       {
@@ -1429,7 +1429,7 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "feature": "Server-side tracking",
-        "pixelTracker": "Not verified",
+        "pixelTracker": "GA4 purchase only",
         "competitor": "Manual setup per platform"
       }
     ],
@@ -1556,11 +1556,11 @@ export const vsComparisonPages: VsComparisonPage[] =
     "competitorPrice": "Varies by method",
     "competitorCategory": "BusinessApplication",
     "title": "Server-Side Tracking Setup Options for Shopify: Comparison",
-    "description": "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    "description": "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
     "h1": "Server-Side Tracking Setup Options for Shopify: CAPI, GTM, Native, and Pixel Tracker",
     "intro": [
       "Server-side tracking sends conversion events directly from your server (or Shopify's) to ad platforms, bypassing browser blockers that kill client-side pixels. There are four main ways to set it up on Shopify, each with different trade-offs in complexity, cost, and platform coverage.",
-      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
     ],
     "quickComparison": [
       {
@@ -1677,15 +1677,15 @@ export const vsComparisonPages: VsComparisonPage[] =
       },
       {
         "q": "Which server-side method should I use?",
-        "a": "For Google Ads server-side, use Server-side GTM. For full data infrastructure, use Elevar. For Meta-only, the native Facebook & Instagram channel works. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+        "a": "For Google Ads server-side, use Server-side GTM. For full data infrastructure, use Elevar. For Meta-only, the native Facebook & Instagram channel works. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       },
       {
         "q": "Can I use Pixel Tracker's server-side alongside sGTM?",
-        "a": "Pixel Tracker server-side delivery is not confirmed. For any future combination, define which provider sends each event and verify duplicate handling before running overlapping integrations."
+        "a": "A saved G- measurement ID can send a GA4 purchase on paid orders. That is not a Google Ads server container. Check the transaction id before running that purchase next to another sender."
       },
       {
         "q": "Does Pixel Tracker support Google Ads server-side?",
-        "a": "Not currently. For Google Ads server-side tracking, Server-side GTM is the standard approach. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+        "a": "Not currently. For Google Ads server-side tracking, Server-side GTM is the standard approach. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       },
       {
         "q": "Is Pixel Tracker available on the Shopify App Store?",
