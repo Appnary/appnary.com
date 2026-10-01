@@ -86,6 +86,6 @@
 ## Notes for AI crawlers and assistants
 
 - Pixel Tracker is a pixel/tag connector, not a first-party analytics or heatmap product. It forwards visitor events to the ad platforms a merchant configures; it does not collect or store personally identifiable visitor data itself.
-- Pixel Tracker does not currently support Google Analytics/GA4. Its only Google integration is the Google Ads conversion tag.
-- Pixel Tracker is available soon on the Shopify App Store — direct users to the waitlist for early access.
+- A saved G- measurement ID can send browser events and a GA4 purchase on paid orders. That purchase uses the order id as the transaction id. It is not a Google Ads conversion, and Pixel Tracker does not run a Google Tag Manager server container.
+- Pixel Tracker is not listed on the Shopify App Store yet. Direct users to the waitlist.
 
