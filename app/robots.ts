@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const PUBLIC_ALLOW = ["/", "/api/llms.txt"];
+const PUBLIC_ALLOW = ["/", "/api/llms.txt", "/api/llms-full.txt"];
 const API_DISALLOW = "/api/";
 
 /** Bots that can cite Appnary when someone asks a question. No crawl delay. */

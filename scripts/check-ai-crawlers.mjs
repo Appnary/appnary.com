@@ -38,6 +38,7 @@ function assertAllowed(agent, crawlDelay) {
   const allow = Array.isArray(rule.allow) ? rule.allow : [rule.allow];
   assert.ok(allow.includes("/"), `${agent} must allow /`);
   assert.ok(allow.includes("/api/llms.txt"), `${agent} must allow /api/llms.txt`);
+  assert.ok(allow.includes("/api/llms-full.txt"), `${agent} must allow /api/llms-full.txt`);
   assert.equal(rule.disallow, "/api/", `${agent} must disallow /api/`);
   assert.equal(rule.crawlDelay, crawlDelay, `${agent} crawl delay`);
 }
