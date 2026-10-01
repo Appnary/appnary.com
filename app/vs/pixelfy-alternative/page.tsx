@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: "Does Pixelfy support Google Ads?",
-    a: "No — Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No — Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "How is Pixelfy rated on the Shopify App Store?",
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker support Taboola?",
-    a: "Not currently. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "Not currently. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Should a lower App Store rating rule out Pixelfy?",
@@ -62,13 +62,13 @@ const faqs = [
 
 const overview = [
   "Pixelfy runs a single flat-rate plan — $7.99/mo for unlimited pixels — covering Facebook, TikTok, Snapchat, Pinterest, and Taboola. Pixel Tracker intends to support multiple platforms, but its launch coverage and pricing are not confirmed.",
-  "Pixelfy is also the only app in this comparison series that supports Taboola. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Pixelfy is also the only app in this comparison series that supports Taboola. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
 ];
 
 const featureBreakdown = [
   {
     title: "Platform coverage",
-    body: "Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. Taboola is Pixelfy's one differentiator no other app in this series offers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Pixelfy covers Facebook, TikTok, Snapchat, Pinterest, and Taboola. Taboola is Pixelfy's one differentiator no other app in this series offers. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "App Store rating",
@@ -76,7 +76,7 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Pixelfy includes CAPI support alongside its pixel installation for the platforms it covers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Pixelfy includes CAPI support alongside its pixel installation for the platforms it covers. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Best fit by platform mix",
@@ -121,7 +121,7 @@ export default function PixelfyVsPage() {
       ]}
       competitorPros={[
         "Low, simple flat price ($7.99/mo)",
-        "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+        "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
       ]}
       competitorCons={[
         "No free plan",

@@ -5,11 +5,11 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/vs/tixel-alternative", {
   title: "Pixel Tracker vs TiXel | Shopify Pixel Tracking Comparison | Appnary",
   description:
-    "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   openGraph: {
     title: "Pixel Tracker vs TiXel",
     description:
-      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+      "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
     url: "https://appnary.com/vs/tixel-alternative",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "Can I switch from TiXel to Pixel Tracker?",
-    a: "Not yet. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "Not yet. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Is TiXel worth choosing just for its Reddit pixel support?",
@@ -61,7 +61,7 @@ const faqs = [
 ];
 
 const overview = [
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   "The practical difference between them comes down to two things: how many ad platforms each one covers, and how each charges for that coverage. TiXel supports the widest platform list of any app in this comparison series, including Reddit, but delivers it through a single flat-rate plan.",
 ];
 
@@ -72,11 +72,11 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI / Events API)",
-    body: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Setup and switching cost",
-    body: "Switching is really just re-entering your existing pixel IDs in the new app's dashboard and uninstalling the old one. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Switching is really just re-entering your existing pixel IDs in the new app's dashboard and uninstalling the old one. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   }
 ];
 
@@ -94,7 +94,7 @@ const chooseWhenCompetitor = [
 ];
 
 const verdict = [
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
 ];
 
 export default function TiXelVsPage() {
@@ -106,7 +106,7 @@ export default function TiXelVsPage() {
       competitorPricing="$19.99/mo (no live-store free plan)"
       competitorBestFor="Stores that need Reddit pixel tracking alongside the standard platforms and prefer one flat-rate plan."
       competitorHref="https://apps.shopify.com/tixel"
-      positioning="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      positioning="Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       overview={overview}
       featureRows={featureRows}
       featureBreakdown={featureBreakdown}

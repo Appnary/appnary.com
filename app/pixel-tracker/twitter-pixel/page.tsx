@@ -26,7 +26,7 @@ const steps = [
   },
   {
     "title": "Inspect server delivery separately",
-    "body": "If your chosen integration includes server delivery, check it separately using the provider's diagnostics and deduplication instructions. Pixel Tracker server-side delivery is not confirmed."
+    "body": "If your chosen integration includes server delivery, check it separately using the provider's diagnostics and deduplication instructions. Pixel Tracker does not send this platform's server events. A saved G- measurement ID can send a GA4 purchase on paid orders."
   }
 ];
 const faqs = [
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     "q": "Does Pixel Tracker provide server-side tracking?",
-    "a": "Server-side delivery and browser/server deduplication are not confirmed launch features."
+    "a": "This platform's server delivery is not confirmed. A saved G- measurement ID can send a GA4 purchase on paid orders."
   },
   {
     "q": "How will Pixel Tracker billing work?",

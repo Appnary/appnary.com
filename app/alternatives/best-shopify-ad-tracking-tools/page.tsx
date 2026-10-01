@@ -22,7 +22,7 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+      "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
     pricing: "Launch pricing not confirmed",
     bestFor:
       "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
@@ -198,7 +198,7 @@ const comparisonRows = [
 const analysis = [
   {
     title: "\"Ad tracking\" spans two genuinely different jobs",
-    body: "The second job is turning that raw event data into attribution reports, blended ROAS, and cross-channel dashboards — that's what Triple Whale does, and partly what Elevar does for technical teams. Confusing the two leads to overpaying: buying Triple Whale to fix a broken pixel, or expecting a $10/mo pixel installer to give you multi-touch attribution. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "The second job is turning that raw event data into attribution reports, blended ROAS, and cross-channel dashboards — that's what Triple Whale does, and partly what Elevar does for technical teams. Confusing the two leads to overpaying: buying Triple Whale to fix a broken pixel, or expecting a $10/mo pixel installer to give you multi-touch attribution. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "The price gap between installers and attribution platforms is real, not a rounding error",
@@ -227,7 +227,7 @@ const buyingGuide = [
 const faqs = [
   {
     q: "What's the difference between a pixel installer and an attribution platform?",
-    a: "An attribution platform (Triple Whale) sits on top of that data to report which channels and campaigns actually drove revenue. You typically need the first before the second is useful. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "An attribution platform (Triple Whale) sits on top of that data to report which channels and campaigns actually drove revenue. You typically need the first before the second is useful. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Why is Triple Whale so much more expensive than the pixel installers on this list?",

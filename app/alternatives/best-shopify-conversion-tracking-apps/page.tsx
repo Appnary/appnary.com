@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/alternatives/best-shopify-conversion-tracking-apps", {
   title: "Best Shopify Conversion Tracking Apps (2026) | Appnary",
   description:
-    "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   openGraph: {
     title: "Best Shopify Conversion Tracking Apps (2026)",
     description:
@@ -39,7 +39,7 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+      "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
     pricing: "Launch pricing not confirmed",
     bestFor:
       "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
@@ -192,7 +192,7 @@ const analysis = [
   },
   {
     title: "Coverage breadth varies a lot even though every app supports CAPI",
-    body: "Supporting \"server-side tracking\" doesn't mean the same thing across these six apps. If your ad spend is concentrated on platforms outside Facebook/TikTok — Microsoft/Bing Ads, for instance — that narrows your options to OnePixel regardless of how good the other apps' CAPI implementation is. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Supporting \"server-side tracking\" doesn't mean the same thing across these six apps. If your ad spend is concentrated on platforms outside Facebook/TikTok — Microsoft/Bing Ads, for instance — that narrows your options to OnePixel regardless of how good the other apps' CAPI implementation is. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Metered vs. flat CAPI pricing changes the real cost as you scale",
@@ -209,7 +209,7 @@ const analysis = [
 ];
 
 const buyingGuide = [
-  "Start with which platforms you need server-side coverage for. If it's Facebook and TikTok only, Pixee or Omega Pixel cover that with a free tier available. If you need Microsoft/Bing Ads specifically, OnePixel is the only option here. If you need the broadest coverage including Reddit, TiXel is the only app that supports it. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Start with which platforms you need server-side coverage for. If it's Facebook and TikTok only, Pixee or Omega Pixel cover that with a free tier available. If you need Microsoft/Bing Ads specifically, OnePixel is the only option here. If you need the broadest coverage including Reddit, TiXel is the only app that supports it. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   "If you want CAPI to be the primary feature rather than one part of a broader pixel app, Avantify's positioning fits that — but budget for its metered per-connection pricing if you plan to add server-side tracking for several platforms.",
   "If you'd rather have tooling that actively flags conversion-tracking problems instead of just forwarding events and hoping they arrive correctly, Pixee's AI diagnostics or TiXel's AI-assisted setup are the two apps in this list built around that idea specifically.",
 ];
@@ -237,7 +237,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker support server-side tracking for Google Ads?",
-    a: "Its Google Ads integration is the standard conversion tag, not a server-side API connection. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "A saved G- measurement ID can send a GA4 purchase on paid orders. That purchase is not a Google Ads conversion and not a server-side Ads connection. Pixel Tracker is in development and is not available to install.",
   },
 ];
 

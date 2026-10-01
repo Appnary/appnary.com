@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "Does Pixel Tracker support Microsoft/Bing Ads?",
-    a: "Not currently. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "Not currently. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Which is cheaper?",
@@ -61,7 +61,7 @@ const faqs = [
 
 const overview = [
   "Compare the extra platforms each app supports. Pixel Tracker's launch prices are not confirmed yet.",
-  "Everything else — Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, and X — is covered by both. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+  "Everything else — Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, and X — is covered by both. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
 ];
 
 const featureBreakdown = [
@@ -71,7 +71,7 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI / Events API)",
-    body: "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     title: "Ease of switching",
@@ -92,7 +92,7 @@ const chooseWhenCompetitor = [
 ];
 
 const verdict = [
-  "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+  "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
 ];
 
 export default function OnePixelVsPage() {

@@ -104,7 +104,7 @@ const tools = [
     isUs: true,
     name: "Pixel Tracker",
     blurb:
-      "Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+      "Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
     pricing: "Launch pricing not confirmed",
     bestFor:
       "Stores evaluating a prelaunch pixel connector and willing to wait for confirmed pricing and plan limits.",
@@ -238,7 +238,7 @@ const analysis = [
   },
   {
     title: "Server-side tracking is table stakes now, not a differentiator",
-    body: "That means server-side support alone shouldn't be the deciding factor between these apps — platform coverage, pricing shape, and review history are where they actually differ. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    body: "That means server-side support alone shouldn't be the deciding factor between these apps — platform coverage, pricing shape, and review history are where they actually differ. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
 ];
 
@@ -255,11 +255,11 @@ const faqs = [
   },
   {
     q: "Which Shopify pixel app supports the most ad platforms?",
-    a: "TiXel supports the most — nine platforms, including Reddit, which no other app in this comparison offers. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "TiXel supports the most — nine platforms, including Reddit, which no other app in this comparison offers. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Do any of these apps require editing my Shopify theme code?",
-    a: "No. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+    a: "No. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
   },
   {
     q: "Is a higher App Store rating always the better choice?",
@@ -281,9 +281,9 @@ export default function BestPixelTrackingAppsPage() {
       slug="best-shopify-pixel-tracking-apps"
       categoryTitle="Best Shopify Pixel Tracking Apps"
       h1="Best Shopify Pixel Tracking Apps (2026)"
-      tldr="Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified."
+      tldr="Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified."
       intro={[
-        "The differences that actually matter are platform coverage, how each app prices access to that coverage, and how much of a track record it's built on the Shopify App Store. Pixel Tracker is in development and not available to install. Platform coverage and server-side delivery are still being verified.",
+        "The differences that actually matter are platform coverage, how each app prices access to that coverage, and how much of a track record it's built on the Shopify App Store. Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified.",
         "This list includes available apps and our prelaunch Pixel Tracker preview. Appnary's own app, Pixel Tracker, is included and ranked honestly alongside the rest, not placed at #1 by default: it's pre-launch and has no reviews yet, which is a real tradeoff against apps with a hundred-plus reviews behind them.",
       ]}
       tools={tools}
