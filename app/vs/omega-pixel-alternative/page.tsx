@@ -75,7 +75,7 @@ const featureBreakdown = [
   },
   {
     title: "Server-side tracking (CAPI)",
-    body: "Omega includes server-side event forwarding. Pixel Tracker's launch plan inclusions are still unconfirmed. Neither app differentiates meaningfully here beyond the platforms each one's CAPI implementation actually covers.",
+    body: "Omega includes server-side event forwarding for its platforms. Pixel Tracker can send a GA4 purchase on paid orders when a G- measurement ID is saved. Its Meta CAPI and TikTok Events API delivery are not confirmed.",
   },
   {
     title: "Best fit by platform mix",

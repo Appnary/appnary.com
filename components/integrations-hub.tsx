@@ -70,7 +70,7 @@ const faqs = [
   },
   {
     q: "Which platforms support server-side tracking?",
-    a: "Pixel Tracker is prelaunch and not available to install. Its launch integrations are still being verified; server-side event delivery is not a confirmed feature.",
+    a: "Pixel Tracker is prelaunch and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Meta CAPI and TikTok Events API are not confirmed.",
   },
   {
     q: "What happens if I stop using a platform later?",

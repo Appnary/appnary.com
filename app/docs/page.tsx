@@ -127,11 +127,11 @@ const faqs = [
   },
   {
     q: "Does it support server-side events?",
-    a: "Pixel Tracker is prelaunch and not available to install. Its launch integrations are still being verified; server-side event delivery is not a confirmed feature.",
+    a: "Pixel Tracker is prelaunch and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Meta CAPI and TikTok Events API are not confirmed.",
   },
   {
     q: "Will it conflict with Google Analytics or an existing Meta Pixel?",
-    a: "Pixel Tracker manages ad-platform pixels. It doesn't install GA4. If you already have a Meta Pixel in the theme, turn off the duplicate so you don't double-fire the same ID.",
+    a: "A saved G- measurement ID loads Google's tag and can send a GA4 purchase on paid orders. If you already have a Meta Pixel in the theme, turn off the duplicate so you don't double-fire the same ID.",
   },
   {
     q: "How do I uninstall it?",

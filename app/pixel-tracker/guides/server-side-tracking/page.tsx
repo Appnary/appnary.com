@@ -26,9 +26,9 @@ const sections = [
     ]
   },
   {
-    "heading": "Pixel Tracker server support is not confirmed",
+    "heading": "What Pixel Tracker sends from the server",
     "paragraphs": [
-      "Pixel Tracker is in development and is not available to install. Meta CAPI, TikTok Events API, and automatic browser/server deduplication are not verified launch capabilities. There is no confirmed token field or server-delivery toggle to follow in this guide.",
+      "Pixel Tracker is in development and is not available to install. A saved G- measurement ID can send a GA4 purchase when an order is paid, using the order id as the transaction id. Meta CAPI, TikTok Events API, and automatic browser/server deduplication are not verified. There is no confirmed CAPI token field to follow in this guide.",
       "Evaluate an available integration if you need server tracking today. [Join the Pixel Tracker waitlist](/#waitlist) for launch updates; pricing will be specific to the app and billed through Shopify."
     ]
   }
