@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lighthouse:production": "node scripts/lighthouse-report.mjs"
+    "lighthouse:production": "node scripts/lighthouse-report.mjs",
+    "check:ai-crawlers": "node scripts/check-ai-crawlers.mjs"
   },
   "dependencies": {
     "next": "^16.2.0",
