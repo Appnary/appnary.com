@@ -71,6 +71,7 @@ for (const agent of [
 
 assert.equal(byAgent.has("Applebot-Extension"), false, "Applebot-Extension is not a real crawler token");
 assert.equal(byAgent.get("Bytespider")?.disallow, "/", "Bytespider must be disallowed");
+assert.equal(byAgent.get("PetalBot")?.disallow, "/", "PetalBot must be disallowed");
 assert.equal(byAgent.get("*")?.disallow, "/api/", "the default rule must keep /api/ closed");
 
 const keyFile = readFileSync(new URL(`../public/${INDEXNOW_KEY}.txt`, import.meta.url), "utf8").trim();
