@@ -33,8 +33,12 @@ const TRAINING_BOTS = [
   "Meta-ExternalAgent",
 ];
 
-/** Hammers sites and does not send customers. Disallow is not enforcement. */
-const BLOCKED_BOTS = ["Bytespider"];
+/**
+ * Hammers sites and does not send customers. Disallow is not enforcement.
+ * PetalBot was the heaviest AI crawler on appnary.com in the 7 days before
+ * 1 Oct 2026 (101 allowed requests). Cloudflare blocks both of these.
+ */
+const BLOCKED_BOTS = ["Bytespider", "PetalBot"];
 
 const TRAINING_CRAWL_DELAY_SECONDS = 10;
 
