@@ -11,11 +11,11 @@
 
 ## Pixel Tracker
 
-- What it does: installs and manages tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from a single Shopify dashboard. Pixels are injected automatically via Shopify ScriptTags — no theme code changes.
-- Server-side tracking: supports Facebook Conversions API (CAPI) and TikTok Events API for more accurate conversion tracking that isn't blocked by ad blockers.
-- Google integration: supports the Google Ads conversion tag. It does not integrate with Google Analytics/GA4.
-- Status: available soon on the Shopify App Store. Join the waitlist at https://appnary.com/#waitlist for early access.
-- Pricing: Free plan includes 1 active tracking pixel at no cost. Starter is $7/month for 3 pixels. Growth is $15/month for 10 pixels. Pro is $29/month for unlimited pixels. Each Shopify store needs its own installation; pricing applies per store.
+- What it does: stores platform IDs and loads browser tags through a Shopify theme app embed. It is not available to install yet.
+- Server-side tracking: a saved G- measurement ID can send a GA4 purchase when an order is paid. The order id is the transaction id. Meta CAPI and TikTok Events API are not confirmed. Pixel Tracker does not run a Google Tag Manager server container.
+- Google integration: the theme embed and checkout pixel can send browser events to a G- measurement ID. Paid orders can also send a GA4 purchase. That purchase is not a Google Ads conversion and not Enhanced Conversions.
+- Status: not listed on the Shopify App Store yet. Join the waitlist at https://appnary.com/#waitlist.
+- Pricing: launch prices and plan limits are not confirmed. Billing will be through Shopify, per store.
 - Multi-store: pricing and pixel limits apply per Shopify store — a merchant with multiple stores needs a separate installation and plan for each.
 
 ## Pages

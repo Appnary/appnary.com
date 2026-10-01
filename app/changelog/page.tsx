@@ -24,6 +24,15 @@ interface ChangelogEntry {
 
 const entries: ChangelogEntry[] = [
   {
+    version: "1.0.1",
+    date: "2026-10-01",
+    title: "GA4 purchase on paid orders",
+    changes: [
+      "A saved G- measurement ID can send a GA4 purchase when an order is paid, using the order id as the transaction id",
+      "Meta CAPI, TikTok Events API, and Google Ads server containers remain unverified",
+    ],
+  },
+  {
     version: "1.0.0",
     date: "2026-07-29",
     title: "Pixel Tracker Launch Preview",
