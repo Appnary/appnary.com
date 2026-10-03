@@ -78,7 +78,7 @@ export function Footer() {
 
         <div
           className="mt-10 flex flex-wrap items-center gap-4 opacity-70"
-          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, and Super Launch"
+          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, Super Launch, AI Findr, Aura++, Direct2App, Directory Hunt, Indie Showcase, NewTools, Seewhatnewai, Showmebest, and Submito"
         >
           <a href="https://neeed.directory" target="_blank" rel="noopener">
             <img
@@ -118,6 +118,87 @@ export function Footer() {
               decoding="async"
               width="300"
               height="83"
+            />
+          </a>
+          <a
+            href="https://ai-findr.com/"
+            title="AI Findr Tools Directory"
+            className="text-sm text-muted-foreground"
+          >
+            AI Findr Tools Diresctory
+          </a>
+          <a
+            href="https://auraplusplus.com/projects/appnary"
+            target="_blank"
+            rel="noopener"
+            title="View this project on Aura++"
+          >
+            <img
+              src="https://auraplusplus.com/images/badges/featured-on-light.svg"
+              alt="Featured on Aura++"
+              width="265"
+              height="58"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://www.direct2app.com" target="_blank" rel="noopener">
+            <img
+              src="https://www.direct2app.com/featured-light.svg"
+              alt="Featured On Direct2App"
+              style={{ height: "54px", width: "auto" }}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://directoryhunt.org"
+            target="_blank"
+            rel="noopener"
+            className="text-sm text-muted-foreground"
+          >
+            Directory Hunt
+          </a>
+          <a href="https://indieshowcase.io">
+            <img
+              src="https://indieshowcase.io/badge/featured-light.svg"
+              alt="Featured"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://newtools.site"
+            target="_blank"
+            rel="noopener"
+            className="text-sm text-muted-foreground"
+          >
+            NewTools
+          </a>
+          <a
+            href="https://www.seewhatnewai.com"
+            target="_blank"
+            className="text-sm text-muted-foreground"
+          >
+            {" "}
+            [backlink descripiton]{" "}
+          </a>
+          <a href="https://showmebest.ai" target="_blank">
+            <img
+              src="https://showmebest.ai/badge/feature-badge-white.webp"
+              alt="Featured on ShowMeBestAI"
+              width="220"
+              height="60"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://submito.net" target="_blank" title="Listed on Submito">
+            <img
+              src="https://submito.net/badge/listed-light.svg"
+              alt="Listed on Submito"
+              loading="lazy"
+              decoding="async"
             />
           </a>
         </div>
