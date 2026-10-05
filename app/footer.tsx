@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import { FooterBadgeRow } from "@/components/footer-badge-row";
 
 const year = new Date().getFullYear();
 
@@ -76,10 +77,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div
-          className="mt-10 flex flex-wrap items-center gap-4 opacity-70"
-          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, Super Launch, AI Findr, Aura++, Direct2App, Directory Hunt, Indie Showcase, NewTools, Seewhatnewai, Showmebest, Submito, Wall of Tools, Tool Index, Xinquji, tools.cafe, EasyLaunch, Sell With Boost, SaaSGrave Launches, Launch and Loop, Maiden Sail, Buildlist, TheSaaSDir, LaunchSoar, ShipGrowth, and SubmitMySaaS"
-        >
+        <FooterBadgeRow>
           <a href="https://neeed.directory" target="_blank" rel="noopener">
             <img
               src="/badges/neeed.svg"
@@ -123,7 +121,7 @@ export function Footer() {
           <a
             href="https://ai-findr.com/"
             title="AI Findr Tools Directory"
-            className="text-sm text-muted-foreground"
+            className="footer-badge-text"
           >
             AI Findr Tools Diresctory
           </a>
@@ -155,7 +153,7 @@ export function Footer() {
             href="https://directoryhunt.org"
             target="_blank"
             rel="noopener"
-            className="text-sm text-muted-foreground"
+            className="footer-badge-text"
           >
             Directory Hunt
           </a>
@@ -171,14 +169,14 @@ export function Footer() {
             href="https://newtools.site"
             target="_blank"
             rel="noopener"
-            className="text-sm text-muted-foreground"
+            className="footer-badge-text"
           >
             NewTools
           </a>
           <a
             href="https://www.seewhatnewai.com"
             target="_blank"
-            className="text-sm text-muted-foreground"
+            className="footer-badge-text"
           >
             {" "}
             [backlink descripiton]{" "}
@@ -215,7 +213,7 @@ export function Footer() {
             href="https://toolindex.net/?ref=listed"
             target="_blank"
             rel="nofollow noopener"
-            className="text-sm text-muted-foreground"
+            className="footer-badge-text"
           >
             Listed on Tool Index
           </a>
@@ -289,6 +287,7 @@ export function Footer() {
             href="https://launchsoar.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="footer-badge-card"
             data-launch-badge="true"
             style={{
               display: "inline-flex",
@@ -325,7 +324,7 @@ export function Footer() {
               style={{ height: "54px", width: "auto" }}
             />
           </a>
-        </div>
+        </FooterBadgeRow>
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col-reverse items-center gap-4 border-t border-border-themed pt-6 text-xs text-muted-foreground-faint md:flex-row md:justify-between">

@@ -146,3 +146,77 @@ body {
     transition: none !important;
   }
 }
+
+/* Directory badges: one 180x48 slot, same treatment as amazingplugins.com */
+.footer-badges {
+  display: block;
+  min-width: 0;
+}
+.footer-badges-heading {
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted-foreground-faint);
+}
+.footer-badges-viewport {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+.footer-badges-viewport:focus-visible {
+  outline: 2px solid var(--accent-foreground);
+  outline-offset: 2px;
+}
+.footer-badges-track,
+.footer-badges-group {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+.footer-badges-group {
+  flex-shrink: 0;
+  gap: 24px;
+  padding: 6px 24px 10px 0;
+}
+.footer-badges-copy[hidden] { display: none; }
+.footer-badges a {
+  flex: 0 0 180px;
+  width: 180px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+  transition: opacity 150ms;
+}
+.footer-badges a.footer-badge-card {
+  flex: 0 0 auto;
+  width: max-content;
+  height: auto;
+  opacity: 1;
+}
+.footer-badges a.footer-badge-text {
+  flex: 0 0 auto;
+  width: max-content;
+  color: var(--muted-foreground);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.footer-badges a:hover,
+.footer-badges a:focus-visible { opacity: 1; }
+.footer-badges a:focus-visible {
+  outline: 2px solid var(--accent-foreground);
+  outline-offset: 2px;
+}
+.footer-badges a:not(.footer-badge-card) img {
+  display: block;
+  width: auto !important;
+  max-width: 100% !important;
+  height: 48px !important;
+  object-fit: contain;
+}
