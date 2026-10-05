@@ -78,7 +78,7 @@ export function Footer() {
 
         <div
           className="mt-10 flex flex-wrap items-center gap-4 opacity-70"
-          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, Super Launch, AI Findr, Aura++, Direct2App, Directory Hunt, Indie Showcase, NewTools, Seewhatnewai, Showmebest, Submito, and Wall of Tools"
+          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, Super Launch, AI Findr, Aura++, Direct2App, Directory Hunt, Indie Showcase, NewTools, Seewhatnewai, Showmebest, Submito, Wall of Tools, Tool Index, Xinquji, tools.cafe, EasyLaunch, Sell With Boost, SaaSGrave Launches, Launch and Loop, Maiden Sail, Buildlist, TheSaaSDir, LaunchSoar, ShipGrowth, and SubmitMySaaS"
         >
           <a href="https://neeed.directory" target="_blank" rel="noopener">
             <img
@@ -209,6 +209,120 @@ export function Footer() {
               height="56"
               loading="lazy"
               decoding="async"
+            />
+          </a>
+          <a
+            href="https://toolindex.net/?ref=listed"
+            target="_blank"
+            rel="nofollow noopener"
+            className="text-sm text-muted-foreground"
+          >
+            Listed on Tool Index
+          </a>
+          <a href="https://xinquji.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://xinquji.com/badge"
+              alt="Featured on 新趣集"
+              style={{ width: "200px", height: "54px" }}
+              width="200"
+              height="54"
+            />
+          </a>
+          <a href="https://tools.cafe" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://tools.cafe/b/dark.svg"
+              alt="Listed on tools.cafe"
+              width="220"
+              height="54"
+            />
+          </a>
+          <a href="https://easylaunch.dev/e-commerce/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://easylaunch.dev/badge/easylaunch-badge-light.svg"
+              alt="Featured on EasyLaunch"
+              width="188"
+              height="56"
+            />
+          </a>
+          <a href="https://sellwithboost.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://sellwithboost.com/badge/listing.svg"
+              alt="Listed on Sell With boost"
+              style={{ height: "40px", width: "auto" }}
+            />
+          </a>
+          <a href="https://ls.saasgrave.org/products/appnary?ref=badge" target="_blank" rel="noopener">
+            <img
+              src="https://ls.saasgrave.org/api/badge?slug=appnary&theme=light"
+              alt="Featured on Saasgrave Launches"
+              width="250"
+              height="54"
+            />
+          </a>
+          <a href="https://www.launchandloop.com/product/appnary" target="_blank" rel="dofollow">
+            <img
+              src="https://www.launchandloop.com/api/badge/appnary?theme=dark"
+              alt="Appnary on Launch & Loop"
+              width="170"
+              height="46"
+            />
+          </a>
+          <a href="https://maidensail.com/startup/appnary" rel="dofollow">
+            <img src="https://maidensail.com/badge/appnary.svg" alt="Featured on Maidensail" height="44" />
+          </a>
+          <a href="https://buildlist.io" target="_blank" rel="noopener">
+            <img
+              src="https://buildlist.io/badge.svg"
+              alt="Featured on Buildlist"
+              style={{ height: "40px", width: "auto" }}
+            />
+          </a>
+          <a href="https://thesaasdir.com/product/appnary?ref=badge" rel="dofollow">
+            <img
+              src="https://thesaasdir.com/badge/appnary.svg"
+              alt="Featured on TheSaaSDir"
+              width="182"
+              height="46"
+            />
+          </a>
+          <a
+            href="https://launchsoar.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-launch-badge="true"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px",
+              padding: "10px 14px",
+              border: "1px solid #e5e7eb",
+              borderRadius: "9999px",
+              background: "#ffffff",
+              color: "#111827",
+              textDecoration: "none",
+              fontFamily:
+                "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial",
+              lineHeight: 1,
+            }}
+          >
+            <img src="https://launchsoar.com/logo.png" alt="Launch" style={{ height: "18px", width: "auto" }} />
+            <span style={{ display: "flex", flexDirection: "column", gap: "2px", lineHeight: 1.1 }}>
+              <span style={{ fontSize: "12px", opacity: 0.8 }}>Listed on</span>
+              <span style={{ fontSize: "14px", fontWeight: 700 }}>Launch</span>
+            </span>
+          </a>
+          <a href="https://shipgrowth.dev" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://storage.shipgrowth.dev/badge-light.png"
+              alt="Featured on ShipGrowth"
+              style={{ height: "64px", width: "auto" }}
+            />
+          </a>
+          <a href="https://submitmysaas.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://submitmysaas.com/featured-badge.png"
+              alt="Featured on SubmitMySaas"
+              style={{ height: "54px", width: "auto" }}
             />
           </a>
         </div>
