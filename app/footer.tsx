@@ -78,7 +78,7 @@ export function Footer() {
 
         <div
           className="mt-10 flex flex-wrap items-center gap-4 opacity-70"
-          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, Super Launch, AI Findr, Aura++, Direct2App, Directory Hunt, Indie Showcase, NewTools, Seewhatnewai, Showmebest, and Submito"
+          aria-label="Featured on Neeed Directory, EarlyHunt, IndieHunt, Super Launch, AI Findr, Aura++, Direct2App, Directory Hunt, Indie Showcase, NewTools, Seewhatnewai, Showmebest, Submito, and Wall of Tools"
         >
           <a href="https://neeed.directory" target="_blank" rel="noopener">
             <img
@@ -197,6 +197,16 @@ export function Footer() {
             <img
               src="https://submito.net/badge/listed-light.svg"
               alt="Listed on Submito"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://wallof.tools/marketing/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://wallof.tools/badge/toolwall-badge-light.svg"
+              alt="Featured on Wall of Tools"
+              width="188"
+              height="56"
               loading="lazy"
               decoding="async"
             />
