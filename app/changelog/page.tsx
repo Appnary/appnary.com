@@ -24,44 +24,13 @@ interface ChangelogEntry {
 
 const entries: ChangelogEntry[] = [
   {
-    version: "1.0.1",
-    date: "2026-10-01",
-    title: "GA4 purchase on paid orders",
+    version: "2.0.0",
+    date: "2026-10-06",
+    title: "Vigil replaces Pixel Tracker",
     changes: [
-      "A saved G- measurement ID can send a GA4 purchase when an order is paid, using the order id as the transaction id",
-      "Meta CAPI, TikTok Events API, and Google Ads server containers remain unverified",
-    ],
-  },
-  {
-    version: "1.0.0",
-    date: "2026-07-29",
-    title: "Pixel Tracker Launch Preview",
-    changes: [
-      "Multi-platform pixel tracking for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn",
-      "Meta CAPI and TikTok Events API remain unverified launch capabilities",
-      "Shopify dashboard integration for pixel management",
-      "Launch plan limits to be confirmed",
-      "App-specific pricing and billing through Shopify; launch plans to be confirmed",
-    ],
-  },
-  {
-    version: "0.9.0",
-    date: "2026-07-15",
-    title: "Beta Release",
-    changes: [
-      "Initial beta release for testing",
-      "Core pixel installation functionality",
-      "Basic dashboard and settings",
-    ],
-  },
-  {
-    version: "0.8.0",
-    date: "2026-06-01",
-    title: "Development Started",
-    changes: [
-      "Project initiated",
-      "Core architecture designed",
-      "Shopify app scaffolding created",
+      "Pixel Tracker is retired and is not coming to the App Store",
+      "Vigil, a Shopify security scanner, is in development with a waitlist",
+      "Sync and Backup have public waitlists and are not in development",
     ],
   },
 ];

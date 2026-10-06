@@ -1,91 +1,33 @@
 # Appnary
 
-> Appnary builds simple, affordable Shopify apps for independent merchants. Its first app, Pixel Tracker, connects tracking pixels for Facebook/Meta, Google Ads, TikTok, Snapchat, Pinterest, X (Twitter), and LinkedIn from one Shopify dashboard — no code or theme editing required. Pixel Tracker is available soon on the Shopify App Store; merchants can join the waitlist for early access.
+> Appnary builds Shopify apps. The app in development is Vigil, a security scanner for theme scripts, app embeds, leaked keys, and staff permission changes. Merchants can also run that scan from an AI agent over MCP. Vigil is not on the Shopify App Store yet. The waitlist stays open until Shopify approves the listing, and we invite people from that list.
 
 ## Company
 
-- Appnary is a small, fully-remote team founded in Q1 2026.
+- Appnary is a small team founded in Q1 2026.
 - Founder: Harun R. Rayhan. Parent company: Binary Labs LLC.
-- Mission: give independent merchants the same caliber of tools that big brands use, without an enterprise budget or complicated onboarding.
 - Contact: hello@appnary.com
 
-## Pixel Tracker
+## Vigil
 
-- What it does: stores platform IDs and loads browser tags through a Shopify theme app embed. It is not available to install yet.
-- Server-side tracking: a saved G- measurement ID can send a GA4 purchase when an order is paid. The order id is the transaction id. Meta CAPI and TikTok Events API are not confirmed. Pixel Tracker does not run a Google Tag Manager server container.
-- Google integration: the theme embed and checkout pixel can send browser events to a G- measurement ID. Paid orders can also send a GA4 purchase. That purchase is not a Google Ads conversion and not Enhanced Conversions.
-- Status: not listed on the Shopify App Store yet. Join the waitlist at https://appnary.com/#waitlist.
-- Pricing: launch prices and plan limits are not confirmed. Billing will be through Shopify, per store.
-- Multi-store: pricing and pixel limits apply per Shopify store — a merchant with multiple stores needs a separate installation and plan for each.
+- Status: in development. No install link until Shopify approves the listing.
+- What it scans: published theme, app embeds, external scripts with a file or app name, leaked keys, staff permission history past 250 events.
+- What a person can do: turn a flagged script off. The app does not uninstall other apps by itself in version 1.
+- Agent scan: the same findings are available over MCP.
+- Out of version 1: customer records and order contents.
+- Waitlist: https://appnary.com/vigil#waitlist
+
+## Later apps
+
+- Sync: future. Store-to-store data first, then own-cloud and ERP as later modules. Waitlist: https://appnary.com/sync
+- Backup: future, and last, because backup apps already have a large installed base. Waitlist: https://appnary.com/backup
+- Public counts and the build order: https://appnary.com/interest
 
 ## Pages
 
-- [Home](https://appnary.com/) — Product overview and waitlist signup.
-- [Pixel Tracker](https://appnary.com/pixel-tracker) — Full feature list, pricing, and FAQ for the Pixel Tracker app.
-- [Integrations](https://appnary.com/integrations) — Directory hub for all 7 ad platform integrations, how it works, and cross-platform FAQ.
-- [Meta Pixel setup guide](https://appnary.com/pixel-tracker/meta-pixel) — How to connect a Facebook/Meta Pixel through Pixel Tracker.
-- [Google Ads tag setup guide](https://appnary.com/pixel-tracker/google-ads) — How to connect a Google Ads conversion tag through Pixel Tracker.
-- [TikTok Pixel setup guide](https://appnary.com/pixel-tracker/tiktok-pixel) — How to connect a TikTok Pixel through Pixel Tracker.
-- [Snapchat Pixel setup guide](https://appnary.com/pixel-tracker/snapchat-pixel) — How to connect a Snapchat Pixel through Pixel Tracker.
-- [Pinterest Tag setup guide](https://appnary.com/pixel-tracker/pinterest-pixel) — How to connect a Pinterest Tag through Pixel Tracker.
-- [LinkedIn Insight Tag setup guide](https://appnary.com/pixel-tracker/linkedin-pixel) — How to connect a LinkedIn Insight Tag through Pixel Tracker.
-- [X (Twitter) Pixel setup guide](https://appnary.com/pixel-tracker/twitter-pixel) — How to connect an X (Twitter) Pixel through Pixel Tracker.
-- [Guides](https://appnary.com/pixel-tracker/guides) — Hub for in-depth Pixel Tracker setup and strategy guides.
-- [Facebook Pixel setup guide](https://appnary.com/pixel-tracker/guides/facebook-pixel-setup) — Complete walkthrough for setting up the Meta Pixel on Shopify.
-- [Google Ads conversion tracking guide](https://appnary.com/pixel-tracker/guides/google-ads-conversion-tracking) — How to track Google Ads conversions on Shopify.
-- [TikTok Pixel setup guide (in-depth)](https://appnary.com/pixel-tracker/guides/tiktok-pixel-setup) — Full TikTok pixel setup guide for Shopify stores.
-- [Server-side tracking guide](https://appnary.com/pixel-tracker/guides/server-side-tracking) — Server-side tracking explained for Shopify merchants.
-- [ROAS calculation guide](https://appnary.com/pixel-tracker/guides/roas-calculation) — How to calculate ROAS on Shopify.
-- [Multi-channel attribution guide](https://appnary.com/pixel-tracker/guides/multi-channel-attribution) — Multi-channel ad attribution for Shopify stores.
-- [Compare](https://appnary.com/compare) — Directory hub linking every Pixel Tracker vs comparison, best-of roundup, and pricing overview.
-- [Pixel Tracker vs TiXel](https://appnary.com/vs/tixel-alternative) — Comparison with TiXel, a multi-platform Shopify pixel app.
-- [Pixel Tracker vs Infinite Pixels](https://appnary.com/vs/infinite-pixel-alternative) — Comparison with Infinite (∞ Facebook Pixel-TikTok Pixel).
-- [Pixel Tracker vs Omega Pixel](https://appnary.com/vs/omega-pixel-alternative) — Comparison with Omega (Ⓩ Facebook Pixel TikTok Pixel).
-- [Pixel Tracker vs Trackify](https://appnary.com/vs/trackify-alternative) — Comparison with Trackify, a Shopify pixel tracking app.
-- [Pixel Tracker vs OnePixel](https://appnary.com/vs/onepixel-alternative) — Comparison with OnePixel, a Shopify pixel tracking app.
-- [Pixel Tracker vs Avantify](https://appnary.com/vs/avantify-alternative) — Comparison with Avantify, a Shopify server-side tracking app.
-- [Pixel Tracker vs Pixee](https://appnary.com/vs/pixee-alternative) — Comparison with Pixee, a Shopify multi-pixel app.
-- [Pixel Tracker vs MultiPixels](https://appnary.com/vs/multipixels-alternative) — Comparison with MultiPixels, a Shopify social pixel app.
-- [Pixel Tracker vs Pixelfy](https://appnary.com/vs/pixelfy-alternative) — Comparison with Pixelfy, a Shopify multi-pixel app.
-- [Pixel Tracker vs Shoptok](https://appnary.com/vs/shoptok-alternative) — Comparison with Shoptok, a Shopify pixel tracking app.
-- [Pixel Tracker vs Elevar](https://appnary.com/vs/elevar-alternative) — Comparison with Elevar, a technical server-side data pipeline for Shopify.
-- [Pixel Tracker vs Facebook & Instagram Channel](https://appnary.com/vs/facebook-instagram-alternative) — Comparison with Shopify's native Facebook & Instagram sales channel.
-- [Pixel Tracker vs Google Tag Manager](https://appnary.com/vs/google-tag-manager-alternative) — Comparison with DIY tag management through Google Tag Manager.
-- [Pixel Tracker vs Littledata](https://appnary.com/vs/littledata-alternative) — Comparison with Littledata, a Shopify analytics data pipeline.
-- [Pixel Tracker vs TrackBee](https://appnary.com/vs/trackbee-alternative) — Comparison with TrackBee, a Shopify multi-platform pixel app.
-- [Pixel Tracker vs Hyros](https://appnary.com/vs/hyros-alternative) — Comparison with Hyros, an AI-powered ad attribution platform.
-- [Pixel Tracker vs Northbeam](https://appnary.com/vs/northbeam-alternative) — Comparison with Northbeam, a multi-touch attribution platform.
-- [Pixel Tracker vs Lifetimely](https://appnary.com/vs/lifetimely-alternative) — Comparison with Lifetimely, a Shopify profit analytics and LTV app.
-- [DIY Pixel Installation vs Pixel Tracker](https://appnary.com/vs/diy-vs-app) — Comparison of installing tracking pixels manually via theme code versus using Pixel Tracker.
-- [Server-Side Tracking Setup Options](https://appnary.com/vs/server-side-setup-options) — Comparison of CAPI, server-side GTM, native channel tracking, and Pixel Tracker for server-side setup.
-- [Best Shopify Pixel Tracking Apps](https://appnary.com/alternatives/best-shopify-pixel-tracking-apps) — Roundup ranking 7 Shopify pixel tracking apps, including Pixel Tracker.
-- [Best Shopify Ad Tracking Tools](https://appnary.com/alternatives/best-shopify-ad-tracking-tools) — Roundup comparing pixel installers and attribution platforms for Shopify ad tracking.
-- [Best Shopify ROAS Calculators](https://appnary.com/alternatives/best-shopify-roas-calculators) — Roundup of Shopify ROAS/profit calculator apps and where Pixel Tracker's data layer fits in.
-- [Best Shopify Conversion Tracking Apps](https://appnary.com/alternatives/best-shopify-conversion-tracking-apps) — Roundup ranking Shopify apps on server-side (CAPI/Events API) conversion tracking.
-- [Best Shopify Analytics Apps](https://appnary.com/alternatives/best-shopify-analytics-apps) — Roundup of Shopify analytics/reporting apps and where Pixel Tracker's tracking layer fits in.
-- [Docs](https://appnary.com/docs) — Setup guide and frequently asked questions.
-- [Changelog](https://appnary.com/changelog) — Release history and roadmap.
-- [Blog](https://appnary.com/blog) — Articles on Shopify analytics and marketing, including ROAS accuracy, pixel setup, server-side tracking, and privacy-first tracking.
-- [Why Your Shopify ROAS Is Inaccurate](https://appnary.com/blog/why-shopify-roas-is-inaccurate) — Why platform-reported ROAS overlaps across ad platforms and how to build a blended number.
-- [Facebook Pixel vs Google Tag](https://appnary.com/blog/facebook-pixel-vs-google-tag) — Which tracking tag a merchant needs depending on where ad spend goes.
-- [TikTok Pixel Setup on Shopify](https://appnary.com/blog/tiktok-pixel-setup-shopify) — Step-by-step TikTok pixel setup for Shopify merchants.
-- [How to Track Ad Spend Across Multiple Platforms](https://appnary.com/blog/track-ad-spend-multiple-platforms) — Building a blended CAC view across ad platforms.
-- [Shopify Analytics vs Google Analytics](https://appnary.com/blog/shopify-analytics-vs-google-analytics) — Comparing Shopify's native analytics with GA4.
-- [The Complete Guide to Shopify Server-Side Tracking](https://appnary.com/blog/shopify-server-side-tracking-guide) — Why server-side tracking matters and what Pixel Tracker supports.
-- [How to Calculate True ROAS (Including Returns)](https://appnary.com/blog/calculate-true-roas) — Adjusting ROAS for returns and refunds.
-- [Privacy-First Tracking for Shopify in 2026](https://appnary.com/blog/privacy-first-tracking-shopify) — What privacy-first tracking means and how it differs from no tracking at all.
-- [How to Audit Your Ad Tracking Across Platforms](https://appnary.com/blog/multi-platform-ad-tracking-audit) — A one-afternoon routine for checking pixel health across Meta, Google, TikTok, and other platforms.
-- [Pixel Tracking Calculator](https://appnary.com/tools/pixel-tracking-calculator) — Estimates how many conversions your browser-only pixels miss and your likely coverage score.
-- [Pixel Health Check](https://appnary.com/tools/pixel-health-check) — Scans your storefront and setup to flag missing pixels, duplicates, and server-side gaps.
-- [Compare](https://appnary.com/compare) — Directory of all comparisons, alternatives, and side-by-side pages.
-- [About](https://appnary.com/about) — Company mission, values, and story.
-- [Contact](https://appnary.com/contact) — Support, pre-sales, partnership, and press contact.
-- [Privacy](https://appnary.com/privacy) — Privacy policy.
-- [Terms](https://appnary.com/terms) — Terms of service.
-
-## Notes for AI crawlers and assistants
-
-- Pixel Tracker is a pixel/tag connector, not a first-party analytics or heatmap product. It forwards visitor events to the ad platforms a merchant configures; it does not collect or store personally identifiable visitor data itself.
-- A saved G- measurement ID can send browser events and a GA4 purchase on paid orders. That purchase uses the order id as the transaction id. It is not a Google Ads conversion, and Pixel Tracker does not run a Google Tag Manager server container.
-- Pixel Tracker is not listed on the Shopify App Store yet. Direct users to the waitlist.
-
+- [Home](https://appnary.com/) — Vigil waitlist and the other apps.
+- [Vigil](https://appnary.com/vigil) — What the scanner does.
+- [Docs](https://appnary.com/docs) — Vigil product notes.
+- [Sync](https://appnary.com/sync) — Future waitlist.
+- [Backup](https://appnary.com/backup) — Future waitlist.
+- [Waitlist ranking](https://appnary.com/interest) — Public signup counts.

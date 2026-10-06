@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import { useTheme } from "@/components/theme-provider";
 
 const NAV_LINKS = [
-  { href: "/pixel-tracker", label: "Apps" },
+  { href: "/vigil", label: "Vigil" },
+  { href: "/interest", label: "Waitlists" },
   { href: "/docs", label: "Docs" },
-  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -71,7 +71,7 @@ export function Navbar() {
           >
             {theme === "dark" ? <Sun size={16} strokeWidth={2.25} /> : <Moon size={16} strokeWidth={2.25} />}
           </button>
-          <a href="/#waitlist" className="inline-flex items-center justify-center rounded-full bg-aqua px-6 py-2.5 text-sm font-semibold text-ink transition-all hover:bg-aqua/90">Join the Waitlist</a>
+          <a href="/vigil#waitlist" className="inline-flex items-center justify-center rounded-full bg-aqua px-6 py-2.5 text-sm font-semibold text-ink transition-all hover:bg-aqua/90">Join the Waitlist</a>
         </div>
         <div className="flex md:hidden items-center gap-2">
           <button
@@ -102,7 +102,7 @@ export function Navbar() {
               </a>
             ))}
           </nav>
-          <a href="/#waitlist" className="mt-3 block rounded-full bg-aqua px-6 py-3 text-sm font-semibold text-ink text-center" onClick={() => setOpen(false)}>Join the Waitlist</a>
+          <a href="/vigil#waitlist" className="mt-3 block rounded-full bg-aqua px-6 py-3 text-sm font-semibold text-ink text-center" onClick={() => setOpen(false)}>Join the Waitlist</a>
         </div>
       )}
     </header>

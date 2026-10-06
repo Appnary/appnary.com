@@ -8,18 +8,15 @@ const columns = [
   {
     title: "Apps",
     links: [
-      { label: "Pixel Tracker", href: "/pixel-tracker" },
-      { label: "Meta Pixel setup", href: "/pixel-tracker/meta-pixel" },
-      { label: "LinkedIn Insight Tag", href: "/pixel-tracker/linkedin-pixel" },
-      { label: "Compare", href: "/compare" },
+      { label: "Vigil", href: "/vigil" },
+      { label: "Sync", href: "/sync" },
+      { label: "Backup", href: "/backup" },
+      { label: "Waitlist ranking", href: "/interest" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Tools", href: "/tools" },
-      { label: "Guides", href: "/pixel-tracker/guides" },
-      { label: "Integrations", href: "/integrations" },
       { label: "Docs", href: "/docs" },
       { label: "Blog", href: "/blog" },
       { label: "Changelog", href: "/changelog" },
@@ -52,7 +49,7 @@ export function Footer() {
               appnary
             </a>
             <p className="mt-2 max-w-xs text-sm text-muted-foreground">
-              Simple, affordable Shopify apps.
+              Shopify apps. Vigil is in development.
             </p>
           </div>
 

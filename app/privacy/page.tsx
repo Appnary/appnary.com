@@ -3,7 +3,7 @@ import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/privacy", {
   title: "Privacy Policy | Appnary",
-  description: "How Appnary collects, uses, and shares data for Pixel Tracker and other Shopify apps.",
+  description: "How Appnary collects, uses, and shares data for Vigil and other Shopify apps.",
 });
 
 export default function PrivacyPage() {
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <div className="mt-8 space-y-4 text-sm text-muted-foreground leading-relaxed">
         <p>Your privacy matters to us. This policy explains how Appnary handles data.</p>
         <h2 className="text-lg font-semibold text-foreground">Data Collection</h2>
-        <p>We collect minimal data needed to provide our services. Pixel Tracker uses no cookies and collects no personally identifiable information.</p>
+        <p>We collect the email you submit for a waitlist. Vigil&apos;s first version scans theme code and app embeds. It does not read customer records or order contents.</p>
         <h2 className="text-lg font-semibold text-foreground">Third Parties</h2>
         <p>We do not sell, trade, or share your data with third parties except as required to provide our services (hosting, email delivery).</p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>

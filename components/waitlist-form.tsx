@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { FormEvent, useState } from "react";
+import type { AppSlug } from "@/content/apps";
 
 const WAITLIST_API = process.env.NEXT_PUBLIC_WAITLIST_API || "https://cp.appnary.com/api/waitlist";
 
-export default function WaitlistForm() {
+export default function WaitlistForm({ product = "vigil" }: { product?: AppSlug }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -18,7 +19,7 @@ export default function WaitlistForm() {
       const res = await fetch(WAITLIST_API, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, product }),
       });
       const data = await res.json();
       if (res.ok) {
@@ -55,7 +56,7 @@ export default function WaitlistForm() {
           disabled={status === "loading"}
           className="rounded-lg bg-aqua px-6 py-2.5 text-sm font-semibold text-ink shadow-sm transition-colors hover:bg-aqua/90 disabled:opacity-50"
         >
-          {status === "loading" ? "Sending..." : "Join the Waitlist"}
+          {status === "loading" ? "Sending..." : "Join the waitlist"}
         </button>
       </div>
       {message && (
@@ -69,7 +70,7 @@ export default function WaitlistForm() {
         </p>
       )}
       <p className="mt-1 text-xs text-muted-foreground-faint">
-        No spam, unsubscribe anytime.
+        No spam. You can leave the list any time.
       </p>
     </form>
   );
