@@ -6,7 +6,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/vigil", {
   title: "Vigil | Shopify security scanner | Appnary",
   description:
-    "Vigil scans a Shopify store for risky scripts, leaked keys, and permission changes. It is in development. Join the waitlist until Shopify approves it.",
+    "Vigil scans a Shopify store for risky scripts and leaked keys. It is in development. Join the waitlist until Shopify approves it.",
   openGraph: {
     title: "Vigil | Shopify security scanner",
     description:
@@ -25,8 +25,8 @@ const checks = [
     body: "It flags tokens and secret-looking strings that shipped in theme code or an embed. The finding names the file.",
   },
   {
-    title: "Staff permissions",
-    body: "It reviews who can change the store, and it keeps a change history past the 250 events Shopify shows you.",
+    title: "Change history",
+    body: "Vigil keeps the store events it can see, past the 250 Shopify shows in admin. It does not read staff accounts.",
   },
   {
     title: "A switch you can flip",

@@ -26,12 +26,12 @@ export default function DocsPage() {
         <li>The published theme, including app embed blocks.</li>
         <li>External scripts, with the theme file or app that added each one.</li>
         <li>Strings that look like leaked keys or tokens.</li>
-        <li>Staff permission changes, including history past the 250 events in Shopify admin.</li>
+        <li>Store events Vigil can already see, kept past the 250 Shopify shows in admin.</li>
       </ul>
 
       <h2 className="mt-12 text-2xl font-bold text-foreground">What you can do with a finding</h2>
       <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-        A person can turn a bad script off. Vigil does not uninstall apps on its own in the first version. Later versions of the same app add undo, an agency kill switch, and an alert when an app changes storefront code.
+        A person can turn a bad script off, and undo that. The same host can be turned off on every store under one account. When the published theme changes, Vigil records it. Vigil does not uninstall other apps.
       </p>
 
       <h2 className="mt-12 text-2xl font-bold text-foreground">Agent scan</h2>
