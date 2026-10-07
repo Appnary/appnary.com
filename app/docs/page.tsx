@@ -23,8 +23,8 @@ export default function DocsPage() {
 
       <h2 className="mt-12 text-2xl font-bold text-foreground">What a scan looks at</h2>
       <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted-foreground">
-        <li>The published theme, including app embed blocks.</li>
-        <li>External scripts, with the theme file or app that added each one.</li>
+        <li>The published theme, including app embeds, app blocks, and JavaScript assets.</li>
+        <li>External scripts and frames, with the theme file or app that added each one.</li>
         <li>Strings that look like leaked keys or tokens.</li>
         <li>Store events Vigil can already see, kept past the 250 Shopify shows in admin.</li>
       </ul>
