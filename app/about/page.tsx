@@ -41,14 +41,14 @@ const milestones = [
     body: "Started as a side project to scratch our own itch with Shopify analytics.",
   },
   {
-    date: "Q2 2026",
-    title: "Pixel Tracker in private beta",
-    body: "Working with a small group of Shopify merchants to shape the first app.",
+    date: "Q3 2026",
+    title: "Pixel Tracker stopped",
+    body: "We deleted the unpublished pixel app and left that review.",
   },
   {
-    date: "Q3 2026",
-    title: "Public launch on the Shopify App Store",
-    body: "Pixel Tracker goes live. More apps in the pipeline.",
+    date: "Q4 2026",
+    title: "Vigil in development",
+    body: "Security scanner first. Sync and Backup stay on public waitlists.",
   },
 ];
 

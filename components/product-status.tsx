@@ -2,12 +2,11 @@ import Link from "next/link";
 
 export function ProductStatus() {
   return (
-    <aside aria-label="Pixel Tracker availability" className="mx-auto max-w-4xl px-6 py-6 text-sm text-muted-foreground-strong">
+    <aside aria-label="Vigil availability" className="mx-auto max-w-4xl px-6 py-6 text-sm text-muted-foreground-strong">
       <p>
-        Pixel Tracker is in development and is not available to install.
-        A saved Google measurement ID can send a GA4 purchase on paid orders.
-        Meta CAPI, TikTok Events API, and other server delivery are not confirmed.{' '}
-        <Link href="/#waitlist" className="underline">Join the waitlist for launch updates.</Link>
+        Vigil is in development and is not on the Shopify App Store yet.
+        The waitlist stays open until Shopify approves the listing. We invite people from that list.{' '}
+        <Link href="/vigil#waitlist" className="underline">Join the Vigil waitlist.</Link>
       </p>
     </aside>
   );

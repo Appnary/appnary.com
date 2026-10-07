@@ -19,12 +19,12 @@ const channels = [
   {
     icon: HelpCircle,
     title: "App support",
-    body: "Questions about Pixel Tracker, billing, or how something works. We answer within 48 hours on weekdays.",
+    body: "Questions about Vigil, billing, or how something works. We answer within 48 hours on weekdays.",
   },
   {
     icon: MessageSquare,
     title: "Pre-sales",
-    body: "Wondering if Pixel Tracker is right for your store? Tell us a bit about what you sell and we'll let you know.",
+    body: "Wondering if Vigil is right for your store? Tell us a bit about what you sell and we'll let you know.",
   },
   {
     icon: Briefcase,
