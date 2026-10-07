@@ -44,6 +44,11 @@ export default function DocsPage() {
         Customer records and order contents stay out of version 1. That keeps the first review off protected customer data.
       </p>
 
+      <h2 className="mt-12 text-2xl font-bold text-foreground">Two addresses</h2>
+      <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+        appnary.com is the public site: this page, the product page, and the waitlist. The Shopify admin screen is hosted on the control panel. That host runs the install, the scan, webhooks, and the agent tool. Merchants open Vigil from Shopify admin. They do not install it from this site.
+      </p>
+
       <h2 className="mt-12 text-2xl font-bold text-foreground">Waitlist</h2>
       <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
         The waitlist stays open while we build Vigil and while Shopify reviews it. After the listing is approved, we invite people from the list. There is no public install URL before that.

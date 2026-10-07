@@ -90,6 +90,13 @@ export default async function VigilPage() {
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
           Version 1 does not read customer records or order contents. Undo, an agency kill switch, and an alert when an app changes storefront code come later in the same app.
         </p>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-16">
+        <h2 className="text-2xl font-bold text-foreground">Where the app lives</h2>
+        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+          This page on appnary.com is the public page. The screen inside Shopify admin is served by the Appnary control panel. That address processes the install, the scan, and the agent tool. It is not an install link, and this site will not show one until Shopify approves the listing.
+        </p>
         <p className="mt-4 text-sm">
           <a href="/docs" className="font-medium text-accent-foreground hover:underline">
             Read the Vigil docs
