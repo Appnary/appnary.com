@@ -30,11 +30,16 @@ import { posts as seedPosts } from "@/content/blog/posts";
 
 const posts: BlogPost[] = seedPosts;
 
-/** Returns all posts, newest first. */
+/** The launch preview 308s to /vigil and stays out of the index and the blog list. */
+const UNLISTED_SLUGS = new Set(["pixel-tracker-launch-preview"]);
+
+/** Returns published posts, newest first. */
 export function getAllPosts(): BlogPost[] {
-  return [...posts].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-  );
+  return [...posts]
+    .filter((post) => !UNLISTED_SLUGS.has(post.slug))
+    .sort(
+      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    );
 }
 
 /** Returns the most recent N posts. */
