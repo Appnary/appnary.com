@@ -59,9 +59,18 @@ export default async function VigilPage() {
         <span className="inline-flex items-center rounded-full border border-border-themed bg-surface px-3 py-1 text-xs font-semibold text-foreground">
           In development
         </span>
-        <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Vigil
-        </h1>
+        <div className="mt-6 flex items-center gap-4">
+          <img
+            src="/vigil-mark.svg"
+            alt=""
+            width={64}
+            height={64}
+            className="h-14 w-14 shrink-0 rounded-[22%] shadow-sm ring-1 ring-border-themed sm:h-16 sm:w-16"
+          />
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            Vigil
+          </h1>
+        </div>
         <p className="mt-6 text-lg text-muted-foreground-strong">
           A security scan for a Shopify store. It tells you which file or app put a script on the storefront, and you can run that scan from Claude, ChatGPT, or Cursor.
         </p>
