@@ -1,17 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">Vigil mark</title>
-  <desc id="desc">Bold Appnary-style rounded mark with a vigilant shield eye in aqua and lime — tuned for favicon and app-icon sizes.</desc>
-  <!-- Full-bleed tile so the mark stays readable at 16–32px -->
+  <desc id="desc">Appnary-style rounded mark with a shield and lock in aqua and lime — tuned for favicon and app-icon sizes.</desc>
   <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
-  <!-- Solid shield — larger, no thin inner cut -->
+  <!-- Solid shield -->
   <path
     fill="#111827"
     d="M256 78c-64 34-128 40-182 44v142c0 96 64 168 182 210 118-42 182-114 182-210V122c-54-4-118-10-182-44z"/>
-  <!-- Watchful eye — oversized for small sizes -->
-  <ellipse cx="256" cy="236" rx="108" ry="58" fill="#37D7C6"/>
-  <circle cx="256" cy="236" r="34" fill="#111827"/>
-  <circle cx="268" cy="224" r="12" fill="#B7F34B"/>
-  <!-- Scan corner — thick strokes that survive downscale -->
+  <!-- Lock shackle -->
+  <path
+    d="M188 214v-28c0-38 30-68 68-68s68 30 68 68v28"
+    fill="none"
+    stroke="#37D7C6"
+    stroke-width="36"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+  <!-- Lock body -->
+  <rect x="168" y="214" width="176" height="148" rx="36" fill="#37D7C6"/>
+  <!-- Keyhole -->
+  <circle cx="256" cy="268" r="22" fill="#111827"/>
+  <rect x="246" y="280" width="20" height="40" rx="8" fill="#111827"/>
+  <!-- Lime accent on keyhole -->
+  <circle cx="264" cy="260" r="8" fill="#B7F34B"/>
+  <!-- Scan corner -->
   <path
     d="M352 88h88v88"
     fill="none"
