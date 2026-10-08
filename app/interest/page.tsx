@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import VigilMark from "@/components/vigil-mark";
 import { apps } from "@/content/apps";
 import { formatCount, getWaitlistCounts } from "@/lib/waitlist-counts";
 import { withPageSeo } from "@/lib/seo";
@@ -42,7 +43,10 @@ export default async function InterestPage() {
             <tr key={app.slug} className="border-b border-border-themed">
               <td className="py-4 pr-4 text-muted-foreground">{index + 1}</td>
               <td className="py-4 pr-4">
-                <a href={app.href} className="font-medium text-foreground hover:underline">
+                <a href={app.href} className="inline-flex items-center gap-2 font-medium text-foreground hover:underline">
+                  {app.slug === "vigil" && (
+                    <VigilMark size={20} className="h-5 w-5 shadow-none" />
+                  )}
                   {app.name}
                 </a>
               </td>

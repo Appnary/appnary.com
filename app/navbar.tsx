@@ -2,10 +2,11 @@
 
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import VigilMark from "@/components/vigil-mark";
 import { useTheme } from "@/components/theme-provider";
 
 const NAV_LINKS = [
-  { href: "/vigil", label: "Vigil" },
+  { href: "/vigil", label: "Vigil", mark: true as const },
   { href: "/interest", label: "Waitlists" },
   { href: "/docs", label: "Docs" },
   { href: "/about", label: "About" },
@@ -55,8 +56,11 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground-strong hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground-strong hover:text-foreground transition-colors"
             >
+              {"mark" in link && link.mark ? (
+                <VigilMark size={16} className="h-4 w-4 shadow-none ring-0" />
+              ) : null}
               {link.label}
             </a>
           ))}
@@ -95,9 +99,12 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 text-sm text-muted-foreground-strong hover:text-foreground"
+                className="inline-flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground-strong hover:text-foreground"
                 onClick={() => setOpen(false)}
               >
+                {"mark" in link && link.mark ? (
+                  <VigilMark size={18} className="h-[18px] w-[18px] shadow-none ring-0" />
+                ) : null}
                 {link.label}
               </a>
             ))}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { ChevronDown, Shield } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import WaitlistForm from "@/components/waitlist-form";
+import VigilMark from "@/components/vigil-mark";
 import { apps } from "@/content/apps";
 import { formatCount, getWaitlistCounts } from "@/lib/waitlist-counts";
 import { withPageSeo } from "@/lib/seo";
@@ -11,6 +12,10 @@ export const metadata: Metadata = withPageSeo("/", {
   openGraph: {
     description:
       "Vigil is in development. Join the waitlist and we will invite you after Shopify approves the listing.",
+    images: [{ url: "/vigil-app-icon.png", width: 1200, height: 1200, alt: "Vigil" }],
+  },
+  twitter: {
+    images: ["/vigil-app-icon.png"],
   },
 });
 
@@ -64,7 +69,7 @@ export default async function Home() {
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 pt-24 pb-24 text-center sm:pt-28 sm:pb-32 lg:pt-32 lg:pb-40">
           <span className="inline-flex items-center gap-2 rounded-full border border-border-themed bg-surface px-4 py-1.5 text-xs font-semibold text-foreground shadow-sm">
-            <Shield className="h-3.5 w-3.5 text-aqua" strokeWidth={2.5} />
+            <VigilMark size={18} className="h-[18px] w-[18px] shadow-none" />
             Vigil is in development
           </span>
 
@@ -120,7 +125,12 @@ export default async function Home() {
                 >
                   {app.label}
                 </span>
-                <h3 className="mt-3 text-lg font-semibold text-foreground">{app.name}</h3>
+                <div className="mt-3 flex items-center gap-3">
+                  {app.slug === "vigil" && (
+                    <VigilMark size={36} className="h-9 w-9" />
+                  )}
+                  <h3 className="text-lg font-semibold text-foreground">{app.name}</h3>
+                </div>
                 <p className="mt-2 text-sm text-muted-foreground">{app.summary}</p>
                 <p className="mt-4 text-sm font-medium text-foreground">
                   {formatCount(counts[app.slug])} on the waitlist

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, Clock } from "lucide-react";
+import VigilMark from "@/components/vigil-mark";
 import {
   formatDate,
   getAllCategories,
@@ -191,7 +192,10 @@ export default function BlogIndexPage() {
           aria-labelledby="cta-heading"
           className="mt-16 rounded-2xl border border-aqua/30 bg-aqua/5 p-6 text-center sm:p-8"
         >
-          <p id="cta-heading" className="text-base font-semibold text-foreground">
+          <div className="flex justify-center">
+            <VigilMark size={40} className="h-10 w-10" />
+          </div>
+          <p id="cta-heading" className="mt-3 text-base font-semibold text-foreground">
             Vigil is in development
           </p>
           <p className="mt-1 text-sm text-muted-foreground-strong">

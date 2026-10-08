@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import WaitlistForm from "@/components/waitlist-form";
+import VigilMark from "@/components/vigil-mark";
 import { formatCount, getWaitlistCounts } from "@/lib/waitlist-counts";
 import { withPageSeo } from "@/lib/seo";
 
@@ -12,6 +13,10 @@ export const metadata: Metadata = withPageSeo("/vigil", {
     description:
       "Vigil is in development. Join the waitlist and we will invite you after Shopify approves the listing.",
     url: "https://appnary.com/vigil",
+    images: [{ url: "/vigil-app-icon.png", width: 1200, height: 1200, alt: "Vigil" }],
+  },
+  twitter: {
+    images: ["/vigil-app-icon.png"],
   },
 });
 
@@ -46,6 +51,7 @@ export default async function VigilPage() {
     description:
       "Vigil is a pre-release Shopify security scanner. It is not available to install until Shopify approves the listing.",
     url: "https://appnary.com/vigil",
+    image: "https://appnary.com/vigil-app-icon.png",
   };
 
   return (
@@ -60,13 +66,7 @@ export default async function VigilPage() {
           In development
         </span>
         <div className="mt-6 flex items-center gap-4">
-          <img
-            src="/vigil-mark.svg"
-            alt=""
-            width={64}
-            height={64}
-            className="h-14 w-14 shrink-0 rounded-[22%] shadow-sm ring-1 ring-border-themed sm:h-16 sm:w-16"
-          />
+          <VigilMark size={64} className="h-14 w-14 sm:h-16 sm:w-16" priority />
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Vigil
           </h1>
