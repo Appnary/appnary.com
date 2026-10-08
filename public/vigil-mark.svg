@@ -1,40 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">Vigil mark</title>
-  <desc id="desc">Bronze shield with a clear two-hemisphere brain mark in aqua.</desc>
+  <desc id="desc">Ink shield with aqua magic sparkles — Appnary landing colors.</desc>
   <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
-  <!-- Shield at 90% -->
+  <!-- Shield at 90% — ink from landing theme -->
   <g transform="translate(256 268) scale(0.9) translate(-256 -268)">
     <path
-      fill="#B08A5A"
+      fill="#111827"
       d="M256 36c-78 38-160 44-226 48v168c0 116 80 204 226 258 146-54 226-142 226-258V84c-66-4-148-10-226-48z"/>
+  </g>
+  <!-- Magic / AI sparkles (Lucide-style), aqua + lime -->
+  <g transform="translate(256 270) scale(9.6) translate(-12 -12)">
     <path
+      fill="#37D7C6"
+      d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+    <path
+      d="M20 2v4M22 4h-4"
       fill="none"
-      stroke="#8A6840"
-      stroke-width="14"
-      stroke-linejoin="round"
-      d="M256 36c-78 38-160 44-226 48v168c0 116 80 204 226 258 146-54 226-142 226-258V84c-66-4-148-10-226-48z"/>
+      stroke="#B7F34B"
+      stroke-width="2.2"
+      stroke-linecap="round"/>
+    <circle cx="4" cy="20" r="2" fill="#B7F34B"/>
   </g>
-  <!--
-    Recognizable brain (Lucide-style two hemispheres).
-    Scaled from 24×24 icon coords into the shield.
-  -->
-  <g
-    transform="translate(256 278) scale(9.4) translate(-12 -12)"
-    fill="none"
-    stroke="#37D7C6"
-    stroke-width="2.15"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M12 18V5"/>
-    <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/>
-    <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/>
-    <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/>
-    <path d="M18 18a4 4 0 0 0 2-7.464"/>
-    <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/>
-    <path d="M6 18a4 4 0 0 1-2-7.464"/>
-    <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/>
-  </g>
-  <!-- Lime accent -->
-  <circle cx="318" cy="232" r="11" fill="#B7F34B"/>
 </svg>
