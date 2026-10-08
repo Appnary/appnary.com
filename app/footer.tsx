@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import VigilMark from "@/components/vigil-mark";
 import { FooterBadgeSlider } from "@/components/footer-badge-slider";
 import { FooterBadges } from "./footer-badges";
 
@@ -8,7 +9,7 @@ const columns = [
   {
     title: "Apps",
     links: [
-      { label: "Vigil", href: "/vigil" },
+      { label: "Vigil", href: "/vigil", mark: true as const },
       { label: "Sync", href: "/sync" },
       { label: "Backup", href: "/backup" },
       { label: "Waitlist ranking", href: "/interest" },
@@ -64,8 +65,11 @@ export function Footer() {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                      className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
+                      {"mark" in link && link.mark ? (
+                        <VigilMark size={14} className="h-3.5 w-3.5 shadow-none ring-0" />
+                      ) : null}
                       {link.label}
                     </a>
                   </li>
