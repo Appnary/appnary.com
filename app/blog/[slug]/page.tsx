@@ -9,6 +9,7 @@ import {
   renderBody,
 } from "@/lib/blog";
 import { InlineText } from "@/components/inline-text";
+import VigilMark from "@/components/vigil-mark";
 import { stripInline } from "@/lib/text";
 import { withPageSeo } from "@/lib/seo";
 
@@ -212,7 +213,10 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           aria-labelledby="cta-heading"
           className="mt-12 rounded-2xl border border-aqua/30 bg-aqua/5 p-6 text-center sm:p-8"
         >
-          <p id="cta-heading" className="text-base font-semibold text-foreground">
+          <div className="flex justify-center">
+            <VigilMark size={40} className="h-10 w-10" />
+          </div>
+          <p id="cta-heading" className="mt-3 text-base font-semibold text-foreground">
             Vigil is in development
           </p>
           <p className="mt-1 text-sm text-muted-foreground-strong">

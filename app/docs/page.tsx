@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import VigilMark from "@/components/vigil-mark";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/docs", {
@@ -9,6 +10,10 @@ export const metadata: Metadata = withPageSeo("/docs", {
     title: "Vigil docs",
     description: "Product notes for Vigil while it is in development.",
     url: "https://appnary.com/docs",
+    images: [{ url: "/vigil-app-icon.png", width: 1200, height: 1200, alt: "Vigil" }],
+  },
+  twitter: {
+    images: ["/vigil-app-icon.png"],
   },
 });
 
@@ -16,7 +21,10 @@ export default function DocsPage() {
   return (
     <article className="mx-auto max-w-3xl px-6 pt-20 pb-24 sm:pt-28">
       <p className="text-sm font-medium text-aqua">Docs</p>
-      <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground">Vigil</h1>
+      <div className="mt-3 flex items-center gap-4">
+        <VigilMark size={48} className="h-12 w-12" />
+        <h1 className="text-4xl font-bold tracking-tight text-foreground">Vigil</h1>
+      </div>
       <p className="mt-6 text-lg text-muted-foreground-strong">
         These notes describe the app we are building. Nothing here is installable yet.
       </p>
