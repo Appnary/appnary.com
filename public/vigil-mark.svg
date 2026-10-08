@@ -1,12 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">Vigil mark</title>
-  <desc id="desc">Appnary-style rounded mark with a large shield and a balanced lock in aqua and lime.</desc>
+  <desc id="desc">Appnary-style rounded mark with a steel shield and aqua lock.</desc>
   <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
-  <!-- Large shield — dominant silhouette -->
+  <!-- Steel shield — reads as armor, not a dark blob -->
   <path
-    fill="#111827"
+    fill="#6B7C8F"
     d="M256 36c-78 38-160 44-226 48v168c0 116 80 204 226 258 146-54 226-142 226-258V84c-66-4-148-10-226-48z"/>
-  <!-- Lock ~27% larger than prior compact size -->
+  <!-- Soft rim so the crest edge stays clear on white -->
+  <path
+    fill="none"
+    stroke="#4A5A6C"
+    stroke-width="14"
+    stroke-linejoin="round"
+    d="M256 36c-78 38-160 44-226 48v168c0 116 80 204 226 258 146-54 226-142 226-258V84c-66-4-148-10-226-48z"/>
+  <!-- Aqua lock -->
   <path
     d="M204 250v-26c0-28 24-50 52-50s52 22 52 50v26"
     fill="none"
@@ -15,16 +22,7 @@
     stroke-linecap="round"
     stroke-linejoin="round"/>
   <rect x="188" y="250" width="136" height="116" rx="28" fill="#37D7C6"/>
-  <circle cx="256" cy="294" r="17" fill="#111827"/>
-  <rect x="248" y="302" width="16" height="34" rx="6" fill="#111827"/>
+  <circle cx="256" cy="294" r="17" fill="#4A5A6C"/>
+  <rect x="248" y="302" width="16" height="34" rx="6" fill="#4A5A6C"/>
   <circle cx="263" cy="288" r="7" fill="#B7F34B"/>
-  <!-- Scan corner -->
-  <path
-    d="M372 64h100v100"
-    fill="none"
-    stroke="#37D7C6"
-    stroke-width="40"
-    stroke-linecap="round"
-    stroke-linejoin="round"/>
-  <circle cx="436" cy="88" r="22" fill="#B7F34B"/>
 </svg>
