@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Vigil mark</title>
+  <desc id="desc">Bold Appnary-style rounded mark with a vigilant shield eye in aqua and lime — tuned for favicon and app-icon sizes.</desc>
+  <!-- Full-bleed tile so the mark stays readable at 16–32px -->
+  <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
+  <!-- Solid shield — larger, no thin inner cut -->
+  <path
+    fill="#111827"
+    d="M256 78c-64 34-128 40-182 44v142c0 96 64 168 182 210 118-42 182-114 182-210V122c-54-4-118-10-182-44z"/>
+  <!-- Watchful eye — oversized for small sizes -->
+  <ellipse cx="256" cy="236" rx="108" ry="58" fill="#37D7C6"/>
+  <circle cx="256" cy="236" r="34" fill="#111827"/>
+  <circle cx="268" cy="224" r="12" fill="#B7F34B"/>
+  <!-- Scan corner — thick strokes that survive downscale -->
+  <path
+    d="M352 88h88v88"
+    fill="none"
+    stroke="#37D7C6"
+    stroke-width="40"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+  <circle cx="408" cy="112" r="22" fill="#B7F34B"/>
+</svg>
