@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">Vigil mark</title>
-  <desc id="desc">Appnary-style rounded mark with a large shield and a smaller lock in aqua and lime.</desc>
+  <desc id="desc">Appnary-style rounded mark with a large shield and a balanced lock in aqua and lime.</desc>
   <rect width="512" height="512" rx="112" fill="#FFFFFF"/>
   <!-- Large shield — dominant silhouette -->
   <path
     fill="#111827"
     d="M256 36c-78 38-160 44-226 48v168c0 116 80 204 226 258 146-54 226-142 226-258V84c-66-4-148-10-226-48z"/>
-  <!-- Compact lock so the shield reads first -->
+  <!-- Lock ~27% larger than prior compact size -->
   <path
-    d="M218 262v-20c0-22 18-40 38-40s38 18 38 40v20"
+    d="M204 250v-26c0-28 24-50 52-50s52 22 52 50v26"
     fill="none"
     stroke="#37D7C6"
-    stroke-width="24"
+    stroke-width="30"
     stroke-linecap="round"
     stroke-linejoin="round"/>
-  <rect x="202" y="262" width="108" height="92" rx="24" fill="#37D7C6"/>
-  <circle cx="256" cy="296" r="13" fill="#111827"/>
-  <rect x="250" y="302" width="12" height="26" rx="5" fill="#111827"/>
-  <circle cx="261" cy="291" r="5" fill="#B7F34B"/>
+  <rect x="188" y="250" width="136" height="116" rx="28" fill="#37D7C6"/>
+  <circle cx="256" cy="294" r="17" fill="#111827"/>
+  <rect x="248" y="302" width="16" height="34" rx="6" fill="#111827"/>
+  <circle cx="263" cy="288" r="7" fill="#B7F34B"/>
   <!-- Scan corner -->
   <path
     d="M372 64h100v100"
