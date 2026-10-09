@@ -312,7 +312,7 @@ Pixel Tracker is in development and not available to install. A saved G- measure
 
 Choose an app whose confirmed plan limits cover every ad platform you need. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.
 
-If you're comparing options for pixel management on Shopify, it's worth looking at more than one tool before committing, since setups and pricing structures vary more than you'd expect for what sounds like a simple task. 
+If you're comparing options for pixel management on Shopify, it's worth looking at more than one tool before committing, since setups and pricing structures vary more than you'd expect for what sounds like a simple task.
 
 Pixel Tracker itself is currently pre-launch and taking [waitlist signups](/#waitlist) rather than live installs, so if the pixel-connection side of this is what you're after, that's the way to get notified when it opens up.
 
@@ -539,7 +539,7 @@ None of this requires overhauling your entire marketing stack overnight. Start w
   {
     slug: "multi-platform-ad-tracking-audit",
     title: "How to audit your ad tracking across platforms in one afternoon",
-    seoTitle: "Audit your ad tracking across platforms in one afternoon",
+    seoTitle: "Audit your ad tracking in one afternoon",
     excerpt: `Most merchants check Facebook, then Google, then TikTok. That wastes hours and misses the gaps. Here's a one-afternoon audit routine.`,
     category: "Strategy",
     publishedAt: "2026-08-02",
