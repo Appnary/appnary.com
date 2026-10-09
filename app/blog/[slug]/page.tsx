@@ -32,8 +32,8 @@ export async function generateMetadata({
     return { title: "Post not found | Appnary Blog" };
   }
   return withPageSeo(`/blog/${post.slug}`, {
-    title: `${post.title} | Appnary Blog`,
-    description: post.excerpt,
+    title: `${post.seoTitle ?? post.title} | Appnary Blog`,
+    description: post.metaDescription ?? post.excerpt,
     openGraph: {
       title: post.title,
       description: post.excerpt,

@@ -42,23 +42,22 @@ const checks = [
 export default async function VigilPage() {
   const counts = await getWaitlistCounts();
 
-  const softwareJsonLd = {
+  const pageJsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Vigil",
-    applicationCategory: "SecurityApplication",
-    operatingSystem: "Shopify",
+    "@type": "WebPage",
+    name: "Vigil | Shopify security scanner",
     description:
       "Vigil is a pre-release Shopify security scanner. It is not available to install until Shopify approves the listing.",
     url: "https://appnary.com/vigil",
-    image: "https://appnary.com/vigil-app-icon.png",
+    primaryImageOfPage: "https://appnary.com/vigil-app-icon.png",
+    about: { "@type": "Thing", name: "Vigil" },
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
 
       <section className="mx-auto max-w-3xl px-6 pt-20 pb-12 sm:pt-28">

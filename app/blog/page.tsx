@@ -13,7 +13,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/blog", {
   title: "Blog | Appnary | Shopify Tips & Product Updates",
   description:
-    "Product updates from the Appnary team and practical Shopify tracking tips for merchants.",
+    "Product updates from the Appnary team, plus practical Shopify tracking, ROAS, and ad attribution tips for merchants who run paid ads.",
   openGraph: {
     title: "Blog | Appnary",
     description: "Product updates and Shopify tips from the Appnary team.",

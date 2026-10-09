@@ -3,7 +3,7 @@ import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/privacy", {
   title: "Privacy Policy | Appnary",
-  description: "How Appnary collects, uses, and shares data for Vigil and other Shopify apps.",
+  description: "How Appnary collects, uses, and shares data for Vigil and other Shopify apps, including waitlist emails, hosting, and your choices.",
 });
 
 export default function PrivacyPage() {

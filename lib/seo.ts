@@ -45,6 +45,10 @@ export function withPageSeo(path: string, metadata: Metadata = {}): Metadata {
       canonical,
     },
     openGraph: {
+      type: "website",
+      siteName: "Appnary",
+      locale: "en_US",
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Appnary" }],
       ...metadata.openGraph,
       url: metadata.openGraph?.url ?? canonical,
       ...(ogTitle ? { title: ogTitle } : {}),

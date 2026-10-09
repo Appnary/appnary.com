@@ -6,7 +6,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/contact", {
   title: "Contact | Appnary | Support & Business Inquiries",
   description:
-    "Reach the Appnary team for support, pre-sales questions, partnerships, press, or anything else.",
+    "Reach the Appnary team for support, pre-sales questions, partnerships, press, or anything else. Send a message or email us directly.",
   openGraph: {
     title: "Contact | Appnary",
     description: "Support and business inquiries for Appnary.",

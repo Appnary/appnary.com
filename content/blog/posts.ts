@@ -61,7 +61,7 @@ Meta CAPI and TikTok Events API delivery are not confirmed Pixel Tracker launch 
     slug: "shopify-tips-first-30-days",
     title: "Shopify tips: what to set up in your first 30 days",
     excerpt:
-      "A practical checklist for new merchants — the stuff we wish someone had told us on day one.",
+      "A practical checklist for new Shopify merchants: what to set up in your first 30 days, from the stuff we wish someone told us on day one.",
     category: "Shopify tips",
     publishedAt: "2026-06-04",
     author: "The Appnary Team",
@@ -88,8 +88,9 @@ None of this is glamorous. All of it compounds.`,
   {
     slug: "shopify-tips-reading-your-reports",
     title: "How to read your Shopify reports without lying to yourself",
+    seoTitle: "How to read your Shopify reports honestly",
     excerpt:
-      "Three traps that turn a good report into a bad decision, and how to avoid each one.",
+      "Three traps turn a good Shopify report into a bad decision. Learn how to read your reports honestly and avoid each one.",
     category: "Shopify tips",
     publishedAt: "2026-05-28",
     author: "The Appnary Team",
@@ -115,6 +116,7 @@ If you only remember one thing: when a report makes you feel something, double-c
     slug: "why-shopify-roas-is-inaccurate",
     title: "Why Your Shopify ROAS Is Inaccurate (And How to Fix It)",
     excerpt: `Facebook, Google, and TikTok each report a ROAS number that assumes full credit for the same sale, while browser pixels quietly lose data to ad blockers and iOS tracking prevention. Here is what is actually driving the gap, and how to build one blended number you can trust.`,
+    metaDescription: `Meta, Google, and TikTok each claim full credit for the same sale, and browser pixels lose data. Here is why Shopify ROAS drifts and how to fix it.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-02",
     updatedAt: "2026-09-30",
@@ -183,6 +185,7 @@ Platform-reported ROAS will keep disagreeing with itself and with your bank acco
     slug: "facebook-pixel-vs-google-tag",
     title: "Facebook Pixel vs Google Tag: Which Do You Need?",
     excerpt: `Facebook Pixel and the Google Ads tag aren't competing versions of the same tool, they track two different ad platforms. If you're running ads on both, the honest answer is you need both installed.`,
+    metaDescription: `Facebook Pixel and the Google Ads tag track two different ad platforms. If you run ads on both, here is why you need both installed.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-07",
     updatedAt: "2026-09-30",
@@ -233,6 +236,7 @@ Neither pixel is a lesser version of the other, and neither is optional once you
     slug: "tiktok-pixel-setup-shopify",
     title: "TikTok Pixel Setup on Shopify: Step-by-Step",
     excerpt: `TikTok's algorithm can't optimize toward conversions it never sees, and your Meta or Google pixel won't tell it anything. Here's the short version of getting a TikTok pixel live on Shopify, plus the purchase-check step most merchants skip.`,
+    metaDescription: `TikTok can't optimize toward conversions it never sees. Here is how to get a TikTok pixel live on Shopify, plus the purchase check most skip.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-10",
     updatedAt: "2026-09-30",
@@ -281,6 +285,7 @@ Step 5 is checking server delivery separately if your provider offers it. Follow
     slug: "track-ad-spend-multiple-platforms",
     title: "How to Track Ad Spend Across Multiple Platforms",
     excerpt: `When ad spend and conversions live in five different ad dashboards, none of them agree, and that's not an accident. Here's a practical, spreadsheet-based way to build one honest number for what your ads are actually doing.`,
+    metaDescription: `When ad spend lives in five dashboards and none agree, build one honest number. A practical spreadsheet method for multi-platform ad tracking.`,
     category: "Ad Tracking",
     publishedAt: "2026-07-14",
     updatedAt: "2026-09-30",
@@ -307,7 +312,7 @@ Pixel Tracker is in development and not available to install. A saved G- measure
 
 Choose an app whose confirmed plan limits cover every ad platform you need. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.
 
-If you're comparing options for pixel management on Shopify, it's worth looking at more than one tool before committing, since setups and pricing structures vary more than you'd expect for what sounds like a simple task. The [roundup of Shopify ad tracking tools](/alternatives/best-shopify-ad-tracking-tools) is a reasonable place to start that comparison.
+If you're comparing options for pixel management on Shopify, it's worth looking at more than one tool before committing, since setups and pricing structures vary more than you'd expect for what sounds like a simple task.
 
 Pixel Tracker itself is currently pre-launch and taking [waitlist signups](/#waitlist) rather than live installs, so if the pixel-connection side of this is what you're after, that's the way to get notified when it opens up.
 
@@ -416,6 +421,7 @@ Server-side tracking and privacy-conscious tracking aren't opposites, even thoug
     slug: "calculate-true-roas",
     title: "How to Measure True ROAS on Shopify (After Returns)",
     excerpt: `Ad platforms lock in ROAS from checkout revenue and never subtract returns. Here's net-of-returns ROAS with a worked example of a campaign that looks fine until refunds land.`,
+    metaDescription: `Ad platforms report ROAS from checkout revenue and never subtract returns. See net-of-returns ROAS with a worked example for Shopify stores.`,
     category: "Analytics",
     publishedAt: "2026-07-24",
     updatedAt: "2026-09-30",
@@ -479,6 +485,7 @@ None of this makes gross ROAS useless. It's still a fast signal for whether a ca
     slug: "privacy-first-tracking-shopify",
     title: "Privacy-First Tracking for Shopify in 2026",
     excerpt: `Third-party cookies are disappearing and ad platforms are undercounting conversions because of it. Here's what privacy-first tracking actually means for a Shopify merchant in 2026, and why it isn't the same thing as turning tracking off.`,
+    metaDescription: `Third-party cookies are fading and ad platforms undercount conversions. Here is what privacy-first tracking means for a Shopify merchant in 2026.`,
     category: "Privacy",
     publishedAt: "2026-07-28",
     updatedAt: "2026-09-30",
@@ -532,6 +539,7 @@ None of this requires overhauling your entire marketing stack overnight. Start w
   {
     slug: "multi-platform-ad-tracking-audit",
     title: "How to audit your ad tracking across platforms in one afternoon",
+    seoTitle: "Audit your ad tracking in one afternoon",
     excerpt: `Most merchants check Facebook, then Google, then TikTok. That wastes hours and misses the gaps. Here's a one-afternoon audit routine.`,
     category: "Strategy",
     publishedAt: "2026-08-02",
@@ -547,7 +555,7 @@ An audit that tries to cover all seven major platforms (Meta, Google Ads, TikTok
 
 Once you know which platforms to focus on, the first real check is whether the pixel loads at all. Each major platform has a free browser extension built for exactly this: Meta Pixel Helper for Facebook and Instagram ads, Google's Tag Assistant for the Google Ads conversion tag, and TikTok Pixel Helper for TikTok. Install the one for each platform you're auditing, load your storefront in a normal browser tab (not incognito, since some ad blockers behave differently there), and click through a real session: homepage, a product page, add to cart, and if you're comfortable doing it, checkout. Each extension shows which pixel ID fired and which events it saw. This tells you the pixel is present and technically working. It does not tell you whether the event data it's sending is complete or correct, which is a separate check covered next. A green checkmark in Pixel Helper is a starting point, not a finish line.
 
-The next step moves out of your browser and into each platform's own event manager: Meta's Events Manager, Google Ads' conversion diagnostics, TikTok's Events Manager. This is where a lot of audits stop too early, because PageView is almost always firing (it's the simplest event, and most installs get it right by default), so merchants see PageView data flowing in and assume tracking is healthy. Purchase is the event that actually matters for measuring return on ad spend, and it's also the one most likely to be broken, since it depends on the checkout or thank-you page firing correctly, with the right value and currency attached. In each platform's dashboard, look specifically at Purchase event volume over the last 7 to 14 days and compare it, roughly, against your actual Shopify order count for the same period. If a platform's Purchase count is well below your real order count, something upstream is dropping the event: a checkout page that changed, a consent banner blocking the script before it fires, or an app that stopped working after a theme update. If you'd rather not go dashboard by dashboard, the [pixel health check tool](/tools/pixel-health-check) runs a storefront scan alongside a short setup checklist and flags a lot of these gaps in a couple of minutes, though it's a starting signal, not a replacement for checking each dashboard directly.
+The next step moves out of your browser and into each platform's own event manager: Meta's Events Manager, Google Ads' conversion diagnostics, TikTok's Events Manager. This is where a lot of audits stop too early, because PageView is almost always firing (it's the simplest event, and most installs get it right by default), so merchants see PageView data flowing in and assume tracking is healthy. Purchase is the event that actually matters for measuring return on ad spend, and it's also the one most likely to be broken, since it depends on the checkout or thank-you page firing correctly, with the right value and currency attached. In each platform's dashboard, look specifically at Purchase event volume over the last 7 to 14 days and compare it, roughly, against your actual Shopify order count for the same period. If a platform's Purchase count is well below your real order count, something upstream is dropping the event: a checkout page that changed, a consent banner blocking the script before it fires, or an app that stopped working after a theme update. If you'd rather not go dashboard by dashboard, a quick storefront scan and a short setup checklist will flag a lot of these gaps in a couple of minutes, though that is a starting signal, not a replacement for checking each dashboard directly.
 
 Purchase events being too low is one failure mode. The other, less obvious one is Purchase events firing too many times for the same order, which is common on stores that have accumulated tracking apps over time. It's easy to end up with Shopify's native Facebook & Instagram sales channel sending a Purchase event, a separate pixel app also sending a Purchase event, and a theme customization from two years ago still injecting a third copy, all for the same single order. Each platform then reports that one sale as two or three conversions, which inflates your apparent conversion rate and return on ad spend, and can also throw off that platform's own optimization, since its algorithm is learning from inflated signals. The way to catch this: open your browser's network tab (or use each platform's Pixel Helper, which usually flags duplicate pixel IDs) during a real checkout, and count how many times a Purchase or Complete Payment request fires to the same platform. More than one is a duplicate, and the fix is almost always removing one of the redundant integrations, not adding deduplication logic on top of both. If Facebook is one of the platforms showing this, count Purchase requests to the same pixel ID during one checkout. If your store has changed tracking apps more than once, this is the single highest-value thing to check in an afternoon audit, because it directly inflates the numbers you're using to make budget decisions.
 
