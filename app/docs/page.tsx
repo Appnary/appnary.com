@@ -5,7 +5,7 @@ import { withPageSeo } from "@/lib/seo";
 export const metadata: Metadata = withPageSeo("/docs", {
   title: "Vigil docs | Appnary",
   description:
-    "What Vigil scans, what it leaves alone, and how the waitlist works until Shopify approves the app.",
+    "What the Vigil Shopify security scan checks, what it leaves alone, and how the waitlist works until Shopify approves the app.",
   openGraph: {
     title: "Vigil docs",
     description: "Product notes for Vigil while it is in development.",

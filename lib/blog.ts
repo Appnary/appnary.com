@@ -14,6 +14,8 @@ export type BlogPost = {
   slug: string;
   title: string;
   excerpt: string;
+  metaDescription?: string; // SEO description, 110-160 chars; falls back to excerpt
+  seoTitle?: string; // SEO title without suffix; falls back to title
   category: string;
   publishedAt: string; // ISO date — YYYY-MM-DD
   updatedAt?: string; // ISO date — YYYY-MM-DD
