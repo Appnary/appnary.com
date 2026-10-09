@@ -49,7 +49,10 @@ export default async function VigilPage() {
     description:
       "Vigil is a pre-release Shopify security scanner. It is not available to install until Shopify approves the listing.",
     url: "https://appnary.com/vigil",
-    primaryImageOfPage: "https://appnary.com/vigil-app-icon.png",
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: "https://appnary.com/vigil-app-icon.png",
+    },
     about: { "@type": "Thing", name: "Vigil" },
   };
 
