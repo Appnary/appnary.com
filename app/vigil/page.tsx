@@ -40,14 +40,14 @@ const checks = [
 ];
 
 const features = [
-  { name: "Scan on open", detail: "Opening Vigil scans the published theme, app embeds, app blocks, and external frames.", status: "Beta" },
-  { name: "Live storefront scan", detail: "Also reads the rendered page, so scripts added at runtime show up. A password-locked store needs its password saved in Vigil.", status: "Beta" },
-  { name: "Source of each script", detail: "Names the theme file and line, or the app, behind every external script.", status: "Beta" },
-  { name: "Leaked keys", detail: "Flags secret-looking strings without showing the secret.", status: "Beta" },
-  { name: "Turn off and Undo", detail: "Blocks a script on the storefront with the Vigil blocker embed. Undo lifts the block. No app is uninstalled.", status: "Beta" },
-  { name: "Agency kill switch", detail: "Turns one host off across the stores on one account.", status: "Beta" },
-  { name: "Theme change alerts", detail: "Records when the published theme changes, so you know to scan again.", status: "Beta" },
-  { name: "MCP tools", detail: "scan_store, warm_live_page, block_host, unblock_host, and list_blocked_hosts, with a per-store agent token.", status: "Beta" },
+  { name: "Scan on open", detail: "Opening Vigil scans the published theme, app embeds, app blocks, and external frames.", status: "In testing" },
+  { name: "Live storefront scan", detail: "Also reads the rendered page, so scripts added at runtime show up. A password-locked store needs its password saved in Vigil.", status: "In testing" },
+  { name: "Source of each script", detail: "Names the theme file and line, or the app, behind every external script.", status: "In testing" },
+  { name: "Leaked keys", detail: "Flags secret-looking strings without showing the secret.", status: "In testing" },
+  { name: "Turn off and Undo", detail: "Blocks a script on the storefront with the Vigil blocker embed. Undo lifts the block. No app is uninstalled.", status: "In testing" },
+  { name: "Agency kill switch", detail: "Turns one host off across the stores on one account.", status: "In testing" },
+  { name: "Theme change alerts", detail: "Records when the published theme changes, so you know to scan again.", status: "In testing" },
+  { name: "MCP tools", detail: "scan_store, warm_live_page, block_host, unblock_host, and list_blocked_hosts, with a per-store agent token.", status: "In testing" },
   { name: "Public MCP access", detail: "Connect from Claude, ChatGPT, or Cursor for every store.", status: "Planned" },
   { name: "Install from the App Store", detail: "Available after Shopify approves the listing.", status: "Planned" },
 ];
@@ -112,9 +112,9 @@ export default async function VigilPage() {
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="border-b border-border-themed text-foreground">
-                <th className="py-2 pr-4 font-semibold">Feature</th>
-                <th className="py-2 pr-4 font-semibold">What it does</th>
-                <th className="py-2 font-semibold">Status</th>
+                <th scope="col" className="py-2 pr-4 font-semibold">Feature</th>
+                <th scope="col" className="py-2 pr-4 font-semibold">What it does</th>
+                <th scope="col" className="py-2 font-semibold">Status</th>
               </tr>
             </thead>
             <tbody>
@@ -133,7 +133,7 @@ export default async function VigilPage() {
       <section className="mx-auto max-w-3xl px-6 pb-16">
         <h2 className="text-2xl font-bold text-foreground">Run it from an agent</h2>
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-          The same scan is available over MCP. An agent asks Vigil to scan the store and gets the findings back as structured data: script, source, and why it was flagged. The merchant still decides what to turn off.
+          The same scan is available over MCP with a per-store token while Vigil is in testing. An agent asks Vigil to scan the store and gets the findings back as structured data: script, source, and why it was flagged. The merchant still decides what to turn off.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
           Version 1 does not read customer records or order contents. Vigil is in beta on development stores. It is not on the App Store yet.
