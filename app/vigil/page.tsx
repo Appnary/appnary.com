@@ -5,11 +5,11 @@ import { formatCount, getWaitlistCounts } from "@/lib/waitlist-counts";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/vigil", {
-  title: "Vigil | Shopify security scanner | Appnary",
+  title: "Vigil: Store Security Scanner | Appnary",
   description:
     "Vigil scans a Shopify store for risky scripts and leaked keys. It is in development. Join the waitlist until Shopify approves it.",
   openGraph: {
-    title: "Vigil | Shopify security scanner",
+    title: "Vigil: Store Security Scanner",
     description:
       "Vigil is in development. Join the waitlist and we will invite you after Shopify approves the listing.",
     url: "https://appnary.com/vigil",
@@ -58,7 +58,7 @@ export default async function VigilPage() {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Vigil | Shopify security scanner",
+    name: "Vigil: Store Security Scanner",
     description:
       "Vigil is a pre-release Shopify security scanner. It is not available to install until Shopify approves the listing.",
     url: "https://appnary.com/vigil",
