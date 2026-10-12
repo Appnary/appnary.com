@@ -162,7 +162,7 @@ export function FooterBadges(): ReactNode {
           </a>
           <a href="https://easylaunch.dev/e-commerce/appnary" target="_blank" rel="noopener">
             <img
-              src="https://easylaunch.dev/badge/easylaunch-badge-light.svg"
+              src="https://www.easylaunch.dev/badge/easylaunch-badge-light.svg"
               alt="Featured on EasyLaunch"
               width="188"
               height="56"
