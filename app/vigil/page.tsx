@@ -35,7 +35,7 @@ const checks = [
   },
   {
     title: "A switch you can flip",
-    body: "When a script looks wrong, a person can turn that script off. The first version does not auto-delete apps.",
+    body: "When a script looks wrong, a person can turn it off on the storefront. Scripts hard-coded in the theme head load first, so Vigil flags those and points to the line to remove. The first version does not auto-delete apps.",
   },
 ];
 
@@ -44,7 +44,7 @@ const features = [
   { name: "Live storefront scan", detail: "Also reads the rendered page, so scripts added at runtime show up. A password-locked store needs its password saved in Vigil.", status: "In testing" },
   { name: "Source of each script", detail: "Names the theme file and line, or the app, behind every external script.", status: "In testing" },
   { name: "Leaked keys", detail: "Flags secret-looking strings without showing the secret.", status: "In testing" },
-  { name: "Turn off and Undo", detail: "Blocks a script on the storefront with the Vigil blocker embed. Undo lifts the block. No app is uninstalled.", status: "In testing" },
+  { name: "Turn off and Undo", detail: "Blocks scripts that load after the Vigil blocker embed: body scripts, tag managers, and app injections. Scripts hard-coded in the theme head are flagged with the line to remove. Undo lifts a block. No app is uninstalled.", status: "In testing" },
   { name: "Agency kill switch", detail: "Turns one host off across the stores on one account.", status: "In testing" },
   { name: "Theme change alerts", detail: "Records when the published theme changes, so you know to scan again.", status: "In testing" },
   { name: "MCP tools", detail: "scan_store, warm_live_page, block_host, unblock_host, and list_blocked_hosts, with a per-store agent token.", status: "In testing" },
