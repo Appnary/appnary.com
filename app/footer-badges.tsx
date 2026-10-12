@@ -255,7 +255,7 @@ export function FooterBadges(): ReactNode {
             target="_blank"
             rel="nofollow noopener noreferrer"
           >
-            <img src="https://mediapronet.com/api/badge?style=classic" alt="Listed on MEDIAPRONET" height="54" />
+            <img src="https://mediapronet.com/api/badge?style=classic" alt="Listed on MEDIAPRONET" height="54" loading="lazy" decoding="async" />
           </a>
           <a href="https://www.popwebtools.com" target="_blank" rel="noopener noreferrer">
             <img
@@ -263,8 +263,7 @@ export function FooterBadges(): ReactNode {
               alt="Featured on PopWebTools"
               width="240"
               height="86"
-              style={{ display: "block", border: 0 }}
-            />
+              style={{ display: "block", border: 0 }} loading="lazy" decoding="async" />
           </a>
           <a href="https://bigkr.com" target="_blank" rel="noopener noreferrer">
             <img
@@ -289,37 +288,33 @@ export function FooterBadges(): ReactNode {
             <img
               src="https://backlinkhubs.com/badge.svg?theme=light&label=Listed%20on%20Backlinkhubs"
               alt="Listed on Backlinkhubs badge"
-              style={{ height: "48px", width: "auto" }}
-            />
+              style={{ height: "48px", width: "auto" }} loading="lazy" decoding="async" />
           </a>
           <a href="https://twelve.tools" target="_blank">
-            <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="148" height="40" />
+            <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="148" height="40" loading="lazy" decoding="async" />
           </a>
           <a href="https://webspot.app" target="_blank" rel="noopener noreferrer">
             <img
               src="https://webspot.app/featured-light.svg"
               alt="Featured on Webspot"
-              style={{ height: "54px", width: "auto" }}
-            />
+              style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
           </a>
           <a href="https://dododirectory.com" target="_blank" rel="dofollow">
             <img
               src="https://dododirectory.com/badge-light.png"
               alt="Featured on DodoDirectory"
               width="200"
-              height="54"
-            />
+              height="54" loading="lazy" decoding="async" />
           </a>
           <a href="https://startuptrusted.com?ref=appnary.com" target="_blank" rel="noopener">
             <img
               src="https://startuptrusted.com/api/badge?type=featured&style=light"
               alt="Appnary on StartupTrusted"
               width="240"
-              height="54"
-            />
+              height="54" loading="lazy" decoding="async" />
           </a>
           <a href="https://saasbison.com" target="_blank" rel="dofollow">
-            <img src="https://saasbison.com/badge.png" alt="Featured on SaaSBison" width="200" height="54" />
+            <img src="https://saasbison.com/badge.png" alt="Featured on SaaSBison" width="200" height="54" loading="lazy" decoding="async" />
           </a>
           <a
             className="footer-badge-card"
@@ -368,14 +363,13 @@ export function FooterBadges(): ReactNode {
               src="https://spacerrapps.com/badge/appnary.svg?v=3&theme=dark"
               alt="Appnary is featured on SpacerrApps"
               width="234"
-              height="54"
-            />
+              height="54" loading="lazy" decoding="async" />
           </a>
           <a href="https://sumodir.com" target="_blank" rel="dofollow">
-            <img src="https://sumodir.com/badge.png" alt="Featured on SumoDir" width="200" height="54" />
+            <img src="https://sumodir.com/badge.png" alt="Featured on SumoDir" width="200" height="54" loading="lazy" decoding="async" />
           </a>
           <a href="https://indexof.ai/tool/appnary?ref=appnary" target="_blank" rel="noopener">
-            <img src="https://indexof.ai/badge-light.svg" alt="Featured on IndexOf.AI" width="200" height="40" />
+            <img src="https://indexof.ai/badge-light.svg" alt="Featured on IndexOf.AI" width="200" height="40" loading="lazy" decoding="async" />
           </a>
           <a href="https://zplatform.ai/" target="_blank" rel="noopener" title="Featured on zPlatform.ai">
             <img
@@ -411,8 +405,7 @@ export function FooterBadges(): ReactNode {
               alt="TopAITools4U"
               width="32"
               height="32"
-              style={{ display: "block", width: "32px", height: "32px", borderRadius: "9px" }}
-            />
+              style={{ display: "block", width: "32px", height: "32px", borderRadius: "9px" }} loading="lazy" decoding="async" />
             <span style={{ display: "flex", flexDirection: "column", lineHeight: 1.15 }}>
               <span style={{ fontSize: "10px", letterSpacing: ".08em", textTransform: "uppercase", color: "#6b7280" }}>
                 Listed on
@@ -421,23 +414,22 @@ export function FooterBadges(): ReactNode {
             </span>
           </a>
           <a href="https://launchit.fast" target="_blank" rel="noopener">
-            <img src="https://launchit.fast/img/launching.svg" alt="Featured on LaunchIt" />
+            <img src="https://launchit.fast/img/launching.svg" alt="Featured on LaunchIt" loading="lazy" decoding="async" />
           </a>
           <a href="https://uno.directory" target="_blank" rel="noopener">
-            <img src="https://uno.directory/uno-directory.svg" alt="Listed on Uno Directory" width="120" height="30" />
+            <img src="https://uno.directory/uno-directory.svg" alt="Listed on Uno Directory" width="120" height="30" loading="lazy" decoding="async" />
           </a>
           <a href="https://launchnest.io/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Featured on LaunchNest
           </a>
           <a href="https://saas.fyi" target="_blank" rel="noopener">
-            <img src="https://saas.fyi/assets/brand/badge.svg" alt="Featured on SaaS.fyi" width="294" height="54" />
+            <img src="https://saas.fyi/assets/brand/badge.svg" alt="Featured on SaaS.fyi" width="294" height="54" loading="lazy" decoding="async" />
           </a>
           <a href="https://prolaunch.net" target="_blank" title="Pro Launch Featured Badge">
             <img
               src="https://prolaunch.net/images/badges/featured-light.svg"
               alt="Pro Launch Featured Badge"
-              style={{ width: "240px", height: "auto" }}
-            />
+              style={{ width: "240px", height: "auto" }} loading="lazy" decoding="async" />
           </a>
           <a
             href="https://www.indietools.app/"
