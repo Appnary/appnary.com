@@ -804,6 +804,16 @@ export function FooterBadges(): ReactNode {
           <a href="https://youraihunt.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Featured on Your AI Hunt
           </a>
+          <a href="https://alterbase.co/" target="_blank" rel="noopener" title="Listed on AlterBase">
+            <img
+              src="https://alterbase.co/badge/alterbase-v1-light.svg"
+              alt="Listed on AlterBase"
+              width="200"
+              height="50"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
     </>
   );
 }
