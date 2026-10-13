@@ -96,6 +96,20 @@ export default async function Home() {
             </p>
             <WaitlistForm product="vigil" />
           </div>
+
+          <a
+            href="https://launchigniter.com/product/appnary?ref=badge-appnary"
+            target="_blank"
+            rel="noopener"
+            className="mt-8"
+          >
+            <img
+              src="https://launchigniter.com/api/badge/appnary?theme=light"
+              alt="Featured on LaunchIgniter"
+              width="212"
+              height="55"
+            />
+          </a>
         </div>
       </section>
 
