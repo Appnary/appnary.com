@@ -1,4 +1,5 @@
 import type { BlogPost } from "@/lib/blog";
+import { vigilPosts } from "@/content/blog/vigil-posts";
 
 // Seed posts — keep content marketing-friendly but factual and on-brand.
 // In production, these would be authored in MDX; for now we keep them in
@@ -565,4 +566,5 @@ An afternoon is enough time to run all of the above on two or three platforms, b
 
 None of this requires new tools or a rebuilt tracking stack to get through in one sitting. It requires actually looking at two or three platforms together instead of one at a time, and being honest about what the numbers say when you compare them to your real Shopify orders. Most merchants who run this audit find at least one issue in the first hour. That's usually the point of doing it.`,
   },
+  ...vigilPosts,
 ];

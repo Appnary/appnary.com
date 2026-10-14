@@ -161,11 +161,31 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         )}
 
         <div className="mt-10 space-y-5 text-base text-muted-foreground-strong leading-relaxed">
-          {paragraphs.map((p, i) => (
-            <p key={i}>
-              <InlineText text={p} />
-            </p>
-          ))}
+          {paragraphs.map((p, i) => {
+            if (p.startsWith("## ")) {
+              return (
+                <h2 key={i} className="pt-4 text-2xl font-bold text-foreground">
+                  {p.slice(3)}
+                </h2>
+              );
+            }
+            if (p.split("\n").every((line) => line.startsWith("- "))) {
+              return (
+                <ul key={i} className="list-disc space-y-2 pl-6">
+                  {p.split("\n").map((line, j) => (
+                    <li key={j}>
+                      <InlineText text={line.slice(2)} />
+                    </li>
+                  ))}
+                </ul>
+              );
+            }
+            return (
+              <p key={i}>
+                <InlineText text={p} />
+              </p>
+            );
+          })}
         </div>
 
         {post.tags.length > 0 && (
