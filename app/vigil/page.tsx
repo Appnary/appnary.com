@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { getAllPosts } from "@/lib/blog";
 import WaitlistForm from "@/components/waitlist-form";
 import VigilMark from "@/components/vigil-mark";
 import { formatCount, getWaitlistCounts } from "@/lib/waitlist-counts";
@@ -69,11 +71,30 @@ export default async function VigilPage() {
     about: { "@type": "Thing", name: "Vigil" },
   };
 
+  // Pre-release: no offers, no ratings, no install URL until Shopify approves the listing.
+  const appJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Vigil",
+    applicationCategory: "SecurityApplication",
+    operatingSystem: "Web (Shopify admin)",
+    description:
+      "A security scan for a Shopify store: finds the file or app behind each external script and flags leaked keys. In development.",
+    url: "https://appnary.com/vigil",
+    publisher: { "@type": "Organization", name: "Appnary", url: "https://appnary.com" },
+  };
+
+  const guides = getAllPosts().filter((post) => post.category === "Security");
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
       />
 
       <section className="mx-auto max-w-3xl px-6 pt-20 pb-12 sm:pt-28">
@@ -150,6 +171,19 @@ export default async function VigilPage() {
             Read the Vigil docs
           </a>
         </p>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-16">
+        <h2 className="text-2xl font-bold text-foreground">Guides</h2>
+        <ul className="mt-4 space-y-2 text-sm">
+          {guides.map((post) => (
+            <li key={post.slug}>
+              <Link href={`/blog/${post.slug}`} className="font-medium text-accent-foreground hover:underline">
+                {post.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section id="waitlist" className="mx-auto max-w-lg px-6 pb-24">
