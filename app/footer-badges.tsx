@@ -959,7 +959,7 @@ export function FooterBadges(): ReactNode {
           </a>
           <a href="https://hiproducty.com" target="_blank" rel="noopener noreferrer">
             <img
-              src="https://hiproducty.com/badge.svg"
+              src="https://www.hiproducty.com/badge/hiproducty-recommend-light.svg"
               alt="Featured on Hiproducty"
               loading="lazy"
               decoding="async"
