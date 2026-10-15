@@ -743,16 +743,7 @@ export function FooterBadges(): ReactNode {
           <a href="https://codehype.ai/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Featured on CodeHype
           </a>
-          <a href="https://launchboard.dev" target="_blank" rel="noopener">
-            <img
-              src="https://launchboard.dev/featured.svg"
-              alt="Featured on LaunchBoard"
-              width="240"
-              height="60"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
+          <a href="https://launchboard.dev" target="_blank" className="text-sm text-muted-foreground">LaunchBoard</a>
           <a href="https://listpitch.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Featured on ListPitch
           </a>
@@ -957,14 +948,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://hiproducty.com" target="_blank" rel="noopener noreferrer">
-            <img
-              src="https://www.hiproducty.com/badge/hiproducty-recommend-light.svg"
-              alt="Featured on Hiproducty"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
+          <a href="https://hiproducty.com" target="_blank" className="text-sm text-muted-foreground">HiProducty</a>
           <a href="https://lemonlaunch.dev/e-commerce/appnary" target="_blank" rel="noopener">
             <img
               src="https://lemonlaunch.dev/badge/lemonlaunch-badge-light.svg"
@@ -1019,16 +1003,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://www.thetoolpicker.com?ref=yourtool" target="_blank" rel="noopener">
-            <img
-              src="https://www.thetoolpicker.com/badge-light.svg"
-              alt="Featured on TheToolPicker"
-              width="200"
-              height="54"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
+          <a href="https://www.thetoolpicker.com?ref=appnary" target="_blank" className="text-sm text-muted-foreground">TheToolPicker</a>
           <a href="https://agentwork.tools" target="_blank">
             <img
               src="https://agentwork.tools/badge/badge_light.svg"
@@ -1120,6 +1095,15 @@ export function FooterBadges(): ReactNode {
               Launch MCP
             </a>
           </span>
+          <a href="https://goodsaas.xyz/saas/appnary" target="_blank" rel="noopener">
+            <img src="https://goodsaas.xyz/badge/appnary.svg?theme=dark" alt="Appnary on goodSaaS" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://toolroots.com" target="_blank" rel="noopener">
+            <img src="https://toolroots.com/badge.svg" alt="Featured on ToolRoots" width="181" height="32" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://indieascent.com/p/appnary" target="_blank" rel="noopener">
+            <img src="https://indieascent.com/badge/standard-light.svg" alt="Featured on IndieAscent" width="200" height="54" loading="lazy" decoding="async" />
+          </a>
     </>
   );
 }
