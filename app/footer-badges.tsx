@@ -814,6 +814,312 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
+          <a href="https://openi.cn/" target="_blank" className="text-sm text-muted-foreground">
+            OpenI AI时代
+          </a>
+          <a href="https://www.aiclubs.cn" target="_blank" className="text-sm text-muted-foreground">
+            AI部落
+          </a>
+          <a href="https://braginpublic.com/?utm_source=badge&utm_medium=referral" target="_blank" rel="noopener">
+            <img
+              src="https://braginpublic.com/badge?theme=light"
+              alt="Featured on Brag in Public"
+              width="208"
+              height="54"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://www.webprojectlist.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            WebProjectList
+          </a>
+          <a href="https://www.tooluck.org/item/appnary" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://www.tooluck.org/badges/tooluck-badge-light.svg"
+              alt="Featured on Tooluck.org"
+              width="210"
+              height="55"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://easydofollow.dev/e-commerce/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://easydofollow.dev/badge/easydofollow-badge-light.svg"
+              alt="Featured on EasyDoFollow"
+              width="188"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://domainrating.lol">
+            <img
+              src="https://domainrating.lol/badge.svg"
+              width="160"
+              height="40"
+              alt="Listed on domainrating.lol"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://saaslineup.com/product/appnary?ref=badge" rel="dofollow">
+            <img
+              src="https://saaslineup.com/badge/appnary.svg"
+              alt="Featured on SaaSLineup"
+              width="182"
+              height="46"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://thedevtoolsdir.com/product/appnary?ref=badge" rel="dofollow">
+            <img
+              src="https://thedevtoolsdir.com/badge/appnary.svg"
+              alt="Featured on TheDevToolsDir"
+              width="182"
+              height="46"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://skylaun.ch/e-commerce/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://skylaun.ch/badge/skylaunch-badge-light.svg"
+              alt="Featured on Sky Launch"
+              width="188"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://launchstag.com/p/tool-1791996728085" target="_blank" rel="noopener">
+            <img
+              src="https://launchstag.com/badge-light.svg"
+              alt="Featured on Launchstag"
+              width="198"
+              height="62"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://www.productlaunchify.com/projects/appnary"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Featured on Product Launchify"
+            aria-label="Featured on Product Launchify"
+          >
+            <img
+              src="https://www.productlaunchify.com/images/badges/powered-by-light.svg"
+              alt="Featured on Product Launchify"
+              width="231"
+              height="55"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://saasgrow.app?ref=appnary.com" target="_blank" rel="noopener">
+            <img
+              src="https://saasgrow.app/api/badge?type=featured&style=light"
+              alt="Appnary on SaaSGrow"
+              width="240"
+              height="54"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://toolrain.com/item/appnary" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://toolrain.com/badges/badge-listed-light.svg"
+              alt="Listed on ToolRain"
+              style={{ height: "60px", width: "auto" }}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://roozna.com/project/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://roozna.com/api/badge/appnary"
+              alt="Featured on Roozna"
+              width="200"
+              height="50"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://nextlaunch.io/projects/appnary" target="_blank" title="Featured on Next Launch">
+            <img
+              src="https://nextlaunch.io/images/badges/nextlaunch-badge-light.svg"
+              alt="Featured on Next Launch"
+              style={{ width: "175px", height: "auto" }}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://hiproducty.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://hiproducty.com/badge.svg"
+              alt="Featured on Hiproducty"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://lemonlaunch.dev/e-commerce/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://lemonlaunch.dev/badge/lemonlaunch-badge-light.svg"
+              alt="Featured on LemonLaunch"
+              width="188"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://www.ontoplist.com/ecommerce-companies/" target="_blank">
+            <img
+              src="https://www.ontoplist.com/images/ontoplist31.png?id=6acfc3a373298"
+              alt="Top eCommerce Development Companies in the USA - OnToplist.com"
+              style={{ border: 0 }}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://themicrosaasdir.com/product/appnary?ref=badge" rel="dofollow">
+            <img
+              src="https://themicrosaasdir.com/badge/appnary.svg"
+              alt="Featured on TheMicroSaaSDir"
+              width="182"
+              height="46"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://www.outdr.lol/card/appnary.com" target="_blank" rel="noopener">
+            <img
+              src="https://www.outdr.lol/badge/appnary.com.svg?theme=light"
+              alt="Domain Rating 11 on outdr.lol"
+              width="168"
+              height="40"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://whatsthebigdata.com/ai-tools/"
+            target="_blank"
+            rel="noopener"
+            title="Whatsthebigdata AI Tools Directory"
+          >
+            <img
+              src="https://whatsthebigdata.com/badges/featured-on-whatsthebigdata-dark.png"
+              alt="Featured on Whatsthebigdata"
+              width="240"
+              style={{ maxWidth: "100%", height: "auto" }}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://www.thetoolpicker.com?ref=yourtool" target="_blank" rel="noopener">
+            <img
+              src="https://www.thetoolpicker.com/badge-light.svg"
+              alt="Featured on TheToolPicker"
+              width="200"
+              height="54"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://agentwork.tools" target="_blank">
+            <img
+              src="https://agentwork.tools/badge/badge_light.svg"
+              alt="Featured on AgentWork.Tools"
+              width="200"
+              height="54"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://smartees.tech/t/appnary" target="_blank" rel="noopener">
+            <img
+              src="https://smartees.tech/badge/smartees-listed-dark.svg"
+              alt="Featured on Smartees"
+              width="184"
+              height="44"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://mydentify.com/" aria-label="Listed on Mydentify">
+            <img
+              src="https://mydentify.com/badges/listed-on-mydentify.svg"
+              alt="Listed on Mydentify"
+              width="176"
+              height="32"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a href="https://agenthunter.io/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on AgentHunter
+          </a>
+          <a
+            href="https://saasearch.io/product/appnary?utm_source=badge&utm_medium=referral&utm_campaign=featured_badge&ref=saasearch"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="https://saasearch.io/api/badge/appnary?theme=light"
+              alt="Featured on SaaSearch"
+              style={{ height: "48px", width: "auto" }}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <span
+            style={{
+              display: "inline-block",
+              textAlign: "center",
+              fontFamily: "system-ui, sans-serif",
+              lineHeight: 1,
+            }}
+          >
+            <a
+              className="footer-badge-card"
+              href="https://tools.launchllama.co/products/appnary?utm_source=badge&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "block", lineHeight: 0 }}
+            >
+              <img
+                src="https://tools.launchllama.co/featured-badge-white.jpg?v=5"
+                alt="Featured on Launch"
+                width="200"
+                height="52"
+                style={{ display: "block", border: 0 }}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a
+              className="footer-badge-card"
+              href="https://launchmcp.co/?utm_source=badge&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "block",
+                marginTop: "-2px",
+                paddingTop: 0,
+                fontSize: "7px",
+                fontWeight: 600,
+                color: "#888",
+                textDecoration: "none",
+                lineHeight: 1,
+                letterSpacing: "0.02em",
+              }}
+            >
+              Launch MCP
+            </a>
+          </span>
     </>
   );
 }
