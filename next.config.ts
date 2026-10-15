@@ -31,6 +31,7 @@ const nextConfig: NextConfig = {
       { source: "/integrations", destination: "/vigil", permanent: true },
       { source: "/tools", destination: "/vigil", permanent: true },
       { source: "/tools/:path*", destination: "/vigil", permanent: true },
+      { source: "/mo", destination: "/", permanent: true },
     ];
   },
 };
