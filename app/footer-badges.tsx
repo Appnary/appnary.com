@@ -948,7 +948,9 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://hiproducty.com" target="_blank" className="text-sm text-muted-foreground">HiProducty</a>
+          <a href="https://hiproducty.com" target="_blank" rel="noopener">
+            <img src="https://www.hiproducty.com/badge/hiproducty-recommend-light.svg" alt="Featured on Hiproducty" loading="lazy" decoding="async" />
+          </a>
           <a href="https://lemonlaunch.dev/e-commerce/appnary" target="_blank" rel="noopener">
             <img
               src="https://lemonlaunch.dev/badge/lemonlaunch-badge-light.svg"
