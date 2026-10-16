@@ -1104,6 +1104,9 @@ export function FooterBadges(): ReactNode {
           <a href="https://indieascent.com/p/appnary" target="_blank" rel="noopener">
             <img src="https://indieascent.com/badge/standard-light.svg" alt="Featured on IndieAscent" width="200" height="54" loading="lazy" decoding="async" />
           </a>
+          <a href="https://softwarecomoservicio.com" target="_blank" rel="noopener">
+            <img src="https://softwarecomoservicio.com/badge/badge-dark.svg" alt="Featured on Software Como Servicio" width="178" height="40" loading="lazy" decoding="async" />
+          </a>
     </>
   );
 }
