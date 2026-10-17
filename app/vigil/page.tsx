@@ -71,19 +71,8 @@ export default async function VigilPage() {
     about: { "@type": "Thing", name: "Vigil" },
   };
 
-  // Pre-release: no offers, no ratings, no install URL until Shopify approves the listing.
-  const appJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Vigil",
-    applicationCategory: "SecurityApplication",
-    operatingSystem: "Web (Shopify admin)",
-    description:
-      "A security scan for a Shopify store: finds the file or app behind each external script and flags leaked keys. In development.",
-    url: "https://appnary.com/vigil",
-    publisher: { "@type": "Organization", name: "Appnary", url: "https://appnary.com" },
-  };
-
+  // No SoftwareApplication JSON-LD: Google requires offers + aggregateRating/review for it.
+  // Re-add once the Shopify listing is live and has real pricing.
   const guides = getAllPosts().filter((post) => post.category === "Security");
 
   return (
@@ -91,10 +80,6 @@ export default async function VigilPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
       />
 
       <section className="mx-auto max-w-3xl px-6 pt-20 pb-12 sm:pt-28">
