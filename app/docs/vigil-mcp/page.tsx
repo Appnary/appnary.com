@@ -66,9 +66,9 @@ export default function VigilMcpDocsPage() {
 }`}</code>
       </pre>
       <p className="mt-4 text-foreground/80">
-        On the sign-in page, enter your store domain, for example <code className="text-sm">your-store.myshopify.com</code>.
-        Shopify asks you to confirm. Then Vigil shows the store, the client, and the turn-off choice. Turn-off is
-        off unless you tick it.
+        Your browser opens Shopify, which uses the store you are signed in to. Then Vigil shows the store, the
+        client, and the turn-off choice. Turn-off is off unless you tick it. Wrong store? Click Choose another store
+        and enter its <code className="text-sm">myshopify.com</code> domain.
       </p>
 
       <h2 className="mt-14 text-2xl font-bold text-foreground">Bearer token fallback</h2>
