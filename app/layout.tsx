@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "./navbar";
 import { Footer } from "./footer";
 import { ThemeProvider, THEME_INIT_SCRIPT } from "@/components/theme-provider";
 
 const baseUrl = "https://appnary.com";
+const GA_ID = "G-LZHBMYJFQF";
 
 export const metadata: Metadata = {
   title: "Appnary | Shopify Apps That Work the Way You Do",
@@ -75,6 +77,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
       </body>
     </html>
   );
