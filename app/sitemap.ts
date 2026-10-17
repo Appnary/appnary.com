@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, priority: 1, changeFrequency: "weekly" },
     { url: `${baseUrl}/vigil`, priority: 0.9, changeFrequency: "weekly" },
     { url: `${baseUrl}/docs`, priority: 0.8, changeFrequency: "weekly" },
+    { url: `${baseUrl}/docs/vigil-mcp`, priority: 0.6, changeFrequency: "monthly" },
     { url: `${baseUrl}/sync`, priority: 0.6, changeFrequency: "monthly" },
     { url: `${baseUrl}/backup`, priority: 0.6, changeFrequency: "monthly" },
     { url: `${baseUrl}/interest`, priority: 0.7, changeFrequency: "weekly" },
