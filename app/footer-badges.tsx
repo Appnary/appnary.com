@@ -1109,6 +1109,57 @@ export function FooterBadges(): ReactNode {
           <a href="https://softwarecomoservicio.com" target="_blank" rel="noopener">
             <img src="https://softwarecomoservicio.com/badge/badge-dark.svg" alt="Featured on Software Como Servicio" width="178" height="40" loading="lazy" decoding="async" />
           </a>
+          <a href="https://aiagentsdirectory.com/agent/appnary" target="_blank" rel="noopener">
+            <img src="https://aiagentsdirectory.com/featured-badge.svg?v=2024" alt="Appnary - Featured on AI Agents Directory" width="200" height="50" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aicavo.com/tools/appnary" target="_blank" rel="noopener">
+            <img src="https://aicavo.com/api/widgets/embed-image/v1/find-us.svg?slug=appnary&theme=dark" alt="AICavo badge" width="200" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aidreamhub.com" target="_blank" rel="noopener">
+            <img src="https://aidreamhub.com/api/badge" alt="Featured on AI Dreamhub" width="200" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aitoolslist.tools" target="_blank" rel="noopener">
+            <img src="https://aitoolslist.tools/badges/aitoolslist-listed-light.svg" alt="Listed on AiToolsList.Tools" width="220" height="58" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://app.softwarehope.com/software/appnary?utm_source=badge&amp;utm_medium=featured" target="_blank" rel="noopener">
+            <img src="https://app.softwarehope.com/api/badge/appnary/svg?type=featured&amp;theme=light" alt="Appnary is featured on SoftwareHope" width="277" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://backlinkdirs.com/item/appnary" target="_blank" rel="noopener">
+            <img src="https://backlinkdirs.com/badges/badge-listed-dark.svg" alt="Listed on Backlink Dirs" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://boringcashcow.com" target="_blank" rel="noopener">
+            <img src="https://boringcashcow.com/img/badge/boringcashcow-badge-light.svg" alt="Appnary - Featured on BoringCashCow" width="200" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://directory.getseoo.com" target="_blank" rel="noopener">
+            <img src="https://directory.getseoo.com/badges/getseoo-badge-dark.svg" alt="Featured on GetSEOO Directory" width="240" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://doforai.tools" target="_blank" rel="noopener">
+            <img src="https://doforai.tools/badge/feature-badge-white.webp" alt="Featured on doforai.tools" width="172" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://doitlaunch.com/products/appnary" target="_blank" rel="noopener">
+            <img src="https://doitlaunch.com/badge.png" alt="Launched on Do It Launch" width="200" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://firmsrated.com" target="_blank" rel="noopener">
+            <img src="https://firmsrated.com/badge.png" alt="Rated on FirmsRated" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://getlaunchpod.com/product/appnary-682626" target="_blank" rel="noopener">
+            <img src="https://getlaunchpod.com/badge/appnary-682626" alt="Appnary on GetLaunchPod" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://peerbear.io/p/appnary" target="_blank" rel="noopener">
+            <img src="https://peerbear.io/badge-light.svg" alt="Sniffed by PeerBear" width="198" height="62" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://swipetolaunch.com/p/appnary?ref=badge" target="_blank" rel="noopener">
+            <img src="https://swipetolaunch.com/api/badge/appnary" alt="Featured on SwipeToLaunch" width="220" height="48" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://toolquix.com" target="_blank" rel="noopener">
+            <img src="https://toolquix.com/assets/badge-featured.svg" alt="Featured on Toolquix" width="240" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://tooltrim.com/?utm_source=appnary&amp;utm_medium=badge&amp;utm_campaign=tool_submission" target="_blank" rel="noopener">
+            <img src="https://tooltrim.com/tooltrim-badge.svg" alt="Discover ToolTrim via Appnary" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://vibetoyou.com" target="_blank" rel="noopener">
+            <img src="https://vibetoyou.com/images/badge-light.svg" alt="Listed on VibeToYou" width="186" height="56" loading="lazy" decoding="async" />
+          </a>
     </>
   );
 }
