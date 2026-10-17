@@ -136,7 +136,7 @@ export default function VigilMcpDocsPage() {
       <ul className="mt-4 list-disc space-y-3 pl-6 text-foreground/80">
         <li>Tokens are stored hashed. Vigil never shows a token again after it is created.</li>
         <li>Each token and connection works for one store only.</li>
-        <li>Vigil asks Shopify for theme read access only. It does not read staff accounts or customer records.</li>
+        <li>Vigil asks Shopify for theme read access only. It reads no customer or order records. It keeps only the name or email of the staff member who connects a client.</li>
       </ul>
     </article>
   );
