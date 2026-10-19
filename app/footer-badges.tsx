@@ -1171,6 +1171,18 @@ export function FooterBadges(): ReactNode {
           <a href="https://launchranked.com/products/appnary" target="_blank" rel="noopener">
             <img src="https://launchranked.com/badge/appnary?theme=light" alt="Launched on LaunchRanked" width="236" height="54" loading="lazy" decoding="async" />
           </a>
+          <a href="https://fazier.com/launches/appnary.com" target="_blank" rel="noopener">
+            <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&amp;theme=light" alt="Appnary - Launched on Fazier" width="120" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://newtool.site/item/appnary" target="_blank" rel="noopener">
+            <img src="https://newtool.site/badges/newtool-light.svg" alt="Featured on NewTool.site" width="180" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://rankcert.com/product/appnary" target="_blank" rel="noopener">
+            <img src="https://rankcert.com/badge/appnary?style=card&amp;theme=light" alt="Appnary on RankCert" width="240" height="64" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://saasaur.com/project/appnary" target="_blank" rel="noopener">
+            <img src="https://saasaur.com/assets/badges/featured-on-light.svg" alt="Featured on SaaSaur" width="200" height="60" loading="lazy" decoding="async" />
+          </a>
     </>
   );
 }
