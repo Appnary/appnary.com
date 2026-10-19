@@ -62,6 +62,12 @@ export default function VigilMcpDocsPage() {
           <strong>Cursor:</strong> add this to <code className="text-sm">~/.cursor/mcp.json</code>. Cursor opens the sign-in the first time it connects. In the Cursor CLI, run <code className="text-sm">cursor-agent mcp login vigil</code>.
         </li>
         <li>
+          <strong>Gemini CLI:</strong> run <code className="text-sm">gemini mcp add -t http vigil {MCP_URL}</code>, then <code className="text-sm">/mcp auth vigil</code> inside Gemini.
+        </li>
+        <li>
+          <strong>OpenCode:</strong> sign-in does not work in OpenCode 2.0 yet. Use an agent token (below): <code className="text-sm">opencode mcp add vigil --url {MCP_URL} --header &quot;Authorization=Bearer YOUR_TOKEN&quot;</code>.
+        </li>
+        <li>
           <strong>Any other AI agent</strong> (VS Code, Windsurf, Gemini CLI, and others): add a remote or HTTP MCP server with the URL. If the client takes JSON, use the one below.
         </li>
       </ul>
