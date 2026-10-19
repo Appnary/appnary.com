@@ -50,7 +50,7 @@ const features = [
   { name: "Agency kill switch", detail: "Turns one host off across the stores on one account.", status: "In testing" },
   { name: "Theme change alerts", detail: "Records when the published theme changes, so you know to scan again.", status: "In testing" },
   { name: "MCP tools", detail: "scan_store, warm_live_page, block_host, unblock_host, and list_blocked_hosts, with a per-store agent token.", status: "In testing" },
-  { name: "Public MCP access", detail: "Connect from Claude, ChatGPT, or Cursor for every store.", status: "Planned" },
+  { name: "Public MCP access", detail: "Sign in with Shopify from Claude, ChatGPT, Codex, Cursor, or any AI agent. Read-only unless you allow turn-off.", status: "In testing" },
   { name: "Install from the App Store", detail: "Available after Shopify approves the listing.", status: "Planned" },
 ];
 
@@ -93,7 +93,7 @@ export default async function VigilPage() {
           </h1>
         </div>
         <p className="mt-6 text-lg text-muted-foreground-strong">
-          A security scan for a Shopify store. It tells you which file or app put a script on the storefront, and you can run that scan from Claude, ChatGPT, or Cursor.
+          A security scan for a Shopify store. It tells you which file or app put a script on the storefront, and you can run that scan from Claude, ChatGPT, Codex, Cursor, or any AI agent.
         </p>
         <p className="mt-4 text-sm text-muted-foreground">
           {formatCount(counts.vigil)} {counts.vigil === 1 ? "person is" : "people are"} on the waitlist. There is no install link until Shopify approves the app.

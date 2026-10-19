@@ -45,7 +45,7 @@ export default function DocsPage() {
 
       <h2 className="mt-12 text-2xl font-bold text-foreground">Agent scan</h2>
       <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-        The scan is also an MCP tool. Claude, ChatGPT, or Cursor can ask Vigil to scan a store and receive the same findings: script, source, and the reason it was flagged. The merchant still approves any change.
+        The scan is also an MCP tool. Claude, ChatGPT, Codex, Cursor, or any AI agent can ask Vigil to scan a store and receive the same findings: script, source, and the reason it was flagged. The merchant still approves any change.
       </p>
 
       <h2 className="mt-12 text-2xl font-bold text-foreground">What version 1 does not read</h2>

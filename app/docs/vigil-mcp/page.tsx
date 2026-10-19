@@ -3,9 +3,9 @@ import Link from "next/link";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/docs/vigil-mcp", {
-  title: "Connect Vigil to Claude, ChatGPT, or Cursor | Appnary Docs",
+  title: "Connect Vigil to Claude, ChatGPT, Codex, Cursor, or any AI agent | Appnary Docs",
   description:
-    "Connect the Vigil MCP server to Claude, ChatGPT, or Cursor. Sign-in with your Shopify store, read-only by default, rate limits, and a Bearer token fallback.",
+    "Connect the Vigil MCP server to Claude, ChatGPT, Codex, Cursor, or any MCP client. Sign-in with your Shopify store, read-only by default, rate limits, and a Bearer token fallback.",
 });
 
 const MCP_URL = "https://cp.appnary.com/api/vigil/mcp";
@@ -23,7 +23,7 @@ export default function VigilMcpDocsPage() {
     <article className="mx-auto max-w-3xl px-6 pt-20 pb-24 sm:pt-28">
       <p className="text-sm font-medium text-aqua">Docs</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-        Connect Vigil to Claude, ChatGPT, or Cursor
+        Connect Vigil to your AI agent
       </h1>
       <p className="mt-6 text-lg text-foreground/80">
         Vigil has a Model Context Protocol (MCP) server. An AI client can scan your Shopify store, read the
@@ -40,20 +40,29 @@ export default function VigilMcpDocsPage() {
 
       <h2 className="mt-14 text-2xl font-bold text-foreground">Connect with sign-in (recommended)</h2>
       <p className="mt-4 text-foreground/80">
-        Use this for Claude and ChatGPT connectors and for Cursor. The client registers itself, then opens a
+        Use this for Claude, ChatGPT, Codex, Cursor, and any other AI agent that supports MCP sign-in. The model does not matter: Claude Opus, Sonnet, GPT, or any other works the same. The client registers itself, then opens a
         Shopify sign-in. Menu names change, so if they differ, look for custom connectors or an MCP server
         and paste the URL.
       </p>
       <ul className="mt-4 list-disc space-y-3 pl-6 text-foreground/80">
         <li>
-          <strong>Claude:</strong> Settings, then Connectors, then add a custom connector. Paste the MCP server URL.
+          <strong>Claude (claude.ai and Claude Desktop):</strong> Settings, then Connectors, then add a custom connector. Paste the MCP server URL.
+        </li>
+        <li>
+          <strong>Claude Code:</strong> run <code className="text-sm">claude mcp add --transport http vigil {MCP_URL}</code>, then type <code className="text-sm">/mcp</code> and pick vigil to sign in.
+        </li>
+        <li>
+          <strong>Codex:</strong> run <code className="text-sm">codex mcp add vigil --url {MCP_URL}</code>. Codex opens the sign-in. Later, <code className="text-sm">codex mcp login vigil</code> signs in again.
         </li>
         <li>
           <strong>ChatGPT:</strong> Settings, then Connectors. Add a custom MCP connector with the URL. Developer
           mode may be needed on your plan.
         </li>
         <li>
-          <strong>Cursor:</strong> add this to <code className="text-sm">~/.cursor/mcp.json</code>. Cursor opens the sign-in the first time it connects.
+          <strong>Cursor:</strong> add this to <code className="text-sm">~/.cursor/mcp.json</code>. Cursor opens the sign-in the first time it connects. In the Cursor CLI, run <code className="text-sm">cursor-agent mcp login vigil</code>.
+        </li>
+        <li>
+          <strong>Any other AI agent</strong> (VS Code, Windsurf, Gemini CLI, and others): add a remote or HTTP MCP server with the URL. If the client takes JSON, use the one below.
         </li>
       </ul>
       <pre className="mt-4 overflow-x-auto rounded-lg bg-foreground/5 p-4 text-sm">
