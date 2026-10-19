@@ -743,7 +743,9 @@ export function FooterBadges(): ReactNode {
           <a href="https://codehype.ai/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Featured on CodeHype
           </a>
-          <a href="https://launchboard.dev" target="_blank" className="text-sm text-muted-foreground">LaunchBoard</a>
+          <a href="https://launchboard.dev" target="_blank" rel="noopener">
+            <img src="https://launchboard.dev/featured.svg" alt="Featured on LaunchBoard" width="240" height="60" loading="lazy" decoding="async" />
+          </a>
           <a href="https://listpitch.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Featured on ListPitch
           </a>
@@ -1159,6 +1161,15 @@ export function FooterBadges(): ReactNode {
           </a>
           <a href="https://vibetoyou.com" target="_blank" rel="noopener">
             <img src="https://vibetoyou.com/images/badge-light.svg" alt="Listed on VibeToYou" width="186" height="56" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aijet.cc" target="_blank" rel="noopener">
+            <img src="https://aijet.cc/badge/badge_light.svg" alt="Featured on AI Jet" width="200" height="55" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://amzdir.com" target="_blank" rel="noopener">
+            <img src="https://amzdir.com/logo.png" alt="AMZdir" width="150" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://launchranked.com/products/appnary" target="_blank" rel="noopener">
+            <img src="https://launchranked.com/badge/appnary?theme=light" alt="Launched on LaunchRanked" width="236" height="54" loading="lazy" decoding="async" />
           </a>
     </>
   );
