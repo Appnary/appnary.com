@@ -10,9 +10,9 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
       <h1 className="text-3xl font-bold text-foreground">Privacy Policy</h1>
-      <p className="mt-4 text-sm text-muted-foreground-faint">Last updated: 17 October 2026</p>
+      <p className="mt-4 text-sm text-muted-foreground-faint">Last updated: 19 October 2026</p>
       <div className="mt-8 space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p>This policy explains how Appnary handles data for its websites and Shopify apps.</p>
+        <p>This policy explains how Appnary handles data for its websites and Shopify apps. Appnary is a product of Binary Labs LLC, a company based in Wyoming, USA (<a className="underline" href="https://binarylabssoft.com">binarylabssoft.com</a>). Binary Labs LLC is responsible for this data.</p>
         <h2 className="text-lg font-semibold text-foreground">Website</h2>
         <p>
           appnary.com uses Google Analytics (GA4). It sets cookies and records page views so we can see which pages are read. Google handles that data under its own policy.
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
           Scans read your storefront as a visitor does, without a customer login.
         </p>
         <p>
-          AI clients you connect, such as Claude, ChatGPT, or Cursor, can read Vigil results for your store: theme findings, script hosts on the live page, change history, and any storefront HTML they upload. Vigil returns this data only when a connected client asks for it. What the client does with it, and how long it keeps it, is set by that provider. Connections are read-only unless you allow turn-off. You can revoke a connection or rotate a token at any time on the Agent page.
+          AI agents you connect, such as Claude (claude.ai, Claude Desktop, Claude Code, with any model including Opus), ChatGPT, Codex, Cursor, or any other MCP client, can read Vigil results for your store: theme findings, script hosts on the live page, change history, and any storefront HTML they upload. Vigil returns this data only when a connected client asks for it. What the client does with it, and how long it keeps it, is set by that provider. Connections are read-only unless you allow turn-off. You can revoke a connection or rotate a token at any time on the Agent page.
         </p>
         <p>
           Vigil keeps its records while the app is installed. Uninstalling Vigil, or a Shopify shop redact request, deletes that store&apos;s Vigil records: tokens, connections, saved passwords, the change log, and turned-off lines. Cached storefront HTML expires within 7 days. Server logs keep the store domain and webhook events for troubleshooting. Other Appnary apps on the store are not affected.
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
         <p>We do not sell your data. Hosting and email delivery providers process it only so the site and the apps can run. AI clients are covered in the Vigil section above.</p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>
         <p>
-          Questions or deletion requests: <a className="underline" href="mailto:harun.b13@gmail.com">harun.b13@gmail.com</a>
+          Questions or deletion requests: <a className="underline" href="mailto:info@binarylabssoft.com">info@binarylabssoft.com</a>
         </p>
       </div>
     </div>
