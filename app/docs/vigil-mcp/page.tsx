@@ -55,8 +55,7 @@ export default function VigilMcpDocsPage() {
           <strong>Codex:</strong> run <code className="text-sm">codex mcp add vigil --url {MCP_URL}</code>. Codex opens the sign-in. Later, <code className="text-sm">codex mcp login vigil</code> signs in again.
         </li>
         <li>
-          <strong>ChatGPT:</strong> Settings, then Connectors. Add a custom MCP connector with the URL. Developer
-          mode may be needed on your plan.
+          <strong>ChatGPT:</strong> open Plugins, then Add, then Add custom MCP server. Paste the URL, keep Authentication on OAuth, and click Create. Works on the Free plan.
         </li>
         <li>
           <strong>Cursor:</strong> add this to <code className="text-sm">~/.cursor/mcp.json</code>. Cursor opens the sign-in the first time it connects. In the Cursor CLI, run <code className="text-sm">cursor-agent mcp login vigil</code>.
