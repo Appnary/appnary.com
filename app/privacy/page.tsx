@@ -3,7 +3,7 @@ import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/privacy", {
   title: "Privacy Policy | Appnary",
-  description: "How Appnary collects, uses, and shares data for its websites and Shopify apps, including Vigil and AI agents connected to it.",
+  description: "How Appnary collects, uses, and shares data for its websites and Shopify apps, including Vigil, Pixel Tracker, and AI agents connected to Vigil.",
 });
 
 export default function PrivacyPage() {
@@ -45,8 +45,21 @@ export default function PrivacyPage() {
         <p>
           Shopify&apos;s customer data request and customer redact webhooks are accepted. Vigil holds no customer records, so there is nothing to export or erase for a customer.
         </p>
+        <h2 className="text-lg font-semibold text-foreground">Pixel Tracker</h2>
+        <p>
+          Pixel Tracker requests web pixel, customer event, and order read access. It adds the ad and analytics pixels you choose (Google, Meta, TikTok, Pinterest, LinkedIn, Snapchat, X) to your storefront and checkout.
+        </p>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>Pixels load only when the visitor&apos;s Shopify privacy choice allows analytics and marketing.</li>
+          <li>The visitor&apos;s browser sends events straight to those platforms: page views, product views, search terms, add to cart, and purchases (product IDs, names, quantities, prices, order ID, value, currency). The platforms also receive the visitor&apos;s IP address, browser details, and their own cookies, under their own policies. This visitor data does not pass through Appnary.</li>
+          <li>When an order is paid, Shopify sends Appnary the order ID, total, and currency. Appnary forwards them to your Google Analytics property as a purchase event and does not store them.</li>
+        </ul>
+        <p>For each store, Pixel Tracker stores the store domain, the Shopify access token (encrypted at rest), your plan and Shopify subscription ID, and the pixel and measurement IDs you enter. If you create an Appnary account, it also stores your name, email, and a hashed password. Shopify handles billing; we never see card details.</p>
+        <p>
+          Uninstalling removes the Shopify token. A Shopify shop redact request deletes the store record and its pixel IDs. Pixel IDs saved to an Appnary account you created stay with that account until you ask us to delete it. Pixel Tracker holds no customer records, so customer data and redact requests have nothing to export or erase.
+        </p>
         <h2 className="text-lg font-semibold text-foreground">Sharing</h2>
-        <p>We do not sell your data. Hosting and email delivery providers process it only so the site and the apps can run. AI clients are covered in the Vigil section above.</p>
+        <p>We do not sell your data. Hosting and email delivery providers process it only so the site and the apps can run. Pixel Tracker sends data only to the ad and analytics platforms you turn on. AI clients are covered in the Vigil section above.</p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>
         <p>
           Questions or deletion requests: <a className="underline" href="mailto:info@binarylabssoft.com">info@binarylabssoft.com</a>
