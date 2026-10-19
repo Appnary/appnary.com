@@ -1166,7 +1166,7 @@ export function FooterBadges(): ReactNode {
             <img src="https://aijet.cc/badge/badge_light.svg" alt="Featured on AI Jet" width="200" height="55" loading="lazy" decoding="async" />
           </a>
           <a href="https://amzdir.com" target="_blank" rel="noopener">
-            <img src="https://amzdir.com/logo.png" alt="AMZdir" width="150" height="40" loading="lazy" decoding="async" />
+            <img src="https://amzdir.com/logo.png" alt="AMZdir" width="150" loading="lazy" decoding="async" />
           </a>
           <a href="https://launchranked.com/products/appnary" target="_blank" rel="noopener">
             <img src="https://launchranked.com/badge/appnary?theme=light" alt="Launched on LaunchRanked" width="236" height="54" loading="lazy" decoding="async" />
