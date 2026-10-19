@@ -9,6 +9,8 @@ export const metadata: Metadata = withPageSeo("/docs/vigil-mcp", {
 });
 
 const MCP_URL = "https://cp.appnary.com/api/vigil/mcp";
+const CURSOR_INSTALL = `cursor://anysphere.cursor-deeplink/mcp/install?name=vigil&config=${Buffer.from(JSON.stringify({ url: MCP_URL })).toString("base64")}`;
+const VSCODE_INSTALL = `https://insiders.vscode.dev/redirect?url=${encodeURIComponent(`vscode:mcp/install?${encodeURIComponent(JSON.stringify({ name: "vigil", type: "http", url: MCP_URL }))}`)}`;
 
 const tools = [
   { name: "scan_store", what: "Scan the theme, app embeds, live storefront scripts, and change history.", access: "Read", limit: "10 per minute" },
@@ -33,6 +35,14 @@ export default function VigilMcpDocsPage() {
       <p className="mt-4 text-foreground/80">
         MCP server URL: <code className="rounded bg-foreground/5 px-1.5 py-0.5 text-sm">{MCP_URL}</code>
       </p>
+      <div className="mt-4 flex flex-wrap gap-3">
+        <a className="rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background" href={CURSOR_INSTALL}>
+          Add to Cursor
+        </a>
+        <a className="rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background" href={VSCODE_INSTALL}>
+          Add to VS Code
+        </a>
+      </div>
       <p className="mt-4 text-foreground/80">
         Vigil is in beta. You need Vigil installed on the store and staff access to that store. Join the
         waitlist on the <Link className="underline" href="/vigil">Vigil page</Link> to get access.
