@@ -1183,6 +1183,12 @@ export function FooterBadges(): ReactNode {
           <a href="https://saasaur.com/project/appnary" target="_blank" rel="noopener">
             <img src="https://saasaur.com/assets/badges/featured-on-light.svg" alt="Featured on SaaSaur" width="200" height="60" loading="lazy" decoding="async" />
           </a>
+          <a href="https://mozolist.com" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Listed on MozoList
+          </a>
+          <a href="https://mydirs.com" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            MyDirs
+          </a>
     </>
   );
 }
