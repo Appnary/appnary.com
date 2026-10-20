@@ -83,14 +83,6 @@ export function FooterBadges(): ReactNode {
           >
             Directory Hunt
           </a>
-          <a href="https://indieshowcase.io">
-            <img
-              src="https://indieshowcase.io/badge/featured-light.svg"
-              alt="Featured"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
           <a href="https://newtools.site/item/appnary" target="_blank" rel="noopener noreferrer">
             <img
               src="https://newtools.site/badges/newtool-light.png"
@@ -126,7 +118,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://wallof.tools/marketing/appnary" target="_blank" rel="noopener">
+          <a href="https://wallof.tools/" target="_blank" rel="noopener">
             <img
               src="https://wallof.tools/badge/toolwall-badge-light.svg"
               alt="Featured on Wall of Tools"
@@ -161,7 +153,7 @@ export function FooterBadges(): ReactNode {
               height="54"
             />
           </a>
-          <a href="https://easylaunch.dev/e-commerce/appnary" target="_blank" rel="noopener">
+          <a href="https://easylaunch.dev/" target="_blank" rel="noopener">
             <img
               src="https://easylaunch.dev/badge/easylaunch-badge-light.svg"
               alt="Featured on EasyLaunch"
@@ -184,7 +176,7 @@ export function FooterBadges(): ReactNode {
               height="54"
             />
           </a>
-          <a href="https://www.launchandloop.com/product/appnary" target="_blank" rel="dofollow">
+          <a href="https://launchandloop.com/" target="_blank" rel="dofollow">
             <img
               src="https://www.launchandloop.com/api/badge/appnary?theme=dark"
               alt="Appnary on Launch & Loop"
@@ -369,7 +361,7 @@ export function FooterBadges(): ReactNode {
           <a href="https://sumodir.com" target="_blank" rel="dofollow">
             <img src="https://sumodir.com/badge.png" alt="Featured on SumoDir" width="200" height="54" loading="lazy" decoding="async" />
           </a>
-          <a href="https://indexof.ai/tool/appnary?ref=appnary" target="_blank" rel="noopener">
+          <a href="https://indexof.ai/" target="_blank" rel="noopener">
             <img src="https://indexof.ai/badge-light.svg" alt="Featured on IndexOf.AI" width="200" height="40" loading="lazy" decoding="async" />
           </a>
           <a href="https://zplatform.ai/" target="_blank" rel="noopener" title="Featured on zPlatform.ai">
@@ -547,61 +539,6 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a
-            className="footer-badge-card"
-            href="https://launchtry.com/product/appnary?utm_source=appnary.com&utm_medium=badge&utm_campaign=launch_badge"
-            target="_blank"
-            rel="noopener"
-            aria-label="View Appnary on LaunchTry"
-            data-launchtry-badge="true"
-            style={{ display: "inline-flex", alignItems: "center", lineHeight: 0, textDecoration: "none" }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="184"
-              height="44"
-              viewBox="0 0 184 44"
-              role="img"
-              aria-label="Launching on LaunchTry"
-              style={{ display: "block", width: "184px", height: "44px", maxWidth: "100%" }}
-            >
-              <path d="M14 0.5H170A13.5 13.5 0 0 1 183.5 14V43.5H0.5V14A13.5 13.5 0 0 1 14 0.5Z" fill="#FFFFFF" stroke="#E8E3DA" />
-              <rect x="1" y="42" width="182" height="1.5" fill="#F97316" opacity="0.92" />
-              <g
-                transform="translate(14 10)"
-                fill="none"
-                stroke="#111111"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M4 17.8c5.2-6.9 10.9-11.6 18-14.8-1.4 7.5-4.9 13.9-10.8 19.5l-1.8-6-5.4 1.3Z" />
-                <path d="M11.3 8.8 16.5 14" />
-                <path d="M3.3 21.2c3.3-.1 6.3-.8 9-2.1" />
-              </g>
-              <text
-                x="45"
-                y="18"
-                fill="#6B6258"
-                fontFamily="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif"
-                fontSize="9"
-                fontWeight="600"
-                letterSpacing=".9"
-              >
-                LAUNCHING ON
-              </text>
-              <text
-                x="45"
-                y="31"
-                fill="#111111"
-                fontFamily="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif"
-                fontSize="15"
-                fontWeight="700"
-              >
-                LaunchTry
-              </text>
-            </svg>
-          </a>
           <a href="https://www.launchvault.dev" target="_blank" title="Feature On Launch Vault">
             <img
               src="https://www.launchvault.dev/images/badges/launch-valut-badge.svg"
@@ -621,7 +558,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://nicklaunches.com/products/appnary/" target="_blank" rel="noopener">
+          <a href="https://nicklaunches.com/profile/products/appnary/" target="_blank" rel="noopener">
             <img
               src="https://nicklaunches.com/badges/featured.png"
               alt="Appnary on Nick Launches"
@@ -688,7 +625,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://ufind.best/products/appnary" target="_blank" rel="noopener">
+          <a href="https://ufind.best/" target="_blank" rel="noopener">
             <img
               src="https://ufind.best/badges/ufind-best-badge-light.svg"
               alt="Featured on ufind.best"
@@ -856,7 +793,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://saaslineup.com/product/appnary?ref=badge" rel="dofollow">
+          <a href="https://saaslineup.com/" rel="dofollow">
             <img
               src="https://saaslineup.com/badge/appnary.svg"
               alt="Featured on SaaSLineup"
@@ -866,7 +803,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://thedevtoolsdir.com/product/appnary?ref=badge" rel="dofollow">
+          <a href="https://thedevtoolsdir.com/" rel="dofollow">
             <img
               src="https://thedevtoolsdir.com/badge/appnary.svg"
               alt="Featured on TheDevToolsDir"
@@ -950,9 +887,6 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://hiproducty.com" target="_blank" rel="noopener">
-            <img src="https://www.hiproducty.com/badge/hiproducty-recommend-light.svg" alt="Featured on Hiproducty" loading="lazy" decoding="async" />
-          </a>
           <a href="https://lemonlaunch.dev/e-commerce/appnary" target="_blank" rel="noopener">
             <img
               src="https://lemonlaunch.dev/badge/lemonlaunch-badge-light.svg"
@@ -972,7 +906,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://themicrosaasdir.com/product/appnary?ref=badge" rel="dofollow">
+          <a href="https://themicrosaasdir.com/" rel="dofollow">
             <img
               src="https://themicrosaasdir.com/badge/appnary.svg"
               alt="Featured on TheMicroSaaSDir"
@@ -1099,7 +1033,7 @@ export function FooterBadges(): ReactNode {
               Launch MCP
             </a>
           </span>
-          <a href="https://goodsaas.xyz/saas/appnary" target="_blank" rel="noopener">
+          <a href="https://goodsaas.xyz/" target="_blank" rel="noopener">
             <img src="https://goodsaas.xyz/badge/appnary.svg?theme=dark" alt="Appnary on goodSaaS" loading="lazy" decoding="async" />
           </a>
           <a href="https://toolroots.com" target="_blank" rel="noopener">
@@ -1150,7 +1084,7 @@ export function FooterBadges(): ReactNode {
           <a href="https://peerbear.io/p/appnary" target="_blank" rel="noopener">
             <img src="https://peerbear.io/badge-light.svg" alt="Sniffed by PeerBear" width="198" height="62" loading="lazy" decoding="async" />
           </a>
-          <a href="https://swipetolaunch.com/p/appnary?ref=badge" target="_blank" rel="noopener">
+          <a href="https://swipetolaunch.com/" target="_blank" rel="noopener">
             <img src="https://swipetolaunch.com/api/badge/appnary" alt="Featured on SwipeToLaunch" width="220" height="48" loading="lazy" decoding="async" />
           </a>
           <a href="https://toolquix.com" target="_blank" rel="noopener">
@@ -1188,6 +1122,82 @@ export function FooterBadges(): ReactNode {
           </a>
           <a href="https://mydirs.com" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             MyDirs
+          </a>
+          <a href="https://1000ai.best/projects/appnary-pixel-tracker?utm_source=badge" target="_blank" rel="noopener noreferrer">
+            <img src="https://1000ai.best/images/badges/featured-on-light.svg" alt="Featured on 1000 AI" style={{ height: "44px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://1000tools.best/projects/appnary-7968?utm_source=badge" target="_blank" rel="noopener noreferrer">
+            <img src="https://1000tools.best/images/badges/featured-on-light.svg" alt="Featured on 1000 Tools" style={{ height: "44px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://abizdirectory.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Abiz Web Directory
+          </a>
+          <a href="https://ai-webcatalog.space/" target="_blank" rel="noopener">
+            <img src="https://img.shields.io/badge/Featured%20on-ai--webcatalog.space-2563eb?style=for-the-badge" alt="Featured on ai-webcatalog.space" height="28" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aihustle.tools" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            AI Hustle
+          </a>
+          <a href="https://aistart.ai/?utm_source=badge-featured" target="_blank" rel="noopener noreferrer">
+            <img src="https://aistart.ai/featured_dark.png" alt="Featured on AIStart.ai" width="210" height="60" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://www.aitoolist.com/" rel="noopener">
+            <img src="https://www.aitoolist.com/badge.svg" alt="Listed on AITOOLIST" width="114" height="44" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://dailylaunch.io/" target="_blank" rel="noopener">
+            <img src="https://dailylaunch.io/badge/light.svg?v=a6cc2b9b" alt="Featured on DailyLaunch" width="200" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://everlist.dev/" target="_blank" rel="noopener">
+            <img src="https://img.shields.io/badge/Featured%20on-EverList-2563eb?style=for-the-badge" alt="Featured on EverList" height="28" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://huntstartup.com" target="_blank" rel="noopener">
+            <img src="https://huntstartup.com/badge-dark.svg" alt="Hunt Startup" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://launchaf.com/" target="_blank" rel="noopener">
+            <img src="https://launchaf.com/api/badge/light?v=launchaf-blue-2026-2" alt="Featured on LaunchAF" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://launchelion.com" target="_blank" rel="noopener">
+            <img src="https://launchelion.com/api/badge" alt="Featured on Launchelion" width="229" height="64" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://launchtory.com/" target="_blank" rel="noopener">
+            <img src="https://img.shields.io/badge/Featured%20on-Launchtory-2563eb?style=for-the-badge" alt="Featured on Launchtory" height="28" loading="lazy" decoding="async" />
+          </a>
+          <a data-newname-badge="appnary" href="https://newname.ai/badge?ref=appnary" target="_blank" rel="noopener">
+            <img src="https://newname.ai/badge/listed.svg" alt="Listed on NewName.ai" width="200" height="54" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://outclimbed.com" target="_blank" rel="noopener">
+            <img src="https://img.shields.io/badge/Featured%20on-outclimbed-2563eb?style=for-the-badge" alt="Featured on outclimbed" height="28" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://saatlas.com/en/saas/appnary/" rel="noopener">
+            <img src="https://saatlas.com/badge/appnary.svg?lang=en" alt="Listed on Saatlas" width="260" height="42" loading="lazy" decoding="async" />
+          </a>
+          <a href="https://shipdirs.com" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on Shipdirs
+          </a>
+          <a href="https://smolrank.com/projects/appnary?utm_source=badge" target="_blank" rel="noopener noreferrer">
+            <img src="https://smolrank.com/smolrank/images/badges/featured-on-light.svg" alt="Featured on Smol Rank" style={{ height: "44px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://smolspot.com/projects/appnary?utm_source=badge" target="_blank" rel="noopener noreferrer">
+            <img src="https://smolspot.com/smolspot/images/badges/featured-on-light.svg" alt="Featured on Smol Spot" style={{ height: "44px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://strategic-flow-audit.replit.app/directory" target="_blank" rel="noopener">
+            <img src="https://strategic-flow-audit.replit.app/api/directory/badge/203/dark.svg" alt="Listed on ToolIndex" width="200" height="44" loading="lazy" decoding="async" />
+          </a>
+          <a
+            href="https://submitforbacklinks.com/badge/7f-q8VT0N3g921TDeok6KET8?ref=badge"
+            target="_blank"
+            rel="noopener"
+            data-s4b-token="7f-q8VT0N3g921TDeok6KET8"
+            data-s4b-theme="dark"
+          >
+            <img
+              src="https://submitforbacklinks.com/api/badge/7f-q8VT0N3g921TDeok6KET8.svg?variant=verified&theme=dark"
+              alt="Appnary — Verified on SubmitForBacklinks"
+              width="220"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
           </a>
     </>
   );
