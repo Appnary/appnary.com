@@ -1,0 +1,9 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public badge tokens that are not secrets"
+regexes = [
+  # SubmitForBacklinks badge token: embedded in the public footer badge URL by design.
+  '''7f-q8VT0N3g921TDeok6KET8''',
+]
