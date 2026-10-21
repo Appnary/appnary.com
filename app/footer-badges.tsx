@@ -292,7 +292,7 @@ export function FooterBadges(): ReactNode {
               alt="Featured on Webspot"
               style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
           </a>
-          <a href="https://dododirectory.com" target="_blank" rel="dofollow">
+          <a href="https://dododirectory.com/item/appnary" target="_blank" rel="dofollow">
             <img
               src="https://dododirectory.com/badge-light.png"
               alt="Featured on DodoDirectory"
@@ -376,7 +376,7 @@ export function FooterBadges(): ReactNode {
           <a
             className="footer-badge-card"
             data-topaitools4u-badge="verified-listing"
-            href="https://www.topaitools4u.site"
+            href="https://www.topaitools4u.site/tools/appnary"
             target="_blank"
             rel="noopener"
             aria-label="Listed on TopAITools4U"
@@ -425,7 +425,7 @@ export function FooterBadges(): ReactNode {
           <a href="https://saas.fyi" target="_blank" rel="noopener">
             <img src="https://saas.fyi/assets/brand/badge.svg" alt="Featured on SaaS.fyi" width="294" height="54" loading="lazy" decoding="async" />
           </a>
-          <a href="https://prolaunch.net" target="_blank" title="Pro Launch Featured Badge">
+          <a href="https://prolaunch.net/projects/appnary" target="_blank" title="Pro Launch Featured Badge">
             <img
               src="https://prolaunch.net/images/badges/featured-light.svg"
               alt="Pro Launch Featured Badge"
@@ -439,8 +439,8 @@ export function FooterBadges(): ReactNode {
           >
             Featured on IndieTools
           </a>
-          <a href="https://curlship.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
-            Featured on Curlship
+          <a href="https://curlship.com/l/3736" target="_blank" rel="noopener">
+            <img src="https://curlship.com/badge.svg" alt="Featured on CurlShip" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
           </a>
           <a href="https://aiblog.tools" target="_blank" className="text-sm text-muted-foreground">
             Find us on AIBlog.Tools
@@ -539,7 +539,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://www.launchvault.dev" target="_blank" title="Feature On Launch Vault">
+          <a href="https://www.launchvault.dev/projects/appnary" target="_blank" title="Feature On Launch Vault">
             <img
               src="https://www.launchvault.dev/images/badges/launch-valut-badge.svg"
               alt="Feature On Launch Vault"
@@ -568,7 +568,7 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://productfame.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://productfame.com/products/appnary" target="_blank" rel="noopener noreferrer">
             <img
               src="https://productfame.com/badges/featured-light.svg"
               alt="Featured on ProductFame"
@@ -1058,7 +1058,7 @@ export function FooterBadges(): ReactNode {
             <img src="https://aitoolslist.tools/badges/aitoolslist-listed-light.svg" alt="Listed on AiToolsList.Tools" width="220" height="58" loading="lazy" decoding="async" />
           </a>
           <a href="https://app.softwarehope.com/software/appnary?utm_source=badge&amp;utm_medium=featured" target="_blank" rel="noopener">
-            <img src="https://app.softwarehope.com/api/badge/appnary/svg?type=featured&amp;theme=light" alt="Appnary is featured on SoftwareHope" width="277" height="54" loading="lazy" decoding="async" />
+            <img src="/badges/softwarehope.svg" alt="Appnary is featured on SoftwareHope" width="277" height="54" loading="lazy" decoding="async" />
           </a>
           <a href="https://backlinkdirs.com/item/appnary" target="_blank" rel="noopener">
             <img src="https://backlinkdirs.com/badges/badge-listed-dark.svg" alt="Listed on Backlink Dirs" loading="lazy" decoding="async" />
@@ -1180,7 +1180,7 @@ export function FooterBadges(): ReactNode {
           <a href="https://smolspot.com/projects/appnary?utm_source=badge" target="_blank" rel="noopener noreferrer">
             <img src="https://smolspot.com/smolspot/images/badges/featured-on-light.svg" alt="Featured on Smol Spot" style={{ height: "44px", width: "auto" }} loading="lazy" decoding="async" />
           </a>
-          <a href="https://strategic-flow-audit.replit.app/directory" target="_blank" rel="noopener">
+          <a href="https://strategic-flow-audit.replit.app/directory/appnary-pixel-tracker-10015" target="_blank" rel="noopener">
             <img src="https://strategic-flow-audit.replit.app/api/directory/badge/203/dark.svg" alt="Listed on ToolIndex" width="200" height="44" loading="lazy" decoding="async" />
           </a>
           <a
@@ -1198,6 +1198,126 @@ export function FooterBadges(): ReactNode {
               loading="lazy"
               decoding="async"
             />
+          </a>
+          <a href="https://apprater.net/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on App Rater
+          </a>
+          <a href="https://infrabase.ai/" target="_blank" rel="noopener">
+            <img src="https://infrabase.ai/badge/listed.svg" alt="Featured on Infrabase" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://www.saaspa.ge/product/cmubkm0rf000sjn04ngma0823" target="_blank" rel="noopener">
+            <img src="https://saaspa.ge/api/embed/product/cmo13x4mv000el104b3hzaxrt/badge.png?theme=orange" alt="Featured on SaaS Page" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://startup.sx/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on startup.sx
+          </a>
+          <a href="https://www.verifiedtools.info/preview/a7a98653c8189a71f282b6926ff7201c6e7ebcadfb8253ba" target="_blank" rel="noopener">
+            <img src="https://www.verifiedtools.info/badge.svg" alt="Featured on Verified Tools" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aitoolscapital.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on AIToolsCapital
+          </a>
+          <a href="https://nextbigproduct.com/product/appnary" target="_blank" rel="noopener">
+            <img src="https://nextbigproduct.com/assets/badge/appnary.svg?theme=light" alt="Featured on Next Big Product" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://llmrelevance.com/" target="_blank" rel="noopener">
+            <img src="https://www.llmrelevance.com/badges/llm-relevance-horizontal-light.svg" alt="Featured on LLM Relevance" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aiwizard.ai/" target="_blank" rel="noopener">
+            <img src="https://www.aiwizard.ai/badges/featured-on-aiwizard-dark.svg" alt="Featured on AIWizard" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://meshkore.com/" target="_blank" rel="noopener">
+            <img src="https://meshkore.com/badge.svg" alt="Featured on Meshkore" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://aitoolsmarketer.com/" target="_blank" rel="noopener">
+            <img src="https://aitoolsmarketer.com/badges/badge-dark.svg" alt="Featured on AI Tools Marketer" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://www.showmysites.com/harunrayhan/appnary/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on ShowMySites
+          </a>
+          <a href="https://toollisted.com/" target="_blank" rel="noopener">
+            <img src="https://www.toollisted.com/badges/toollisted-badge-light.png" alt="Featured on ToolListed" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://toolradar.com/tools/appnary" target="_blank" rel="noopener">
+            <img src="https://toolradar.com/api/badge/appnary?type=review&amp;format=png&amp;v=4" alt="Featured on Toolradar" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://www.launch-list.org/product/appnary" target="_blank" rel="noopener">
+            <img src="https://launch-list.org/badges/svg/launch_list_badge_live.svg" alt="Featured on Launch List" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://inuidea.com/" target="_blank" rel="noopener">
+            <img src="https://inuidea.com/wp-content/uploads/Featured-on-Inuidea-Hunt-Badge.svg" alt="Featured on Inuidea" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://peerpush.com/p/appnary-wdvg" target="_blank" rel="noopener">
+            <img src="https://peerpush.com/p/appnary/badge.png" alt="Featured on PeerPush" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://publishyoursaas.com/" target="_blank" rel="noopener">
+            <img src="https://publishyoursaas.com/publishyoursaas-badge.svg" alt="Featured on PublishYourSaaS" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://www.betterlaunch.co/product/appnary" target="_blank" rel="noopener">
+            <img src="https://www.betterlaunch.co/badge.svg" alt="Featured on BetterLaunch" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://inventlist.com/" target="_blank" rel="noopener">
+            <img src="https://inventlist.com/sites/appnary/badge/listed" alt="Featured on InventList" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://ideakiln.com/" target="_blank" rel="noopener">
+            <img src="https://ideakiln.com/light.svg" alt="Featured on IdeaKiln" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://toolverified.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on ToolVerified
+          </a>
+          <a href="https://saashammer.net/project/appnary" target="_blank" rel="noopener">
+            <img src="https://saashammer.net/assets/badges/featured-on-light.svg" alt="Featured on SaaSHammer" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://leanvibe.io/vibe/appnary" target="_blank" rel="noopener">
+            <img src="https://leanvibe.io/api/badge/appnary?type=featured&amp;view=light" alt="Featured on LeanVibe" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://appstackbuilder.com/" target="_blank" rel="noopener">
+            <img src="https://appstackbuilder.com/badge-light.svg" alt="Featured on App Stack Builder" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://launchon.it/products/appnary" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on LaunchOnIt
+          </a>
+          <a href="https://spotlitely.com/l/appnary" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on Spotlitely
+          </a>
+          <a href="https://viberank.dev/apps/Appnary" target="_blank" rel="noopener">
+            <img src="https://viberank.dev/badge?app=Appnary&amp;theme=dark" alt="Featured on VibeRank" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://best-ai.org/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on best-ai.org
+          </a>
+          <a href="https://shareyourstartup.com/s/appnary" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on shareyourstartup.com
+          </a>
+          <a href="https://hicyou.com/" target="_blank" rel="noopener">
+            <img src="https://hicyou.com/badge/featured-light.svg" alt="Featured on HiCyou" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://listyouridea.com/user/appnary" target="_blank" rel="noopener">
+            <img src="https://listyouridea.com/featured-on-listyouridea-badge.svg" alt="Featured on listyouridea.com" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://nowfound.app/launch/appnary" target="_blank" rel="noopener">
+            <img src="https://nowfound.app/badge/appnary.svg" alt="Featured on nowfound.app" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://scrappystartups.com/" target="_blank" rel="noopener">
+            <img src="https://scrappystartups.com/badge.svg?theme=blue" alt="Featured on scrappystartups.com" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://listing.yaeris.com/company/appnary" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on Yaeris Listing
+          </a>
+          <a href="https://truetier.app/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on truetier.app
+          </a>
+          <a href="https://showbuild.co/builds/appnary/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on showbuild.co
+          </a>
+          <a href="https://nav4ai.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on nav4ai.com
+          </a>
+          <a href="https://launchaijam.com/tool/appnary-pixel-tracker" target="_blank" rel="noopener">
+            <img src="https://launchaijam.com/api/badge?slug=appnary" alt="Featured on launchaijam.com" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
+          </a>
+          <a href="https://indielaunch.dev/products/pixel-tracker/preview" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+            Featured on indielaunch.dev
           </a>
     </>
   );
