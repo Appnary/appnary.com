@@ -10,9 +10,9 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
       <h1 className="text-3xl font-bold text-foreground">Privacy Policy</h1>
-      <p className="mt-4 text-sm text-muted-foreground-faint">Last updated: 19 October 2026</p>
+      <p className="mt-4 text-sm text-muted-foreground-faint">Last updated: 26 October 2026</p>
       <div className="mt-8 space-y-4 text-sm text-muted-foreground leading-relaxed">
-        <p>This policy explains how Appnary handles data for its websites and Shopify apps. Appnary is a product of Binary Labs LLC, a company based in Wyoming, USA (<a className="underline" href="https://binarylabssoft.com">binarylabssoft.com</a>). Binary Labs LLC is responsible for this data.</p>
+        <p>This policy explains how Appnary handles data for its websites and Shopify apps. Appnary is a product of Binary Labs LLC, 1309 Coffeen Avenue, Sheridan, Wyoming 82801, USA (<a className="underline" href="https://binarylabssoft.com">binarylabssoft.com</a>). Binary Labs LLC is responsible for this data.</p>
         <h2 className="text-lg font-semibold text-foreground">Website</h2>
         <p>
           appnary.com uses Google Analytics (GA4). It sets cookies and records page views so we can see which pages are read. Google handles that data under its own policy.
@@ -43,6 +43,12 @@ export default function PrivacyPage() {
           Vigil keeps its records while the app is installed. Uninstalling Vigil, or a Shopify shop redact request, deletes that store&apos;s Vigil records: tokens, connections, saved passwords, the change log, and turned-off lines. Cached storefront HTML expires within 7 days. Server logs keep the store domain and webhook events for troubleshooting. Other Appnary apps on the store are not affected.
         </p>
         <p>
+          AI review: when a scan flags code, Vigil sends the store domain and a short snippet of each flagged line to an AI provider, which says whether it looks harmful. Appnary&apos;s default providers are Anthropic, with OpenAI as backup. If you save your own AI endpoint on the Agent page, Vigil uses that one instead. Snippets come from your theme and public storefront, not from customers.
+        </p>
+        <p>
+          Host checks: Vigil looks up the registration date of script hosts found on your storefront in public domain registries (RDAP). Only the host name is sent.
+        </p>
+        <p>
           Shopify&apos;s customer data request and customer redact webhooks are accepted. Vigil holds no customer records, so there is nothing to export or erase for a customer.
         </p>
         <h2 className="text-lg font-semibold text-foreground">Pixel Tracker</h2>
@@ -59,10 +65,12 @@ export default function PrivacyPage() {
           Uninstalling removes the Shopify token. A Shopify shop redact request deletes the store record and its pixel IDs. Pixel IDs saved to an Appnary account you created stay with that account until you ask us to delete it. Pixel Tracker holds no customer records, so customer data and redact requests have nothing to export or erase.
         </p>
         <h2 className="text-lg font-semibold text-foreground">Sharing</h2>
-        <p>We do not sell your data. Hosting and email delivery providers process it only so the site and the apps can run. Pixel Tracker sends data only to the ad and analytics platforms you turn on. AI clients are covered in the Vigil section above.</p>
+        <p>We do not sell your data. Railway (hosting), Resend (email delivery), and the AI providers named above process it only so the site and the apps can run. Pixel Tracker sends data only to the ad and analytics platforms you turn on. AI clients are covered in the Vigil section above.</p>
+        <h2 className="text-lg font-semibold text-foreground">Where data is kept</h2>
+        <p>Appnary&apos;s apps and database run on Railway in the United States (US West). Server logs are kept for up to 30 days, then deleted by the host.</p>
         <h2 className="text-lg font-semibold text-foreground">Contact</h2>
         <p>
-          Questions or deletion requests: <a className="underline" href="mailto:info@binarylabssoft.com">info@binarylabssoft.com</a>
+          Questions or deletion requests: <a className="underline" href="mailto:info@binarylabssoft.com">info@binarylabssoft.com</a>, or by post to Binary Labs LLC, 1309 Coffeen Avenue, Sheridan, Wyoming 82801, USA.
         </p>
       </div>
     </div>
