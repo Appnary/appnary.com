@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import VigilMark from "@/components/vigil-mark";
 import { withPageSeo } from "@/lib/seo";
 
@@ -17,9 +18,27 @@ export const metadata: Metadata = withPageSeo("/docs", {
   },
 });
 
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: "Vigil docs",
+  description:
+    "What the Vigil Shopify security scan checks, what it leaves alone, and how the waitlist works until Shopify approves the app.",
+  datePublished: "2026-06-26",
+  dateModified: "2026-10-27",
+  author: { "@type": "Organization", name: "Appnary" },
+  publisher: { "@type": "Organization", name: "Appnary" },
+  mainEntityOfPage: "https://appnary.com/docs",
+  image: "https://appnary.com/vigil-app-icon.png",
+};
+
 export default function DocsPage() {
   return (
     <article className="mx-auto max-w-3xl px-6 pt-20 pb-24 sm:pt-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <p className="text-sm font-medium text-aqua">Docs</p>
       <div className="mt-3 flex items-center gap-4">
         <VigilMark size={48} className="h-12 w-12" />
@@ -46,6 +65,11 @@ export default function DocsPage() {
       <h2 className="mt-12 text-2xl font-bold text-foreground">Agent scan</h2>
       <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
         The scan is also an MCP tool. Claude, ChatGPT, Codex, Cursor, or any AI agent can ask Vigil to scan a store and receive the same findings: script, source, and the reason it was flagged. The merchant still approves any change.
+      </p>
+      <p className="mt-4 text-sm">
+        <Link href="/docs/vigil-mcp" className="font-medium text-accent-foreground hover:underline">
+          Connect Vigil to your AI agent
+        </Link>
       </p>
 
       <h2 className="mt-12 text-2xl font-bold text-foreground">What version 1 does not read</h2>

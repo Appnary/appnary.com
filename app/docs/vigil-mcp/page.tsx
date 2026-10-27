@@ -3,9 +3,9 @@ import Link from "next/link";
 import { withPageSeo } from "@/lib/seo";
 
 export const metadata: Metadata = withPageSeo("/docs/vigil-mcp", {
-  title: "Connect Vigil to Claude, ChatGPT, Codex, Cursor, or any AI agent | Appnary Docs",
+  title: "Vigil MCP: connect Claude, ChatGPT, or Cursor | Appnary",
   description:
-    "Connect the Vigil MCP server to Claude, ChatGPT, Codex, Cursor, or any MCP client. Sign-in with your Shopify store, read-only by default, rate limits, and a Bearer token fallback.",
+    "Connect the Vigil MCP server to Claude, ChatGPT, Codex, Cursor, or any MCP client. Sign in with your Shopify store. Read-only by default.",
 });
 
 const MCP_URL = "https://cp.appnary.com/api/vigil/mcp";
@@ -20,9 +20,27 @@ const tools = [
   { name: "unblock_host", what: "Turn a blocked host back on (same as Undo in Vigil).", access: "Turn off", limit: "20 per minute" },
 ];
 
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: "Connect Vigil to your AI agent",
+  description:
+    "Connect the Vigil MCP server to Claude, ChatGPT, Codex, Cursor, or any MCP client. Sign in with your Shopify store. Read-only by default.",
+  datePublished: "2026-10-17",
+  dateModified: "2026-10-19",
+  author: { "@type": "Organization", name: "Appnary" },
+  publisher: { "@type": "Organization", name: "Appnary" },
+  mainEntityOfPage: "https://appnary.com/docs/vigil-mcp",
+  image: "https://appnary.com/vigil-app-icon.png",
+};
+
 export default function VigilMcpDocsPage() {
   return (
     <article className="mx-auto max-w-3xl px-6 pt-20 pb-24 sm:pt-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <p className="text-sm font-medium text-aqua">Docs</p>
       <h1 className="mt-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
         Connect Vigil to your AI agent

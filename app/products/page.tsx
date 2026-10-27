@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { withPageSeo } from "@/lib/seo";
 import ProductShowcase from "./product-showcase";
+import { products } from "./products";
 import { ContactBanner, PageIntro } from "./sections";
 import "./products.css";
 
@@ -10,9 +11,24 @@ export const metadata: Metadata = withPageSeo("/products", {
   openGraph: { images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Appnary" }] },
 });
 
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Our products",
+  url: "https://appnary.com/products",
+  numberOfItems: products.length,
+  itemListElement: products.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: product.name,
+    url: product.url,
+  })),
+};
+
 export default function ProductsPage() {
   return (
     <div className="binary-products">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <PageIntro label="The Binary Labs collection" title="Built out of curiosity. Made to be useful." description="Cloud tools, everyday utilities, and better ways to run a store. Different problems, the same hands-on approach." />
       <section className="wrap catalog-section" aria-label="Product catalog">
         <ProductShowcase searchable />
