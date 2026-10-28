@@ -5,6 +5,8 @@ import VigilMark from "@/components/vigil-mark";
 import { apps } from "@/content/apps";
 import { formatCount, getWaitlistCounts } from "@/lib/waitlist-counts";
 import { withPageSeo } from "@/lib/seo";
+import { FooterBadgeSlider } from "@/components/footer-badge-slider";
+import { FooterBadges } from "./footer-badges";
 
 export const metadata: Metadata = withPageSeo("/", {
   description:
@@ -179,6 +181,13 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
+      {/* Homepage only: ~200 sitewide outbound directory links read as a link scheme. */}
+      <div className="mx-auto max-w-6xl px-5 pb-12 md:px-8">
+        <FooterBadgeSlider>
+          <FooterBadges />
+        </FooterBadgeSlider>
+      </div>
     </>
   );
 }
