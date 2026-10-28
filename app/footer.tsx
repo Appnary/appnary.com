@@ -1,7 +1,5 @@
 import { Mail } from "lucide-react";
 import VigilMark from "@/components/vigil-mark";
-import { FooterBadgeSlider } from "@/components/footer-badge-slider";
-import { FooterBadges } from "./footer-badges";
 
 const year = new Date().getFullYear();
 
@@ -78,10 +76,6 @@ export function Footer() {
             </div>
           ))}
         </div>
-
-        <FooterBadgeSlider>
-          <FooterBadges />
-        </FooterBadgeSlider>
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col-reverse items-center gap-4 border-t border-border-themed pt-6 text-xs text-muted-foreground-faint md:flex-row md:justify-between">
