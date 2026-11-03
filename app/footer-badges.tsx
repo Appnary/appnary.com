@@ -1328,10 +1328,10 @@ export function FooterBadges(): ReactNode {
           <a href="https://productwill.com" target="_blank" rel="noopener noreferrer">
             <img src="https://productwill.com/badages-awards.svg" alt="Featured on Product Will" style={{ height: "54px", width: "auto" }} loading="lazy" decoding="async" />
           </a>
-          <a href="https://aifinderplus.com" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+          <a href="https://aifinderplus.com" target="_blank" className="text-sm text-muted-foreground">
             AI Finder Plus
           </a>
-          <a href="https://www.azlisted.com" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
+          <a href="http://www.azlisted.com" target="_blank" className="text-sm text-muted-foreground">
             AzListed
           </a>
           <a href="https://francesaas.fr/saas/appnary" target="_blank" rel="noopener" title="Profil du SaaS Appnary sur FranceSaaS.fr">
@@ -1342,6 +1342,7 @@ export function FooterBadges(): ReactNode {
             target="_blank"
             rel="noopener"
             aria-label="View Appnary on LaunchTry"
+            data-launchtry-badge="true"
             style={{ display: "inline-flex", alignItems: "center", lineHeight: 0, textDecoration: "none" }}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="184" height="44" viewBox="0 0 184 44" role="img" aria-label="Launching on LaunchTry" style={{ display: "block", width: "184px", height: "44px", maxWidth: "100%" }}>
