@@ -4,6 +4,29 @@ import type { ReactNode } from "react";
 export function FooterBadges(): ReactNode {
   return (
     <>
+          <a href="https://peeklaunch.com/products/appnary?ref=badge" target="_blank" rel="noopener">
+            <img src="https://peeklaunch.com/api/badge/appnary" alt="Featured on PeekLaunch" width="220" height="48" />
+          </a>
+          <a href="https://launchdog.dev/p/appnary?ref=badge">
+            <img src="https://launchdog.dev/badges/appnary.svg" alt="Launching on Launchdog" width="200" height="54" />
+          </a>
+          <a href="https://saasdirectorylist.com/launch/appnary" rel="nofollow" target="_blank">
+            <img src="https://saasdirectorylist.com/badge/appnary.svg?kind=listed&shape=standard&mode=light&size=m&v=2" alt="Listed on SaaS Directory List" width="250" height="54" loading="lazy" decoding="async" />
+          </a>
+          <script async src="https://saasdirectorylist.com/badge/appnary.js"></script>
+          <a href="https://saasdirectorypro.com/launch/appnary" rel="nofollow" target="_blank">
+            <img src="https://saasdirectorypro.com/badge/appnary.svg?kind=listed&shape=standard&mode=light&size=m&v=2" alt="Listed on SaaS Directory Pro" width="250" height="54" loading="lazy" decoding="async" />
+          </a>
+          <script async src="https://saasdirectorypro.com/badge/appnary.js"></script>
+          <a href="https://softwareontheweb.com" rel="dofollow">
+            <picture>
+              <source srcSet="https://softwareontheweb.com/images/badge.svg?v=1792560811" type="image/svg+xml" />
+              <img src="https://softwareontheweb.com/images/badge.png?v=1792560811" alt="Featured on Software on the Web" width="200" />
+            </picture>
+          </a>
+          <a href="https://www.norohunt.com" target="_blank" rel="noopener">
+            <img src="https://www.norohunt.com/images/norohunt-light.svg" alt="Featured on NoroHunt" width="185" height="48" />
+          </a>
           <a href="https://neeed.directory" target="_blank" rel="noopener">
             <img
               src="https://neeed.directory/badges/neeed-badge-light.svg"
@@ -195,12 +218,7 @@ export function FooterBadges(): ReactNode {
             />
           </a>
           <a href="https://thesaasdir.com/product/appnary?ref=badge" rel="dofollow">
-            <img
-              src="https://thesaasdir.com/badge/appnary.svg"
-              alt="Featured on TheSaaSDir"
-              width="182"
-              height="46"
-            />
+            <img src="https://thesaasdir.com/badge/appnary.svg" alt="Featured on TheSaaSDir" width="182" height="46" />
           </a>
           <a
             className="footer-badge-card"
@@ -361,8 +379,8 @@ export function FooterBadges(): ReactNode {
           <a href="https://sumodir.com" target="_blank" rel="dofollow">
             <img src="https://sumodir.com/badge.png" alt="Featured on SumoDir" width="200" height="54" loading="lazy" decoding="async" />
           </a>
-          <a href="https://indexof.ai/" target="_blank" rel="noopener">
-            <img src="https://indexof.ai/badge-light.svg" alt="Featured on IndexOf.AI" width="200" height="40" loading="lazy" decoding="async" />
+          <a href="https://indexof.ai/tool/appnary?ref=appnary" target="_blank" rel="noopener">
+            <img src="https://indexof.ai/badge-light.svg" alt="Featured on IndexOf.AI" width="200" height="40" />
           </a>
           <a href="https://zplatform.ai/" target="_blank" rel="noopener" title="Featured on zPlatform.ai">
             <img
@@ -558,15 +576,8 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://nicklaunches.com/profile/products/appnary/" target="_blank" rel="noopener">
-            <img
-              src="https://nicklaunches.com/badges/featured.png"
-              alt="Appnary on Nick Launches"
-              width="244"
-              height="56"
-              loading="lazy"
-              decoding="async"
-            />
+          <a href="https://nicklaunches.com/products/appnary/" target="_blank" rel="noopener">
+            <img src="https://nicklaunches.com/badges/featured.png" alt="Appnary on Nick Launches" width="244" height="56" />
           </a>
           <a href="https://productfame.com/products/appnary" target="_blank" rel="noopener noreferrer">
             <img
@@ -625,14 +636,8 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://ufind.best/" target="_blank" rel="noopener">
-            <img
-              src="https://ufind.best/badges/ufind-best-badge-light.svg"
-              alt="Featured on ufind.best"
-              width="150"
-              loading="lazy"
-              decoding="async"
-            />
+          <a href="https://ufind.best/products/appnary" target="_blank" rel="noopener">
+            <img src="https://ufind.best/badges/ufind-best-badge-light.svg" alt="Featured on ufind.best" width="150" />
           </a>
           <a href="https://useneedle.net/directory/appnary" target="_blank" rel="noopener noreferrer">
             <img
@@ -793,25 +798,11 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://saaslineup.com/" rel="dofollow">
-            <img
-              src="https://saaslineup.com/badge/appnary.svg"
-              alt="Featured on SaaSLineup"
-              width="182"
-              height="46"
-              loading="lazy"
-              decoding="async"
-            />
+          <a href="https://saaslineup.com/product/appnary?ref=badge" rel="dofollow">
+            <img src="https://saaslineup.com/badge/appnary.svg" alt="Featured on SaaSLineup" width="182" height="46" />
           </a>
-          <a href="https://thedevtoolsdir.com/" rel="dofollow">
-            <img
-              src="https://thedevtoolsdir.com/badge/appnary.svg"
-              alt="Featured on TheDevToolsDir"
-              width="182"
-              height="46"
-              loading="lazy"
-              decoding="async"
-            />
+          <a href="https://thedevtoolsdir.com/product/appnary?ref=badge" rel="dofollow">
+            <img src="https://thedevtoolsdir.com/badge/appnary.svg" alt="Featured on TheDevToolsDir" width="182" height="46" />
           </a>
           <a href="https://skylaun.ch/e-commerce/appnary" target="_blank" rel="noopener">
             <img
@@ -906,15 +897,8 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://themicrosaasdir.com/" rel="dofollow">
-            <img
-              src="https://themicrosaasdir.com/badge/appnary.svg"
-              alt="Featured on TheMicroSaaSDir"
-              width="182"
-              height="46"
-              loading="lazy"
-              decoding="async"
-            />
+          <a href="https://themicrosaasdir.com/product/appnary?ref=badge" rel="dofollow">
+            <img src="https://themicrosaasdir.com/badge/appnary.svg" alt="Featured on TheMicroSaaSDir" width="182" height="46" />
           </a>
           <a href="https://www.outdr.lol/card/appnary.com" target="_blank" rel="noopener">
             <img
@@ -972,8 +956,17 @@ export function FooterBadges(): ReactNode {
               decoding="async"
             />
           </a>
-          <a href="https://agenthunter.io/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
-            Featured on AgentHunter
+          <a
+            href="https://www.agenthunter.io/?utm_source=badge&utm_medium=embed&utm_campaign=Appnary"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", backgroundColor: "#fffbeb", border: "1px solid #fbbf24", padding: "0.5rem 0.75rem", borderRadius: "0.5rem", textDecoration: "none", fontFamily: "sans-serif", transition: "all 0.2s" }}
+          >
+            <img src="https://www.agenthunter.io/logo-light.svg" alt="AgentHunter Badge" style={{ height: "2.5rem", width: "2.5rem" }} />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <p style={{ margin: 0, fontSize: "0.75rem", color: "#92400e" }}>AgentHunter</p>
+              <p style={{ margin: 0, fontSize: "0.875rem", color: "#451a03", fontWeight: 600 }}>Featured AI Agent</p>
+            </div>
           </a>
           <a
             href="https://saasearch.io/product/appnary?utm_source=badge&utm_medium=referral&utm_campaign=featured_badge&ref=saasearch"
@@ -1033,8 +1026,8 @@ export function FooterBadges(): ReactNode {
               Launch MCP
             </a>
           </span>
-          <a href="https://goodsaas.xyz/" target="_blank" rel="noopener">
-            <img src="https://goodsaas.xyz/badge/appnary.svg?theme=dark" alt="Appnary on goodSaaS" loading="lazy" decoding="async" />
+          <a href="https://goodsaas.xyz/saas/appnary" rel="noopener" target="_blank">
+            <img alt="Appnary on goodSaaS" decoding="async" loading="lazy" src="https://goodsaas.xyz/badge/appnary.svg?theme=dark" />
           </a>
           <a href="https://toolroots.com" target="_blank" rel="noopener">
             <img src="https://toolroots.com/badge.svg" alt="Featured on ToolRoots" width="181" height="32" loading="lazy" decoding="async" />
@@ -1132,8 +1125,8 @@ export function FooterBadges(): ReactNode {
           <a href="https://abizdirectory.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Abiz Web Directory
           </a>
-          <a href="https://ai-webcatalog.space/" target="_blank" rel="noopener">
-            <img src="https://img.shields.io/badge/Featured%20on-ai--webcatalog.space-2563eb?style=for-the-badge" alt="Featured on ai-webcatalog.space" height="28" loading="lazy" decoding="async" />
+          <a href="https://ai-webcatalog.space/r/28317b696f2f0616372e483cbb63ef67" target="_blank" rel="sponsored noopener" title="AI Webcatalog">
+            <img src="https://ai-webcatalog.space/badges/badge-dark-en.svg" alt="Featured on AI Webcatalog" width="240" height="54" />
           </a>
           <a href="https://aihustle.tools" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             AI Hustle
