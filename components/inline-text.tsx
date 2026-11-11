@@ -11,7 +11,7 @@ export function InlineText({ text }: { text: string }) {
           <Link
             key={i}
             href={token.href}
-            className="text-aqua underline decoration-aqua/40 underline-offset-2 hover:decoration-aqua"
+            className="text-accent-foreground underline decoration-accent-foreground/40 underline-offset-2 hover:decoration-accent-foreground"
           >
             {token.label}
           </Link>
