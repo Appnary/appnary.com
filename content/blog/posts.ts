@@ -7,58 +7,6 @@ import { vigilPosts } from "@/content/blog/vigil-posts";
 
 export const posts: BlogPost[] = [
   {
-    slug: "pixel-tracker-launch-preview",
-    title: "Pixel Tracker Launch Preview: What We're Building",
-    excerpt:
-      "A look at Pixel Tracker's multi-platform tracking setup, planned pricing, and what remains before the Shopify App Store launch.",
-    category: "Product update",
-    publishedAt: "2026-06-18",
-    updatedAt: "2026-09-30",
-    author: "The Appnary Team",
-    readingMinutes: 4,
-    tags: ["Pixel Tracker", "Launch", "Shopify"],
-    tldr: `Pixel Tracker is in development. Here is the intended platform scope, the verification still needed, and how Shopify billing will work.`,
-    body: `Pixel Tracker is the first Shopify app we're building at Appnary. The intended focus is pixel configuration from one dashboard.
-
-The planned platform list is Meta, Google Ads, TikTok, Snapchat, Pinterest, X, and LinkedIn. That list describes our intended scope, not a set of verified launch integrations. Each platform still needs an end-to-end test before we can promise its event coverage.
-
-Our current approach uses a Shopify theme app extension. Merchants would activate the app embed in their theme editor and test the configured events. A storefront tag loading does not establish that a completed checkout reaches the advertising platform.
-
-Server-side delivery through Meta Conversions API or TikTok Events API is not a confirmed launch feature. We also haven't verified automatic browser/server deduplication. We'll document those capabilities only after testing them.
-
-Pricing will be specific to each Shopify app, with billing through Shopify. Pixel Tracker's prices and plan limits are not confirmed.
-
-Pixel Tracker is still in development and is not available to install. [Join the waitlist](/#waitlist) for launch updates.`,
-  },
-  {
-    slug: "why-we-built-pixel-tracker-cookieless",
-    title: "Why server-side tracking matters for Shopify stores",
-    excerpt:
-      "Ad blockers and browser restrictions can drop client-side conversion events. Server-side tracking adds another delivery path.",
-    category: "Engineering",
-    publishedAt: "2026-06-11",
-    updatedAt: "2026-09-30",
-    author: "The Appnary Team",
-    readingMinutes: 5,
-    tags: ["Privacy", "Pixel Tracker", "Engineering"],
-    tldr: `Browser pixels can lose conversion events to ad blockers and browser restrictions. Meta Conversions API and TikTok Events API provide another delivery path, but they do not remove consent or privacy obligations.`,
-    body: `A browser pixel depends on a script running and its request reaching the advertising platform. Ad blockers and browser restrictions can interrupt that path. A backend integration can send a recorded order through a separate server connection.
-
-That separate connection still needs to work. Confirm the event source, supported Shopify events, failed-delivery handling, and the platform's diagnostics before assuming that server tracking improves your reporting.
-
-## Browser and server events need coordination
-
-When both paths report the same purchase, the integration must follow the destination platform's deduplication rules. Check a test order's event identifiers, value, and currency. A browser helper doesn't prove server delivery or deduplication.
-
-## Consent still applies
-
-Server-side delivery does not override customer choices or privacy requirements. Check which data the integration sends and how it handles declined collection. A received event is also not a guarantee that the platform will attribute an order to an ad.
-
-## Pixel Tracker is still in development
-
-Meta CAPI and TikTok Events API delivery are not confirmed Pixel Tracker launch capabilities. We won't describe server delivery as working until the integration is verified. Use an available provider if you need this today, and follow our [server-side tracking guide](/blog/shopify-server-side-tracking-guide) to evaluate its results.`,
-  },
-  {
     slug: "shopify-tips-first-30-days",
     title: "Shopify tips: what to set up in your first 30 days",
     excerpt:
@@ -152,8 +100,6 @@ What to actually do about it
 
 None of this makes platform ROAS useless. It makes it directional, not literal. Three adjustments make it far more trustworthy.
 
-Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified. If you need tracking today, choose an available integration and verify its events. [Join the waitlist](/#waitlist) for launch updates.
-
 Second, stop treating any single platform's ROAS as a final answer and start reading it as a trend line instead. If Meta's reported ROAS drops from 3.2 to 2.4 week over week, that drop is real information regardless of whether 3.2 was ever fully accurate to begin with. Trend direction survives attribution noise better than any single snapshot does.
 
 Third, build one blended number that becomes your actual ground truth: total ad spend across every channel, divided by total store revenue from Shopify for that same period, using your own order data instead of any platform's self-reported revenue. This number can't double-count a sale, because it only counts revenue once, no matter how many platforms want credit for it. [This post](/blog/calculate-true-roas) walks through the adjustment most merchants skip entirely: backing out returns and refunds, which platform ROAS never accounts for.
@@ -176,10 +122,6 @@ Platform-reported ROAS will keep disagreeing with itself and with your bank acco
         q: `Should I ignore platform-reported ROAS entirely?`,
         a: `No. It's still useful as a directional signal, particularly for spotting trends within a single platform over time. The mistake is treating the absolute number as literal truth or comparing raw ROAS figures across platforms, since each one is measuring against a different, self-favoring set of rules.`,
       },
-      {
-        q: `Does Pixel Tracker calculate ROAS for me?`,
-        a: `No. Pixel Tracker is a prelaunch pixel-configuration app, not a ROAS calculator or attribution dashboard. Use store records and ad spend to do that calculation separately. Its launch tracking coverage and server delivery are not confirmed.`,
-      },
     ],
   },
   {
@@ -197,7 +139,7 @@ Platform-reported ROAS will keep disagreeing with itself and with your bank acco
 
 The Facebook Pixel tracks activity on your store and reports it back to Meta's ad system, which uses that data to decide who sees your Facebook and Instagram ads. When a visitor views a product, adds to cart, or completes checkout, the pixel fires an event telling Meta's algorithm what kind of person just took that action, so it can find more people who look similar. Without the pixel installed, Meta is still running your campaigns, but it's optimizing for clicks and engagement rather than actual purchases, because it has no way to confirm which clicks turned into sales.
 
-The Google Ads conversion tag does the equivalent job for Google's ad network: Search ads, Shopping listings, Display, and YouTube ads bought through Google Ads. When someone clicks one of those ads and later buys, the tag reports the conversion back to Google Ads, which uses it to decide which keywords, product listings, and audiences are worth bidding on again. Worth being precise here: this is the Google Ads conversion tag, not Google Analytics or GA4. Those are separate Google products that measure different things. GA4 tracks your overall site traffic and behavior, while the Ads conversion tag exists specifically to tell the ad platform what converted. Pixel Tracker is a prelaunch pixel-configuration app, not a GA4 setup service; its Google Ads event coverage is still being verified. If you're actually trying to sort out Google Analytics versus other options, that's a different question, covered in [Shopify Analytics vs Google Analytics](/blog/shopify-analytics-vs-google-analytics).
+The Google Ads conversion tag does the equivalent job for Google's ad network: Search ads, Shopping listings, Display, and YouTube ads bought through Google Ads. When someone clicks one of those ads and later buys, the tag reports the conversion back to Google Ads, which uses it to decide which keywords, product listings, and audiences are worth bidding on again. Worth being precise here: this is the Google Ads conversion tag, not Google Analytics or GA4. Those are separate Google products that measure different things. GA4 tracks your overall site traffic and behavior, while the Ads conversion tag exists specifically to tell the ad platform what converted. If you're actually trying to sort out Google Analytics versus other options, that's a different question, covered in [Shopify Analytics vs Google Analytics](/blog/shopify-analytics-vs-google-analytics).
 
 Facebook and Google run separate auctions for separate inventory, using separate signals. A shopper who clicks your Instagram ad and a shopper who searches for your product on Google are, from each platform's point of view, two unconnected events being scored by two unconnected systems. Meta never sees the Google search. Google never sees the Instagram scroll. Installing the Facebook Pixel does nothing for your Google campaigns, and installing the Google tag does nothing for your Facebook campaigns, because neither pixel talks to the other and neither would help the other's optimization even if it could. So for any store running ad budget on both platforms, the honest answer isn't a choice between the two. It's both.
 
@@ -207,14 +149,8 @@ Say you're running Facebook ads and Google Shopping at the same time, but you on
 
 If time or budget only allows for setting up one platform this week, install the pixel for whichever platform you're actually spending money on right now. That sounds obvious, but it's common for stores to stall out trying to get both platforms perfectly configured before launching either, and end up with zero tracking on the campaign that's already live. If your ad budget currently lives in Meta Ads Manager, connect the Meta Pixel first. If your spend is in Google Ads instead, prioritize the Google Ads conversion tag. Once the platform you're actively spending on is tracked, add the second one before you turn on that second campaign, not after it's already running unmeasured.
 
-Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified. If you need tracking today, choose an available integration and verify its events. [Join the waitlist](/#waitlist) for launch updates.
-
 Neither pixel is a lesser version of the other, and neither is optional once you're paying for ads on that platform. If your ad spend touches both Facebook and Google, plan on both pixels from day one. If it only touches one right now, install that one immediately and add the second the moment your budget or campaigns expand there.`,
     faqs: [
-      {
-        q: `Does the Google tag in Pixel Tracker also cover Google Analytics or GA4?`,
-        a: `No. Google Ads conversion measurement and GA4 analytics are separate setups. Pixel Tracker is still in development; it is not a GA4 installation service.`,
-      },
       {
         q: `If I only run ads on one platform, do I still need both pixels?`,
         a: `No. The need for a pixel is tied to where you're actually spending ad budget. If you only advertise on Facebook and Instagram, there's no reason to install a Google Ads tag that has no campaign to report on, and the reverse is true if you only run Google Ads.`,
@@ -222,10 +158,6 @@ Neither pixel is a lesser version of the other, and neither is optional once you
       {
         q: `Will running a Facebook Pixel and a Google Ads tag at the same time cause conflicts?`,
         a: `No. They're independent scripts reporting to two different systems, and Shopify handles the injection through its own theme app extensions mechanism. Adding one doesn't interfere with the other or require editing your theme code.`,
-      },
-      {
-        q: `Does Pixel Tracker support server-side tracking for both Facebook and Google?`,
-        a: `Pixel Tracker server-side delivery and automatic browser/server deduplication are not confirmed. The app is in development. For an existing integration, verify server-event receipt separately from browser pixel activity.`,
       },
       {
         q: `What happens if I only ever install one pixel while advertising on both platforms?`,
@@ -250,20 +182,14 @@ The mechanics aren't complicated once you know what you're doing, but Shopify ad
 
 Step 1 is creating the pixel itself. Log into TikTok Ads Manager, go to Assets, then Events, and set up a new web pixel. TikTok will ask whether you want to install it manually or through a partner integration, and either way you'll come away with a Pixel ID, a string of letters and numbers unique to your account. That ID is the one thing you need before touching your store.
 
-Step 2 is choosing an available Shopify integration. Follow its current setup instructions and confirm checkout support. Pixel Tracker is in development and is not available to install.
+Step 2 is choosing an available Shopify integration. Follow its current setup instructions and confirm checkout support.
 
 Step 3 is confirming the pixel is actually firing, not just installed. Add the TikTok Pixel Helper browser extension, load your storefront, and check that the pixel ID showing up matches the one in Ads Manager. Browse a product page and add something to cart, then watch for standard events like ViewContent and AddToCart to register. If nothing shows up, check a cached page or an ad blocker running in your own test browser before assuming the install itself is broken. If the basics don't turn up the problem, recheck the pixel ID, the theme app embed, and whether an ad blocker is hiding the request.
 
 Step 4 is the purchase check because the pixel already "looks installed": running an actual purchase through checkout and confirming the event lands in TikTok Events Manager with the correct value and currency attached. TikTok's algorithm uses that value to find more people likely to spend a similar amount, so a Purchase event that fires with a zero value or the wrong currency will quietly work against campaigns optimized for value rather than just clicks. Do this before you scale ad spend, not after the numbers start looking strange.
 
-Steps 1 and 2 above are the setup. Pixel Tracker is not available to install. The app in development now is [Vigil](/vigil), and its [waitlist](/vigil#waitlist) is for that scanner, not for a TikTok pixel.
-
 Step 5 is checking server delivery separately if your provider offers it. Follow its deduplication instructions and respect the same consent settings. A pixel that's technically installed but never confirmed against a real purchase is just code sitting on your site, not a working tracking setup. Get the base pixel firing, confirm it against an actual order, and add server-side tracking once you know the campaigns you're running are worth protecting.`,
     faqs: [
-      {
-        q: `Do I need to edit my Shopify theme code to install the TikTok pixel?`,
-        a: `Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified. Its current approach uses a Shopify theme app extension, which requires app embed activation and event testing.`,
-      },
       {
         q: `How is this different from the full TikTok Pixel Setup Guide?`,
         a: `This post is the setup checklist. It covers the install path, consent, and how to confirm ViewContent and AddToCart. There isn't a second guide behind it.`,
@@ -271,14 +197,6 @@ Step 5 is checking server delivery separately if your provider offers it. Follow
       {
         q: `Can TikTok still track a sale if the customer uses an ad blocker?`,
         a: `Not reliably through the browser pixel alone, since ad blockers and privacy settings can stop it from firing. TikTok's Events API sends the same event data from your server instead, which is why it's worth adding once your browser pixel is confirmed working. The [server-side tracking guide](/blog/shopify-server-side-tracking-guide) covers how that works.`,
-      },
-      {
-        q: `Can I install Pixel Tracker on my store right now?`,
-        a: `Not yet. Pixel Tracker isn't available to install. The current waitlist is for [Vigil](/vigil#waitlist), which scans theme scripts and leaked keys. It does not install a TikTok pixel.`,
-      },
-      {
-        q: `What does Pixel Tracker cost once it's available?`,
-        a: `Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.`,
       },
     ],
   },
@@ -309,13 +227,9 @@ Blended CAC is a more honest sanity check precisely because it doesn't care whic
 
 None of this works, though, if half your platforms aren't reporting real numbers in the first place. This is the part that trips up most merchants running ads on more than one or two channels: they set up a Facebook pixel and a Google Ads tag when they first started running ads, and that's where pixel setup stopped. Six months later they're running TikTok and Pinterest campaigns too, spending real money, but nobody went back and connected pixels for those platforms. The result is a weekly tracker with a blank or unreliable reported-conversions column for exactly the channels that are newest and least understood, which is backwards. You end up with your best data on your oldest, most familiar channel and next to nothing on the ones you actually need visibility into.
 
-Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified. If you need tracking today, choose an available integration and verify its events. [Join the waitlist](/#waitlist) for launch updates.
-
-Choose an app whose confirmed plan limits cover every ad platform you need. Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.
+Choose an app whose confirmed plan limits cover every ad platform you need.
 
 If you're comparing options for pixel management on Shopify, it's worth looking at more than one tool before committing, since setups and pricing structures vary more than you'd expect for what sounds like a simple task.
-
-Pixel Tracker itself is currently pre-launch and taking [waitlist signups](/#waitlist) rather than live installs, so if the pixel-connection side of this is what you're after, that's the way to get notified when it opens up.
 
 None of this requires new software to start, though. The spreadsheet, the weekly fifteen minutes, and the blended CAC formula work today with whatever platforms you're already running, using numbers you can pull by hand. Getting every pixel connected just determines how much you can trust the numbers you're plugging into it.`,
     faqs: [
@@ -334,10 +248,6 @@ None of this requires new software to start, though. The spreadsheet, the weekly
       {
         q: `Do I need every platform's pixel connected even if I'm only actively running paid ads on two of them right now?`,
         a: `You only need pixels firing for platforms where you're actually spending money, but the moment you add a new ad platform to the mix, connect its pixel before or alongside launching the campaign. The common failure is adding TikTok or Pinterest spend months after initial setup and forgetting to connect that platform's pixel, which leaves that channel's numbers unreliable in your tracker.`,
-      },
-      {
-        q: `Does Pixel Tracker calculate blended CAC or ROAS for me?`,
-        a: `No. Pixel Tracker is a prelaunch pixel-configuration app, not a ROAS calculator or attribution dashboard. Use store records and ad spend to do that calculation separately. Its launch tracking coverage and server delivery are not confirmed.`,
       },
     ],
   },
@@ -405,17 +315,10 @@ That's the short version of the mechanics. Deduplication, purchase details, and 
 
 Timing is part of the case too. Browsers have spent years tightening what third-party scripts are allowed to do, and none of them have reversed course. Ad platforms have noticed the same signal loss merchants have, which is why Meta and TikTok both built server-side APIs in the first place and now reward accounts that use them with better event matching. This isn't a trend you can wait out until it blows over. Browsers are only going to get more restrictive from here, and a server-side path needs monitoring before you can rely on its data. Delivery alone does not establish attribution.
 
-Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified. If you need tracking today, choose an available integration and verify its events. [Join the waitlist](/#waitlist) for launch updates.
-
-Pixel Tracker's launch prices and plan limits are not confirmed. Billing will be through Shopify.
-
 Server-side tracking and privacy-conscious tracking aren't opposites, even though the phrase can sound like it's about squeezing more data out of people who tried to opt out. It's really about not losing the data your own customers already generated by buying something from you. We get into that distinction more in [our post on privacy-first tracking for Shopify stores](/blog/privacy-first-tracking-shopify). The practical takeaway here is simpler: if your pixel is the only thing telling an ad platform what converted, you're leaking signal quietly, every day, in a way that's fixable without touching your theme.`,
     faqs: [
       { q: `What's the actual difference between a pixel and server-side tracking?`, a: `A pixel sends events from a browser. A server integration sends them from a backend through the platform's API. Check both paths separately and verify duplicate handling when they report the same purchase.` },
-      { q: `Does Pixel Tracker support server-side tracking for Google Ads, Snapchat, Pinterest, X, or LinkedIn?`, a: `Pixel Tracker server-side delivery and automatic browser/server deduplication are not confirmed. The app is in development. For an existing integration, verify server-event receipt separately from browser pixel activity.` },
-      { q: `Do I need a developer or theme access to set this up?`, a: `That depends on the provider. A managed integration may offer a guided Shopify setup; a custom server integration needs technical implementation. Pixel Tracker is not available to install yet.` },
-      { q: `How much does Pixel Tracker cost?`, a: `Pixel Tracker's launch prices and plan limits are not confirmed. Check its Shopify listing when available; billing will be through Shopify.` },
-      { q: `Can I install Pixel Tracker today?`, a: `Not yet. Pixel Tracker is pre-launch and currently taking signups on the waitlist. You can join the waitlist to get access when it opens.` },
+      { q: `Do I need a developer or theme access to set this up?`, a: `That depends on the provider. A managed integration may offer a guided Shopify setup; a custom server integration needs technical implementation.` },
     ],
   },
   {
@@ -509,8 +412,6 @@ Keep a privacy policy that's actually accurate. This sounds obvious, but a lot o
 
 Use a cookie consent banner where the law requires one. Whether that's required depends on where your visitors are and what you're collecting. That's genuinely a legal question rather than a technical one, and your Shopify app can't decide for you whether GDPR or CCPA applies to your specific business. If you sell into the EU or UK, or have meaningful California traffic, talk to whoever handles your compliance about what your banner needs to cover.
 
-Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified. If you need tracking today, choose an available integration and verify its events. [Join the waitlist](/#waitlist) for launch updates.
-
 Don't install more pixels than you're actually using. It's common for a store to accumulate a Facebook pixel, a Pinterest tag, a Snap pixel, and a LinkedIn tag over the years, long after the campaigns that needed them have ended. Every pixel still installed is still collecting and sending visitor data somewhere, whether or not anyone is looking at the results. If you're not actively running ads on a platform, there's no upside to keeping its pixel live on your store; it's just more data leaving your site for no benefit to you.
 
 None of this requires overhauling your entire marketing stack overnight. Start with the pixels you actually use, move the ones that support it to server-side, and make sure your privacy policy reflects what's actually happening on your store. That's a more realistic definition of privacy-first than either ignoring the issue or ripping out tracking altogether.`,
@@ -526,14 +427,6 @@ None of this requires overhauling your entire marketing stack overnight. Start w
       {
         q: `Why do my ad platform's conversion numbers look lower than my actual sales?`,
         a: `Browser restrictions on tracking scripts, from Safari and Firefox's cookie blocking to iOS's App Tracking Transparency prompt, make it harder for ad platforms to connect a click to a later purchase. Server-side tracking, where the platform supports it, helps close that gap.`,
-      },
-      {
-        q: `Does Pixel Tracker handle GDPR or CCPA compliance for my store?`,
-        a: `No. Pixel Tracker forwards the events you configure to the ad platforms you choose, and it doesn't collect or store personally identifiable visitor data itself, but it doesn't manage cookie consent or handle your legal compliance. Your privacy policy, consent banner, and overall compliance remain your responsibility as the merchant.`,
-      },
-      {
-        q: `Which ad platforms support server-side tracking through Pixel Tracker?`,
-        a: `Pixel Tracker server-side delivery and automatic browser/server deduplication are not confirmed. The app is in development. For an existing integration, verify server-event receipt separately from browser pixel activity.`,
       },
     ],
   },
@@ -559,8 +452,6 @@ Once you know which platforms to focus on, the first real check is whether the p
 The next step moves out of your browser and into each platform's own event manager: Meta's Events Manager, Google Ads' conversion diagnostics, TikTok's Events Manager. This is where a lot of audits stop too early, because PageView is almost always firing (it's the simplest event, and most installs get it right by default), so merchants see PageView data flowing in and assume tracking is healthy. Purchase is the event that actually matters for measuring return on ad spend, and it's also the one most likely to be broken, since it depends on the checkout or thank-you page firing correctly, with the right value and currency attached. In each platform's dashboard, look specifically at Purchase event volume over the last 7 to 14 days and compare it, roughly, against your actual Shopify order count for the same period. If a platform's Purchase count is well below your real order count, something upstream is dropping the event: a checkout page that changed, a consent banner blocking the script before it fires, or an app that stopped working after a theme update. If you'd rather not go dashboard by dashboard, a quick storefront scan and a short setup checklist will flag a lot of these gaps in a couple of minutes, though that is a starting signal, not a replacement for checking each dashboard directly.
 
 Purchase events being too low is one failure mode. The other, less obvious one is Purchase events firing too many times for the same order, which is common on stores that have accumulated tracking apps over time. It's easy to end up with Shopify's native Facebook & Instagram sales channel sending a Purchase event, a separate pixel app also sending a Purchase event, and a theme customization from two years ago still injecting a third copy, all for the same single order. Each platform then reports that one sale as two or three conversions, which inflates your apparent conversion rate and return on ad spend, and can also throw off that platform's own optimization, since its algorithm is learning from inflated signals. The way to catch this: open your browser's network tab (or use each platform's Pixel Helper, which usually flags duplicate pixel IDs) during a real checkout, and count how many times a Purchase or Complete Payment request fires to the same platform. More than one is a duplicate, and the fix is almost always removing one of the redundant integrations, not adding deduplication logic on top of both. If Facebook is one of the platforms showing this, count Purchase requests to the same pixel ID during one checkout. If your store has changed tracking apps more than once, this is the single highest-value thing to check in an afternoon audit, because it directly inflates the numbers you're using to make budget decisions.
-
-Pixel Tracker is in development and not available to install. A saved G- measurement ID can send a GA4 purchase on paid orders. Other platform coverage and server delivery are still being verified. If you need tracking today, choose an available integration and verify its events. [Join the waitlist](/#waitlist) for launch updates.
 
 An afternoon is enough time to run all of the above on two or three platforms, but not enough time to fix everything you find. If the audit turns up more than one issue, which is common, it helps to prioritize. First, fix duplicate Purchase events, since they're actively distorting the numbers you're using right now to decide where to spend, and the fix is usually just removing a redundant app or theme snippet. Second, fix any platform where Purchase events are firing well below your actual order count, since that's a direct measurement gap on money you're already spending on ads. Third, if Meta or TikTok are among your main platforms and you're not on server-side tracking yet, that's the next highest-leverage fix, since it recovers conversions that ad blockers and browser restrictions are otherwise dropping silently. Everything else, like removing an unused pixel from a platform you no longer advertise on, or double-checking event values match your actual order totals, is worth doing but can wait for a slower week.
 

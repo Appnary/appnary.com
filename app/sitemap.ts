@@ -22,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const blogPosts = getAllPosts()
-    .filter((post) => post.slug !== "pixel-tracker-launch-preview")
     .map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: new Date((post.updatedAt ?? post.publishedAt) + "T00:00:00Z"),

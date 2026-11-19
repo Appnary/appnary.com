@@ -21,6 +21,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/blog/announcing-appnary-public-launch", destination: "/vigil", permanent: true },
       { source: "/blog/pixel-tracker-launch-preview", destination: "/vigil", permanent: true },
+      { source: "/blog/why-we-built-pixel-tracker-cookieless", destination: "/vigil", permanent: true },
       { source: "/pixel-tracker", destination: "/vigil", permanent: true },
       { source: "/pixel-tracker/:path*", destination: "/vigil", permanent: true },
       { source: "/vs", destination: "/vigil", permanent: true },
