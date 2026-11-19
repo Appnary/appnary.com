@@ -8,11 +8,9 @@ function section(title: string, url: string, blocks: Array<string | undefined>):
 
 /**
  * Long form of the blog posts that are still published.
- * Pixel Tracker comparison and setup pages redirect to Vigil and are omitted.
  */
 export function renderLlmsFull(index: string): string {
   const blog = [...posts]
-    .filter((post) => post.slug !== "pixel-tracker-launch-preview")
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
     .map((post) =>
       section(post.title, `${BASE_URL}/blog/${post.slug}`, [

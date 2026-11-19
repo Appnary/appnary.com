@@ -32,13 +32,9 @@ import { posts as seedPosts } from "@/content/blog/posts";
 
 const posts: BlogPost[] = seedPosts;
 
-/** The launch preview 308s to /vigil and stays out of the index and the blog list. */
-const UNLISTED_SLUGS = new Set(["pixel-tracker-launch-preview"]);
-
 /** Returns published posts, newest first. */
 export function getAllPosts(): BlogPost[] {
   return [...posts]
-    .filter((post) => !UNLISTED_SLUGS.has(post.slug))
     .sort(
       (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
     );
@@ -64,7 +60,7 @@ export function getAllTags(): string[] {
   return Array.from(new Set(posts.flatMap((p) => p.tags))).sort();
 }
 
-/** Convert a slug like "pixel-tracker-launch-preview" to a title. */
+/** Convert a slug like "shopify-tips-first-30-days" to a title. */
 export function slugToTitle(slug: string): string {
   return slug
     .split("-")
