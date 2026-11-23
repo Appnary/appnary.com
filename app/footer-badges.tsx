@@ -1125,7 +1125,7 @@ export function FooterBadges(): ReactNode {
           <a href="https://abizdirectory.com/" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
             Abiz Web Directory
           </a>
-          <a href="https://ai-webcatalog.space/r/28317b696f2f0616372e483cbb63ef67" target="_blank" rel="sponsored noopener" title="AI Webcatalog">
+          <a href="https://ai-webcatalog.space/r/071a6205cd3664f6c6a0f964b2a19a3f" target="_blank" rel="sponsored noopener" title="AI Webcatalog">
             <img src="https://ai-webcatalog.space/badges/badge-dark-en.svg" alt="Featured on AI Webcatalog" width="240" height="54" />
           </a>
           <a href="https://aihustle.tools" target="_blank" rel="noopener" className="text-sm text-muted-foreground">
