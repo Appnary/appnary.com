@@ -53,7 +53,7 @@ If you check conversion rate over the last 7 days after a strong weekend, you'll
 
 Trap 2: Confusing traffic with intent.
 
-Sessions going up is not the same as sales going up. The classic mistake is to celebrate a traffic spike that came from a low-intent source. Always look at revenue alongside sessions.
+Sessions going up is not the same as sales going up. The classic mistake is to celebrate a traffic spike that came from a low-intent source. Always look at revenue alongside sessions. And if Shopify and GA4 show different numbers for the same week, that gap is normal; [Shopify Analytics vs Google Analytics](/blog/shopify-analytics-vs-google-analytics) explains where each one counts differently.
 
 Trap 3: Ignoring the denominator.
 
@@ -82,7 +82,7 @@ Attribution windows are the first problem. Meta's default is a 7-day click and 1
 
 None of these systems talk to each other. Picture an ordinary path to purchase: a shopper sees a Facebook ad on Monday, searches your brand name on Google on Wednesday and clicks a Google Ads result, then buys on Thursday. Facebook counts that as a Facebook-driven sale, since it fell inside the view window. Google counts it as a Google-driven sale, since it was a direct ad click. One order, two platforms claiming full credit. Add up reported revenue across every channel you run and the total can sit well above what actually landed in your Shopify orders.
 
-This isn't a bug in either platform. It's what happens when every ad network grades its own homework.
+This isn't a bug in either platform. It's what happens when every ad network grades its own homework. Analytics tools disagree in a similar way: GA4 and Shopify rarely match, and [this comparison of Shopify Analytics and Google Analytics](/blog/shopify-analytics-vs-google-analytics) shows why.
 
 Pixel data is also going missing
 
@@ -361,7 +361,9 @@ Matching refunds back to the campaign that generated the original sale adds anot
 
 In practice that means pulling refund records out of Shopify (orders with a refund or return, tied to a date and an amount) and matching them against the orders your ads generated, then recalculating ROAS on a delay, after most of the return window for that batch of orders has closed. For a store with a 30-day return policy, that might mean not trusting a campaign's real ROAS until five or six weeks after it ran. That's an awkward cadence for making fast budget decisions, which is exactly why it's easy to skip and why so many merchants never catch it. For more on why the ROAS number on your dashboard drifts from reality even before returns enter the picture, see [why Shopify ROAS is inaccurate](/blog/why-shopify-roas-is-inaccurate).
 
-None of this makes gross ROAS useless. It's still a fast signal for whether a campaign is in the right neighborhood. But if you sell anything with a meaningful return rate, treat what your ad platform shows you as provisional, not final, until enough time has passed for the returns to show up.`,
+None of this makes gross ROAS useless. It's still a fast signal for whether a campaign is in the right neighborhood. But if you sell anything with a meaningful return rate, treat what your ad platform shows you as provisional, not final, until enough time has passed for the returns to show up.
+
+On the analytics side, [Google Analytics for Shopify: Shopify Analytics vs GA4](/blog/shopify-analytics-vs-google-analytics) covers which numbers to trust in each tool.`,
     faqs: [
       {
         q: `Does Meta or Google Ads ever adjust reported ROAS after a customer returns a product?`,
