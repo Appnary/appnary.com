@@ -25,7 +25,8 @@ const nextConfig: NextConfig = {
       { source: "/pixel-tracker", destination: "/vigil", permanent: true },
       { source: "/pixel-tracker/:path*", destination: "/vigil", permanent: true },
       { source: "/vs", destination: "/vigil", permanent: true },
-      { source: "/vs/:path*", destination: "/vigil", permanent: true },
+      // Keep in sync with VS_SLUGS in content/vs.ts: those slugs are live pages, every other /vs/* is retired.
+      { source: "/vs/:path((?!(?:shieldscan|store-auditor|sketchaudit)$).+)", destination: "/vigil", permanent: true },
       { source: "/alternatives", destination: "/vigil", permanent: true },
       { source: "/alternatives/:path*", destination: "/vigil", permanent: true },
       { source: "/compare", destination: "/interest", permanent: true },
