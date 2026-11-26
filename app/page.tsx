@@ -157,6 +157,12 @@ export default async function Home() {
               </div>
             ))}
           </div>
+          <p className="mt-10 text-center text-sm text-muted-foreground">
+            Reading up on store analytics?{" "}
+            <a href="/blog/shopify-analytics-vs-google-analytics" className="font-medium text-accent-foreground hover:underline">
+              Google Analytics for Shopify: Shopify Analytics vs GA4
+            </a>
+          </p>
         </div>
       </section>
 
