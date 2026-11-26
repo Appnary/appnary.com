@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
+import { VS_SLUGS } from "@/content/vs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://appnary.com";
@@ -21,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/terms`, priority: 0.3, changeFrequency: "yearly" },
   ];
 
+  const vsPages = VS_SLUGS.map((slug) => ({
+    url: `${baseUrl}/vs/${slug}`,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
   const blogPosts = getAllPosts()
     .map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
@@ -35,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: route.changeFrequency,
       priority: route.priority,
     })),
+    ...vsPages,
     ...blogPosts,
   ];
 }
